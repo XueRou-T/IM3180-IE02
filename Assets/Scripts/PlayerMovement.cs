@@ -3,8 +3,24 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float gridSize = 1f;
+    public GridManager gridManager;
 
+    [Header("Grid Position")]
+    public Vector2Int gridPosition;
+    public Vector2Int targetPosition;
+
+    [Header("Fall Settings")]
+    public int minimumY = -5;
+    public float fallSpeed = 5f;
+    public bool isFalling = false;
+
+    private void Start()
+    {
+        gridPosition = new Vector2Int(
+            Mathf.RoundToInt(transform.position.x),
+            Mathf.RoundToInt(transform.position.y)
+        );
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
@@ -46,32 +62,81 @@ public class PlayerMovement : MonoBehaviour
 
     void GoLeft()
     {
-        transform.position += Vector3.left * gridSize;
+        targetPosition = gridPosition + Vector2Int.left;
+        CheckAndMove(targetPosition);
     }
 
     void GoRight()
     {
-        transform.position += Vector3.right * gridSize;
+        targetPosition = gridPosition + Vector2Int.right;
+        CheckAndMove(targetPosition);
     }
 
     void GoUp()
     {
-        transform.position += Vector3.up * gridSize;
+        targetPosition = gridPosition + Vector2Int.up;
+        CheckAndMove(targetPosition);
     }
 
     void GoDown()
     {
-        transform.position += Vector3.down * gridSize;
+        targetPosition = gridPosition + Vector2Int.down;
+        CheckAndMove(targetPosition);
     }
 
     void JumpLeft()
     {
-        transform.position += new Vector3(-1, 1, 0) * gridSize;
+        targetPosition = gridPosition + new Vector2Int(-1,1);
+        CheckAndMove(targetPosition);
     }
 
     void JumpRight()
     {
-        transform.position += new Vector3(1, 1, 0) * gridSize;
+        targetPosition = gridPosition + new Vector2Int(1, 1);
+        CheckAndMove(targetPosition);
     }
 
+    public void CheckAndMove(Vector2Int targetPosition)
+    {
+        if(gridManager.HasPlatform(targetPosition))
+        {
+            MoveTo(targetPosition);
+            return;
+        }
+
+        Vector2Int landingPosition = FindPlatformBelow(targetPosition);
+        if (landingPosition != targetPosition)
+        {
+            MoveTo(landingPosition);            
+        }
+        else
+        {
+            Debug.Log("Game Over");
+        }
+    }
+
+    public Vector2Int FindPlatformBelow(Vector2Int startPosition)
+    {
+        Vector2Int checkPosition = startPosition + Vector2Int.down;
+
+        while(checkPosition.y > minimumY)
+        {
+            if(gridManager.HasPlatform(checkPosition))
+                return checkPosition;
+
+            checkPosition += Vector2Int.down;
+        }
+
+        return startPosition;
+    }
+    public void MoveTo(Vector2Int targetPosition)
+    {
+        gridPosition = targetPosition;
+
+        transform.position = new Vector3(
+                gridPosition.x,
+                gridPosition.y,
+                0
+            );
+    }
 }
