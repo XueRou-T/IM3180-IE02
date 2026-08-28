@@ -1,28 +1,29 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PuzzlePlayerMovement : MonoBehaviour
 {
+    public PuzzlePlayer player;
     public GridManager gridManager;
 
-    [Header("Grid Position")]
-    public Vector2Int gridPosition;
-    public Vector2Int targetPosition;
+    private Vector2Int targetPosition;
 
     [Header("Fall Settings")]
     public int minimumY = -5;
     public float fallSpeed = 5f;
-    public bool isFalling = false;
 
     private void Start()
     {
-        gridPosition = new Vector2Int(
+        player.gridPosition = new Vector2Int(
             Mathf.RoundToInt(transform.position.x),
             Mathf.RoundToInt(transform.position.y)
         );
     }
     void Update()
     {
+        if (player.isFalling)
+            return;
+
         if (Input.GetKeyDown(KeyCode.A))
         {
             GoLeft();
@@ -62,37 +63,37 @@ public class PlayerMovement : MonoBehaviour
 
     void GoLeft()
     {
-        targetPosition = gridPosition + Vector2Int.left;
+        targetPosition = player.gridPosition + Vector2Int.left;
         CheckAndMove(targetPosition);
     }
 
     void GoRight()
     {
-        targetPosition = gridPosition + Vector2Int.right;
+        targetPosition = player.gridPosition + Vector2Int.right;
         CheckAndMove(targetPosition);
     }
 
     void GoUp()
     {
-        targetPosition = gridPosition + Vector2Int.up;
+        targetPosition = player.gridPosition + Vector2Int.up;
         CheckAndMove(targetPosition);
     }
 
     void GoDown()
     {
-        targetPosition = gridPosition + Vector2Int.down;
+        targetPosition = player.gridPosition + Vector2Int.down;
         CheckAndMove(targetPosition);
     }
 
     void JumpLeft()
     {
-        targetPosition = gridPosition + new Vector2Int(-1,1);
+        targetPosition = player.gridPosition + new Vector2Int(-1,1);
         CheckAndMove(targetPosition);
     }
 
     void JumpRight()
     {
-        targetPosition = gridPosition + new Vector2Int(1, 1);
+        targetPosition = player.gridPosition + new Vector2Int(1, 1);
         CheckAndMove(targetPosition);
     }
 
@@ -131,12 +132,12 @@ public class PlayerMovement : MonoBehaviour
     }
     public void MoveTo(Vector2Int targetPosition)
     {
-        gridPosition = targetPosition;
+        player.gridPosition = targetPosition;
 
         transform.position = new Vector3(
-                gridPosition.x,
-                gridPosition.y,
-                0
-            );
+            targetPosition.x,
+            targetPosition.y,
+            0
+        );
     }
 }
