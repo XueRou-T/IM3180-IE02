@@ -119,6 +119,55 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &144435360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144435362}
+  - component: {fileID: 144435361}
+  m_Layer: 0
+  m_Name: PuzzleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &144435361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144435360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28cd7280868c704d98847d7ba51dd45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleManager
+  player: {fileID: 390756178}
+  playerMovement: {fileID: 390756175}
+  gridManager: {fileID: 1526748901}
+  spawnPoint: {fileID: 1879600367}
+  moveCount: 0
+--- !u!4 &144435362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144435360}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.03692, y: -4.46971, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390756174
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   player: {fileID: 390756178}
-  gridManager: {fileID: 1526748901}
+  puzzleManager: {fileID: 144435361}
   minimumY: -5
   fallSpeed: 5
 --- !u!212 &390756176
@@ -240,9 +289,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0651d8cc642144d93ffb138cfed345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePlayer
-  gridPosition: {x: 0, y: 0}
+  playerPosition: {x: 0, y: 0}
   isFalling: 0
-  isOnLadder: 0
+  isClimbing: 0
+  isUpLadder: 0
+  isDownLadder: 0
 --- !u!1 &985300496
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +429,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78447cfdd864583488cf04024ed6bd6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleLadder
-  player: {fileID: 390756178}
   ladderPosition_Start: {x: 0, y: 0}
   ladderPosition_End: {x: 0, y: 0}
 --- !u!212 &1277276243
@@ -881,7 +931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f61ea7dee014d4fbfda0675f68576f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleGoal
-  player: {fileID: 390756178}
 --- !u!212 &1800887585
 SpriteRenderer:
   serializedVersion: 2
@@ -1123,7 +1172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d096d8ef25a17de4bb7fba19247a3f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleSpawnPoint
-  player: {fileID: 390756178}
 --- !u!212 &1879600368
 SpriteRenderer:
   serializedVersion: 2
@@ -1366,3 +1414,4 @@ SceneRoots:
   - {fileID: 2142825867}
   - {fileID: 985300499}
   - {fileID: 1277276244}
+  - {fileID: 144435362}

@@ -26,19 +26,6 @@ public class PuzzleButton : MonoBehaviour
         spriteRenderer.sprite = buttonReleasedSprite;
     }
 
-    void Update()
-    {
-        if (player.gridPosition == buttonPosition)
-        {
-            PressButton();
-        }
-        else
-        {
-            ReleaseButton();
-        }
-
-    }
-
     public void PressButton()
     {
         if (isPressed)
@@ -65,5 +52,13 @@ public class PuzzleButton : MonoBehaviour
         {
             connectedDoor.CloseDoor();
         }
+    }
+
+    public Vector2Int GetPosition()
+    {
+        return new Vector2Int(
+            Mathf.RoundToInt(transform.position.x),
+            Mathf.RoundToInt(transform.position.y)
+        );
     }
 }

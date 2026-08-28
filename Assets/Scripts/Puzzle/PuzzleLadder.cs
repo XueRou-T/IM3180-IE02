@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class PuzzleLadder : MonoBehaviour
 {
-    public PuzzlePlayer player;
-
     public Vector2Int ladderPosition_Start;
     public Vector2Int ladderPosition_End;
 
@@ -23,17 +21,13 @@ public class PuzzleLadder : MonoBehaviour
         ladderPosition_End = ladderPosition_Start + Vector2Int.up * ladderLength;
     }
 
-    void Update()
+    public Vector2Int GetStartPosition()
     {
-        if(player.gridPosition == ladderPosition_Start || player.gridPosition == ladderPosition_End)
-        {
-            player.isOnLadder = true;
-        }
-        else
-        {
-            player.isOnLadder = false;
-        }
+        return ladderPosition_Start;
+    }
 
-
+    public Vector2Int GetEndPosition()
+    {
+        return ladderPosition_End;
     }
 }

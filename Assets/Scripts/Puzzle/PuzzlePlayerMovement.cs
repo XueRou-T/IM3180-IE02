@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PuzzlePlayerMovement : MonoBehaviour
 {
     public PuzzlePlayer player;
-    public GridManager gridManager;
+    public PuzzleManager puzzleManager;
 
     private Vector2Int targetPosition;
 
@@ -12,127 +12,85 @@ public class PuzzlePlayerMovement : MonoBehaviour
     public int minimumY = -5;
     public float fallSpeed = 5f;
 
-    private void Start()
-    {
-        player.gridPosition = new Vector2Int(
-            Mathf.RoundToInt(transform.position.x),
-            Mathf.RoundToInt(transform.position.y)
-        );
-    }
     void Update()
     {
-        if (player.isFalling)
+        if (player.isFalling || player.isClimbing)
             return;
 
         if (Input.GetKeyDown(KeyCode.A))
         {
             GoLeft();
-            Debug.Log("Player went left");
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
             GoRight();
-            Debug.Log("Player went right");
         }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
             GoUp();
-            Debug.Log("Player went up");
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
             GoDown();
-            Debug.Log("Player went down");
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
             JumpLeft();
-            Debug.Log("Player jump left");
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             JumpRight();
-            Debug.Log("Player jump right");
         }
     }
 
     void GoLeft()
     {
-        targetPosition = player.gridPosition + Vector2Int.left;
-        CheckAndMove(targetPosition);
+        targetPosition = player.playerPosition + Vector2Int.left;
+        TryMove(targetPosition);
     }
 
     void GoRight()
     {
-        targetPosition = player.gridPosition + Vector2Int.right;
-        CheckAndMove(targetPosition);
+        targetPosition = player.playerPosition + Vector2Int.right;
+        TryMove(targetPosition);
     }
 
     void GoUp()
     {
-        targetPosition = player.gridPosition + Vector2Int.up;
-        CheckAndMove(targetPosition);
+        targetPosition = player.playerPosition + Vector2Int.up;
+        TryMove(targetPosition);   
     }
 
     void GoDown()
     {
-        targetPosition = player.gridPosition + Vector2Int.down;
-        CheckAndMove(targetPosition);
+        puzzleManager.TryMoveDown();
     }
 
     void JumpLeft()
     {
-        targetPosition = player.gridPosition + new Vector2Int(-1,1);
-        CheckAndMove(targetPosition);
+        targetPosition = player.playerPosition + new Vector2Int(-1,1);
+        TryMove(targetPosition);
     }
 
     void JumpRight()
     {
-        targetPosition = player.gridPosition + new Vector2Int(1, 1);
-        CheckAndMove(targetPosition);
+        targetPosition = player.playerPosition + new Vector2Int(1, 1);
+        TryMove(targetPosition);
     }
 
-    public void CheckAndMove(Vector2Int targetPosition)
+    public void TryMove(Vector2Int targetPosition)
     {
-        if(gridManager.HasPlatform(targetPosition))
-        {
-            MoveTo(targetPosition);
-            return;
-        }
-
-        Vector2Int landingPosition = FindPlatformBelow(targetPosition);
-        if (landingPosition != targetPosition)
-        {
-            MoveTo(landingPosition);            
-        }
-        else
-        {
-            Debug.Log("Game Over");
-        }
+        puzzleManager.TryMovePlayer(targetPosition);
     }
 
-    public Vector2Int FindPlatformBelow(Vector2Int startPosition)
-    {
-        Vector2Int checkPosition = startPosition + Vector2Int.down;
-
-        while(checkPosition.y > minimumY)
-        {
-            if(gridManager.HasPlatform(checkPosition))
-                return checkPosition;
-
-            checkPosition += Vector2Int.down;
-        }
-
-        return startPosition;
-    }
     public void MoveTo(Vector2Int targetPosition)
     {
-        player.gridPosition = targetPosition;
+        player.playerPosition = targetPosition;
 
         transform.position = new Vector3(
             targetPosition.x,
