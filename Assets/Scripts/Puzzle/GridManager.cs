@@ -64,7 +64,6 @@ public class GridManager : MonoBehaviour
         RegisterButtons();
         RegisterDoors();
         RegisterLadders();
-        // RegisterLevers();
         RegisterGoals();
     }
 

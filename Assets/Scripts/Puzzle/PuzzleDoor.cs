@@ -3,6 +3,7 @@ using UnityEngine;
 public class PuzzleDoor : MonoBehaviour
 {
     public bool isOpen;
+    public GridManager gridManager;
 
     public void OpenDoor()
     {
@@ -10,6 +11,8 @@ public class PuzzleDoor : MonoBehaviour
             return;
 
         isOpen = true;
+
+        gridManager.SetBlocked(GetPosition(), false);
 
         gameObject.SetActive(false);
     }
@@ -20,6 +23,8 @@ public class PuzzleDoor : MonoBehaviour
             return;
 
         isOpen = false;
+
+        gridManager.SetBlocked(GetPosition(), true);
 
         gameObject.SetActive(true);
     }

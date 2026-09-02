@@ -36,34 +36,24 @@ public class PuzzlePlayerMovement : MonoBehaviour
         {
             GoDown();
         }
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            JumpLeft();
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            JumpRight();
-        }
     }
 
     void GoLeft()
     {
         targetPosition = player.playerPosition + Vector2Int.left;
-        TryMove(targetPosition);
+        TryMove(targetPosition, PuzzlePlayerMoveType.Left);
     }
 
     void GoRight()
     {
         targetPosition = player.playerPosition + Vector2Int.right;
-        TryMove(targetPosition);
+        TryMove(targetPosition, PuzzlePlayerMoveType.Right);
     }
 
     void GoUp()
     {
         targetPosition = player.playerPosition + Vector2Int.up;
-        TryMove(targetPosition);   
+        TryMove(targetPosition, PuzzlePlayerMoveType.Up);   
     }
 
     void GoDown()
@@ -71,21 +61,9 @@ public class PuzzlePlayerMovement : MonoBehaviour
         puzzleManager.TryMoveDown();
     }
 
-    void JumpLeft()
+    public void TryMove(Vector2Int targetPosition, PuzzlePlayerMoveType moveType)
     {
-        targetPosition = player.playerPosition + new Vector2Int(-1,1);
-        TryMove(targetPosition);
-    }
-
-    void JumpRight()
-    {
-        targetPosition = player.playerPosition + new Vector2Int(1, 1);
-        TryMove(targetPosition);
-    }
-
-    public void TryMove(Vector2Int targetPosition)
-    {
-        puzzleManager.TryMovePlayer(targetPosition);
+        puzzleManager.TryMovePlayer(targetPosition, moveType);
     }
 
     public void MoveTo(Vector2Int targetPosition)
