@@ -101,13 +101,13 @@ public class PuzzleManager : MonoBehaviour
             return;
         }
 
-        if (targetGrid.hasPlatform)
+        if (HasPlatformAfterMove(targetPosition, targetPosition, shadow.shadowPosition))
         {
             MovePlayer(targetPosition, moveType);
             return;
         }
 
-        Vector2Int landingPosition = FindPlatformBelow(targetPosition);
+        Vector2Int landingPosition = FindPlatformBelow(targetPosition, targetPosition, shadow.shadowPosition);
 
         if (landingPosition != targetPosition)
         {
@@ -218,7 +218,7 @@ public class PuzzleManager : MonoBehaviour
             return;
         }
 
-        Vector2Int landingPosition = FindPlatformBelow(shadowTargetPosition);
+        Vector2Int landingPosition = FindPlatformBelow(shadowTargetPosition, player.playerPosition, shadowTargetPosition);
 
         if (landingPosition == shadowTargetPosition)
             return;
@@ -234,17 +234,15 @@ public class PuzzleManager : MonoBehaviour
         shadowMovement.MoveTo(landingPosition);
     }
 
-    Vector2Int FindPlatformBelow(Vector2Int startPosition)
+    Vector2Int FindPlatformBelow(Vector2Int startPosition, Vector2Int nextPlayerPosition, Vector2Int nextShadowPosition)
     {
-        Vector2Int checkPosition =
-            startPosition + Vector2Int.down;
+        Vector2Int checkPosition = startPosition + Vector2Int.down;
 
         while (checkPosition.y >= -4)
         {
-            GridData grid =
-                gridManager.GetGridData(checkPosition);
+            GridData grid = gridManager.GetGridData(checkPosition);
 
-            if (grid != null && grid.hasPlatform)
+            if (HasPlatformAfterMove(checkPosition, nextPlayerPosition, nextShadowPosition))
             {
                 return checkPosition;
             }
@@ -257,6 +255,9 @@ public class PuzzleManager : MonoBehaviour
 
     void StartFall()
     {
+        if (player.isFalling)
+            return;
+
         player.isFalling = true;
 
         Debug.Log("Game Over");
@@ -267,6 +268,7 @@ public class PuzzleManager : MonoBehaviour
         CheckButtons();
         CheckLadders();
         CheckGoals();
+        CheckPlayerStnadingOnPlatform();
     }
 
     void CheckButtons()
@@ -329,13 +331,24 @@ public class PuzzleManager : MonoBehaviour
 
     bool IsDoorBlockedAfterMove(Vector2Int targetPosition, Vector2Int nextPlayerPosition, Vector2Int nextShadowPosition)
     {
+
         GridData targetGrid = gridManager.GetGridData(targetPosition);
+
+        Debug.Log(
+        $"BLOCK CHECK: {targetPosition} | " +
+        $"Grid: {targetGrid != null} | " +
+        $"Door: {(targetGrid != null && targetGrid.door != null)}"
+        );
+
 
         if (targetGrid == null)
             return true;
 
         if (targetGrid.door == null)
             return targetGrid.isBlocked;
+
+        if ((targetGrid.door.doorType == DoorType.Trapdoor))
+            return false;
 
         foreach (GridData grid in gridManager.GetAllGridData())
         {
@@ -356,5 +369,64 @@ public class PuzzleManager : MonoBehaviour
         }
 
         return !targetGrid.door.isOpen;
+    }
+
+    bool HasPlatformAfterMove(Vector2Int targetPosition, Vector2Int nextPlayerPosition, Vector2Int nextShadowPosition)
+    {
+        GridData targetGrid = gridManager.GetGridData(targetPosition);
+
+        Debug.Log(
+        $"PLATFORM CHECK: {targetPosition} | " +
+        $"Grid: {targetGrid != null} | " +
+        $"Platform: {(targetGrid != null ? targetGrid.hasPlatform : false)} | " +
+        $"Door: {(targetGrid != null && targetGrid.door != null)}"
+    );
+
+        if (targetGrid == null)
+            return false;
+
+        if (targetGrid.door != null && targetGrid.door.doorType == DoorType.Trapdoor)
+        {
+            Debug.Log(
+            $"[Trapdoor] Position: {targetPosition} | " +
+            $"isOpen: {targetGrid.door.isOpen} | " +
+            $"hasPlatform: {targetGrid.hasPlatform}"
+            );
+
+            return targetGrid.hasPlatform;
+        }
+
+        if (targetGrid.door == null)
+            return targetGrid.hasPlatform;
+
+        foreach (GridData grid in gridManager.GetAllGridData())
+        {
+            if (grid.button == null)
+                continue;
+
+            if (grid.button.connectedDoor != targetGrid.door)
+                continue;
+
+            Vector2Int buttonPosition = grid.button.GetPosition();
+
+            bool playerOnButton = nextPlayerPosition == buttonPosition;
+
+            bool shadowOnButton = nextShadowPosition == buttonPosition;
+
+            if (playerOnButton || shadowOnButton)
+                return false;
+        }
+
+        return targetGrid.hasPlatform;
+    }
+
+    void CheckPlayerStnadingOnPlatform()
+    {
+        GridData currentGrid = gridManager.GetGridData(player.playerPosition);
+
+        if (currentGrid == null) return;
+
+        if (!currentGrid.hasPlatform)
+            StartFall();
     }
 }
