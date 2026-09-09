@@ -2,9 +2,32 @@ using UnityEngine;
 
 public class PuzzleDoor : MonoBehaviour
 {
+    public bool initiallyOpen;
     public bool isOpen;
     public GridManager gridManager;
 
+    public DoorType doorType;
+
+    void Start()
+    {
+        isOpen = initiallyOpen;
+        
+        if(doorType == DoorType.Door)
+        {
+            gridManager.SetBlocked(GetPosition(), !isOpen);
+        }
+        else if(doorType == DoorType.Trapdoor)
+        {
+            gridManager.SetPlatform(GetPosition(), !isOpen);
+        }
+    }
+    public void ToggleDoor()
+    {
+        if(isOpen)
+            CloseDoor();
+        else
+            OpenDoor();
+    }
     public void OpenDoor()
     {
         if (isOpen)
@@ -12,9 +35,16 @@ public class PuzzleDoor : MonoBehaviour
 
         isOpen = true;
 
-        gridManager.SetBlocked(GetPosition(), false);
+        if (doorType == DoorType.Door)
+        {
+            gridManager.SetBlocked(GetPosition(), false);
+        }
+        else if (doorType == DoorType.Trapdoor)
+        {
+            gridManager.SetPlatform(GetPosition(), false);
+        }
 
-        gameObject.SetActive(false);
+            gameObject.SetActive(false);
     }
 
     public void CloseDoor()
@@ -24,9 +54,16 @@ public class PuzzleDoor : MonoBehaviour
 
         isOpen = false;
 
-        gridManager.SetBlocked(GetPosition(), true);
+        if (doorType == DoorType.Door)
+        {
+            gridManager.SetBlocked(GetPosition(), true);
+        }
+        else if (doorType==DoorType.Trapdoor)
+        {
+            gridManager.SetPlatform(GetPosition(), true);
+        }
 
-        gameObject.SetActive(true);
+            gameObject.SetActive(true);
     }
 
     public Vector2Int GetPosition()
