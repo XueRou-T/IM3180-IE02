@@ -1,6 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using System.Collections.Generic;
 
 public class GridManager : MonoBehaviour
 {
@@ -45,13 +45,12 @@ public class GridManager : MonoBehaviour
 
     public bool HasPlatform(Vector2Int position)
     {
-        Vector3Int gridPosition = new Vector3Int(
-            position.x,
-            position.y,
-            0
-        );
+        GridData grid = GetGridData(position);
 
-        return tilemap.HasTile(gridPosition);
+        if (grid == null)
+            return false;
+
+        return grid.hasPlatform;
     }
 
     public IEnumerable<GridData> GetAllGridData()
@@ -98,13 +97,23 @@ public class GridManager : MonoBehaviour
         {
             Vector2Int position = door.GetPosition();
 
+            Debug.Log(
+                $"DOOR REGISTER: {position} | " +
+                $"Type: {door.doorType} | " +
+                $"Open: {door.isOpen}"
+            );
+
             GridData grid = GetGridData(position);
 
             if (grid == null)
                 continue;
 
             grid.door = door;
-            grid.isBlocked = !door.isOpen;
+            
+            if(door.doorType == DoorType.Door)
+                grid.isBlocked = !door.isOpen;
+            else
+                grid.hasPlatform = !door.isOpen;
         }
     }
 
@@ -172,6 +181,16 @@ public class GridManager : MonoBehaviour
         if (grid != null)
         {
             grid.isBlocked = blocked;
+        }
+    }
+
+    public void SetPlatform(Vector2Int position, bool hasPlatform)
+    {
+        GridData grid = GetGridData(position);
+
+        if (grid != null)
+        {
+            grid.hasPlatform = hasPlatform;
         }
     }
 }
