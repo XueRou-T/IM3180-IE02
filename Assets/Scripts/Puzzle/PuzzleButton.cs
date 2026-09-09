@@ -36,7 +36,7 @@ public class PuzzleButton : MonoBehaviour
 
         if (connectedDoor != null)
         {
-            connectedDoor.OpenDoor();
+            connectedDoor.ToggleDoor();
         }
     }
 
@@ -50,7 +50,7 @@ public class PuzzleButton : MonoBehaviour
 
         if(connectedDoor != null)
         {
-            connectedDoor.CloseDoor();
+            connectedDoor.ToggleDoor();
         }
     }
 

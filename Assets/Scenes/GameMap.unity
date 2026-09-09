@@ -298,17 +298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 757b9cde323181640a81fbf829355898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleShadowMovement
---- !u!114 &269279313 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4722496489943375354, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-  m_PrefabInstance: {fileID: 705003389}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00300014f20a444b9add665b8c3506f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PuzzleDoor
 --- !u!114 &390756175 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7356967959090095637, guid: 790179ca15dcff0429fc8c686ec71855, type: 3}
@@ -331,67 +320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0651d8cc642144d93ffb138cfed345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePlayer
---- !u!1001 &705003389
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1451792548887023325, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-      propertyPath: m_Name
-      value: PuzzleDoor (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4722496489943375354, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-      propertyPath: gridManager
-      value: 
-      objectReference: {fileID: 1526748901}
-    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
 --- !u!1 &834206967
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +372,83 @@ MonoBehaviour:
   puzzleManager: {fileID: 144435361}
   moveSlotPrefab: {fileID: 2751213472731895984, guid: 79214b4053606e1438a20717791b49a0, type: 3}
   moveSlotContainer: {fileID: 90189847}
+--- !u!1001 &963393776
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1451792548887023325, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_Name
+      value: PuzzleDoor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722496489943375354, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: doorType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722496489943375354, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: gridManager
+      value: 
+      objectReference: {fileID: 1526748901}
+    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229383246839845456, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294346182521856017, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3531483
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294346182521856017, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4784145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294346182521856017, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.56813407
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
 --- !u!1 &1065651530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,6 +1183,17 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1844960165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4722496489943375354, guid: 29fca73932996d94198adacad6ffd18e, type: 3}
+  m_PrefabInstance: {fileID: 963393776}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00300014f20a444b9add665b8c3506f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleDoor
 --- !u!114 &1879600367 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1304502731396227682, guid: bfad8dfcbafd55e48bb9b8b502166dbe, type: 3}
@@ -1299,6 +1315,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1830618418730253269, guid: 790179ca15dcff0429fc8c686ec71855, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4281445024243405800, guid: b4f6103746e6a8c4caed0b276c1ac5d3, type: 3}
+    - target: {fileID: 1830618418730253269, guid: 790179ca15dcff0429fc8c686ec71855, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2651136653524681941, guid: 790179ca15dcff0429fc8c686ec71855, type: 3}
       propertyPath: m_Name
       value: PuzzlePlayer
@@ -1582,7 +1606,7 @@ PrefabInstance:
     - target: {fileID: 4737985726995606773, guid: e7f67641a15961b4d8329c15c1dbdefb, type: 3}
       propertyPath: connectedDoor
       value: 
-      objectReference: {fileID: 269279313}
+      objectReference: {fileID: 1844960165}
     - target: {fileID: 8267469166192536160, guid: e7f67641a15961b4d8329c15c1dbdefb, type: 3}
       propertyPath: m_Name
       value: PuzzleButton
@@ -1666,4 +1690,4 @@ SceneRoots:
   - {fileID: 1473392480}
   - {fileID: 1065651533}
   - {fileID: 4424377418293468424}
-  - {fileID: 705003389}
+  - {fileID: 963393776}
