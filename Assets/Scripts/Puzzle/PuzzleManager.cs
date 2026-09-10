@@ -1,5 +1,7 @@
-using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class PuzzleManager : MonoBehaviour
     public MoveTrackerUI moveTrackerUI;
     private bool shadowStarted;
     private int shadowMoveIndex;
+    private bool gameOver = false;
 
     void Start()
     {
@@ -127,6 +130,22 @@ public class PuzzleManager : MonoBehaviour
     void MovePlayer(Vector2Int targetPosition, PuzzlePlayerMoveType moveType)
     {
         moveCount++;
+        
+        if (moveType == PuzzlePlayerMoveType.Down)
+        {
+            player.isFalling = false;
+            player.isClimbing = true;
+        }
+        else if (moveType == PuzzlePlayerMoveType.Up)
+        {
+            player.isFalling = false;
+            player.isClimbing = true;
+        }
+        else if (targetPosition.y < player.playerPosition.y) 
+        {
+            player.isFalling = true;
+            player.isClimbing = false;
+        }
 
         playerMovement.MoveTo(targetPosition);
 
@@ -268,7 +287,8 @@ public class PuzzleManager : MonoBehaviour
         CheckButtons();
         CheckLadders();
         CheckGoals();
-        CheckPlayerStnadingOnPlatform();
+        CheckPlayerStandingOnPlatform();
+        CheckPlayerShadowCollide();
     }
 
     void CheckButtons()
@@ -334,13 +354,6 @@ public class PuzzleManager : MonoBehaviour
 
         GridData targetGrid = gridManager.GetGridData(targetPosition);
 
-        Debug.Log(
-        $"BLOCK CHECK: {targetPosition} | " +
-        $"Grid: {targetGrid != null} | " +
-        $"Door: {(targetGrid != null && targetGrid.door != null)}"
-        );
-
-
         if (targetGrid == null)
             return true;
 
@@ -375,24 +388,11 @@ public class PuzzleManager : MonoBehaviour
     {
         GridData targetGrid = gridManager.GetGridData(targetPosition);
 
-        Debug.Log(
-        $"PLATFORM CHECK: {targetPosition} | " +
-        $"Grid: {targetGrid != null} | " +
-        $"Platform: {(targetGrid != null ? targetGrid.hasPlatform : false)} | " +
-        $"Door: {(targetGrid != null && targetGrid.door != null)}"
-    );
-
         if (targetGrid == null)
             return false;
 
         if (targetGrid.door != null && targetGrid.door.doorType == DoorType.Trapdoor)
         {
-            Debug.Log(
-            $"[Trapdoor] Position: {targetPosition} | " +
-            $"isOpen: {targetGrid.door.isOpen} | " +
-            $"hasPlatform: {targetGrid.hasPlatform}"
-            );
-
             return targetGrid.hasPlatform;
         }
 
@@ -420,13 +420,47 @@ public class PuzzleManager : MonoBehaviour
         return targetGrid.hasPlatform;
     }
 
-    void CheckPlayerStnadingOnPlatform()
+    void CheckPlayerStandingOnPlatform()
     {
         GridData currentGrid = gridManager.GetGridData(player.playerPosition);
 
-        if (currentGrid == null) return;
+        if (currentGrid == null)
+            return;
 
-        if (!currentGrid.hasPlatform)
+        if (currentGrid.hasPlatform)
+            return;
+
+        Vector2Int landingPosition = FindPlatformBelow(player.playerPosition, player.playerPosition, shadow.shadowPosition
+        );
+
+        if (landingPosition == player.playerPosition)
+        {
             StartFall();
+            return;
+        }
+
+        if (IsDoorBlockedAfterMove(landingPosition, landingPosition, shadow.shadowPosition))
+        {
+            StartFall();
+            return;
+        }
+
+        playerMovement.MoveTo(landingPosition);
+    }
+
+    void CheckPlayerShadowCollide()
+    {
+        if (gameOver)
+            return;
+
+        if(player.playerPosition == shadow.shadowPosition && !gameOver)
+        {
+            Debug.Log("Game Over: Collided");
+        }
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
