@@ -45,6 +45,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // Don't process movement input while the puzzle UI is open
+        if (LaptopPuzzle.IsPuzzleOpen)
+        {
+            moveInput = Vector2.zero;
+            return;
+        }
+
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
