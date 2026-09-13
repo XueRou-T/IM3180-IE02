@@ -227,7 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneDoor
   promptText: {fileID: 2100066302}
   sceneToLoad: Lab
-  targetSpawnPointName: SpawnPoint_ReturnFromHouse
+  targetSpawnPointName: SpawnPoint_FromHouse
   promptMessage: Press E to go to lab
   lockedMessage: 
   requiresUnlock: 0

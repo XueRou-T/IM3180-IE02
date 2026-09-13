@@ -4,10 +4,32 @@ using TMPro;
 public class InventoryUI : MonoBehaviour
 {
     public TMP_Text inventoryText;
+    public GameObject panelToToggle; // the InventoryPanel itself
+
+    private bool isOpen = false;
+
+    void Start()
+    {
+        SetPanelOpen(false); // hidden by default
+    }
 
     void Update()
     {
-        RefreshDisplay();
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            SetPanelOpen(!isOpen);
+        }
+
+        if (isOpen)
+        {
+            RefreshDisplay();
+        }
+    }
+
+    void SetPanelOpen(bool open)
+    {
+        isOpen = open;
+        panelToToggle.SetActive(open);
     }
 
     void RefreshDisplay()
