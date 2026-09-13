@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c34a033555e4645e782879a6c048a9a2
+guid: deb85040b797d644a9249078fb7fc3a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8366686200752546876
-    second: bead-pattern copy 2_0
+      213: -3221260232179644279
+    second: Hawker Seat Red_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bead-pattern copy 2_0
+      name: Hawker Seat Red_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 0
-        width: 1294
-        height: 1458
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c34a40f55c07c1470800000000000000
-      internalID: 8366686200752546876
+      spriteID: 98807d3c2e8cb43d0800000000000000
+      internalID: -3221260232179644279
       vertices: []
       indices: 
       edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bead-pattern copy 2_0: 8366686200752546876
+      Hawker Seat Red_0: -3221260232179644279
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
