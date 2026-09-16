@@ -12,8 +12,49 @@ public class PuzzlePlayerMovement : MonoBehaviour
     public int minimumY = -5;
     public float fallSpeed = 5f;
 
+    [Header("Move Settings")]
+    public float moveSpeed = 8.0f;
+    private bool isMoving;
+
     void Update()
     {
+        if (isMoving)
+        {
+            if (transform.position.x != player.playerPosition.x)
+            {
+                transform.position = Vector3.MoveTowards(
+                    transform.position,
+                    new Vector3(
+                        player.playerPosition.x,
+                        transform.position.y,
+                        transform.position.z
+                    ),
+                    moveSpeed * Time.deltaTime
+                );
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(
+                    transform.position,
+                    new Vector3(
+                        transform.position.x,
+                        player.playerPosition.y,
+                        transform.position.z
+                    ),
+                    moveSpeed * Time.deltaTime
+                );
+            }
+
+            if (transform.position == new Vector3(player.playerPosition.x, player.playerPosition.y, transform.position.z))
+            {
+                isMoving = false;
+                player.isFalling = false;
+                player.isClimbing = false;
+            }
+
+            return;
+        }
+
         if (player.isFalling || player.isClimbing)
             return;
 
@@ -70,10 +111,11 @@ public class PuzzlePlayerMovement : MonoBehaviour
     {
         player.playerPosition = targetPosition;
 
-        transform.position = new Vector3(
+        isMoving = true;
+        /*transform.position = new Vector3(
             targetPosition.x,
             targetPosition.y,
             0
-        );
+        );*/
     }
 }
