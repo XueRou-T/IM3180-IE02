@@ -5,10 +5,10 @@ using UnityEngine.Tilemaps;
 public class GridManager : MonoBehaviour
 {
     [Header("Platform")]
-    public Tilemap tilemap;
+    public Tilemap floorTileMap;
+    public Tilemap wallTileMap;
 
-    private Dictionary<Vector2Int, GridData> gridData =
-        new Dictionary<Vector2Int, GridData>();
+    private Dictionary<Vector2Int, GridData> gridData = new Dictionary<Vector2Int, GridData>();
 
     private void Start()
     {
@@ -18,16 +18,16 @@ public class GridManager : MonoBehaviour
 
     private void BuildGridData()
     {
-        BoundsInt bounds = tilemap.cellBounds;
+        BoundsInt bounds = floorTileMap.cellBounds;
 
         foreach (Vector3Int position in bounds.allPositionsWithin)
         {
-            Vector2Int gridPosition =
-                new Vector2Int(position.x, position.y);
+            Vector2Int gridPosition =  new Vector2Int(position.x, position.y);
 
             GridData data = new GridData();
 
-            data.hasPlatform = tilemap.HasTile(position);
+            data.hasPlatform = floorTileMap.HasTile(position);
+            data.isBlocked = wallTileMap.HasTile(position);
 
             gridData[gridPosition] = data;
         }
@@ -84,6 +84,7 @@ public class GridManager : MonoBehaviour
 
             grid.button = button;
         }
+        Debug.Log("Registered Buttons");
     }
 
     private void RegisterDoors()
@@ -97,12 +98,6 @@ public class GridManager : MonoBehaviour
         {
             Vector2Int position = door.GetPosition();
 
-            Debug.Log(
-                $"DOOR REGISTER: {position} | " +
-                $"Type: {door.doorType} | " +
-                $"Open: {door.isOpen}"
-            );
-
             GridData grid = GetGridData(position);
 
             if (grid == null)
@@ -115,6 +110,7 @@ public class GridManager : MonoBehaviour
             else
                 grid.hasPlatform = !door.isOpen;
         }
+        Debug.Log("Registered Doors");
     }
 
     private void RegisterLadders()
@@ -144,6 +140,7 @@ public class GridManager : MonoBehaviour
             startGrid.ladder_Up = ladder;
             endGrid.ladder_Down = ladder;
         }
+        Debug.Log("Registered Ladder");
     }
 
     private void RegisterGoals()
@@ -164,6 +161,7 @@ public class GridManager : MonoBehaviour
 
             grid.goal = goal;
         }
+        Debug.Log("Registered Goals");
     }
 
     public Vector2Int GetGridPosition(Vector3 position)

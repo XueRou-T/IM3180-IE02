@@ -13,6 +13,8 @@ public class PuzzleManager : MonoBehaviour
     public GridManager gridManager;
     public PuzzleSpawnPoint spawnPoint;
     public PuzzleSpawnPoint shadowSpawnPoint;
+    public PuzzlePlayerAnimator playerAnimator;
+    public PuzzleShadowAnimator shadowAnimator;
     
 
     [Header("Move Tracking")]
@@ -27,7 +29,7 @@ public class PuzzleManager : MonoBehaviour
     void Start()
     {
         SetPlayerSpawn();
-        PlayerMoved();
+        Invoke(nameof(PlayerMoved), 0.1f);
     }
 
     void SetPlayerSpawn()
@@ -130,18 +132,29 @@ public class PuzzleManager : MonoBehaviour
     void MovePlayer(Vector2Int targetPosition, PuzzlePlayerMoveType moveType)
     {
         moveCount++;
-        
+
+        if (moveType == PuzzlePlayerMoveType.Left)
+        {
+            playerAnimator.MoveLeft();
+        }
+        else if (moveType == PuzzlePlayerMoveType.Right)
+        {
+            playerAnimator.MoveRight();
+        }
         if (moveType == PuzzlePlayerMoveType.Down)
         {
             player.isFalling = false;
             player.isClimbing = true;
+            playerAnimator.MoveDown();
+
         }
         else if (moveType == PuzzlePlayerMoveType.Up)
         {
             player.isFalling = false;
             player.isClimbing = true;
+            playerAnimator.MoveUp();
         }
-        else if (targetPosition.y < player.playerPosition.y) 
+        else if (targetPosition.y < player.playerPosition.y)
         {
             player.isFalling = true;
             player.isClimbing = false;
@@ -176,8 +189,7 @@ public class PuzzleManager : MonoBehaviour
         if (shadowMoveIndex >= moveHistory.Count)
             return;
 
-        PuzzlePlayerMoveType move =
-            moveHistory[shadowMoveIndex];
+        PuzzlePlayerMoveType move = moveHistory[shadowMoveIndex];
 
         shadowMoveIndex++;
 
@@ -197,28 +209,37 @@ public class PuzzleManager : MonoBehaviour
         {
             case PuzzlePlayerMoveType.Left:
                 shadowTargetPosition += Vector2Int.left;
+                shadowAnimator.MoveLeft();
                 break;
             case PuzzlePlayerMoveType.Right:
                 shadowTargetPosition += Vector2Int.right;
+                shadowAnimator.MoveRight();
                 break;
             case PuzzlePlayerMoveType.Up:
                 if (shadowCurrentGrid != null && shadowCurrentGrid.ladder_Up != null)
                 {
-                    if(!IsDoorBlockedAfterMove(shadowCurrentGrid.ladder_Up.GetEndPosition(), player.playerPosition, shadowCurrentGrid.ladder_Up.GetEndPosition()))
+                    if (!IsDoorBlockedAfterMove(shadowCurrentGrid.ladder_Up.GetEndPosition(), player.playerPosition, shadowCurrentGrid.ladder_Up.GetEndPosition()))
+                    {
                         shadowMovement.MoveTo(shadowCurrentGrid.ladder_Up.GetEndPosition());
+                        shadowAnimator.MoveUp();
+                    }
 
                     return;
                 }
                 
                 shadowTargetPosition += Vector2Int.up;
-                
+               
+
                 break;
 
             case PuzzlePlayerMoveType.Down:
                 if(shadowCurrentGrid != null && shadowCurrentGrid.ladder_Down != null)
                 {
-                    if(!IsDoorBlockedAfterMove(shadowCurrentGrid.ladder_Down.GetStartPosition(), player.playerPosition, shadowCurrentGrid.ladder_Down.GetStartPosition()))
+                    if (!IsDoorBlockedAfterMove(shadowCurrentGrid.ladder_Down.GetStartPosition(), player.playerPosition, shadowCurrentGrid.ladder_Down.GetStartPosition()))
+                    {
                         shadowMovement.MoveTo(shadowCurrentGrid.ladder_Down.GetStartPosition());
+                        shadowAnimator.MoveDown();
+                    }
                 }
                 return;
         }
