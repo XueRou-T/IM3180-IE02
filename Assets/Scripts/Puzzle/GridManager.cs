@@ -104,9 +104,12 @@ public class GridManager : MonoBehaviour
                 continue;
 
             grid.door = door;
-            
-            if(door.doorType == DoorType.Door)
+
+            if (door.doorType == DoorType.Door)
+            {
                 grid.isBlocked = !door.isOpen;
+                grid.hasPlatform = true;
+            }
             else
                 grid.hasPlatform = !door.isOpen;
         }

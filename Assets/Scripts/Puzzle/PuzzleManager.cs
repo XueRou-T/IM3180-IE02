@@ -412,6 +412,11 @@ public class PuzzleManager : MonoBehaviour
         if (targetGrid == null)
             return false;
 
+        if (targetGrid.door != null && targetGrid.door.doorType == DoorType.Door)
+        {
+            return true;
+        }
+
         if (targetGrid.door != null && targetGrid.door.doorType == DoorType.Trapdoor)
         {
             return targetGrid.hasPlatform;
