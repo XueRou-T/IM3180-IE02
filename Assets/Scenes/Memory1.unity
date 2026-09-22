@@ -715,7 +715,7 @@ MonoBehaviour:
   DialogueText: {fileID: 990184054}
   Sentences:
   - testing
-  - hello
+  - wassup
   - 123
   DialogueSpeed: 0.05
 --- !u!4 &1467357425
