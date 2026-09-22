@@ -306,7 +306,7 @@ MonoBehaviour:
   SpeakerPortraitImage: {fileID: 1586926057}
   DialogueText: {fileID: 1698693176}
   DialogueLines:
-  - SpeakerName: John
+  - SpeakerName: Johnathan
     SpeakerPortrait: {fileID: -4281445024243405800, guid: 68894ace3f02b4e2db4eef2dc5caa278, type: 3}
     Sentence: WHATSUP
   - SpeakerName: Sharon
@@ -331,6 +331,7 @@ MonoBehaviour:
     Sentence: 
   - SpeakerName: 
     SpeakerPortrait: {fileID: 0}
+    Sentence: 
   - SpeakerName: 
     SpeakerPortrait: {fileID: 0}
     Sentence: 
