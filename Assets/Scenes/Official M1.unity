@@ -307,37 +307,26 @@ MonoBehaviour:
   DialogueText: {fileID: 1698693176}
   DialogueLines:
   - SpeakerName: Johnathan
-    SpeakerPortrait: {fileID: -4281445024243405800, guid: 68894ace3f02b4e2db4eef2dc5caa278, type: 3}
-    Sentence: WHATSUP
+    SpeakerPortrait: {fileID: -4281445024243405800, guid: e3f97b872daa05946a24f0a862540432, type: 3}
+    Sentence: What are you up to?
   - SpeakerName: Sharon
     SpeakerPortrait: {fileID: -2353376327185201564, guid: d68c346715fff4c4c8f2b9d43f23ff93, type: 3}
-    Sentence: 'nth
-
-'
-  - SpeakerName: 
-    SpeakerPortrait: {fileID: 0}
-    Sentence: 
-  - SpeakerName: 
-    SpeakerPortrait: {fileID: 0}
-    Sentence: 
-  - SpeakerName: 
-    SpeakerPortrait: {fileID: 0}
-    Sentence: 
-  - SpeakerName: 
-    SpeakerPortrait: {fileID: 0}
-    Sentence: 
-  - SpeakerName: 
-    SpeakerPortrait: {fileID: 0}
-    Sentence: 
-  - SpeakerName: 
-    SpeakerPortrait: {fileID: 0}
-    Sentence: 
-  - SpeakerName: 
-    SpeakerPortrait: {fileID: 0}
-    Sentence: 
-  - SpeakerName: 
-    SpeakerPortrait: {fileID: 0}
-    Sentence: 
+    Sentence: I bought some tulips to decorate our home!
+  - SpeakerName: Johnathan
+    SpeakerPortrait: {fileID: -1301921001619438931, guid: 4a9f879367dd64240a2fcef9e96d45c4, type: 3}
+    Sentence: 'Oh... What''s the special occasion? '
+  - SpeakerName: Sharon
+    SpeakerPortrait: {fileID: -2353376327185201564, guid: d68c346715fff4c4c8f2b9d43f23ff93, type: 3}
+    Sentence: 'Just redecorating the house for the baby! '
+  - SpeakerName: Johnathan
+    SpeakerPortrait: {fileID: -1301921001619438931, guid: 4a9f879367dd64240a2fcef9e96d45c4, type: 3}
+    Sentence: (Walking away...)
+  - SpeakerName: Sharon
+    SpeakerPortrait: {fileID: -2353376327185201564, guid: d68c346715fff4c4c8f2b9d43f23ff93, type: 3}
+    Sentence: And they're my favourite flowers...
+  - SpeakerName: Johnathan
+    SpeakerPortrait: {fileID: -8984412352856763439, guid: daacae5145ad49d458d540ef82b522cf, type: 3}
+    Sentence: ...
   DialogueSpeed: 0.05
 --- !u!4 &559386767
 Transform:
