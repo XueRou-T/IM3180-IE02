@@ -50,6 +50,8 @@ public class PuzzlePlayerMovement : MonoBehaviour
                 isMoving = false;
                 player.isFalling = false;
                 player.isClimbing = false;
+
+                puzzleManager.playerAnimator.StopAllAnimation();
             }
 
             return;
