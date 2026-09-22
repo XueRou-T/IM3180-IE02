@@ -1,0 +1,67 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class DestinationChoice : MonoBehaviour
+{
+    public static DestinationChoice Instance;
+    public static bool IsChoiceOpen = false;
+
+    public CanvasGroup choicePanelGroup;
+    public GameObject labButton;
+    public GameObject houseButton;
+    public GameObject hawkerButton;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
+    void Start()
+    {
+        SetPanelVisible(false);
+    }
+
+    public void OpenChoice()
+    {
+        SetPanelVisible(true);
+        IsChoiceOpen = true;
+
+        string currentScene = SceneManager.GetActiveScene().name;
+        labButton.SetActive(currentScene != "Lab");
+        houseButton.SetActive(currentScene != "House");
+        hawkerButton.SetActive(currentScene != "HawkerCentre");
+    }
+
+    public void GoToLab() { LoadDestination("Lab"); }
+    public void GoToHouse() { LoadDestination("House"); }
+    public void GoToHawker() { LoadDestination("HawkerCentre"); }
+
+    void LoadDestination(string sceneName)
+    {
+        PlayerPersistence.nextSpawnPointName = "SpawnPoint";
+        SetPanelVisible(false);
+        IsChoiceOpen = false;
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void CancelChoice()
+    {
+        SetPanelVisible(false);
+        IsChoiceOpen = false;
+    }
+
+    void SetPanelVisible(bool visible)
+    {
+        choicePanelGroup.alpha = visible ? 1f : 0f;
+        choicePanelGroup.interactable = visible;
+        choicePanelGroup.blocksRaycasts = visible;
+    }
+}

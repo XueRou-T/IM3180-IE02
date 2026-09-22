@@ -45,8 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Don't process movement input while the puzzle UI is open
-        if (LaptopPuzzle.IsPuzzleOpen)
+        if (LaptopPuzzle.IsPuzzleOpen || DestinationChoice.IsChoiceOpen)
         {
             moveInput = Vector2.zero;
             return;
