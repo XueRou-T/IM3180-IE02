@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c34a033555e4645e782879a6c048a9a2
+guid: 56c5f190b84e1e244bad6aff4d65c646
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8366686200752546876
-    second: bead-pattern copy 2_0
+      213: 3407240004335824135
+    second: PuzzleBackground1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bead-pattern copy 2_0
+      name: PuzzleBackground1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1294
-        height: 1458
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c34a40f55c07c1470800000000000000
-      internalID: 8366686200752546876
+      spriteID: 70defea4bb2f84f20800000000000000
+      internalID: 3407240004335824135
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bead-pattern copy 2_0: 8366686200752546876
+      PuzzleBackground1_0: 3407240004335824135
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
