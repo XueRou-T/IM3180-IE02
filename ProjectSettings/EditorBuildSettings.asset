@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lab.unity
     guid: fb8484ec80c8a134ba93292d52be9e1f
+  - enabled: 1
+    path: Assets/Scenes/HawkerCentre.unity
+    guid: 79ef86ef1134aa44f8dfdd61a286c235
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -4,7 +4,7 @@ using TMPro;
 public class LaptopInteract : MonoBehaviour
 {
     public TMP_Text promptText;
-    public GameObject puzzlePanel; // drag the puzzle UI panel here
+    public GameObject loginPanel;
 
     [Header("Lock Settings")]
     public bool requiresUnlock = true;
@@ -27,7 +27,6 @@ public class LaptopInteract : MonoBehaviour
         baseColor = sr.color;
         promptText.text = "Laptop";
 
-        // If puzzle was already solved before (e.g. scene reload), remember that
         if (GameManager.Instance != null && GameManager.Instance.HasItem("LaptopSolved"))
         {
             isSolved = true;
@@ -77,8 +76,7 @@ public class LaptopInteract : MonoBehaviour
 
     void OpenPuzzle()
     {
-        puzzlePanel.SetActive(true);
-        LaptopPuzzle.IsPuzzleOpen = true;
+        loginPanel.SetActive(true);
     }
 
     void OnTriggerEnter2D(Collider2D other)
