@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: c94257c3da4d01d449c987d0d1506865, type: 3}
+  m_Sprite: {fileID: 2014383968, guid: 49b03ab2aec88444e9f9ef313ee96219, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,5 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f00300014f20a444b9add665b8c3506f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleDoor
+  initiallyOpen: 0
   isOpen: 0
   gridManager: {fileID: 0}
+  doorType: 0
