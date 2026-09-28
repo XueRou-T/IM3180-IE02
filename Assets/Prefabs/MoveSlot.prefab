@@ -88,7 +88,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 3296059887323227081, guid: e36805a2312b84d4ba0e3b66f909a856, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,13 +111,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveSlotUI
   icon_Image: {fileID: 8005971018403751705}
-  icon_Default: {fileID: 21300000, guid: e76bc8b3919965246bcd52482f579419, type: 3}
+  icon_Default: {fileID: 3296059887323227081, guid: e36805a2312b84d4ba0e3b66f909a856, type: 3}
   icon_MoveLeft: {fileID: 21300000, guid: f46e859f7a6504643a9c56258aea15ae, type: 3}
   icon_MoveRight: {fileID: 21300000, guid: b03db06b07c4bc144babe01e0f692611, type: 3}
   icon_MoveUp: {fileID: 21300000, guid: 8a7558b658ebd0647acc163220c13795, type: 3}
   icon_MoveDown: {fileID: 21300000, guid: 353360c1c8f0cef4abfef22a3f3dc7fb, type: 3}
-  icon_JumpLeft: {fileID: 21300000, guid: cfc14b4ef12b20141a1a6b1068e16ae2, type: 3}
-  icon_JumpRight: {fileID: 21300000, guid: ec959411e487eeb4ab643f3f7735985d, type: 3}
 --- !u!222 &464064962044130859
 CanvasRenderer:
   m_ObjectHideFlags: 0
