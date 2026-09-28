@@ -20,6 +20,9 @@ public class PuzzleDoor : MonoBehaviour
         {
             gridManager.SetPlatform(GetPosition(), !isOpen);
         }
+
+        if (isOpen) gameObject.SetActive(false);
+        else gameObject.SetActive(true);
     }
     public void ToggleDoor()
     {

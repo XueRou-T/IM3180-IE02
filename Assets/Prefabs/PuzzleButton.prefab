@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 8267469166192536160}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 9ae1b9d42d3d56b43a4f24b7720fbe91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 24e2e59163264554384b64fad4bb5d74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108,5 +108,5 @@ MonoBehaviour:
   connectedDoor: {fileID: 0}
   isPressed: 0
   buttonPosition: {x: 0, y: 0}
-  buttonPressedSprite: {fileID: 21300000, guid: 057b11039c319ae4b9a3ae062393e248, type: 3}
-  buttonReleasedSprite: {fileID: 21300000, guid: 9ae1b9d42d3d56b43a4f24b7720fbe91, type: 3}
+  buttonPressedSprite: {fileID: 21300000, guid: 97e55fb41d6330843b14d243b10f59ab, type: 3}
+  buttonReleasedSprite: {fileID: 21300000, guid: 24e2e59163264554384b64fad4bb5d74, type: 3}

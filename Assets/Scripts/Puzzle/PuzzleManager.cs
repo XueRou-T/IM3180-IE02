@@ -227,7 +227,7 @@ public class PuzzleManager : MonoBehaviour
                     return;
                 }
                 
-                shadowTargetPosition += Vector2Int.up;
+                //shadowTargetPosition += Vector2Int.up;
                
 
                 break;
