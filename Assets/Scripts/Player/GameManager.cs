@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     // Notes/clues collected as text, e.g. security question answers found in other scenes
     private List<string> collectedNotes = new List<string>();
 
+    // Flags: internal state tracking that should NOT appear in the visible inventory
+    private List<string> flags = new List<string>();
+
     void Awake()
     {
         // Singleton pattern: only one GameManager should ever exist
@@ -55,6 +58,20 @@ public class GameManager : MonoBehaviour
             collectedNotes.Add(noteText);
             Debug.Log("Note added: " + noteText);
         }
+    }
+
+    public void SetFlag(string flagName)
+    {
+        if (!flags.Contains(flagName))
+        {
+            flags.Add(flagName);
+            Debug.Log("Flag set: " + flagName);
+        }
+    }
+
+    public bool HasFlag(string flagName)
+    {
+        return flags.Contains(flagName);
     }
 
     public List<string> GetAllItems()
