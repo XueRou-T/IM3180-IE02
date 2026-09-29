@@ -25,6 +25,7 @@ public class PuzzleManager : MonoBehaviour
     private bool shadowStarted;
     private int shadowMoveIndex;
     private bool gameOver = false;
+    private PuzzlePlayerMoveType lastMoveType;
 
     void Start()
     {
@@ -92,7 +93,7 @@ public class PuzzleManager : MonoBehaviour
 
         if (targetGrid == null)
         {
-            StartFall();
+            StartFall(moveType);
             return;
         }
 
@@ -125,13 +126,14 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
-            StartFall();
+            StartFall(moveType);
         }
     }
 
     void MovePlayer(Vector2Int targetPosition, PuzzlePlayerMoveType moveType)
     {
         moveCount++;
+        lastMoveType = moveType;
 
         if (moveType == PuzzlePlayerMoveType.Left)
         {
@@ -227,7 +229,7 @@ public class PuzzleManager : MonoBehaviour
                     return;
                 }
                 
-                shadowTargetPosition += Vector2Int.up;
+                //shadowTargetPosition += Vector2Int.up;
                
 
                 break;
@@ -293,13 +295,19 @@ public class PuzzleManager : MonoBehaviour
         return startPosition;
     }
 
-    void StartFall()
+    void StartFall(PuzzlePlayerMoveType direction)
     {
         if (player.isFalling)
             return;
 
         player.isFalling = true;
 
+        if (direction == PuzzlePlayerMoveType.Left)
+            playerAnimator.MoveLeft();
+        if (direction == PuzzlePlayerMoveType.Right)
+            playerAnimator.MoveRight();
+        playerMovement.FallTo(direction);
+        
         Debug.Log("Game Over");
     }
 
@@ -461,13 +469,13 @@ public class PuzzleManager : MonoBehaviour
 
         if (landingPosition == player.playerPosition)
         {
-            StartFall();
+            StartFall(lastMoveType);
             return;
         }
 
         if (IsDoorBlockedAfterMove(landingPosition, landingPosition, shadow.shadowPosition))
         {
-            StartFall();
+            StartFall(lastMoveType);
             return;
         }
 
