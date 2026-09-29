@@ -18,8 +18,8 @@ public class LaptopPuzzle : MonoBehaviour
         string given1 = answer1Input.text.Trim();
         string given2 = answer2Input.text.Trim();
 
-        bool correct1 = string.Equals(given1, correctAnswer1, System.StringComparison.OrdinalIgnoreCase);
-        bool correct2 = string.Equals(given2, correctAnswer2, System.StringComparison.OrdinalIgnoreCase);
+        bool correct1 = string.Equals(given1, correctAnswer1.Trim(), System.StringComparison.OrdinalIgnoreCase);
+        bool correct2 = string.Equals(given2, correctAnswer2.Trim(), System.StringComparison.OrdinalIgnoreCase);
 
         if (correct1 && correct2)
         {
@@ -28,7 +28,7 @@ public class LaptopPuzzle : MonoBehaviour
 
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.AddItem("LaptopSolved");
+                GameManager.Instance.SetFlag("LaptopSolved");
             }
 
             // Placeholder for later: trigger the memory-reveal video/cutscene here

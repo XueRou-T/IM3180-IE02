@@ -21,8 +21,7 @@ public class SceneDoor : MonoBehaviour
         if (!requiresUnlock) isUnlocked = true;
         if (promptText != null) promptText.text = promptMessage;
 
-        // Auto-find the persistent choice panel if not manually assigned
-        choiceScript = DestinationChoice.Instance;
+        choiceScript = UIPersistence.Instance != null ? UIPersistence.Instance.destinationChoice : null;
     }
 
     void Update()

@@ -3,26 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class DestinationChoice : MonoBehaviour
 {
-    public static DestinationChoice Instance;
     public static bool IsChoiceOpen = false;
 
     public CanvasGroup choicePanelGroup;
     public GameObject labButton;
     public GameObject houseButton;
     public GameObject hawkerButton;
-
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-    }
 
     void Start()
     {
