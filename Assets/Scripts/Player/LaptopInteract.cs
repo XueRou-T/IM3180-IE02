@@ -27,7 +27,7 @@ public class LaptopInteract : MonoBehaviour
         baseColor = sr.color;
         promptText.text = "Laptop";
 
-        if (GameManager.Instance != null && GameManager.Instance.HasItem("LaptopSolved"))
+        if (GameManager.Instance != null && GameManager.Instance.HasFlag("LaptopSolved"))
         {
             isSolved = true;
         }
@@ -45,9 +45,16 @@ public class LaptopInteract : MonoBehaviour
             PulseGlow();
         }
 
-        if (playerInRange && isUnlocked && !isSolved && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && isUnlocked && !LaptopPuzzle.IsPuzzleOpen && Input.GetKeyDown(KeyCode.E))
         {
-            OpenPuzzle();
+            if (isSolved)
+            {
+                OpenFiles();
+            }
+            else
+            {
+                OpenPuzzle();
+            }
         }
     }
 
@@ -76,14 +83,24 @@ public class LaptopInteract : MonoBehaviour
 
     void OpenPuzzle()
     {
-        loginPanel.SetActive(true);
+        if (UIPersistence.Instance != null && UIPersistence.Instance.laptopLogin != null)
+        {
+            UIPersistence.Instance.laptopLogin.gameObject.SetActive(true);
+            LaptopPuzzle.IsPuzzleOpen = true;
+        }
+    }
+
+    void OpenFiles()
+    {
+        Debug.Log("Files screen open here.");
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && isUnlocked && !isSolved)
+        if (other.CompareTag("Player") && isUnlocked)
         {
             playerInRange = true;
+            promptText.text = isSolved ? "Access Files" : "Laptop";
             promptText.gameObject.SetActive(true);
         }
     }
