@@ -142,7 +142,8 @@ public class PuzzlePlayerMovement : MonoBehaviour
 
     void GoDown()
     {
-        puzzleManager.TryMoveDown();
+        targetPosition = player.playerPosition + Vector2Int.down;
+        TryMove(targetPosition, PuzzlePlayerMoveType.Down);
     }
 
     public void TryMove(Vector2Int targetPosition, PuzzlePlayerMoveType moveType)
