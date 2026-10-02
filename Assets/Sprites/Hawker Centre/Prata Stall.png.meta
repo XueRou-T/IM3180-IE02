@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 278dcd063f04d7c4aa0ae2604d299776
+guid: d1507ed872cf87248b6ce26ea8c869e8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1699210435672511939
-    second: chickem rice stall_0
+      213: 4964535310798702811
+    second: empty hawker stall 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chickem rice stall_0
+      name: empty hawker stall 2_0
       rect:
         serializedVersion: 2
         x: 4
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3a6a1f8c113b68e0800000000000000
-      internalID: -1699210435672511939
+      spriteID: bd84a0bdf8295e440800000000000000
+      internalID: 4964535310798702811
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chickem rice stall_0: -1699210435672511939
+      empty hawker stall 2_0: 4964535310798702811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
