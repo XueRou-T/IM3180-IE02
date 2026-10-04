@@ -15,6 +15,7 @@ public class PuzzleManager : MonoBehaviour
     public PuzzleSpawnPoint shadowSpawnPoint;
     public PuzzlePlayerAnimator playerAnimator;
     public PuzzleShadowAnimator shadowAnimator;
+    public MinigameSFXManager minigameSFXManager;
 
     [Header("Move Tracking")]
     public int moveCount;
@@ -29,6 +30,8 @@ public class PuzzleManager : MonoBehaviour
     private Vector2Int lastPlayerPos;
     private Vector2Int lastShadowPos;
 
+    [Header("Next Scene")]
+    public string nextSceneName;
     void Start()
     {
         SetPlayerSpawn();
@@ -82,20 +85,30 @@ public class PuzzleManager : MonoBehaviour
         moveCount++;
         lastMoveType = moveType;
 
-        if (moveType == PuzzlePlayerMoveType.Left) playerAnimator.MoveLeft();
-        else if (moveType == PuzzlePlayerMoveType.Right) playerAnimator.MoveRight();
+        if (moveType == PuzzlePlayerMoveType.Left)
+        {
+            playerAnimator.MoveLeft();
+            minigameSFXManager.PlayWalkingSound();
+        }
+        else if (moveType == PuzzlePlayerMoveType.Right)
+        {
+            playerAnimator.MoveRight();
+            minigameSFXManager.PlayWalkingSound();
+        }
 
         if (moveType == PuzzlePlayerMoveType.Down)
         {
             player.isFalling = false;
             player.isClimbing = true;
             playerAnimator.MoveDown();
+            minigameSFXManager.PlayWalkingSound();
         }
         else if (moveType == PuzzlePlayerMoveType.Up)
         {
             player.isFalling = false;
             player.isClimbing = true;
             playerAnimator.MoveUp();
+            minigameSFXManager.PlayWalkingSound();
         }
 
         playerMovement.MoveTo(targetPosition);
@@ -354,6 +367,7 @@ public class PuzzleManager : MonoBehaviour
         if (currentGrid != null && currentGrid.goal != null)
         {
             Debug.Log("Reached Goal");
+            GoToNextScene();
         }
     }
 
@@ -374,5 +388,10 @@ public class PuzzleManager : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void GoToNextScene()
+    {
+        SceneManager.LoadScene(nextSceneName);
     }
 }
