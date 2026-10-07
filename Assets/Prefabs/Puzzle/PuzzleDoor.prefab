@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1812127519, guid: 268dd458dba28bb489cb5c284f1d0604, type: 3}
+  m_Sprite: {fileID: 2512015656075680509, guid: 2c8db6b8b34d78041b5d98ddd68f8a8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108,3 +108,7 @@ MonoBehaviour:
   isOpen: 0
   gridManager: {fileID: 0}
   doorType: 0
+  trapdoorOpened: {fileID: 89056045030928453, guid: 2c8db6b8b34d78041b5d98ddd68f8a8b, type: 3}
+  trapdoorClosed: {fileID: 8371794142061086048, guid: 2c8db6b8b34d78041b5d98ddd68f8a8b, type: 3}
+  doorOpened: {fileID: 1268436621409888761, guid: 2c8db6b8b34d78041b5d98ddd68f8a8b, type: 3}
+  doorClosed: {fileID: 2512015656075680509, guid: 2c8db6b8b34d78041b5d98ddd68f8a8b, type: 3}

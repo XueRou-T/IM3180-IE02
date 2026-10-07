@@ -1,256 +1,259 @@
 fileFormatVersion: 2
-guid: 268dd458dba28bb489cb5c284f1d0604
+guid: 2c8db6b8b34d78041b5d98ddd68f8a8b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6888756438569675735
-    second: New Piskel (1)_0
+      213: 7666513221243317089
+    second: Synapses_2_0
   - first:
-      213: 9173839873224666002
-    second: New Piskel (1)_1
+      213: -6951090769679826732
+    second: Synapses_2_1
   - first:
-      213: -745645855993587873
-    second: New Piskel (1)_2
+      213: -9041639696550117050
+    second: Synapses_2_2
   - first:
-      213: 4123733795721074919
-    second: New Piskel (1)_3
+      213: 8292852581009100088
+    second: Synapses_2_3
   - first:
-      213: -1753449832276896209
-    second: New Piskel (1)_4
+      213: 8371794142061086048
+    second: Synapses_2_4
   - first:
-      213: 3188600494121364513
-    second: New Piskel (1)_5
+      213: 89056045030928453
+    second: Synapses_2_5
   - first:
-      213: 393433629526434239
-    second: New Piskel (1)_6
+      213: 2512015656075680509
+    second: Synapses_2_6
   - first:
-      213: -6999936710424723473
-    second: New Piskel (1)_7
+      213: 1268436621409888761
+    second: Synapses_2_7
   - first:
-      213: 5940041773153359950
-    second: New Piskel (1)_8
+      213: -387180688804633036
+    second: Synapses_2_8
   - first:
-      213: 7506680604602429903
-    second: New Piskel (1)_9
+      213: -1451103023242287219
+    second: Synapses_2_9
   - first:
-      213: -8695545766370844827
-    second: New Piskel (1)_10
+      213: -7671118534338401515
+    second: Synapses_2_10
   - first:
-      213: 7137586956756217966
-    second: New Piskel (1)_11
+      213: 5087406446876133007
+    second: Synapses_2_11
   - first:
-      213: -1545029242027367301
-    second: New Piskel (1)_12
+      213: 5072713067772908230
+    second: Synapses_2_12
   - first:
-      213: 8101533981685690433
-    second: New Piskel (1)_13
+      213: 7105984625581469027
+    second: Synapses_2_13
   - first:
-      213: 4801293961129559398
-    second: New Piskel (1)_14
+      213: 4053014379020001161
+    second: Synapses_2_14
   - first:
-      213: -6430870321733951535
-    second: New Piskel (1)_15
+      213: 8330212199874528019
+    second: Synapses_2_15
   - first:
-      213: 3573209282882095603
-    second: New Piskel (1)_16
+      213: -4378903437104205702
+    second: Synapses_2_16
   - first:
-      213: -5327827185363330059
-    second: New Piskel (1)_17
+      213: 959480572580423082
+    second: Synapses_2_17
   - first:
-      213: -4224503851982913176
-    second: New Piskel (1)_18
+      213: 3061256999374495417
+    second: Synapses_2_18
   - first:
-      213: -7014553719434779897
-    second: New Piskel (1)_19
+      213: 9164591436471851142
+    second: Synapses_2_19
   - first:
-      213: 5949592847331480888
-    second: New Piskel (1)_20
+      213: -4730520206064996590
+    second: Synapses_2_20
   - first:
-      213: 4170087483869172866
-    second: New Piskel (1)_21
+      213: -2987635598959608984
+    second: Synapses_2_21
   - first:
-      213: -8221978525592423953
-    second: New Piskel (1)_22
+      213: -3591652418443079860
+    second: Synapses_2_22
   - first:
-      213: 8176395970327938649
-    second: New Piskel (1)_23
+      213: 8418729499676862767
+    second: Synapses_2_23
   - first:
-      213: 462394856950266495
-    second: New Piskel (1)_24
+      213: -279930142948185651
+    second: Synapses_2_24
   - first:
-      213: 7451424815457516745
-    second: New Piskel (1)_25
+      213: -4743111956232576181
+    second: Synapses_2_25
   - first:
-      213: -5537965251174010096
-    second: New Piskel (1)_26
+      213: -5140969884007046755
+    second: Synapses_2_26
   - first:
-      213: 9051925332781689180
-    second: New Piskel (1)_27
+      213: 2818876983901821606
+    second: Synapses_2_27
   - first:
-      213: -5008392639725783772
-    second: New Piskel (1)_28
+      213: -483740561926249618
+    second: Synapses_2_28
   - first:
-      213: -7781140172301390271
-    second: New Piskel (1)_29
+      213: -68618837195633274
+    second: Synapses_2_29
   - first:
-      213: 8370049089200813822
-    second: New Piskel (1)_30
+      213: -15208314957769071
+    second: Synapses_2_30
   - first:
-      213: 4600400718216220818
-    second: New Piskel (1)_31
+      213: 4027856333668339913
+    second: Synapses_2_31
   - first:
-      213: 7257386416912100850
-    second: New Piskel (1)_32
+      213: -5231560245908894021
+    second: Synapses_2_32
   - first:
-      213: -8797904050458391657
-    second: New Piskel (1)_33
+      213: -3979823101074126465
+    second: Synapses_2_33
   - first:
-      213: -5906794389571790742
-    second: New Piskel (1)_34
+      213: 7305937706633121732
+    second: Synapses_2_34
   - first:
-      213: 76548887087707164
-    second: New Piskel (1)_35
+      213: -8982263006851646041
+    second: Synapses_2_35
   - first:
-      213: -3451913875344004114
-    second: New Piskel (1)_36
+      213: 2323444542079735950
+    second: Synapses_2_36
   - first:
-      213: 3556458318164269345
-    second: New Piskel (1)_37
+      213: -6265053506812570424
+    second: Synapses_2_37
   - first:
-      213: -395288509304432329
-    second: New Piskel (1)_38
+      213: -2310912152580951207
+    second: Synapses_2_38
   - first:
-      213: 327181177265494108
-    second: New Piskel (1)_39
+      213: -8417421285277090988
+    second: Synapses_2_39
   - first:
-      213: -1718308461442877282
-    second: New Piskel (1)_40
+      213: 9018320969195240520
+    second: Synapses_2_40
   - first:
-      213: -4102021159856012792
-    second: New Piskel (1)_41
+      213: 506522143347414700
+    second: Synapses_2_41
   - first:
-      213: -363458246745632159
-    second: New Piskel (1)_42
+      213: -4289239013288772721
+    second: Synapses_2_42
   - first:
-      213: -80698305844539923
-    second: New Piskel (1)_43
+      213: 5233868504381254211
+    second: Synapses_2_43
   - first:
-      213: 6788647821448529078
-    second: New Piskel (1)_44
+      213: 6133041854689190771
+    second: Synapses_2_44
   - first:
-      213: -7287756389217138327
-    second: New Piskel (1)_45
+      213: -2892832283757568538
+    second: Synapses_2_45
   - first:
-      213: 1844041657970528365
-    second: New Piskel (1)_46
+      213: -5659335842242613405
+    second: Synapses_2_46
   - first:
-      213: 928507840171069670
-    second: New Piskel (1)_47
+      213: 6372487425540856345
+    second: Synapses_2_47
   - first:
-      213: 4573950580702288645
-    second: New Piskel (1)_48
+      213: -7808420161345425652
+    second: Synapses_2_48
   - first:
-      213: 4309044938645981320
-    second: New Piskel (1)_49
+      213: -4376731559189989582
+    second: Synapses_2_49
   - first:
-      213: 7872710135569193049
-    second: New Piskel (1)_50
+      213: 4830823747197145054
+    second: Synapses_2_50
   - first:
-      213: 7047174933492348939
-    second: New Piskel (1)_51
+      213: 4519932728795385371
+    second: Synapses_2_51
   - first:
-      213: -7858534486600234144
-    second: New Piskel (1)_52
+      213: 3360537774196631582
+    second: Synapses_2_52
   - first:
-      213: 6920983870424214873
-    second: New Piskel (1)_53
+      213: 8360910125929534690
+    second: Synapses_2_53
   - first:
-      213: -6911749841580899697
-    second: New Piskel (1)_54
+      213: 5820145437469999296
+    second: Synapses_2_54
   - first:
-      213: -5498778571012609379
-    second: New Piskel (1)_55
+      213: -6966230003475787137
+    second: Synapses_2_55
   - first:
-      213: 3487059061273636421
-    second: New Piskel (1)_56
+      213: 657116387676271062
+    second: Synapses_2_56
   - first:
-      213: 8236968232206133035
-    second: New Piskel (1)_57
+      213: -157915618117726846
+    second: Synapses_2_57
   - first:
-      213: -7558157591359337805
-    second: New Piskel (1)_58
+      213: 1561424115852207262
+    second: Synapses_2_58
   - first:
-      213: 162122377718283167
-    second: New Piskel (1)_59
+      213: -6119622149483151008
+    second: Synapses_2_59
   - first:
-      213: 8074570563051871884
-    second: New Piskel (1)_60
+      213: -8038063661950712256
+    second: Synapses_2_60
   - first:
-      213: 8986697218138539577
-    second: New Piskel (1)_61
+      213: 9089588014981979204
+    second: Synapses_2_61
   - first:
-      213: -8966909100245943194
-    second: New Piskel (1)_62
+      213: -7071314385341899521
+    second: Synapses_2_62
   - first:
-      213: 7678336280838398975
-    second: New Piskel (1)_63
+      213: -8155837039477761338
+    second: Synapses_2_63
   - first:
-      213: 7970246666276661644
-    second: New Piskel (1)_64
+      213: 8676251513842516265
+    second: Synapses_2_64
   - first:
-      213: -3861613004895918575
-    second: New Piskel (1)_65
+      213: 3349800856766737666
+    second: Synapses_2_65
   - first:
-      213: 3176687965132428638
-    second: New Piskel (1)_66
+      213: 6834216832841412706
+    second: Synapses_2_66
   - first:
-      213: 7954151402838368696
-    second: New Piskel (1)_67
+      213: -2662065723892107237
+    second: Synapses_2_67
   - first:
-      213: 4891673569725576094
-    second: New Piskel (1)_68
+      213: 6031550614074395484
+    second: Synapses_2_68
   - first:
-      213: 6472107754072297054
-    second: New Piskel (1)_69
+      213: -4462152681321462341
+    second: Synapses_2_69
   - first:
-      213: 1719080838930479944
-    second: New Piskel (1)_70
+      213: 9184886320483362235
+    second: Synapses_2_70
   - first:
-      213: 2387859162490352062
-    second: New Piskel (1)_71
+      213: 4439966025404216115
+    second: Synapses_2_71
   - first:
-      213: -7840135907929504399
-    second: New Piskel (1)_72
+      213: -788267104910650459
+    second: Synapses_2_72
   - first:
-      213: 7914372008274346995
-    second: New Piskel (1)_73
+      213: -8744996688494458729
+    second: Synapses_2_73
   - first:
-      213: -4953395565520875762
-    second: New Piskel (1)_74
+      213: -8722104128657089664
+    second: Synapses_2_74
   - first:
-      213: -7705988259636774296
-    second: New Piskel (1)_75
+      213: 2057832460701920425
+    second: Synapses_2_75
   - first:
-      213: 865553881898425349
-    second: New Piskel (1)_76
+      213: -4704313891883491924
+    second: Synapses_2_76
   - first:
-      213: -3175927291662187872
-    second: New Piskel (1)_77
+      213: -5824169873735851721
+    second: Synapses_2_77
   - first:
-      213: -140875653999488420
-    second: New Piskel (1)_78
+      213: -2658947849065573377
+    second: Synapses_2_78
   - first:
-      213: 4636151924938081678
-    second: New Piskel (1)_79
+      213: -2058490355942015292
+    second: Synapses_2_79
   - first:
-      213: -3560226236515696304
-    second: New Piskel (1)_80
+      213: -1779459457550644032
+    second: Synapses_2_80
   - first:
-      213: -6597131431283346153
-    second: New Piskel (1)_81
+      213: 687077859684745169
+    second: Synapses_2_81
   - first:
-      213: -5489828521690384103
-    second: New Piskel (1)_82
+      213: -1409201920003484816
+    second: Synapses_2_82
+  - first:
+      213: -3778087466250114913
+    second: Synapses_2_83
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -346,7 +349,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MinigameTileset_0
+      name: Synapses_2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -359,82 +362,82 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cfb71f8eefbead84ea7b7916d0b5f214
-      internalID: 1036312793
+      spriteID: 16b2b02e72de46a60800000000000000
+      internalID: 7666513221243317089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_1
+      name: Synapses_2_1
       rect:
         serializedVersion: 2
         x: 480
         y: 1440
         width: 480
         height: 480
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 76456f55d7eae0f44bfeece4c483d9fc
-      internalID: 462311230
+      spriteID: 4d0ccbff5c3c88f90800000000000000
+      internalID: -6951090769679826732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_2
+      name: Synapses_2_2
       rect:
         serializedVersion: 2
         x: 960
         y: 1440
         width: 480
         height: 480
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bcd5dfa024735f04ca0b4c931bfb21b1
-      internalID: -193179024
+      spriteID: 6414f04c994a58280800000000000000
+      internalID: -9041639696550117050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_3
+      name: Synapses_2_3
       rect:
         serializedVersion: 2
         x: 1440
         y: 1440
         width: 480
         height: 480
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 110a6c636ec90b24884153e5c4706c42
-      internalID: -1549528889
+      spriteID: 83d8ab92c71261370800000000000000
+      internalID: 8292852581009100088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_4
+      name: Synapses_2_4
       rect:
         serializedVersion: 2
         x: 0
@@ -447,38 +450,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2e1115a58849dda449897f88bc6760b3
-      internalID: -2036579187
+      spriteID: 0654f32aa669e2470800000000000000
+      internalID: 8371794142061086048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_5
+      name: Synapses_2_5
       rect:
         serializedVersion: 2
         x: 480
         y: 960
         width: 480
         height: 480
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7ec0bb2a299940641b15ba385b28165d
-      internalID: -1812127519
+      spriteID: 5407b2940046c3100800000000000000
+      internalID: 89056045030928453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_6
+      name: Synapses_2_6
       rect:
         serializedVersion: 2
         x: 960
@@ -491,38 +494,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fa553c5618b56df40a9c8c50f6aa8352
-      internalID: -470647683
+      spriteID: dfa5c921ee87cd220800000000000000
+      internalID: 2512015656075680509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_7
+      name: Synapses_2_7
       rect:
         serializedVersion: 2
         x: 1440
         y: 960
         width: 480
         height: 480
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 70ce94e282e70504f97c7584935eb8d0
-      internalID: -897335407
+      spriteID: 9f9ab3ff2646a9110800000000000000
+      internalID: 1268436621409888761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_8
+      name: Synapses_2_8
       rect:
         serializedVersion: 2
         x: 0
@@ -535,16 +538,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f5f6f2ae72632844fabbb75488d8f9d0
-      internalID: -1342320185
+      spriteID: 436a8e3073570aaf0800000000000000
+      internalID: -387180688804633036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_9
+      name: Synapses_2_9
       rect:
         serializedVersion: 2
         x: 480
@@ -557,16 +560,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7a6731e8cc41d22428115185f93f8642
-      internalID: -842781654
+      spriteID: d87e5271d75acdbe0800000000000000
+      internalID: -1451103023242287219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_10
+      name: Synapses_2_10
       rect:
         serializedVersion: 2
         x: 960
@@ -579,16 +582,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 837e82f77c943d447b64499356e3ef0e
-      internalID: 1619634737
+      spriteID: 51b28da1656ba8590800000000000000
+      internalID: -7671118534338401515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_11
+      name: Synapses_2_11
       rect:
         serializedVersion: 2
         x: 1440
@@ -601,16 +604,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 50dbb64fa68577845a753d13b91c29ae
-      internalID: 990254489
+      spriteID: f86851e85391a9640800000000000000
+      internalID: 5087406446876133007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_12
+      name: Synapses_2_12
       rect:
         serializedVersion: 2
         x: 0
@@ -623,19 +626,19 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f2b67dafc468b364386fc52ac93e0f3f
-      internalID: -1637650692
+      spriteID: 6c21614a8a5e56640800000000000000
+      internalID: 5072713067772908230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MinigameTileset_13
+      name: Synapses_2_13
       rect:
         serializedVersion: 2
-        x: 480
+        x: 479
         y: 0
         width: 480
         height: 480
@@ -645,10 +648,32 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: eef9a2f69a20c774281d6c4b2f6bd893
-      internalID: -1083720817
+      spriteID: 36dab2b2e578d9260800000000000000
+      internalID: 7105984625581469027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_14
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f990b9a133f3830800000000000000
+      internalID: 4053014379020001161
       vertices: []
       indices: 
       edges: []
@@ -657,7 +682,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dc5703f7238d2e84786f84c11e53ac82
+    spriteID: 80ae4cd6e72c89746b621e61b8e522e0
     internalID: 0
     vertices: []
     indices: 
@@ -669,20 +694,21 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":480.0,"y":480.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      MinigameTileset_0: 1036312793
-      MinigameTileset_1: 462311230
-      MinigameTileset_10: 1619634737
-      MinigameTileset_11: 990254489
-      MinigameTileset_12: -1637650692
-      MinigameTileset_13: -1083720817
-      MinigameTileset_2: -193179024
-      MinigameTileset_3: -1549528889
-      MinigameTileset_4: -2036579187
-      MinigameTileset_5: -1812127519
-      MinigameTileset_6: -470647683
-      MinigameTileset_7: -897335407
-      MinigameTileset_8: -1342320185
-      MinigameTileset_9: -842781654
+      Synapses_2_0: 7666513221243317089
+      Synapses_2_1: -6951090769679826732
+      Synapses_2_10: -7671118534338401515
+      Synapses_2_11: 5087406446876133007
+      Synapses_2_12: 5072713067772908230
+      Synapses_2_13: 7105984625581469027
+      Synapses_2_14: 4053014379020001161
+      Synapses_2_2: -9041639696550117050
+      Synapses_2_3: 8292852581009100088
+      Synapses_2_4: 8371794142061086048
+      Synapses_2_5: 89056045030928453
+      Synapses_2_6: 2512015656075680509
+      Synapses_2_7: 1268436621409888761
+      Synapses_2_8: -387180688804633036
+      Synapses_2_9: -1451103023242287219
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
