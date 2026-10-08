@@ -55,7 +55,7 @@ public class PuzzleDoor : MonoBehaviour
         else if (doorType == DoorType.Trapdoor)
         {
             gridManager.SetPlatform(GetPosition(), false);
-            spriteRenderer.sprite = trapdoorClosed;
+            spriteRenderer.sprite = trapdoorOpened;
         }
     }
 
@@ -74,7 +74,7 @@ public class PuzzleDoor : MonoBehaviour
         else if (doorType==DoorType.Trapdoor)
         {
             gridManager.SetPlatform(GetPosition(), true);
-            spriteRenderer.sprite = trapdoorOpened;
+            spriteRenderer.sprite = trapdoorClosed;
         }
     }
 
