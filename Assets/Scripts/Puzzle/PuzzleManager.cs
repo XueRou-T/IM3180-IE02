@@ -337,6 +337,7 @@ public class PuzzleManager : MonoBehaviour
         {
             Debug.Log("Shadow gone");
             shadow.gameObject.SetActive(false);
+            shadowStarted = false;
         }
     }
 

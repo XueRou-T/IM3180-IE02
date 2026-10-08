@@ -109,7 +109,7 @@ MonoBehaviour:
   puzzleManager: {fileID: 0}
   minimumY: -5
   fallSpeed: 5
-  moveSpeed: 8
+  moveSpeed: 10
 --- !u!114 &7310307924844190651
 MonoBehaviour:
   m_ObjectHideFlags: 0
