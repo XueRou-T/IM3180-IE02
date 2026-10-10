@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -15,103 +11,122 @@ public class PuzzleManager : MonoBehaviour
     public GridManager gridManager;
     public PuzzleSpawnPoint spawnPoint;
     public PuzzleSpawnPoint shadowSpawnPoint;
-    public PuzzlePlayerAnimator playerAnimator;
-    public PuzzleShadowAnimator shadowAnimator;
-    public MinigameSFXManager minigameSFXManager;
+    
 
     [Header("Move Tracking")]
     public int moveCount;
     public int shadowMoveCount = 5;
     public List<PuzzlePlayerMoveType> moveHistory = new List<PuzzlePlayerMoveType>();
     public MoveTrackerUI moveTrackerUI;
-
     private bool shadowStarted;
     private int shadowMoveIndex;
-    private bool gameOver = false;
-    private PuzzlePlayerMoveType lastMoveType;
-    private Vector2Int lastPlayerPos;
-    private Vector2Int lastShadowPos;
 
-    [Header("Next Scene")]
-    public string nextSceneName;
     void Start()
     {
         SetPlayerSpawn();
-        Invoke(nameof(ProcessTurnLoop), 0.1f);
+        PlayerMoved();
     }
 
     void SetPlayerSpawn()
     {
         Vector2Int spawnPosition = spawnPoint.GetPosition();
+
         player.playerPosition = spawnPosition;
-        player.transform.position = new Vector3(spawnPosition.x, spawnPosition.y, player.transform.position.z);
+
+        player.transform.position = new Vector3(
+            spawnPosition.x,
+            spawnPosition.y,
+            player.transform.position.z
+        );
     }
 
     void SpawnShadow()
     {
         shadow.gameObject.SetActive(true);
+
         Vector2Int spawnPosition = shadowSpawnPoint.GetPosition();
+
         shadow.shadowPosition = spawnPosition;
-        shadow.transform.position = new Vector3(spawnPosition.x, spawnPosition.y, shadow.transform.position.z);
+
+        shadow.transform.position = new Vector3(
+            spawnPosition.x,
+            spawnPosition.y,
+            shadow.transform.position.z
+        );
     }
+
 
     public void TryMovePlayer(Vector2Int targetPosition, PuzzlePlayerMoveType moveType)
     {
-        if (gameOver) return;
-
         GridData currentGrid = gridManager.GetGridData(player.playerPosition);
-        lastPlayerPos = player.playerPosition;
+
+        GridData targetGrid = gridManager.GetGridData(targetPosition);
 
         if (currentGrid != null)
         {
             if (targetPosition == player.playerPosition + Vector2Int.up && currentGrid.ladder_Up != null)
             {
-                ExecutePlayerMove(currentGrid.ladder_Up.GetEndPosition(), moveType);
-                return;
+                targetGrid = gridManager.GetGridData(currentGrid.ladder_Up.GetEndPosition());
+                if (!IsDoorBlockedAfterMove(currentGrid.ladder_Up.GetEndPosition(), currentGrid.ladder_Up.GetEndPosition(), shadow.shadowPosition))
+                {
+                    MovePlayer(currentGrid.ladder_Up.GetEndPosition(), PuzzlePlayerMoveType.Up);
+                    return;
+                }
             }
 
             if (targetPosition == player.playerPosition + Vector2Int.down && currentGrid.ladder_Down != null)
             {
-                ExecutePlayerMove(currentGrid.ladder_Down.GetStartPosition(), moveType);
-                return;
+                targetGrid = gridManager.GetGridData(currentGrid.ladder_Down.GetStartPosition());
+                if (!IsDoorBlockedAfterMove(currentGrid.ladder_Down.GetStartPosition(), currentGrid.ladder_Down.GetStartPosition(), shadow.shadowPosition))
+                {
+                    MovePlayer(currentGrid.ladder_Down.GetStartPosition(), PuzzlePlayerMoveType.Down);
+                    return;
+                }
             }
         }
 
-        if (moveType == PuzzlePlayerMoveType.Up || moveType == PuzzlePlayerMoveType.Down) return;
+        if (targetGrid == null)
+        {
+            StartFall();
+            return;
+        }
 
-        ExecutePlayerMove(targetPosition, moveType);
+        if(moveType == PuzzlePlayerMoveType.Up)
+        {
+            return;
+        }
+
+        if (IsDoorBlockedAfterMove(targetPosition, targetPosition, shadow.shadowPosition))
+        {
+            return;
+        }
+
+        if (HasPlatformAfterMove(targetPosition, targetPosition, shadow.shadowPosition))
+        {
+            MovePlayer(targetPosition, moveType);
+            return;
+        }
+
+        Vector2Int landingPosition = FindPlatformBelow(targetPosition, targetPosition, shadow.shadowPosition);
+
+        if (landingPosition != targetPosition)
+        {
+            GridData landingGrid = gridManager.GetGridData(landingPosition);
+
+            if (!IsDoorBlockedAfterMove(landingPosition, landingPosition, shadow.shadowPosition))
+            {
+                MovePlayer(landingPosition, moveType);
+            }
+        }
+        else
+        {
+            StartFall();
+        }
     }
 
-    void ExecutePlayerMove(Vector2Int targetPosition, PuzzlePlayerMoveType moveType)
+    void MovePlayer(Vector2Int targetPosition, PuzzlePlayerMoveType moveType)
     {
         moveCount++;
-        lastMoveType = moveType;
-
-        if (moveType == PuzzlePlayerMoveType.Left)
-        {
-            playerAnimator.MoveLeft();
-            minigameSFXManager.PlayWalkingSound();
-        }
-        else if (moveType == PuzzlePlayerMoveType.Right)
-        {
-            playerAnimator.MoveRight();
-            minigameSFXManager.PlayWalkingSound();
-        }
-
-        if (moveType == PuzzlePlayerMoveType.Down)
-        {
-            player.isFalling = false;
-            player.isClimbing = true;
-            playerAnimator.MoveDown();
-            minigameSFXManager.PlayWalkingSound();
-        }
-        else if (moveType == PuzzlePlayerMoveType.Up)
-        {
-            player.isFalling = false;
-            player.isClimbing = true;
-            playerAnimator.MoveUp();
-            minigameSFXManager.PlayWalkingSound();
-        }
 
         playerMovement.MoveTo(targetPosition);
 
@@ -127,145 +142,143 @@ public class PuzzleManager : MonoBehaviour
             }
         }
 
+        PlayerMoved();
+
         if (moveCount > shadowMoveCount && shadowStarted)
         {
             ExecuteNextShadowMove();
-        }
 
-        ProcessTurnLoop();
+            PlayerMoved();
+        }
     }
 
     void ExecuteNextShadowMove()
     {
-        if (shadowMoveIndex >= moveHistory.Count) return;
+        if (shadowMoveIndex >= moveHistory.Count)
+            return;
 
-        PuzzlePlayerMoveType move = moveHistory[shadowMoveIndex];
+        PuzzlePlayerMoveType move =
+            moveHistory[shadowMoveIndex];
+
         shadowMoveIndex++;
 
         TryMoveShadow(move);
+
     }
 
     public void TryMoveShadow(PuzzlePlayerMoveType moveType)
     {
         Vector2Int shadowCurrentPosition = shadow.shadowPosition;
+
         GridData shadowCurrentGrid = gridManager.GetGridData(shadowCurrentPosition);
+
         Vector2Int shadowTargetPosition = shadowCurrentPosition;
 
-        lastShadowPos = shadowCurrentPosition;
-
-        switch (moveType)
+        switch(moveType)
         {
             case PuzzlePlayerMoveType.Left:
                 shadowTargetPosition += Vector2Int.left;
-                shadowAnimator.MoveLeft();
                 break;
-
             case PuzzlePlayerMoveType.Right:
                 shadowTargetPosition += Vector2Int.right;
-                shadowAnimator.MoveRight();
                 break;
-
             case PuzzlePlayerMoveType.Up:
                 if (shadowCurrentGrid != null && shadowCurrentGrid.ladder_Up != null)
                 {
-                    shadowMovement.MoveTo(shadowCurrentGrid.ladder_Up.GetEndPosition());
-                    shadowAnimator.MoveUp();
+                    if(!IsDoorBlockedAfterMove(shadowCurrentGrid.ladder_Up.GetEndPosition(), player.playerPosition, shadowCurrentGrid.ladder_Up.GetEndPosition()))
+                        shadowMovement.MoveTo(shadowCurrentGrid.ladder_Up.GetEndPosition());
+
                     return;
                 }
+                
+                shadowTargetPosition += Vector2Int.up;
+                
                 break;
 
             case PuzzlePlayerMoveType.Down:
-                if (shadowCurrentGrid != null && shadowCurrentGrid.ladder_Down != null)
+                if(shadowCurrentGrid != null && shadowCurrentGrid.ladder_Down != null)
                 {
-                    shadowMovement.MoveTo(shadowCurrentGrid.ladder_Down.GetStartPosition());
-                    shadowAnimator.MoveDown();
-                    return;
+                    if(!IsDoorBlockedAfterMove(shadowCurrentGrid.ladder_Down.GetStartPosition(), player.playerPosition, shadowCurrentGrid.ladder_Down.GetStartPosition()))
+                        shadowMovement.MoveTo(shadowCurrentGrid.ladder_Down.GetStartPosition());
                 }
-                break;
+                return;
         }
 
-        shadowMovement.MoveTo(shadowTargetPosition);
+        GridData targetGrid = gridManager.GetGridData(shadowTargetPosition);
+
+        if (targetGrid == null)
+            return;
+
+        if (IsDoorBlockedAfterMove(shadowTargetPosition, player.playerPosition, shadowTargetPosition))
+            return;
+
+        if(targetGrid.hasPlatform)
+        {
+            shadowMovement.MoveTo(shadowTargetPosition);
+            return;
+        }
+
+        Vector2Int landingPosition = FindPlatformBelow(shadowTargetPosition, player.playerPosition, shadowTargetPosition);
+
+        if (landingPosition == shadowTargetPosition)
+            return;
+
+        GridData landingGrid = gridManager.GetGridData(landingPosition);
+
+        if (landingGrid == null)
+            return;
+
+        if (IsDoorBlockedAfterMove(landingPosition, player.playerPosition, landingPosition))
+            return;
+
+        shadowMovement.MoveTo(landingPosition);
     }
 
-    public void ProcessTurnLoop()
+    Vector2Int FindPlatformBelow(Vector2Int startPosition, Vector2Int nextPlayerPosition, Vector2Int nextShadowPosition)
     {
-        if (gameOver) return;
+        Vector2Int checkPosition = startPosition + Vector2Int.down;
 
-        bool loop;
-        int maxIterations = 20;
-        int iteration = 0;
-
-        do
+        while (checkPosition.y >= -4)
         {
-            loop = false;
-            iteration++;
+            GridData grid = gridManager.GetGridData(checkPosition);
 
-            CheckButtons();
-
-            GridData playerGrid = gridManager.GetGridData(player.playerPosition);
-            if (playerGrid == null || !IsSolidPlatform(playerGrid))
+            if (HasPlatformAfterMove(checkPosition, nextPlayerPosition, nextShadowPosition))
             {
-                Vector2Int nextPlatform = FindPlatformStepped(player.playerPosition);
-
-                if (nextPlatform != player.playerPosition)
-                {
-                    playerMovement.MoveTo(nextPlatform);
-                    GridData landedGrid = gridManager.GetGridData(nextPlatform);
-
-                    if (landedGrid != null && landedGrid.button != null)
-                    {
-                        loop = true;
-                    }
-                }
-                else
-                {
-                    StartFall(lastMoveType);
-                    return;
-                }
+                return checkPosition;
             }
 
-            if (shadowStarted)
-            {
-                GridData shadowGrid = gridManager.GetGridData(shadow.shadowPosition);
-                if (shadowGrid == null || !IsSolidPlatform(shadowGrid))
-                {
-                    Vector2Int nextPlatform = FindPlatformStepped(shadow.shadowPosition);
+            checkPosition += Vector2Int.down;
+        }
 
-                    if (nextPlatform != shadow.shadowPosition)
-                    {
-                        shadowMovement.MoveTo(nextPlatform);
-                        GridData landedGrid = gridManager.GetGridData(nextPlatform);
+        return startPosition;
+    }
 
-                        if (landedGrid != null && landedGrid.button != null)
-                        {
-                            loop = true;
-                        }
-                    }
-                }
-            }
+    void StartFall()
+    {
+        if (player.isFalling)
+            return;
 
-            if (loop) continue;
+        player.isFalling = true;
 
-        } while (loop && iteration < maxIterations);
+        Debug.Log("Game Over");
+    }
 
-        CheckPlayerClosedDoorDeath();
+    public void PlayerMoved()
+    {
+        CheckButtons();
         CheckLadders();
         CheckGoals();
-        CheckPlayerShadowCollide();
-        CheckShadowlosedDoorDeath();
+        CheckPlayerStnadingOnPlatform();
     }
 
     void CheckButtons()
     {
         foreach (GridData grid in gridManager.GetAllGridData())
         {
-            if (grid.button == null) continue;
+            if (grid.button == null)
+                continue;
 
-            Vector2Int buttonPos = grid.button.GetPosition();
-            bool isPlayerOn = player.playerPosition == buttonPos;
-            bool isShadowOn = shadowStarted && shadow.shadowPosition == buttonPos;
-
-            if (isPlayerOn || isShadowOn)
+            if (player.playerPosition == grid.button.GetPosition() || shadow.shadowPosition == grid.button.GetPosition())
             {
                 grid.button.PressButton();
             }
@@ -276,147 +289,144 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-    Vector2Int FindPlatformStepped(Vector2Int startPosition)
-    {
-        Vector2Int checkPosition = startPosition + Vector2Int.down;
-
-        while (checkPosition.y >= -10)
-        {
-            GridData grid = gridManager.GetGridData(checkPosition);
-
-            if (grid != null)
-            {
-                if (grid.door != null && grid.door.doorType == DoorType.Trapdoor)
-                {
-                    if (!grid.door.isOpen)
-                    {
-                        return checkPosition;
-                    }
-                }
-                else if (grid.hasPlatform)
-                {
-                    return checkPosition;
-                }
-            }
-
-            checkPosition += Vector2Int.down;
-        }
-
-        return startPosition;
-    }
-
-    bool IsSolidPlatform(GridData grid)
-    {
-        if (grid == null) return false;
-
-        if (grid.door != null && grid.door.doorType == DoorType.Trapdoor)
-        {
-            return !grid.door.isOpen;
-        }
-
-        return grid.hasPlatform;
-    }
-
-    void CheckPlayerClosedDoorDeath()
-    {
-        GridData currentGrid = gridManager.GetGridData(player.playerPosition);
-        if (currentGrid == null || currentGrid.door == null) return;
-
-        if (currentGrid.door.doorType == DoorType.Door && !currentGrid.door.isOpen)
-        {
-            Debug.Log("Game Over: Player trapped inside a closed death door!");
-            gameOver = true;
-            StartFall(lastMoveType);
-        }
-    }
-
-    void CheckShadowlosedDoorDeath()
-    {
-        GridData currentGrid = gridManager.GetGridData(shadow.shadowPosition);
-        if (currentGrid == null || currentGrid.door == null) return;
-
-        if (currentGrid.door.doorType == DoorType.Door && !currentGrid.door.isOpen)
-        {
-            Debug.Log("Shadow gone");
-            shadow.gameObject.SetActive(false);
-            shadowStarted = false;
-        }
-    }
-
-    void CheckPlayerShadowCollide()
-    {
-        if (gameOver) return;
-
-        if (player.playerPosition == shadow.shadowPosition || (player.playerPosition == lastShadowPos && shadow.shadowPosition == lastPlayerPos) )
-        {
-            gameOver = true;
-            Debug.Log("Game Over: Collided with Shadow");
-
-            StartCoroutine(StartDeathTransition(player.playerPosition, shadow.shadowPosition));
-        }
-    }
-
     void CheckLadders()
     {
         GridData currentGrid = gridManager.GetGridData(player.playerPosition);
-        if (currentGrid == null) return;
 
-        if (currentGrid.ladder_Up != null) Debug.Log("Ladder Up");
-        if (currentGrid.ladder_Down != null) Debug.Log("Ladder Down");
+        if (currentGrid == null)
+            return;
+
+        if (currentGrid.ladder_Up != null)
+        {
+            Debug.Log("Ladder Up");
+        }
+
+        if (currentGrid.ladder_Down != null)
+        {
+            Debug.Log("Ladder Down");
+        }
     }
 
     void CheckGoals()
     {
         GridData currentGrid = gridManager.GetGridData(player.playerPosition);
-        if (currentGrid != null && currentGrid.goal != null)
+
+        if (currentGrid != null &&
+            currentGrid.goal != null)
         {
             Debug.Log("Reached Goal");
-            minigameSFXManager.PlayWinningSound();
-            GoToNextScene();
         }
     }
 
-    void StartFall(PuzzlePlayerMoveType direction)
+    public void TryMoveDown()
     {
-        if (player.isFalling) return;
+        GridData currentGrid = gridManager.GetGridData(player.playerPosition); 
 
-        player.isFalling = true;
-        gameOver = true;
-
-        if (direction == PuzzlePlayerMoveType.Left) playerAnimator.MoveLeft();
-        if (direction == PuzzlePlayerMoveType.Right) playerAnimator.MoveRight();
-
-        playerMovement.FallTo(direction);
-        minigameSFXManager.PlayFallingSound();
-        Debug.Log("Game Over");
-    }
-
-    IEnumerator StartDeathTransition(Vector2Int playerPos, Vector2Int shadowPos)
-    {
-        Vector2Int midpoint = (playerPos + shadowPos) / 2;
-
-        playerMovement.MoveTo(midpoint);
-        shadowMovement.MoveTo(midpoint);
-
-        while (Vector2.Distance(player.transform.position, (Vector2)midpoint) > 0.05f || Vector2.Distance(shadow.transform.position, (Vector2)midpoint) > 0.05f)
+        if(currentGrid != null && currentGrid.ladder_Down != null)
         {
-            yield return null;
+            MovePlayer(currentGrid.ladder_Down.GetStartPosition(), PuzzlePlayerMoveType.Down);
+        }
+        return;
+    }
+
+    bool IsDoorBlockedAfterMove(Vector2Int targetPosition, Vector2Int nextPlayerPosition, Vector2Int nextShadowPosition)
+    {
+
+        GridData targetGrid = gridManager.GetGridData(targetPosition);
+
+        Debug.Log(
+        $"BLOCK CHECK: {targetPosition} | " +
+        $"Grid: {targetGrid != null} | " +
+        $"Door: {(targetGrid != null && targetGrid.door != null)}"
+        );
+
+
+        if (targetGrid == null)
+            return true;
+
+        if (targetGrid.door == null)
+            return targetGrid.isBlocked;
+
+        if ((targetGrid.door.doorType == DoorType.Trapdoor))
+            return false;
+
+        foreach (GridData grid in gridManager.GetAllGridData())
+        {
+            if (grid.button == null)
+                continue;
+
+            if (grid.button.connectedDoor != targetGrid.door)
+                continue;
+
+            Vector2Int buttonPosition = grid.button.GetPosition();
+
+            bool playerOnButton = nextPlayerPosition == buttonPosition;
+
+            bool shadowOnButton = nextShadowPosition == buttonPosition;
+
+            if (playerOnButton || shadowOnButton)
+                return false;
         }
 
-        minigameSFXManager.PlayDeathSound();
-
-        Debug.Log("Death transition complete");
-
-        RestartLevel(); 
+        return !targetGrid.door.isOpen;
     }
 
-    public void RestartLevel()
+    bool HasPlatformAfterMove(Vector2Int targetPosition, Vector2Int nextPlayerPosition, Vector2Int nextShadowPosition)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GridData targetGrid = gridManager.GetGridData(targetPosition);
+
+        Debug.Log(
+        $"PLATFORM CHECK: {targetPosition} | " +
+        $"Grid: {targetGrid != null} | " +
+        $"Platform: {(targetGrid != null ? targetGrid.hasPlatform : false)} | " +
+        $"Door: {(targetGrid != null && targetGrid.door != null)}"
+    );
+
+        if (targetGrid == null)
+            return false;
+
+        if (targetGrid.door != null && targetGrid.door.doorType == DoorType.Trapdoor)
+        {
+            Debug.Log(
+            $"[Trapdoor] Position: {targetPosition} | " +
+            $"isOpen: {targetGrid.door.isOpen} | " +
+            $"hasPlatform: {targetGrid.hasPlatform}"
+            );
+
+            return targetGrid.hasPlatform;
+        }
+
+        if (targetGrid.door == null)
+            return targetGrid.hasPlatform;
+
+        foreach (GridData grid in gridManager.GetAllGridData())
+        {
+            if (grid.button == null)
+                continue;
+
+            if (grid.button.connectedDoor != targetGrid.door)
+                continue;
+
+            Vector2Int buttonPosition = grid.button.GetPosition();
+
+            bool playerOnButton = nextPlayerPosition == buttonPosition;
+
+            bool shadowOnButton = nextShadowPosition == buttonPosition;
+
+            if (playerOnButton || shadowOnButton)
+                return false;
+        }
+
+        return targetGrid.hasPlatform;
     }
 
-    void GoToNextScene()
+    void CheckPlayerStnadingOnPlatform()
     {
-        SceneManager.LoadScene(nextSceneName);
+        GridData currentGrid = gridManager.GetGridData(player.playerPosition);
+
+        if (currentGrid == null) return;
+
+        if (!currentGrid.hasPlatform)
+            StartFall();
     }
 }

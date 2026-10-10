@@ -7,7 +7,7 @@ public class PuzzleLadder : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    void Awake()
+    void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
