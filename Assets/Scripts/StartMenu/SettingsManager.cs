@@ -15,23 +15,20 @@ public class SettingsManager : MonoBehaviour
 
     public void Start()
     {
-        foreach (Transform child in transform)
-        {
-            child.gameObject.SetActive(false);
-        }
+        gameObject.SetActive(false);
     }
 
     private void Awake()
     {
         float savedVolume = PlayerPrefs.GetFloat("Volume", 1f);
-        volumeSlider.SetValueWithoutNotify(savedVolume);
+        volumeSlider.value = savedVolume;
         AudioListener.volume = savedVolume;
         UpdateVolumeText(savedVolume);
         volumeSlider.onValueChanged.RemoveAllListeners();
         volumeSlider.onValueChanged.AddListener(OnVolumeChanged);
 
         float savedBrightness = PlayerPrefs.GetFloat("Brightness", 1f);
-        brightnessSlider.SetValueWithoutNotify(savedBrightness);
+        brightnessSlider.value = savedBrightness;
         brightnessFilter.color = new Color32(0,0,0, (byte)(200 - 200 * savedBrightness));
         UpdateBrightnessText(savedBrightness);
         brightnessSlider.onValueChanged.RemoveAllListeners();
@@ -66,17 +63,11 @@ public class SettingsManager : MonoBehaviour
 
     public void OpenSettings()
     {
-        foreach (Transform child in transform)
-        {
-            child.gameObject.SetActive(true);
-        }
+        gameObject.SetActive(true);
     }
 
     public void CloseSettings()
     {
-        foreach (Transform child in transform)
-        {
-            child.gameObject.SetActive(false);
-        }
+        gameObject.SetActive(false);
     }
 }
