@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 526026096961818667}
   - component: {fileID: 6332050787983231397}
   - component: {fileID: 8960923804782764241}
+  - component: {fileID: 4656884606437448576}
   m_Layer: 0
   m_Name: PuzzleGoal
   m_TagString: Untagged
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1637650692, guid: 268dd458dba28bb489cb5c284f1d0604, type: 3}
+  m_Sprite: {fileID: 4053014379020001161, guid: 2c8db6b8b34d78041b5d98ddd68f8a8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,3 +105,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f61ea7dee014d4fbfda0675f68576f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleGoal
+--- !u!95 &4656884606437448576
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3939344331758080499}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 778fabbe5e1e3bd49b69d20b04cf2ee2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
