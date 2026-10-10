@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -349,7 +351,8 @@ public class PuzzleManager : MonoBehaviour
         {
             gameOver = true;
             Debug.Log("Game Over: Collided with Shadow");
-            StartFall(lastMoveType);
+
+            StartCoroutine(StartDeathTransition(player.playerPosition, shadow.shadowPosition));
         }
     }
 
@@ -368,6 +371,7 @@ public class PuzzleManager : MonoBehaviour
         if (currentGrid != null && currentGrid.goal != null)
         {
             Debug.Log("Reached Goal");
+            minigameSFXManager.PlayWinningSound();
             GoToNextScene();
         }
     }
@@ -383,7 +387,27 @@ public class PuzzleManager : MonoBehaviour
         if (direction == PuzzlePlayerMoveType.Right) playerAnimator.MoveRight();
 
         playerMovement.FallTo(direction);
+        minigameSFXManager.PlayFallingSound();
         Debug.Log("Game Over");
+    }
+
+    IEnumerator StartDeathTransition(Vector2Int playerPos, Vector2Int shadowPos)
+    {
+        Vector2Int midpoint = (playerPos + shadowPos) / 2;
+
+        playerMovement.MoveTo(midpoint);
+        shadowMovement.MoveTo(midpoint);
+
+        while (Vector2.Distance(player.transform.position, (Vector2)midpoint) > 0.05f || Vector2.Distance(shadow.transform.position, (Vector2)midpoint) > 0.05f)
+        {
+            yield return null;
+        }
+
+        minigameSFXManager.PlayDeathSound();
+
+        Debug.Log("Death transition complete");
+
+        RestartLevel(); 
     }
 
     public void RestartLevel()
