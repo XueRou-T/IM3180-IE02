@@ -1,14 +1,12 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
 
 public class SceneDoor : MonoBehaviour
 {
     public TMP_Text promptText;
-    public string sceneToLoad = "House";
-    public string targetSpawnPointName = "";
     public string promptMessage = "Press E to leave";
     public string lockedMessage = "It's locked. I need everything first.";
+    public GameObject choicePanelObject; // drag DestinationChoicePanel here
 
     [Header("Lock Settings")]
     public bool requiresUnlock = true;
@@ -16,13 +14,14 @@ public class SceneDoor : MonoBehaviour
 
     private bool playerInRange = false;
     private bool isUnlocked = false;
+    private DestinationChoice choiceScript;
 
     void Start()
     {
-        if (!requiresUnlock)
-        {
-            isUnlocked = true;
-        }
+        if (!requiresUnlock) isUnlocked = true;
+        if (promptText != null) promptText.text = promptMessage;
+
+        choiceScript = UIPersistence.Instance != null ? UIPersistence.Instance.destinationChoice : null;
     }
 
     void Update()
@@ -32,12 +31,11 @@ public class SceneDoor : MonoBehaviour
             CheckUnlockCondition();
         }
 
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && Input.GetKeyDown(KeyCode.E) && !DestinationChoice.IsChoiceOpen)
         {
             if (isUnlocked)
             {
-                PlayerPersistence.nextSpawnPointName = targetSpawnPointName;
-                SceneManager.LoadScene(sceneToLoad);
+                choiceScript.OpenChoice();
             }
             else
             {
@@ -60,10 +58,7 @@ public class SceneDoor : MonoBehaviour
             }
         }
 
-        if (allFound)
-        {
-            isUnlocked = true;
-        }
+        if (allFound) isUnlocked = true;
     }
 
     void ShowLockedMessage()

@@ -130,9 +130,9 @@ GameObject:
   - component: {fileID: 443010922}
   - component: {fileID: 443010921}
   - component: {fileID: 443010924}
-  - component: {fileID: 443010923}
+  - component: {fileID: 443010925}
   m_Layer: 0
-  m_Name: DoorToLab
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,25 +213,6 @@ Transform:
   - {fileID: 833486431}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &443010923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443010920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a54e5c54837484f966356643a23824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneDoor
-  promptText: {fileID: 2100066302}
-  sceneToLoad: Lab
-  targetSpawnPointName: SpawnPoint_FromHouse
-  promptMessage: Press E to go to lab
-  lockedMessage: 
-  requiresUnlock: 0
-  requiredItems: []
 --- !u!61 &443010924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -278,6 +259,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &443010925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443010920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a54e5c54837484f966356643a23824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneDoor
+  promptText: {fileID: 2100066302}
+  promptMessage: Press E to leave
+  lockedMessage: It's locked. I need everything first.
+  choicePanelObject: {fileID: 0}
+  requiresUnlock: 0
+  requiredItems: []
 --- !u!1 &658174619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2006760738}
   m_Layer: 0
-  m_Name: SpawnPoint_FromLab
+  m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
