@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: 8c055bb5cdca07b4498839acf0516ae0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2463666279909007856
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_0
+  - first:
+      213: 8842167899818731386
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_1
+  - first:
+      213: -2139780244233344798
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_2
+  - first:
+      213: -5714437700571986929
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_3
+  - first:
+      213: -9130641110983210401
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_4
+  - first:
+      213: -8765789875748116907
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_5
+  - first:
+      213: -3180085336150147354
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_6
+  - first:
+      213: -5653801325581854932
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_7
+  - first:
+      213: 8724408532963893786
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_8
+  - first:
+      213: -8950714896353264234
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_9
+  - first:
+      213: 2660726241310392418
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_10
+  - first:
+      213: 8214363110097105633
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_11
+  - first:
+      213: 7945694695934611557
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_12
+  - first:
+      213: 1461505464618206245
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_13
+  - first:
+      213: -3444022656154657807
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_14
+  - first:
+      213: 6172480384786885873
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_15
+  - first:
+      213: 5103804199797643161
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_16
+  - first:
+      213: 5887249770338345062
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_17
+  - first:
+      213: 917779152467211158
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_18
+  - first:
+      213: -6074992482232004773
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_19
+  - first:
+      213: -4949305170387589033
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_20
+  - first:
+      213: -7523542685039779572
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_21
+  - first:
+      213: -7441063367946753958
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_22
+  - first:
+      213: -6925692171157763487
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_23
+  - first:
+      213: -3253800053390481551
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_24
+  - first:
+      213: -4500690927812742700
+    second: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 767
+        width: 2689
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f1a513bd63b03220800000000000000
+      internalID: 2463666279909007856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 1394
+        width: 14
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77ae096bd0b5ba70800000000000000
+      internalID: 8842167899818731386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 2753
+        y: 1394
+        width: 110
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8a2157439fd42e0800000000000000
+      internalID: -2139780244233344798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 1391
+        width: 193
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f048e4e003d32b0b0800000000000000
+      internalID: -5714437700571986929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 1346
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a84482942794180800000000000000
+      internalID: -9130641110983210401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 2753
+        y: 1346
+        width: 110
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55661581d88a95680800000000000000
+      internalID: -8765789875748116907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 1343
+        width: 193
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee775f4c311ed3d0800000000000000
+      internalID: -3180085336150147354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 1202
+        width: 14
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c279f0646a9a981b0800000000000000
+      internalID: -5653801325581854932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 2753
+        y: 1202
+        width: 110
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1223ba3653531970800000000000000
+      internalID: 8724408532963893786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 1199
+        width: 193
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69df015893ca8c380800000000000000
+      internalID: -8950714896353264234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 1154
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260cdd95b6ccce420800000000000000
+      internalID: 2660726241310392418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 2753
+        y: 1154
+        width: 110
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e239612ab74ff170800000000000000
+      internalID: 8214363110097105633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 1151
+        width: 193
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56053e45a37c44e60800000000000000
+      internalID: 7945694695934611557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 1010
+        width: 14
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5244cd70a7f484410800000000000000
+      internalID: 1461505464618206245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 2753
+        y: 1010
+        width: 110
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fb118534af5430d0800000000000000
+      internalID: -3444022656154657807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 1007
+        width: 193
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fce94ee43e09a550800000000000000
+      internalID: 6172480384786885873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 962
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997d51ce0ea54d640800000000000000
+      internalID: 5103804199797643161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 2753
+        y: 962
+        width: 110
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66064016976b3b150800000000000000
+      internalID: 5887249770338345062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 959
+        width: 193
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693311dc64b9cbc00800000000000000
+      internalID: 917779152467211158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_19
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 818
+        width: 14
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f846b268a41bba0800000000000000
+      internalID: -6074992482232004773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_20
+      rect:
+        serializedVersion: 2
+        x: 2753
+        y: 818
+        width: 110
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7582b0a8b29805bb0800000000000000
+      internalID: -4949305170387589033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_21
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 815
+        width: 193
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0127b51ac1079790800000000000000
+      internalID: -7523542685039779572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_22
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 770
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58ac529a480cb890800000000000000
+      internalID: -7441063367946753958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_23
+      rect:
+        serializedVersion: 2
+        x: 2753
+        y: 770
+        width: 110
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a007a0aaff2ef90800000000000000
+      internalID: -6925692171157763487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_24
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 767
+        width: 193
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177638f371e28d2d0800000000000000
+      internalID: -3253800053390481551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1537
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d1f5e362755a81c0800000000000000
+      internalID: -4500690927812742700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_0: 2463666279909007856
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_1: 8842167899818731386
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_10: 2660726241310392418
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_11: 8214363110097105633
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_12: 7945694695934611557
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_13: 1461505464618206245
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_14: -3444022656154657807
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_15: 6172480384786885873
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_16: 5103804199797643161
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_17: 5887249770338345062
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_18: 917779152467211158
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_19: -6074992482232004773
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_2: -2139780244233344798
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_20: -4949305170387589033
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_21: -7523542685039779572
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_22: -7441063367946753958
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_23: -6925692171157763487
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_24: -3253800053390481551
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_25: -4500690927812742700
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_3: -5714437700571986929
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_4: -9130641110983210401
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_5: -8765789875748116907
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_6: -3180085336150147354
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_7: -5653801325581854932
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_8: 8724408532963893786
+      vectoraith_tileset_interior_laboratory_floorwall_ATLAS_48x48_9: -8950714896353264234
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
