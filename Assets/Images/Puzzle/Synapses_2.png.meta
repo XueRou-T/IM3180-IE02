@@ -1,0 +1,716 @@
+fileFormatVersion: 2
+guid: 2c8db6b8b34d78041b5d98ddd68f8a8b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7666513221243317089
+    second: Synapses_2_0
+  - first:
+      213: -6951090769679826732
+    second: Synapses_2_1
+  - first:
+      213: -9041639696550117050
+    second: Synapses_2_2
+  - first:
+      213: 8292852581009100088
+    second: Synapses_2_3
+  - first:
+      213: 8371794142061086048
+    second: Synapses_2_4
+  - first:
+      213: 89056045030928453
+    second: Synapses_2_5
+  - first:
+      213: 2512015656075680509
+    second: Synapses_2_6
+  - first:
+      213: 1268436621409888761
+    second: Synapses_2_7
+  - first:
+      213: -387180688804633036
+    second: Synapses_2_8
+  - first:
+      213: -1451103023242287219
+    second: Synapses_2_9
+  - first:
+      213: -7671118534338401515
+    second: Synapses_2_10
+  - first:
+      213: 5087406446876133007
+    second: Synapses_2_11
+  - first:
+      213: 5072713067772908230
+    second: Synapses_2_12
+  - first:
+      213: 7105984625581469027
+    second: Synapses_2_13
+  - first:
+      213: 4053014379020001161
+    second: Synapses_2_14
+  - first:
+      213: 8330212199874528019
+    second: Synapses_2_15
+  - first:
+      213: -4378903437104205702
+    second: Synapses_2_16
+  - first:
+      213: 959480572580423082
+    second: Synapses_2_17
+  - first:
+      213: 3061256999374495417
+    second: Synapses_2_18
+  - first:
+      213: 9164591436471851142
+    second: Synapses_2_19
+  - first:
+      213: -4730520206064996590
+    second: Synapses_2_20
+  - first:
+      213: -2987635598959608984
+    second: Synapses_2_21
+  - first:
+      213: -3591652418443079860
+    second: Synapses_2_22
+  - first:
+      213: 8418729499676862767
+    second: Synapses_2_23
+  - first:
+      213: -279930142948185651
+    second: Synapses_2_24
+  - first:
+      213: -4743111956232576181
+    second: Synapses_2_25
+  - first:
+      213: -5140969884007046755
+    second: Synapses_2_26
+  - first:
+      213: 2818876983901821606
+    second: Synapses_2_27
+  - first:
+      213: -483740561926249618
+    second: Synapses_2_28
+  - first:
+      213: -68618837195633274
+    second: Synapses_2_29
+  - first:
+      213: -15208314957769071
+    second: Synapses_2_30
+  - first:
+      213: 4027856333668339913
+    second: Synapses_2_31
+  - first:
+      213: -5231560245908894021
+    second: Synapses_2_32
+  - first:
+      213: -3979823101074126465
+    second: Synapses_2_33
+  - first:
+      213: 7305937706633121732
+    second: Synapses_2_34
+  - first:
+      213: -8982263006851646041
+    second: Synapses_2_35
+  - first:
+      213: 2323444542079735950
+    second: Synapses_2_36
+  - first:
+      213: -6265053506812570424
+    second: Synapses_2_37
+  - first:
+      213: -2310912152580951207
+    second: Synapses_2_38
+  - first:
+      213: -8417421285277090988
+    second: Synapses_2_39
+  - first:
+      213: 9018320969195240520
+    second: Synapses_2_40
+  - first:
+      213: 506522143347414700
+    second: Synapses_2_41
+  - first:
+      213: -4289239013288772721
+    second: Synapses_2_42
+  - first:
+      213: 5233868504381254211
+    second: Synapses_2_43
+  - first:
+      213: 6133041854689190771
+    second: Synapses_2_44
+  - first:
+      213: -2892832283757568538
+    second: Synapses_2_45
+  - first:
+      213: -5659335842242613405
+    second: Synapses_2_46
+  - first:
+      213: 6372487425540856345
+    second: Synapses_2_47
+  - first:
+      213: -7808420161345425652
+    second: Synapses_2_48
+  - first:
+      213: -4376731559189989582
+    second: Synapses_2_49
+  - first:
+      213: 4830823747197145054
+    second: Synapses_2_50
+  - first:
+      213: 4519932728795385371
+    second: Synapses_2_51
+  - first:
+      213: 3360537774196631582
+    second: Synapses_2_52
+  - first:
+      213: 8360910125929534690
+    second: Synapses_2_53
+  - first:
+      213: 5820145437469999296
+    second: Synapses_2_54
+  - first:
+      213: -6966230003475787137
+    second: Synapses_2_55
+  - first:
+      213: 657116387676271062
+    second: Synapses_2_56
+  - first:
+      213: -157915618117726846
+    second: Synapses_2_57
+  - first:
+      213: 1561424115852207262
+    second: Synapses_2_58
+  - first:
+      213: -6119622149483151008
+    second: Synapses_2_59
+  - first:
+      213: -8038063661950712256
+    second: Synapses_2_60
+  - first:
+      213: 9089588014981979204
+    second: Synapses_2_61
+  - first:
+      213: -7071314385341899521
+    second: Synapses_2_62
+  - first:
+      213: -8155837039477761338
+    second: Synapses_2_63
+  - first:
+      213: 8676251513842516265
+    second: Synapses_2_64
+  - first:
+      213: 3349800856766737666
+    second: Synapses_2_65
+  - first:
+      213: 6834216832841412706
+    second: Synapses_2_66
+  - first:
+      213: -2662065723892107237
+    second: Synapses_2_67
+  - first:
+      213: 6031550614074395484
+    second: Synapses_2_68
+  - first:
+      213: -4462152681321462341
+    second: Synapses_2_69
+  - first:
+      213: 9184886320483362235
+    second: Synapses_2_70
+  - first:
+      213: 4439966025404216115
+    second: Synapses_2_71
+  - first:
+      213: -788267104910650459
+    second: Synapses_2_72
+  - first:
+      213: -8744996688494458729
+    second: Synapses_2_73
+  - first:
+      213: -8722104128657089664
+    second: Synapses_2_74
+  - first:
+      213: 2057832460701920425
+    second: Synapses_2_75
+  - first:
+      213: -4704313891883491924
+    second: Synapses_2_76
+  - first:
+      213: -5824169873735851721
+    second: Synapses_2_77
+  - first:
+      213: -2658947849065573377
+    second: Synapses_2_78
+  - first:
+      213: -2058490355942015292
+    second: Synapses_2_79
+  - first:
+      213: -1779459457550644032
+    second: Synapses_2_80
+  - first:
+      213: 687077859684745169
+    second: Synapses_2_81
+  - first:
+      213: -1409201920003484816
+    second: Synapses_2_82
+  - first:
+      213: -3778087466250114913
+    second: Synapses_2_83
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 480
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Synapses_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16b2b02e72de46a60800000000000000
+      internalID: 7666513221243317089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d0ccbff5c3c88f90800000000000000
+      internalID: -6951090769679826732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6414f04c994a58280800000000000000
+      internalID: -9041639696550117050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d8ab92c71261370800000000000000
+      internalID: 8292852581009100088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 480
+        height: 480
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0654f32aa669e2470800000000000000
+      internalID: 8371794142061086048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 960
+        width: 480
+        height: 480
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5407b2940046c3100800000000000000
+      internalID: 89056045030928453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 960
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa5c921ee87cd220800000000000000
+      internalID: 2512015656075680509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_7
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 960
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9ab3ff2646a9110800000000000000
+      internalID: 1268436621409888761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436a8e3073570aaf0800000000000000
+      internalID: -387180688804633036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_9
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87e5271d75acdbe0800000000000000
+      internalID: -1451103023242287219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 480
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b28da1656ba8590800000000000000
+      internalID: -7671118534338401515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_11
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 480
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86851e85391a9640800000000000000
+      internalID: 5087406446876133007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c21614a8a5e56640800000000000000
+      internalID: 5072713067772908230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_13
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 0
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36dab2b2e578d9260800000000000000
+      internalID: 7105984625581469027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Synapses_2_14
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f990b9a133f3830800000000000000
+      internalID: 4053014379020001161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 80ae4cd6e72c89746b621e61b8e522e0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":480.0,"y":480.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Synapses_2_0: 7666513221243317089
+      Synapses_2_1: -6951090769679826732
+      Synapses_2_10: -7671118534338401515
+      Synapses_2_11: 5087406446876133007
+      Synapses_2_12: 5072713067772908230
+      Synapses_2_13: 7105984625581469027
+      Synapses_2_14: 4053014379020001161
+      Synapses_2_2: -9041639696550117050
+      Synapses_2_3: 8292852581009100088
+      Synapses_2_4: 8371794142061086048
+      Synapses_2_5: 89056045030928453
+      Synapses_2_6: 2512015656075680509
+      Synapses_2_7: 1268436621409888761
+      Synapses_2_8: -387180688804633036
+      Synapses_2_9: -1451103023242287219
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
