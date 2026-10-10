@@ -1,0 +1,690 @@
+fileFormatVersion: 2
+guid: 268dd458dba28bb489cb5c284f1d0604
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6888756438569675735
+    second: New Piskel (1)_0
+  - first:
+      213: 9173839873224666002
+    second: New Piskel (1)_1
+  - first:
+      213: -745645855993587873
+    second: New Piskel (1)_2
+  - first:
+      213: 4123733795721074919
+    second: New Piskel (1)_3
+  - first:
+      213: -1753449832276896209
+    second: New Piskel (1)_4
+  - first:
+      213: 3188600494121364513
+    second: New Piskel (1)_5
+  - first:
+      213: 393433629526434239
+    second: New Piskel (1)_6
+  - first:
+      213: -6999936710424723473
+    second: New Piskel (1)_7
+  - first:
+      213: 5940041773153359950
+    second: New Piskel (1)_8
+  - first:
+      213: 7506680604602429903
+    second: New Piskel (1)_9
+  - first:
+      213: -8695545766370844827
+    second: New Piskel (1)_10
+  - first:
+      213: 7137586956756217966
+    second: New Piskel (1)_11
+  - first:
+      213: -1545029242027367301
+    second: New Piskel (1)_12
+  - first:
+      213: 8101533981685690433
+    second: New Piskel (1)_13
+  - first:
+      213: 4801293961129559398
+    second: New Piskel (1)_14
+  - first:
+      213: -6430870321733951535
+    second: New Piskel (1)_15
+  - first:
+      213: 3573209282882095603
+    second: New Piskel (1)_16
+  - first:
+      213: -5327827185363330059
+    second: New Piskel (1)_17
+  - first:
+      213: -4224503851982913176
+    second: New Piskel (1)_18
+  - first:
+      213: -7014553719434779897
+    second: New Piskel (1)_19
+  - first:
+      213: 5949592847331480888
+    second: New Piskel (1)_20
+  - first:
+      213: 4170087483869172866
+    second: New Piskel (1)_21
+  - first:
+      213: -8221978525592423953
+    second: New Piskel (1)_22
+  - first:
+      213: 8176395970327938649
+    second: New Piskel (1)_23
+  - first:
+      213: 462394856950266495
+    second: New Piskel (1)_24
+  - first:
+      213: 7451424815457516745
+    second: New Piskel (1)_25
+  - first:
+      213: -5537965251174010096
+    second: New Piskel (1)_26
+  - first:
+      213: 9051925332781689180
+    second: New Piskel (1)_27
+  - first:
+      213: -5008392639725783772
+    second: New Piskel (1)_28
+  - first:
+      213: -7781140172301390271
+    second: New Piskel (1)_29
+  - first:
+      213: 8370049089200813822
+    second: New Piskel (1)_30
+  - first:
+      213: 4600400718216220818
+    second: New Piskel (1)_31
+  - first:
+      213: 7257386416912100850
+    second: New Piskel (1)_32
+  - first:
+      213: -8797904050458391657
+    second: New Piskel (1)_33
+  - first:
+      213: -5906794389571790742
+    second: New Piskel (1)_34
+  - first:
+      213: 76548887087707164
+    second: New Piskel (1)_35
+  - first:
+      213: -3451913875344004114
+    second: New Piskel (1)_36
+  - first:
+      213: 3556458318164269345
+    second: New Piskel (1)_37
+  - first:
+      213: -395288509304432329
+    second: New Piskel (1)_38
+  - first:
+      213: 327181177265494108
+    second: New Piskel (1)_39
+  - first:
+      213: -1718308461442877282
+    second: New Piskel (1)_40
+  - first:
+      213: -4102021159856012792
+    second: New Piskel (1)_41
+  - first:
+      213: -363458246745632159
+    second: New Piskel (1)_42
+  - first:
+      213: -80698305844539923
+    second: New Piskel (1)_43
+  - first:
+      213: 6788647821448529078
+    second: New Piskel (1)_44
+  - first:
+      213: -7287756389217138327
+    second: New Piskel (1)_45
+  - first:
+      213: 1844041657970528365
+    second: New Piskel (1)_46
+  - first:
+      213: 928507840171069670
+    second: New Piskel (1)_47
+  - first:
+      213: 4573950580702288645
+    second: New Piskel (1)_48
+  - first:
+      213: 4309044938645981320
+    second: New Piskel (1)_49
+  - first:
+      213: 7872710135569193049
+    second: New Piskel (1)_50
+  - first:
+      213: 7047174933492348939
+    second: New Piskel (1)_51
+  - first:
+      213: -7858534486600234144
+    second: New Piskel (1)_52
+  - first:
+      213: 6920983870424214873
+    second: New Piskel (1)_53
+  - first:
+      213: -6911749841580899697
+    second: New Piskel (1)_54
+  - first:
+      213: -5498778571012609379
+    second: New Piskel (1)_55
+  - first:
+      213: 3487059061273636421
+    second: New Piskel (1)_56
+  - first:
+      213: 8236968232206133035
+    second: New Piskel (1)_57
+  - first:
+      213: -7558157591359337805
+    second: New Piskel (1)_58
+  - first:
+      213: 162122377718283167
+    second: New Piskel (1)_59
+  - first:
+      213: 8074570563051871884
+    second: New Piskel (1)_60
+  - first:
+      213: 8986697218138539577
+    second: New Piskel (1)_61
+  - first:
+      213: -8966909100245943194
+    second: New Piskel (1)_62
+  - first:
+      213: 7678336280838398975
+    second: New Piskel (1)_63
+  - first:
+      213: 7970246666276661644
+    second: New Piskel (1)_64
+  - first:
+      213: -3861613004895918575
+    second: New Piskel (1)_65
+  - first:
+      213: 3176687965132428638
+    second: New Piskel (1)_66
+  - first:
+      213: 7954151402838368696
+    second: New Piskel (1)_67
+  - first:
+      213: 4891673569725576094
+    second: New Piskel (1)_68
+  - first:
+      213: 6472107754072297054
+    second: New Piskel (1)_69
+  - first:
+      213: 1719080838930479944
+    second: New Piskel (1)_70
+  - first:
+      213: 2387859162490352062
+    second: New Piskel (1)_71
+  - first:
+      213: -7840135907929504399
+    second: New Piskel (1)_72
+  - first:
+      213: 7914372008274346995
+    second: New Piskel (1)_73
+  - first:
+      213: -4953395565520875762
+    second: New Piskel (1)_74
+  - first:
+      213: -7705988259636774296
+    second: New Piskel (1)_75
+  - first:
+      213: 865553881898425349
+    second: New Piskel (1)_76
+  - first:
+      213: -3175927291662187872
+    second: New Piskel (1)_77
+  - first:
+      213: -140875653999488420
+    second: New Piskel (1)_78
+  - first:
+      213: 4636151924938081678
+    second: New Piskel (1)_79
+  - first:
+      213: -3560226236515696304
+    second: New Piskel (1)_80
+  - first:
+      213: -6597131431283346153
+    second: New Piskel (1)_81
+  - first:
+      213: -5489828521690384103
+    second: New Piskel (1)_82
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 480
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MinigameTileset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb71f8eefbead84ea7b7916d0b5f214
+      internalID: 1036312793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76456f55d7eae0f44bfeece4c483d9fc
+      internalID: 462311230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd5dfa024735f04ca0b4c931bfb21b1
+      internalID: -193179024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110a6c636ec90b24884153e5c4706c42
+      internalID: -1549528889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 480
+        height: 480
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1115a58849dda449897f88bc6760b3
+      internalID: -2036579187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 960
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec0bb2a299940641b15ba385b28165d
+      internalID: -1812127519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 960
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa553c5618b56df40a9c8c50f6aa8352
+      internalID: -470647683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_7
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 960
+        width: 480
+        height: 480
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ce94e282e70504f97c7584935eb8d0
+      internalID: -897335407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f6f2ae72632844fabbb75488d8f9d0
+      internalID: -1342320185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_9
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6731e8cc41d22428115185f93f8642
+      internalID: -842781654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 480
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837e82f77c943d447b64499356e3ef0e
+      internalID: 1619634737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_11
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 480
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dbb64fa68577845a753d13b91c29ae
+      internalID: 990254489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b67dafc468b364386fc52ac93e0f3f
+      internalID: -1637650692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MinigameTileset_13
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 480
+        height: 480
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef9a2f69a20c774281d6c4b2f6bd893
+      internalID: -1083720817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dc5703f7238d2e84786f84c11e53ac82
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":480.0,"y":480.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      MinigameTileset_0: 1036312793
+      MinigameTileset_1: 462311230
+      MinigameTileset_10: 1619634737
+      MinigameTileset_11: 990254489
+      MinigameTileset_12: -1637650692
+      MinigameTileset_13: -1083720817
+      MinigameTileset_2: -193179024
+      MinigameTileset_3: -1549528889
+      MinigameTileset_4: -2036579187
+      MinigameTileset_5: -1812127519
+      MinigameTileset_6: -470647683
+      MinigameTileset_7: -897335407
+      MinigameTileset_8: -1342320185
+      MinigameTileset_9: -842781654
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
