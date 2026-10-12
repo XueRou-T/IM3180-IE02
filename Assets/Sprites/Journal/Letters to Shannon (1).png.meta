@@ -1,12 +1,10 @@
 fileFormatVersion: 2
-guid: 496dd966329d3184b82d62bf94518610
+guid: b7500c69b1acb08479b783dd2bf4489e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6729007986651162139
-    second: "It\u2019s been exactly 1 week since, well, you left. I can\u2019t help
-      but feel that this is all my fault. If only I had been a little more thoughtful.
-      If only I neglected you less. If only I had been there to send you for yo_0"
+      213: -1461505308867036790
+    second: Letters to Shannon (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,9 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "It\u2019s been exactly 1 week since, well, you left. I can\u2019t help
-        but feel that this is all my fault. If only I had been a little more thoughtful.
-        If only I neglected you less. If only I had been there to send you for yo_0"
+      name: Letters to Shannon (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e914e053e2cd92a0800000000000000
-      internalID: -6729007986651162139
+      spriteID: a89f1ab3aa0b7bbe0800000000000000
+      internalID: -1461505308867036790
       vertices: []
       indices: 
       edges: []
@@ -139,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "It\u2019s been exactly 1 week since, well, you left. I can\u2019t help but feel that this is all my fault. If only I had been a little more thoughtful. If only I neglected you less. If only I had been there to send you for yo_0": -6729007986651162139
+      Letters to Shannon (1)_0: -1461505308867036790
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
