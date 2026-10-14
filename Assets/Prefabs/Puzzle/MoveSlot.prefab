@@ -88,7 +88,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3296059887323227081, guid: e36805a2312b84d4ba0e3b66f909a856, type: 3}
+  m_Sprite: {fileID: 718668678, guid: fdc769177e0bbf446ae1bff18df12d47, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,11 +111,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveSlotUI
   icon_Image: {fileID: 8005971018403751705}
-  icon_Default: {fileID: 5394766491131639683, guid: 88f4bd81c9e0053489771e87f5ec442e, type: 3}
-  icon_MoveLeft: {fileID: -8358896747359307601, guid: 88f4bd81c9e0053489771e87f5ec442e, type: 3}
-  icon_MoveRight: {fileID: -5510208519428937547, guid: 88f4bd81c9e0053489771e87f5ec442e, type: 3}
-  icon_MoveUp: {fileID: -903187362089178521, guid: 88f4bd81c9e0053489771e87f5ec442e, type: 3}
-  icon_MoveDown: {fileID: 1106685565836525862, guid: 88f4bd81c9e0053489771e87f5ec442e, type: 3}
+  icon_Default: {fileID: 718668678, guid: fdc769177e0bbf446ae1bff18df12d47, type: 3}
+  icon_MoveLeft: {fileID: -1291371066, guid: fdc769177e0bbf446ae1bff18df12d47, type: 3}
+  icon_MoveRight: {fileID: -1977548514, guid: fdc769177e0bbf446ae1bff18df12d47, type: 3}
+  icon_MoveUp: {fileID: 1359674909, guid: fdc769177e0bbf446ae1bff18df12d47, type: 3}
+  icon_MoveDown: {fileID: 611056004, guid: fdc769177e0bbf446ae1bff18df12d47, type: 3}
 --- !u!222 &464064962044130859
 CanvasRenderer:
   m_ObjectHideFlags: 0
