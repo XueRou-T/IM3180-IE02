@@ -1,2 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 4833ef661a7f00d4997b91557096bd51
+=======
+guid: 4833ef661a7f00d4997b91557096bd51
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> parent of 3bfe626 (Merge branch 'minghui' into Afiq)

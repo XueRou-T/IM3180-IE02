@@ -35,11 +35,14 @@ public class LaptopInteract : MonoBehaviour
 
     void Update()
     {
+<<<<<<< HEAD
         if (!isSolved && GameManager.Instance != null && GameManager.Instance.HasFlag("LaptopSolved"))
         {
             isSolved = true;
         }
 
+=======
+>>>>>>> parent of 3bfe626 (Merge branch 'minghui' into Afiq)
         if (requiresUnlock && !isUnlocked)
         {
             CheckUnlockCondition();
