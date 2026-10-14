@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cc21efa637c3f5e4ea8441da615983b9
+guid: aee6902f189f29c45819b13c726dbbb2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1916968025992009915
-    second: Letters to Shannon (2)_0
+      213: 8188620987103541275
+    second: pg1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Letters to Shannon (2)_0
+      name: pg1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb8190b53407a9a10800000000000000
-      internalID: 1916968025992009915
+      spriteID: b187d901763d3a170800000000000000
+      internalID: 8188620987103541275
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Letters to Shannon (2)_0: 1916968025992009915
+      pg1_0: 8188620987103541275
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
