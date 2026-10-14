@@ -35,11 +35,6 @@ public class LaptopInteract : MonoBehaviour
 
     void Update()
     {
-        if (!isSolved && GameManager.Instance != null && GameManager.Instance.HasFlag("LaptopSolved"))
-        {
-            isSolved = true;
-        }
-
         if (requiresUnlock && !isUnlocked)
         {
             CheckUnlockCondition();

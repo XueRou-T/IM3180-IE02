@@ -3021,9 +3021,6 @@ MonoBehaviour:
   - speakerName: NPC
     speakerPortrait: {fileID: 0}
     sentence: Hello
-  - speakerName: NPC
-    speakerPortrait: {fileID: 0}
-    sentence: Would you like to order?
 --- !u!1 &1975145100
 GameObject:
   m_ObjectHideFlags: 0
