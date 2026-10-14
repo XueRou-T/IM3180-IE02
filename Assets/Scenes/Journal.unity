@@ -150,7 +150,7 @@ PrefabInstance:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[3]'
       value: 
-      objectReference: {fileID: 21300000, guid: cc21efa637c3f5e4ea8441da615983b9, type: 3}
+      objectReference: {fileID: 21300000, guid: ba249fc5cb66f494e91d662ba181cb73, type: 3}
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[4]'
       value: 
@@ -166,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 11415212, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: 'bookPages.Array.data[7]'
       value: 
-      objectReference: {fileID: 21300000, guid: 99aacdede2787f14ab79e6a8de8f8a12, type: 3}
+      objectReference: {fileID: 21300000, guid: d24c568b46bf7eb408973de500811fd8, type: 3}
     - target: {fileID: 22433904, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 3}
       propertyPath: m_SizeDelta.x
       value: 558

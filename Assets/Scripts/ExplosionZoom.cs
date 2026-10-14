@@ -5,8 +5,8 @@ public class ExplosionZoom : MonoBehaviour
     [SerializeField] private Camera cam;
 
     [Header("Zoom Settings")]
-    [SerializeField] private float zoomIn = 2f;     // zoom when clicked
-    [SerializeField] private float zoomOut = 8f;    // zoom when clicked again
+    [SerializeField] private float zoomIn = 2f;     
+    [SerializeField] private float zoomOut = 8f;   
     [SerializeField] private float smoothTime = 0.25f;
 
     private float currentZoom;
