@@ -9,6 +9,7 @@ public class UIPersistence : MonoBehaviour
     public LaptopPuzzle laptopPuzzle;
     public DestinationChoice destinationChoice;
 
+    public DialogueSystem dialogueSystem;
     void Awake()
     {
         if (Instance == null)
