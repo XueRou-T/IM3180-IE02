@@ -18,6 +18,7 @@ public class PuzzleManager : MonoBehaviour
     public PuzzlePlayerAnimator playerAnimator;
     public PuzzleShadowAnimator shadowAnimator;
     public MinigameSFXManager minigameSFXManager;
+    public TutorialManager tutorialManager;
 
     [Header("Move Tracking")]
     public int moveCount;
@@ -79,6 +80,8 @@ public class PuzzleManager : MonoBehaviour
 
         if (moveType == PuzzlePlayerMoveType.Up || moveType == PuzzlePlayerMoveType.Down) return;
 
+       
+
         ExecutePlayerMove(targetPosition, moveType);
     }
 
@@ -133,6 +136,21 @@ public class PuzzleManager : MonoBehaviour
         }
 
         ProcessTurnLoop();
+
+
+        if (tutorialManager != null)
+        {
+            if (moveType == PuzzlePlayerMoveType.Right)
+            {
+                tutorialManager.OnPlayerMovedRight();
+            }
+
+            if (moveHistory.Count == shadowMoveCount)
+            {
+                tutorialManager.OnMoveSlotsFilled();
+            }
+        }
+
     }
 
     void ExecuteNextShadowMove()
