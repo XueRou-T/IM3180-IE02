@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 313036664}
   - component: {fileID: 313036663}
   m_Layer: 5
-  m_Name: JohnAvatar
+  m_Name: Avatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 45.7, y: 0.00000095367}
-  m_SizeDelta: {x: 73.1672, y: 73.1672}
+  m_AnchoredPosition: {x: 203, y: 0.0000021193}
+  m_SizeDelta: {x: 183.145, y: 183.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &313036663
 MonoBehaviour:
@@ -228,8 +228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 124.50917, y: 27.367998}
-  m_SizeDelta: {x: 69.2184, y: 18.432}
+  m_AnchoredPosition: {x: 605, y: 82}
+  m_SizeDelta: {x: 521.593, y: 50.157}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &794642013
 MonoBehaviour:
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: John
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4279900698
-  m_fontColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  m_fontColor: {r: 0.9921569, g: 0.9607844, b: 0.9019608, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -278,8 +278,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.8
-  m_fontSizeBase: 16.8
+  m_fontSize: 46.5
+  m_fontSizeBase: 46.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -331,6 +331,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794642011}
   m_CullTransparentMesh: 1
+--- !u!1 &796605926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 796605927}
+  - component: {fileID: 796605928}
+  m_Layer: 5
+  m_Name: TypingAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &796605927
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796605926}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1936974623}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &796605928
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796605926}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1146899970
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,10 +633,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1936974623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.824, y: -6.848}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 107.143, y: 118.599}
+  m_SizeDelta: {x: -438.89, y: 119.405}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322952480
 MonoBehaviour:
@@ -525,7 +658,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -552,13 +685,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 60.23
+  m_fontSizeBase: 60.23
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -653,7 +786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -797,6 +930,7 @@ GameObject:
   - component: {fileID: 1936974623}
   - component: {fileID: 1936974625}
   - component: {fileID: 1936974624}
+  - component: {fileID: 1936974626}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -819,12 +953,13 @@ RectTransform:
   - {fileID: 313036662}
   - {fileID: 794642012}
   - {fileID: 1322952479}
+  - {fileID: 796605927}
   m_Father: {fileID: 1550513318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -74}
-  m_SizeDelta: {x: -75.5527, y: -187.7707}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000025749, y: -362.242}
+  m_SizeDelta: {x: 1797.202, y: 278.941}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936974624
 MonoBehaviour:
@@ -846,8 +981,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 2063826154672905881, guid: b45815b0c44c41941bd75c1fb114dbc5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -864,6 +999,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936974622}
   m_CullTransparentMesh: 1
+--- !u!114 &1936974626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936974622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a2ea689a8d0f244a43fa1708bb29fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  textComponent: {fileID: 1322952480}
+  nameComponent: {fileID: 794642013}
+  avatarImage: {fileID: 313036663}
+  audioSource: {fileID: 796605928}
+  typingSound: {fileID: 8300000, guid: 30b73f15e392b914cba1f9b8a6840b07, type: 3}
+  soundFrequency: 5
+  lines:
+  - speakerName: Sharon
+    speakerAvatar: {fileID: -2353376327185201564, guid: d68c346715fff4c4c8f2b9d43f23ff93, type: 3}
+    text: '"It''s been so long since we last ate out..."'
+  - speakerName: Sharon
+    speakerAvatar: {fileID: -2353376327185201564, guid: d68c346715fff4c4c8f2b9d43f23ff93, type: 3}
+    text: '"Shall we head to the hawker center downstairs to have lunch?"'
+  - speakerName: John
+    speakerAvatar: {fileID: -4281445024243405800, guid: e3f97b872daa05946a24f0a862540432, type: 3}
+    text: '"I''m busy."'
+  - speakerName: Sharon
+    speakerAvatar: {fileID: -2353376327185201564, guid: d68c346715fff4c4c8f2b9d43f23ff93, type: 3}
+    text: '"Can''t you spare just one hour of your day to have lunch with your WIFE?"'
+  - speakerName: John
+    speakerAvatar: {fileID: -4281445024243405800, guid: e3f97b872daa05946a24f0a862540432, type: 3}
+    text: '"You don''t understand, I''m working on something really important."'
+  - speakerName: Sharon
+    speakerAvatar: {fileID: -2353376327185201564, guid: d68c346715fff4c4c8f2b9d43f23ff93, type: 3}
+    text: '"And somehow it''s more important than our marriage??"'
+  - speakerName: John
+    speakerAvatar: {fileID: -4281445024243405800, guid: e3f97b872daa05946a24f0a862540432, type: 3}
+    text: '"You will never understand! I NEED to work on this!"'
+  - speakerName: Sharon
+    speakerAvatar: {fileID: -2353376327185201564, guid: d68c346715fff4c4c8f2b9d43f23ff93, type: 3}
+    text: '"Sigh..."'
+  - speakerName: Sharon
+    speakerAvatar: {fileID: -2353376327185201564, guid: d68c346715fff4c4c8f2b9d43f23ff93, type: 3}
+    text: '"He''s always working... I guess I''ll just have lunch on my own..." '
+  textSpeed: 0.1
 --- !u!1 &1981871670
 GameObject:
   m_ObjectHideFlags: 0

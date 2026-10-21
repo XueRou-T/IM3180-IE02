@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -15,6 +17,8 @@ public class PuzzleManager : MonoBehaviour
     public PuzzleSpawnPoint shadowSpawnPoint;
     public PuzzlePlayerAnimator playerAnimator;
     public PuzzleShadowAnimator shadowAnimator;
+    public MinigameSFXManager minigameSFXManager;
+    public TutorialManager tutorialManager;
 
     [Header("Move Tracking")]
     public int moveCount;
@@ -29,6 +33,8 @@ public class PuzzleManager : MonoBehaviour
     private Vector2Int lastPlayerPos;
     private Vector2Int lastShadowPos;
 
+    [Header("Next Scene")]
+    public string nextSceneName;
     void Start()
     {
         SetPlayerSpawn();
@@ -74,6 +80,8 @@ public class PuzzleManager : MonoBehaviour
 
         if (moveType == PuzzlePlayerMoveType.Up || moveType == PuzzlePlayerMoveType.Down) return;
 
+       
+
         ExecutePlayerMove(targetPosition, moveType);
     }
 
@@ -82,20 +90,30 @@ public class PuzzleManager : MonoBehaviour
         moveCount++;
         lastMoveType = moveType;
 
-        if (moveType == PuzzlePlayerMoveType.Left) playerAnimator.MoveLeft();
-        else if (moveType == PuzzlePlayerMoveType.Right) playerAnimator.MoveRight();
+        if (moveType == PuzzlePlayerMoveType.Left)
+        {
+            playerAnimator.MoveLeft();
+            minigameSFXManager.PlayWalkingSound();
+        }
+        else if (moveType == PuzzlePlayerMoveType.Right)
+        {
+            playerAnimator.MoveRight();
+            minigameSFXManager.PlayWalkingSound();
+        }
 
         if (moveType == PuzzlePlayerMoveType.Down)
         {
             player.isFalling = false;
             player.isClimbing = true;
             playerAnimator.MoveDown();
+            minigameSFXManager.PlayWalkingSound();
         }
         else if (moveType == PuzzlePlayerMoveType.Up)
         {
             player.isFalling = false;
             player.isClimbing = true;
             playerAnimator.MoveUp();
+            minigameSFXManager.PlayWalkingSound();
         }
 
         playerMovement.MoveTo(targetPosition);
@@ -118,6 +136,21 @@ public class PuzzleManager : MonoBehaviour
         }
 
         ProcessTurnLoop();
+
+
+        if (tutorialManager != null)
+        {
+            if (moveType == PuzzlePlayerMoveType.Right)
+            {
+                tutorialManager.OnPlayerMovedRight();
+            }
+
+            if (moveHistory.Count == shadowMoveCount)
+            {
+                tutorialManager.OnMoveSlotsFilled();
+            }
+        }
+
     }
 
     void ExecuteNextShadowMove()
@@ -324,6 +357,7 @@ public class PuzzleManager : MonoBehaviour
         {
             Debug.Log("Shadow gone");
             shadow.gameObject.SetActive(false);
+            shadowStarted = false;
         }
     }
 
@@ -335,7 +369,8 @@ public class PuzzleManager : MonoBehaviour
         {
             gameOver = true;
             Debug.Log("Game Over: Collided with Shadow");
-            StartFall(lastMoveType);
+
+            StartCoroutine(StartDeathTransition(player.playerPosition, shadow.shadowPosition));
         }
     }
 
@@ -354,6 +389,8 @@ public class PuzzleManager : MonoBehaviour
         if (currentGrid != null && currentGrid.goal != null)
         {
             Debug.Log("Reached Goal");
+            minigameSFXManager.PlayWinningSound();
+            GoToNextScene();
         }
     }
 
@@ -368,11 +405,36 @@ public class PuzzleManager : MonoBehaviour
         if (direction == PuzzlePlayerMoveType.Right) playerAnimator.MoveRight();
 
         playerMovement.FallTo(direction);
+        minigameSFXManager.PlayFallingSound();
         Debug.Log("Game Over");
+    }
+
+    IEnumerator StartDeathTransition(Vector2Int playerPos, Vector2Int shadowPos)
+    {
+        Vector2Int midpoint = (playerPos + shadowPos) / 2;
+
+        playerMovement.MoveTo(midpoint);
+        shadowMovement.MoveTo(midpoint);
+
+        while (Vector2.Distance(player.transform.position, (Vector2)midpoint) > 0.05f || Vector2.Distance(shadow.transform.position, (Vector2)midpoint) > 0.05f)
+        {
+            yield return null;
+        }
+
+        minigameSFXManager.PlayDeathSound();
+
+        Debug.Log("Death transition complete");
+
+        RestartLevel(); 
     }
 
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void GoToNextScene()
+    {
+        SceneManager.LoadScene(nextSceneName);
     }
 }

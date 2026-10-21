@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 24e2e59163264554384b64fad4bb5d74, type: 3}
+  m_Sprite: {fileID: -1451103023242287219, guid: 2c8db6b8b34d78041b5d98ddd68f8a8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108,5 +108,5 @@ MonoBehaviour:
   connectedDoor: {fileID: 0}
   isPressed: 0
   buttonPosition: {x: 0, y: 0}
-  buttonPressedSprite: {fileID: -842781654, guid: 268dd458dba28bb489cb5c284f1d0604, type: 3}
-  buttonReleasedSprite: {fileID: -1342320185, guid: 268dd458dba28bb489cb5c284f1d0604, type: 3}
+  buttonPressedSprite: {fileID: -7671118534338401515, guid: 2c8db6b8b34d78041b5d98ddd68f8a8b, type: 3}
+  buttonReleasedSprite: {fileID: -1451103023242287219, guid: 2c8db6b8b34d78041b5d98ddd68f8a8b, type: 3}

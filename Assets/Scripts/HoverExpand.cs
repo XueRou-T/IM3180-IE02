@@ -17,6 +17,7 @@ public class HoverExpand : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerEnter(PointerEventData eventData)
     {
         targetScale = originalScale * hoverExpandScale;
+        UIAudioManager.Instance.PlayHoverSound();
     }
 
     public void OnPointerExit(PointerEventData eventData) 
