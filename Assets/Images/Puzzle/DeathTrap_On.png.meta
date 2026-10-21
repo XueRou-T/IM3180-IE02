@@ -3,8 +3,13 @@ guid: f74d58f93afec6f438e0b246cb6d2c8e
 TextureImporter:
   internalIDToNameTable:
   - first:
+<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
       213: 3679451477852462636
     second: New Piskel-16.png_0
+========
+      213: 1825938730613327874
+    second: pg4_0
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +105,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
       name: New Piskel-16.png_0
+========
+      name: pg4_0
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +124,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
       spriteID: c2e9ea1ef99001330800000000000000
       internalID: 3679451477852462636
+========
+      spriteID: 208c5dbe999075910800000000000000
+      internalID: 1825938730613327874
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
       vertices: []
       indices: 
       edges: []
@@ -125,7 +139,11 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
+<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
     spriteID: b00bab47328239e4cabfa7a7c7f2ee22
+========
+    spriteID: 5e97eb03825dee720800000000000000
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +153,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
       New Piskel-16.png_0: 3679451477852462636
+========
+      pg4_0: 1825938730613327874
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

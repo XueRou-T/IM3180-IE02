@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/npc1 up.png.meta
 guid: ea1ffb75375871a4ab052f7662dc48e1
 TextureImporter:
   internalIDToNameTable:
@@ -11,6 +12,14 @@ TextureImporter:
   - first:
       213: -5259541787709284988
     second: npc1 up_2
+========
+guid: d24c568b46bf7eb408973de500811fd8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5567209643581371143
+    second: pg 7_0
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg 7.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -106,7 +115,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/npc1 up.png.meta
       name: npc1 up_0
+========
+      name: pg 7_0
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg 7.png.meta
       rect:
         serializedVersion: 2
         x: 22
@@ -121,6 +134,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:Assets/Sprites/npc1 up.png.meta
       spriteID: 480b6a54dc9180210800000000000000
       internalID: 1299316861923930244
       vertices: []
@@ -167,6 +181,10 @@ TextureImporter:
       bones: []
       spriteID: 48dd34e3c9a5207b0800000000000000
       internalID: -5259541787709284988
+========
+      spriteID: 703fbcbaca3b24d40800000000000000
+      internalID: 5567209643581371143
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg 7.png.meta
       vertices: []
       indices: 
       edges: []
@@ -175,7 +193,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +203,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<<< HEAD:Assets/Sprites/npc1 up.png.meta
       npc1 up_0: 1299316861923930244
       npc1 up_1: 2242413676518492518
       npc1 up_2: -5259541787709284988
+========
+      pg 7_0: 5567209643581371143
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg 7.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
