@@ -8,17 +8,8 @@ public class PuzzleDoor : MonoBehaviour
 
     public DoorType doorType;
 
-    public Sprite trapdoorOpened;
-    public Sprite trapdoorClosed;
-    public Sprite doorOpened;
-    public Sprite doorClosed;
-
-    private SpriteRenderer spriteRenderer;
-
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
         isOpen = initiallyOpen;
         
         if(doorType == DoorType.Door)
@@ -29,9 +20,6 @@ public class PuzzleDoor : MonoBehaviour
         {
             gridManager.SetPlatform(GetPosition(), !isOpen);
         }
-
-        if (isOpen) gameObject.SetActive(false);
-        else gameObject.SetActive(true);
     }
     public void ToggleDoor()
     {
@@ -50,13 +38,13 @@ public class PuzzleDoor : MonoBehaviour
         if (doorType == DoorType.Door)
         {
             gridManager.SetBlocked(GetPosition(), false);
-            spriteRenderer.sprite = doorOpened;
         }
         else if (doorType == DoorType.Trapdoor)
         {
             gridManager.SetPlatform(GetPosition(), false);
-            spriteRenderer.sprite = trapdoorOpened;
         }
+
+            gameObject.SetActive(false);
     }
 
     public void CloseDoor()
@@ -69,13 +57,13 @@ public class PuzzleDoor : MonoBehaviour
         if (doorType == DoorType.Door)
         {
             gridManager.SetBlocked(GetPosition(), true);
-            spriteRenderer.sprite = doorClosed;
         }
         else if (doorType==DoorType.Trapdoor)
         {
             gridManager.SetPlatform(GetPosition(), true);
-            spriteRenderer.sprite = trapdoorClosed;
         }
+
+            gameObject.SetActive(true);
     }
 
     public Vector2Int GetPosition()
