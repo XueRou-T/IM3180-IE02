@@ -915,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2549bb7586ea5634783e42f325942331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartMenuManager
-  gameSceneName: 
+  gameSceneName: Explosion
 --- !u!1 &666328899
 GameObject:
   m_ObjectHideFlags: 0
