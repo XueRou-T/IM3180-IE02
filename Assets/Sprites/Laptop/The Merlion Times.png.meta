@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9521c1a798a1d5048b809378463e78cd
+guid: 64c39735b0341ec4a89436145fb3654f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1051488023436266399
-    second: DialogueTextboxPaperlike_0
+      213: -2387703371616577420
+    second: The Merlion Times_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,6 +97,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -113,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DialogueTextboxPaperlike_0
+      name: The Merlion Times_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 17
-        width: 922
-        height: 265
+        x: 0
+        y: 0
+        width: 1414
+        height: 2000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 164f085b63d5861f0800000000000000
-      internalID: -1051488023436266399
+      spriteID: 4789ac12f6c2dded0800000000000000
+      internalID: -2387703371616577420
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DialogueTextboxPaperlike_0: -1051488023436266399
+      The Merlion Times_0: -2387703371616577420
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
