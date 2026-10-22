@@ -33,7 +33,7 @@ public class DialogueSystem : MonoBehaviour
     {
         if (!IsDialogueOpen) return;
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             if (isTyping)
             {
