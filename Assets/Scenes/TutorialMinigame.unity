@@ -1518,7 +1518,7 @@ MonoBehaviour:
   uiTarget: {fileID: 0}
   worldTarget: {fileID: 0}
   worldCamera: {fileID: 1807832179}
-  padding: {x: 20, y: 20}
+  padding: {x: 30, y: 30}
   worldTargetSize: {x: 100, y: 100}
 --- !u!114 &341259892
 MonoBehaviour:
@@ -1744,7 +1744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.2411539, b: 0.89517814, a: 0.8392157}
+  m_Color: {r: 1, g: 0.2411539, b: 0.89517814, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

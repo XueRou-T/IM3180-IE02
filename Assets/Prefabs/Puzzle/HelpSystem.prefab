@@ -589,24 +589,24 @@ MonoBehaviour:
   helpPages:
   - title: Movement
     description: 'Use WASD on your keyboard to move. '
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 9116d1741c95f1241b438408081ff375, type: 3}
   - title: Move Tracker
     description: 'After each successful movement, the movement will be recorded in
       the Move Tracker. '
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: ff2edb70743e61f498cd6f6e8bd4871a, type: 3}
   - title: Buttons
     description: Stand on buttons to activate them. It will toggle the trapdoor or
       disable death trap.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 1ff0e60c29e60084ea18f18344aaef98, type: 3}
   - title: Death Trap
     description: Avoid stepping onto death trap.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 941a4516a9174474cabec0a47b5f0254, type: 3}
   - title: Shadow
     description: After the Move Tracker has been filled, shadow will start appear.
       Shadow will follow the moves recorded in the move tracker from the first to
       the end, it will stop once it reach the last move. Shadow can activate buttons
       and climb ladder, it can also pass through death traps.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 1e6f9995de42f8743b182b6cd001f6b0, type: 3}
 --- !u!1 &6008275199710934019
 GameObject:
   m_ObjectHideFlags: 0
