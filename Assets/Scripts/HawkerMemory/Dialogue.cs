@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public struct DialogueLine
@@ -33,6 +34,9 @@ public class Dialogue : MonoBehaviour
     public DialogueLine[] lines;
     public float textSpeed;
 
+    [Header("Next Scene")]
+    public string nextSceneName;
+
     private int index;
 
     void Start()
@@ -44,7 +48,7 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
             if (textComponent.text == lines[index].text)
             {
@@ -111,7 +115,8 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 
