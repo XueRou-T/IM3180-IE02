@@ -1074,7 +1074,7 @@ MonoBehaviour:
   shadowMoveCount: 2
   moveHistory: 
   moveTrackerUI: {fileID: 834206969}
-  nextSceneName: StartMenuScene
+  nextSceneName: Puzzle1
 --- !u!4 &144435362
 Transform:
   m_ObjectHideFlags: 0
