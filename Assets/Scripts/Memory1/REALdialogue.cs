@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class RealDialogue : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class RealDialogue : MonoBehaviour
     public DialogueLine[] DialogueLines;    
     public float DialogueSpeed;
 
+    [Header("Next Scene")]
+    string nextSceneName;
+
     private int Index = 0;
     private bool isTyping = false;          
 
@@ -44,8 +48,7 @@ public class RealDialogue : MonoBehaviour
         }
         else
         {
-            
-            Debug.Log("Dialogue Ended");
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 
