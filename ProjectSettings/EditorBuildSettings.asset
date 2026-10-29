@@ -29,6 +29,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Explosion.unity
     guid: aed05da922c7ff447a3301550107ac69
+  - enabled: 1
+    path: Assets/Scenes/Official M1.unity
+    guid: 5c18c1052210f9046bf901d6dfcbbf89
+  - enabled: 1
+    path: Assets/Scenes/TutorialMinigame.unity
+    guid: efa1eebf733c96648ac8226c3a9b28ba
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

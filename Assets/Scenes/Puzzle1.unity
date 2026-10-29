@@ -590,7 +590,7 @@ MonoBehaviour:
   shadowMoveCount: 7
   moveHistory: 
   moveTrackerUI: {fileID: 834206969}
-  nextSceneName: StartMenuScene
+  nextSceneName: Official M1
 --- !u!4 &144435362
 Transform:
   m_ObjectHideFlags: 0
