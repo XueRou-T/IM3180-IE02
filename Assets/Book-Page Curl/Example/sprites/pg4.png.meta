@@ -1,7 +1,24 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Book-Page Curl/Example/sprites/pg 2.png.meta
 guid: b7500c69b1acb08479b783dd2bf4489e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3137163498497503779
+    second: pg 2_0
+========
+guid: b78e98034b63f024bb1d9cdce35fd8b5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
+      213: 3679451477852462636
+    second: New Piskel-16.png_0
+========
+      213: 1825938730613327874
+    second: pg4_0
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
+>>>>>>>> XR:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -39,7 +56,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -63,16 +80,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 2
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,7 +102,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,12 +112,60 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Book-Page Curl/Example/sprites/pg 2.png.meta
+      name: pg 2_0
+========
+<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
+      name: New Piskel-16.png_0
+========
+      name: pg4_0
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
+>>>>>>>> XR:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+<<<<<<<< HEAD:Assets/Book-Page Curl/Example/sprites/pg 2.png.meta
+      spriteID: ddd0cb56b6e8674d0800000000000000
+      internalID: -3137163498497503779
+========
+<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
+      spriteID: c2e9ea1ef99001330800000000000000
+      internalID: 3679451477852462636
+========
+      spriteID: 208c5dbe999075910800000000000000
+      internalID: 1825938730613327874
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
+>>>>>>>> XR:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
+<<<<<<<< HEAD:Assets/Book-Page Curl/Example/sprites/pg 2.png.meta
     spriteID: 5e97eb03825dee720800000000000000
+========
+<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
+    spriteID: b00bab47328239e4cabfa7a7c7f2ee22
+========
+    spriteID: 5e97eb03825dee720800000000000000
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
+>>>>>>>> XR:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
     internalID: 0
     vertices: []
     indices: 
@@ -109,7 +174,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+<<<<<<<< HEAD:Assets/Book-Page Curl/Example/sprites/pg 2.png.meta
+      pg 2_0: -3137163498497503779
+========
+<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
+      New Piskel-16.png_0: 3679451477852462636
+========
+      pg4_0: 1825938730613327874
+>>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
+>>>>>>>> XR:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
