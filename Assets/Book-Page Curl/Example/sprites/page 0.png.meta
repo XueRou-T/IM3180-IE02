@@ -1,17 +1,10 @@
 fileFormatVersion: 2
-guid: 496dd966329d3184b82d62bf94518610
+guid: eacd3f8098a91cb4886c69dfff6fe36e
 TextureImporter:
   internalIDToNameTable:
   - first:
-<<<<<<<< HEAD:Assets/Book-Page Curl/Example/sprites/page 0.png.meta
-      213: -6729007986651162139
-    second: "It\u2019s been exactly 1 week since, well, you left. I can\u2019t help
-      but feel that this is all my fault. If only I had been a little more thoughtful.
-      If only I neglected you less. If only I had been there to send you for yo_0"
-========
-      213: -3137163498497503779
-    second: pg 2_0
->>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg 2.png.meta
+      213: -4770260875420062922
+    second: page 0_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -44,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -53,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -107,13 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Book-Page Curl/Example/sprites/page 0.png.meta
-      name: "It\u2019s been exactly 1 week since, well, you left. I can\u2019t help
-        but feel that this is all my fault. If only I had been a little more thoughtful.
-        If only I neglected you less. If only I had been there to send you for yo_0"
-========
-      name: pg 2_0
->>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg 2.png.meta
+      name: page 0_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,13 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/Book-Page Curl/Example/sprites/page 0.png.meta
-      spriteID: 5e914e053e2cd92a0800000000000000
-      internalID: -6729007986651162139
-========
-      spriteID: ddd0cb56b6e8674d0800000000000000
-      internalID: -3137163498497503779
->>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg 2.png.meta
+      spriteID: 63ba4aaf101accdb0800000000000000
+      internalID: -4770260875420062922
       vertices: []
       indices: 
       edges: []
@@ -143,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -153,11 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:Assets/Book-Page Curl/Example/sprites/page 0.png.meta
-      "It\u2019s been exactly 1 week since, well, you left. I can\u2019t help but feel that this is all my fault. If only I had been a little more thoughtful. If only I neglected you less. If only I had been there to send you for yo_0": -6729007986651162139
-========
-      pg 2_0: -3137163498497503779
->>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg 2.png.meta
+      page 0_0: -4770260875420062922
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
