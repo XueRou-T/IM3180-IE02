@@ -4,13 +4,13 @@ using TMPro;
 public class InventoryUI : MonoBehaviour
 {
     public TMP_Text inventoryText;
-    public GameObject panelToToggle; // the InventoryPanel itself
+    public GameObject panelToToggle;
 
     private bool isOpen = false;
 
     void Start()
     {
-        SetPanelOpen(false); // hidden by default
+        SetPanelOpen(false);
     }
 
     void Update()

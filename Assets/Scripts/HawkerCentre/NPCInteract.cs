@@ -4,6 +4,7 @@ using TMPro;
 public class NPCInteract : MonoBehaviour
 {
     public TMP_Text promptText;
+    public GameObject promptContainer; // Added: Reference to the background image
     public string promptMessage = "Press E to talk";
     public DialogueSystem.Line[] dialogueLines;
 
@@ -12,6 +13,9 @@ public class NPCInteract : MonoBehaviour
     void Start()
     {
         if (promptText != null) promptText.text = promptMessage;
+
+        // Ensure the prompt is hidden when the game starts
+        if (promptContainer != null) promptContainer.SetActive(false);
     }
 
     void Update()
@@ -30,7 +34,8 @@ public class NPCInteract : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            if (promptText != null) promptText.gameObject.SetActive(true);
+            // Show the background (which also shows the text inside it)
+            if (promptContainer != null) promptContainer.SetActive(true);
         }
     }
 
@@ -39,7 +44,8 @@ public class NPCInteract : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            if (promptText != null) promptText.gameObject.SetActive(false);
+            // Hide the background
+            if (promptContainer != null) promptContainer.SetActive(false);
         }
     }
 }
