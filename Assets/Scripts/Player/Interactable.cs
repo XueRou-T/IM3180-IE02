@@ -116,6 +116,9 @@ public class Interactable : MonoBehaviour
         if (GameManager.Instance != null)
         {
             GameManager.Instance.AddItem(itemID);
+
+            // Tell the UI to redraw the sprites immediately
+            if (InventoryUI.Instance != null) InventoryUI.Instance.RefreshDisplay();
         }
 
         Invoke(nameof(FinishPickUp), 1f);
