@@ -1541,18 +1541,58 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 9.5545
       objectReference: {fileID: 0}
+    - target: {fileID: 2722727970793467829, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 2722727970793467829, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3091952099187031890, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3091952099187031890, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 3965098568934336304, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
       propertyPath: brightnessFilter
       value: 
       objectReference: {fileID: 1176053623}
+    - target: {fileID: 4001590227286392333, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4001590227286392333, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4396530141118982208, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5292839223923607024, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5292839223923607024, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 5656284054101594352, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 118
       objectReference: {fileID: 0}
+    - target: {fileID: 5717946932425246924, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5717946932425246924, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 6757264800823713786, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2605,11 +2645,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1638921801}
   - {fileID: 834206968}
   - {fileID: 66480373}
   - {fileID: 156304171}
   - {fileID: 179880455}
-  - {fileID: 1638921801}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
