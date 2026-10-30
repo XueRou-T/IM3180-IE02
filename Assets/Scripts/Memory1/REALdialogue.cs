@@ -27,7 +27,6 @@ public class RealDialogue : MonoBehaviour
 
     [Header("Next Scene")]
     string nextSceneName;
-
     private int Index = 0;
     private bool isTyping = false;          
 

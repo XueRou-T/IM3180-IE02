@@ -1518,7 +1518,7 @@ MonoBehaviour:
   uiTarget: {fileID: 0}
   worldTarget: {fileID: 0}
   worldCamera: {fileID: 1807832179}
-  padding: {x: 20, y: 20}
+  padding: {x: 30, y: 30}
   worldTargetSize: {x: 100, y: 100}
 --- !u!114 &341259892
 MonoBehaviour:
@@ -1744,7 +1744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.27540612, g: 0.2411539, b: 0.89517814, a: 0.8392157}
+  m_Color: {r: 1, g: 0.2411539, b: 0.89517814, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1894,7 +1894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.60701764, g: 0.5587002, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4103,8 +4103,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e400aa160a48304418885a9aa72f1407, type: 2}
-  m_sharedMaterial: {fileID: 532153396506003083, guid: e400aa160a48304418885a9aa72f1407, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
+  m_sharedMaterial: {fileID: 532153396506003083, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4883,6 +4883,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1457428360314462123, guid: 63f2496ce18daf04cacd683dd21cf01e, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5522665443948182132, guid: 63f2496ce18daf04cacd683dd21cf01e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.99
