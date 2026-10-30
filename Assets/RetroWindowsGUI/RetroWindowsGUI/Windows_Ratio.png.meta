@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 6488d4c3e797a4acab80a1daf227f9fd
+guid: 3c01bf9a119212240a392b293e85c718
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2441641230190825026
-    second: npc2 up (1)_0
-  - first:
-      213: 4134327708112295382
-    second: npc2 up (1)_1
-  - first:
-      213: 579674456070065040
-    second: npc2 up (1)_2
+      213: -2950093642854564771
+    second: Windows_Ratio_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: npc2 up (1)_0
+      name: Windows_Ratio_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 84
-        width: 20
-        height: 30
+        x: 0
+        y: 0
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,52 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eb1378dcc3c8d1ed0800000000000000
-      internalID: -2441641230190825026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: npc2 up (1)_1
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 84
-        width: 20
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d5961b5525106930800000000000000
-      internalID: 4134327708112295382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: npc2 up (1)_2
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 20
-        width: 20
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 09b8c67b8da6b0800800000000000000
-      internalID: 579674456070065040
+      spriteID: d5cf38b46792f07d0800000000000000
+      internalID: -2950093642854564771
       vertices: []
       indices: 
       edges: []
@@ -185,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      npc2 up (1)_0: -2441641230190825026
-      npc2 up (1)_1: 4134327708112295382
-      npc2 up (1)_2: 579674456070065040
+      Windows_Ratio_0: -2950093642854564771
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
