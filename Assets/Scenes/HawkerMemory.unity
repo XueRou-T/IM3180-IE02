@@ -1118,11 +1118,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 844408995047080975, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1619
+      value: 1666
       objectReference: {fileID: 0}
     - target: {fileID: 844408995047080975, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 27.307
+      value: -175.1
       objectReference: {fileID: 0}
     - target: {fileID: 2574642500302333439, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_Pivot.x
@@ -1186,11 +1186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2574642500302333439, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0084877
+      value: -0.0022504
       objectReference: {fileID: 0}
     - target: {fileID: 2574642500302333439, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0036469
+      value: -0.0014435
       objectReference: {fileID: 0}
     - target: {fileID: 2574642500302333439, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1208,13 +1208,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBox
       objectReference: {fileID: 0}
+    - target: {fileID: 3399972807196271739, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 245
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399972807196271739, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -155
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614797072457857258, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -427.583
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614797072457857258, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 106.0885
+      objectReference: {fileID: 0}
     - target: {fileID: 3614797072457857258, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.012084961
+      value: -10.7315
       objectReference: {fileID: 0}
     - target: {fileID: 3614797072457857258, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 236
+      value: 169.6917
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: fadeImage
@@ -1224,37 +1240,77 @@ PrefabInstance:
       propertyPath: nextSceneName
       value: HawkerCentre
       objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[0].text
+      value: It's been so long since we last ate out...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[1].text
+      value: Shall we head to the hawker center downstairs to have lunch?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[2].text
+      value: I'm busy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[3].text
+      value: Can't you spare just one hour of your day to have lunch with your WIFE?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[4].text
+      value: You don't understand, I'm working on something really important.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[5].text
+      value: And somehow it's more important than our marriage??
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[6].text
+      value: You will never understand! I NEED to work on this!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[7].text
+      value: Sigh...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[8].text
+      value: 'He''s always working... I guess I''ll just have lunch on my own... '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[2].speakerName
+      value: Jonathan
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[4].speakerName
+      value: Jonathan
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[6].speakerName
+      value: Jonathan
+      objectReference: {fileID: 0}
     - target: {fileID: 3961174576340799076, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1920
       objectReference: {fileID: 0}
     - target: {fileID: 3961174576340799076, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1079.7
+      value: 668.72
       objectReference: {fileID: 0}
     - target: {fileID: 3961174576340799076, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.012104
+      value: 0.012001
       objectReference: {fileID: 0}
     - target: {fileID: 3961174576340799076, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.012468
-      objectReference: {fileID: 0}
-    - target: {fileID: 8940879573508695139, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 597.8939
+      value: -205.49
       objectReference: {fileID: 0}
     - target: {fileID: 8940879573508695139, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 84.3594
-      objectReference: {fileID: 0}
-    - target: {fileID: 8940879573508695139, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 492.66104
+      value: 55.1229
       objectReference: {fileID: 0}
     - target: {fileID: 8940879573508695139, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -113.3168
+      value: -276.30154
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -8263,6 +8263,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6745544964413045453, guid: 2de231aa5dc2eae469a7cbe0ecc0a642, type: 3}
   m_PrefabInstance: {fileID: 1353873231}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &467566831 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3631904631101438893, guid: 2de231aa5dc2eae469a7cbe0ecc0a642, type: 3}
+  m_PrefabInstance: {fileID: 1353873231}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467566826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69599baa7b8c26848b6b2af88a731cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaptopPuzzle
 --- !u!1 &576953411
 GameObject:
   m_ObjectHideFlags: 0
@@ -9054,6 +9065,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2971513805170325137, guid: a492e57d660bc1141bafa8ef8401dcbe, type: 3}
   m_PrefabInstance: {fileID: 1716081983}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &647826690 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7712173958130031354, guid: a492e57d660bc1141bafa8ef8401dcbe, type: 3}
+  m_PrefabInstance: {fileID: 1716081983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647826681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaceeaead2bda9f4bb9da5cac32f68d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestinationChoice
 --- !u!1 &682818164
 GameObject:
   m_ObjectHideFlags: 0
@@ -11399,7 +11421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1574372976208726890, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00092316
+      value: 0.00091552734
       objectReference: {fileID: 0}
     - target: {fileID: 1574372976208726890, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13516,6 +13538,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 329499427}
     m_Modifications:
+    - target: {fileID: 3631904631101438893, guid: 2de231aa5dc2eae469a7cbe0ecc0a642, type: 3}
+      propertyPath: desktopScreen
+      value: 
+      objectReference: {fileID: 2997632311349296817}
     - target: {fileID: 6077922977234621914, guid: 2de231aa5dc2eae469a7cbe0ecc0a642, type: 3}
       propertyPath: m_Name
       value: PuzzlePanel
@@ -17042,6 +17068,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4096250683422760721, guid: 453e9cbb921ebd14c8aaf85e88d220e6, type: 3}
   m_PrefabInstance: {fileID: 1607376115}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1880823199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2118248794439034302, guid: 453e9cbb921ebd14c8aaf85e88d220e6, type: 3}
+  m_PrefabInstance: {fileID: 1607376115}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880823197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb21f939b9e85b408f95c5ace062bf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaptopLogin
 --- !u!1 &1881958076
 GameObject:
   m_ObjectHideFlags: 0
@@ -19861,6 +19898,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.86, y: 1.69}
   m_EdgeRadius: 0
+--- !u!224 &2528776467336916434 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+  m_PrefabInstance: {fileID: 5827462568598249075}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2997632311349296817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3073265717569184222, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+  m_PrefabInstance: {fileID: 5827462568598249075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3123558659382816784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19981,6 +20028,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3098527758850934341, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: laptopLogin
+      value: 
+      objectReference: {fileID: 1880823199}
+    - target: {fileID: 3098527758850934341, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: laptopPuzzle
+      value: 
+      objectReference: {fileID: 467566831}
+    - target: {fileID: 3098527758850934341, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: destinationChoice
+      value: 
+      objectReference: {fileID: 647826690}
     - target: {fileID: 3664302014668272810, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -20390,10 +20449,118 @@ PrefabInstance:
       insertIndex: 2
       addedObject: {fileID: 1880823198}
     - targetCorrespondingSourceObject: {fileID: 4597194181456019225, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-      insertIndex: 4
+      insertIndex: 3
+      addedObject: {fileID: 2528776467336916434}
+    - targetCorrespondingSourceObject: {fileID: 4597194181456019225, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      insertIndex: 5
       addedObject: {fileID: 647826687}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+--- !u!1001 &5827462568598249075
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 329499427}
+    m_Modifications:
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 11.8191595
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.734509
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442227057738566066, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: puzzlePanel
+      value: 
+      objectReference: {fileID: 467566826}
+    - target: {fileID: 3073265717569184222, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_Name
+      value: DesktopScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073265717569184222, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
