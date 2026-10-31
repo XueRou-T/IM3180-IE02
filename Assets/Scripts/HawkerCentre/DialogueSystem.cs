@@ -12,6 +12,9 @@ public class DialogueSystem : MonoBehaviour
         public Sprite speakerPortrait;
         [TextArea(3, 10)]
         public string sentence;
+
+        [Tooltip("How many seconds this specific line stays on screen in Overhead Mode")]
+        public float displayTime;
     }
 
     public static bool IsDialogueOpen = false;
