@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 [RequireComponent(typeof(Book))]
 public class AutoFlip : MonoBehaviour {
     public FlipMode Mode;
@@ -11,6 +12,10 @@ public class AutoFlip : MonoBehaviour {
     public int AnimationFramesCount = 40;
     bool isFlipping = false;
     // Use this for initialization
+
+    public Image leftTemp;
+    public Image rightTemp;
+
     void Start () {
         if (!ControledBook)
             ControledBook = GetComponent<Book>();
@@ -21,6 +26,8 @@ public class AutoFlip : MonoBehaviour {
     void PageFlipped()
     {
         isFlipping = false;
+        leftTemp.gameObject.SetActive(true);
+        rightTemp.gameObject.SetActive(true);
     }
 	public void StartFlipping()
     {
@@ -28,6 +35,7 @@ public class AutoFlip : MonoBehaviour {
     }
     public void FlipRightPage()
     {
+        rightTemp.gameObject.SetActive(false);
         if (isFlipping) return;
         if (ControledBook.currentPage >= ControledBook.TotalPageCount) return;
         isFlipping = true;
@@ -41,6 +49,7 @@ public class AutoFlip : MonoBehaviour {
     }
     public void FlipLeftPage()
     {
+        leftTemp.gameObject.SetActive(false);
         if (isFlipping) return;
         if (ControledBook.currentPage <= 0) return;
         isFlipping = true;
