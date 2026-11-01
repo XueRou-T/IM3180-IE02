@@ -108,24 +108,52 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    void PickUp()
+    public void PickUp()
     {
         hasBeenPickedUp = true;
-        promptText.text = pickupMessage;
+
+        // SAFETY CHECK 1: Only update the prompt text if it actually exists
+        if (promptText != null)
+        {
+            promptText.text = pickupMessage;
+        }
 
         if (GameManager.Instance != null)
         {
             GameManager.Instance.AddItem(itemID);
+
+            if (InventoryUI.Instance != null)
+            {
+                InventoryUI.Instance.RefreshDisplay();
+
+                // --- ADDED: Tell the UI to pop up the description for this specific item ---
+                InventoryUI.Instance.ShowPopup(itemID);
+            }
         }
 
         Invoke(nameof(FinishPickUp), 1f);
-        sr.enabled = false;
-        GetComponent<Collider2D>().enabled = false;
+
+        // SAFETY CHECK 2: Only disable the sprite renderer if it found one
+        if (sr != null)
+        {
+            sr.enabled = false;
+        }
+
+        // SAFETY CHECK 3: Only disable the collider if one is attached
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            col.enabled = false;
+        }
     }
 
     void FinishPickUp()
     {
-        promptText.gameObject.SetActive(false);
-        promptText.text = interactPrompt;
+        // SAFETY CHECK: Only try to modify the text if it actually exists
+        if (promptText != null)
+        {
+            promptText.gameObject.SetActive(false);
+            promptText.text = interactPrompt;
+        }
     }
 }

@@ -1,15 +1,7 @@
 fileFormatVersion: 2
-guid: b78e98034b63f024bb1d9cdce35fd8b5
+guid: b7500c69b1acb08479b783dd2bf4489e
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
-      213: 3679451477852462636
-    second: New Piskel-16.png_0
-========
-      213: 1825938730613327874
-    second: pg4_0
->>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -47,16 +39,16 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 6
+  alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 480
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,47 +95,12 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
-      name: New Piskel-16.png_0
-========
-      name: pg4_0
->>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 480
-        height: 480
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
-      spriteID: c2e9ea1ef99001330800000000000000
-      internalID: 3679451477852462636
-========
-      spriteID: 208c5dbe999075910800000000000000
-      internalID: 1825938730613327874
->>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
-    spriteID: b00bab47328239e4cabfa7a7c7f2ee22
-========
     spriteID: 5e97eb03825dee720800000000000000
->>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
     internalID: 0
     vertices: []
     indices: 
@@ -152,12 +109,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-<<<<<<<< HEAD:Assets/Images/Puzzle/DeathTrap_On.png.meta
-      New Piskel-16.png_0: 3679451477852462636
-========
-      pg4_0: 1825938730613327874
->>>>>>>> origin/WY:Assets/Book-Page Curl/Example/sprites/pg4.png.meta
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

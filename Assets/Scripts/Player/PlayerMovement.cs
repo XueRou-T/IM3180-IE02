@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (LaptopPuzzle.IsPuzzleOpen || DestinationChoice.IsChoiceOpen || DialogueSystem.IsDialogueOpen)
+        if (LaptopPuzzle.IsPuzzleOpen || DestinationChoice.IsChoiceOpen || DialogueSystem.IsDialogueOpen || HawkerDialogueManager.IsDialogueOpen)
         {
             moveInput = Vector2.zero;
             return;
