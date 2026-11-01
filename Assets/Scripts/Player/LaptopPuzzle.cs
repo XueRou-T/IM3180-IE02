@@ -25,7 +25,7 @@ public class LaptopPuzzle : MonoBehaviour
         if (correct1 && correct2)
         {
             feedbackText.color = Color.green;
-            feedbackText.text = "Access granted. Loading memory file...";
+            feedbackText.text = "";
 
             if (GameManager.Instance != null)
             {
