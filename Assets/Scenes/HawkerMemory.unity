@@ -1129,7 +1129,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1705580416
+--- !u!1 &1602292683
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1137,9 +1137,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1705580419}
-  - component: {fileID: 1705580418}
-  - component: {fileID: 1705580417}
+  - component: {fileID: 1602292687}
+  - component: {fileID: 1602292686}
+  - component: {fileID: 1602292685}
+  - component: {fileID: 1602292684}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1147,13 +1148,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1705580417
+--- !u!114 &1602292684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705580416}
+  m_GameObject: {fileID: 1602292683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f71798c29011bea4a868e1043deda4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventSystemManager
+--- !u!114 &1602292685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602292683}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
@@ -1178,13 +1191,13 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
---- !u!114 &1705580418
+--- !u!114 &1602292686
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705580416}
+  m_GameObject: {fileID: 1602292683}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
@@ -1193,13 +1206,13 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!4 &1705580419
+--- !u!4 &1602292687
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705580416}
+  m_GameObject: {fileID: 1602292683}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1682,6 +1695,6 @@ SceneRoots:
   - {fileID: 1146899973}
   - {fileID: 1981871673}
   - {fileID: 1550513318}
-  - {fileID: 1705580419}
   - {fileID: 1195387057}
   - {fileID: 796605927}
+  - {fileID: 1602292687}
