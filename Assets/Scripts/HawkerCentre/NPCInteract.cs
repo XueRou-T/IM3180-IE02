@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -8,17 +9,16 @@ public class NPCInteract : MonoBehaviour
     public GameObject promptContainer;
     public string promptMessage = "Press E to talk";
 
-    [Tooltip("Check this box to swap text inside the small white bubble above their head. Uncheck it to use the big cinematic dialogue box.")]
+    [Tooltip("Check this box to use the small timed bubble. Uncheck to use the big cinematic dialogue box.")]
     public bool useSimpleOverheadDialogue = false;
 
     [Header("Dialogue Content")]
     public DialogueSystem.Line[] dialogueLines;
 
     private bool playerInRange = false;
-
-    // Tracking variables for the overhead dialogue mode
     private bool isTalkingOverhead = false;
     private int currentLineIndex = 0;
+    private Coroutine overheadRoutine;
 
     void Start()
     {
@@ -28,9 +28,8 @@ public class NPCInteract : MonoBehaviour
 
     void Update()
     {
-        if (!playerInRange) return; // Do nothing if player is far away
+        if (!playerInRange) return;
 
-        // Decide which dialogue mode to run based on your checkbox
         if (useSimpleOverheadDialogue)
         {
             HandleOverheadDialogue();
@@ -41,7 +40,7 @@ public class NPCInteract : MonoBehaviour
         }
     }
 
-    // --- MODE 1: THE BIG DIALOGUE BOX ---
+    // --- MODE 1: THE BIG DIALOGUE BOX (MANUAL) ---
     private void HandleManagerDialogue()
     {
         if (!HawkerDialogueManager.IsDialogueOpen && Input.GetKeyDown(KeyCode.E))
@@ -53,44 +52,41 @@ public class NPCInteract : MonoBehaviour
             }
         }
 
-        // Reactivate prompt after the big dialogue box closes
         if (!HawkerDialogueManager.IsDialogueOpen && promptContainer != null && !promptContainer.activeSelf)
         {
             promptContainer.SetActive(true);
         }
     }
 
-    // --- MODE 2: THE OVERHEAD BUBBLE ---
+    // --- MODE 2: THE OVERHEAD BUBBLE (AUTOMATIC) ---
     private void HandleOverheadDialogue()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        // Only require 'E' to start the conversation, not to advance it
+        if (Input.GetKeyDown(KeyCode.E) && !isTalkingOverhead)
         {
-            if (!isTalkingOverhead)
+            if (dialogueLines.Length > 0)
             {
-                // Start overhead conversation
-                if (dialogueLines.Length > 0)
-                {
-                    isTalkingOverhead = true;
-                    currentLineIndex = 0;
-                    UpdateOverheadText();
-                }
-            }
-            else
-            {
-                // Advance overhead conversation
-                currentLineIndex++;
-                if (currentLineIndex < dialogueLines.Length)
-                {
-                    UpdateOverheadText();
-                }
-                else
-                {
-                    // End conversation and reset the prompt text
-                    isTalkingOverhead = false;
-                    if (promptText != null) promptText.text = promptMessage;
-                }
+                overheadRoutine = StartCoroutine(PlayOverheadAuto());
             }
         }
+    }
+
+    private IEnumerator PlayOverheadAuto()
+    {
+        isTalkingOverhead = true;
+
+        for (int i = 0; i < dialogueLines.Length; i++)
+        {
+            currentLineIndex = i;
+            UpdateOverheadText();
+
+            // This is what makes the overhead bubble wait automatically!
+            yield return new WaitForSeconds(dialogueLines[i].displayTime);
+        }
+
+        // End conversation and reset the prompt text
+        isTalkingOverhead = false;
+        if (promptText != null) promptText.text = promptMessage;
     }
 
     private void UpdateOverheadText()
@@ -100,7 +96,6 @@ public class NPCInteract : MonoBehaviour
             string speaker = dialogueLines[currentLineIndex].speakerName;
             string sentence = dialogueLines[currentLineIndex].sentence;
 
-            // Displays it as "Name: Sentence" inside the little white box
             promptText.text = "<b>" + speaker + "</b>\n" + sentence;
         }
     }
@@ -110,11 +105,10 @@ public class NPCInteract : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            isTalkingOverhead = false; // Reset overhead state just in case
+            isTalkingOverhead = false;
 
             if (promptText != null) promptText.text = promptMessage;
 
-            // Show the prompt (but only if the big manager isn't actively talking)
             if (promptContainer != null && (!useSimpleOverheadDialogue ? !HawkerDialogueManager.IsDialogueOpen : true))
             {
                 promptContainer.SetActive(true);
@@ -128,6 +122,13 @@ public class NPCInteract : MonoBehaviour
         {
             playerInRange = false;
             isTalkingOverhead = false;
+
+            // Forcefully stop the automatic conversation if the player walks away
+            if (overheadRoutine != null)
+            {
+                StopCoroutine(overheadRoutine);
+                overheadRoutine = null;
+            }
 
             if (promptContainer != null) promptContainer.SetActive(false);
         }

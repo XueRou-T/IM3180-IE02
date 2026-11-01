@@ -8,6 +8,7 @@ public class LaptopPuzzle : MonoBehaviour
     public TMP_InputField answer1Input;
     public TMP_InputField answer2Input;
     public TMP_Text feedbackText;
+    public GameObject desktopScreen;
 
     [Header("Correct Answers")]
     public string correctAnswer1 = "White Tulip";
@@ -32,6 +33,8 @@ public class LaptopPuzzle : MonoBehaviour
             }
 
             // Placeholder for later: trigger the memory-reveal video/cutscene here
+            desktopScreen.SetActive(true);
+            this.gameObject.SetActive(false);
         }
         else
         {

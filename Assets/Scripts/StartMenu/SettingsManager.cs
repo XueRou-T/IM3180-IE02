@@ -13,14 +13,24 @@ public class SettingsManager : MonoBehaviour
 
     [SerializeField] Image brightnessFilter;
 
+    private bool isOn;
+
     public void Start()
     {
         foreach (Transform child in transform)
         {
             child.gameObject.SetActive(false);
         }
+        isOn = false;
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.Escape))
+        {
+            ToggleSettings();
+        }
+    }
     private void Awake()
     {
         float savedVolume = PlayerPrefs.GetFloat("Volume", 1f);
@@ -70,6 +80,7 @@ public class SettingsManager : MonoBehaviour
         {
             child.gameObject.SetActive(true);
         }
+        isOn = true;
     }
 
     public void CloseSettings()
@@ -78,5 +89,14 @@ public class SettingsManager : MonoBehaviour
         {
             child.gameObject.SetActive(false);
         }
+        isOn = false;
+    }
+
+    public void ToggleSettings()
+    {
+        if (isOn)
+            CloseSettings();
+        else 
+            OpenSettings();
     }
 }

@@ -1894,14 +1894,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7484276, g: 0.7484276, b: 0.7484276, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47b1b4d3682fad34b909e7d0c901c661, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2fe2d9c4a952ffb4ea0b081071912ffd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2121,7 +2121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838fe9d852b40b843ab5c7f44eacc718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSFXManager
-  walking: {fileID: 8300000, guid: c434bcd256567e548a940d01e1662dff, type: 3}
+  walking: {fileID: 8300000, guid: ef6ab3c83dc5b3447a61b290abd45df9, type: 3}
   falling: {fileID: 8300000, guid: 314b82d5ba6e44045a9126891d68a7d9, type: 3}
   dead: {fileID: 8300000, guid: 11a728190b3f398448d33e701e6eea6b, type: 3}
   winning: {fileID: 8300000, guid: 3b688edb4826d4044b56ad7629f6f5b0, type: 3}
