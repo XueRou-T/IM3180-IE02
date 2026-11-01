@@ -142,6 +142,17 @@ public class InventoryUI : MonoBehaviour
 
     public void ShowPopup(string itemName)
     {
+        // 1. CHECK: Are we currently using a table to eat?
+        if (TableInteract.activeTable != null)
+        {
+            // EATING MODE: Send this item's ID to the table
+            TableInteract.activeTable.TryEatItem(itemName);
+
+            // Instantly stop this function so the popup panel below never opens
+            return;
+        }
+
+        // 2. NORMAL MODE: The table is not active, so open the description panel normally
         ItemDisplay foundItem = GetItemDisplay(itemName);
         if (foundItem == null || popupPanel == null) return;
 

@@ -112,6 +112,7 @@ public class Interactable : MonoBehaviour
     {
         hasBeenPickedUp = true;
 
+
         // SAFETY CHECK 1: Only update the prompt text if it actually exists
         if (promptText != null)
         {
@@ -145,6 +146,9 @@ public class Interactable : MonoBehaviour
         {
             col.enabled = false;
         }
+
+
+
     }
 
     void FinishPickUp()
