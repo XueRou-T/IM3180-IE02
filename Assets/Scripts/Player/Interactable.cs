@@ -113,7 +113,10 @@ public class Interactable : MonoBehaviour
     {
         hasBeenPickedUp = true;
 
-        this.gameObject.GetComponent<Light2D>().enabled = false;
+        if (this.gameObject.GetComponent<Light2D>() != null)
+        {
+            this.gameObject.GetComponent<Light2D>().enabled = false;
+        }
 
         // SAFETY CHECK 1: Only update the prompt text if it actually exists
         if (promptText != null)
