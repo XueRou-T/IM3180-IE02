@@ -310,9 +310,9 @@ MonoBehaviour:
   playerMovementScriptName: PlayerMovement
   foodOnTable: {fileID: 1103701164}
   eatingSprites:
-  - {fileID: 3194539028255842366, guid: be801d1c82867344cac6a34930770e6b, type: 3}
-  - {fileID: 2057036126654855816, guid: be801d1c82867344cac6a34930770e6b, type: 3}
-  sittingSprite: {fileID: -1682988258533189575, guid: be801d1c82867344cac6a34930770e6b, type: 3}
+  - {fileID: 3194539028255842366, guid: 55747eff4cd911f428ed0b07f9c5f4df, type: 3}
+  - {fileID: 2057036126654855816, guid: 55747eff4cd911f428ed0b07f9c5f4df, type: 3}
+  sittingSprite: {fileID: -1682988258533189575, guid: 55747eff4cd911f428ed0b07f9c5f4df, type: 3}
   animFrameRate: 0.2
   nextSceneName: Puzzle2
 --- !u!58 &141200400
