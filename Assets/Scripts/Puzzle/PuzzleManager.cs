@@ -270,7 +270,7 @@ public class PuzzleManager : MonoBehaviour
         CheckLadders();
         CheckGoals();
         CheckPlayerShadowCollide();
-        CheckShadowlosedDoorDeath();
+        CheckShadowClosedDoorDeath();
     }
 
     void CheckButtons()
@@ -344,11 +344,11 @@ public class PuzzleManager : MonoBehaviour
         {
             Debug.Log("Game Over: Player trapped inside a closed death door!");
             gameOver = true;
-            StartFall(lastMoveType);
+            StartDoorDeathTransition(player.playerPosition);
         }
     }
 
-    void CheckShadowlosedDoorDeath()
+    void CheckShadowClosedDoorDeath()
     {
         GridData currentGrid = gridManager.GetGridData(shadow.shadowPosition);
         if (currentGrid == null || currentGrid.door == null) return;
@@ -426,6 +426,21 @@ public class PuzzleManager : MonoBehaviour
         Debug.Log("Death transition complete");
 
         RestartLevel(); 
+    }
+
+    IEnumerator StartDoorDeathTransition(Vector2Int playerPos)
+    {
+
+        while (Vector2.Distance(player.transform.position, (Vector2)playerPos)  > 0.05f)
+        {
+            yield return null;
+        }
+
+        minigameSFXManager.PlayDeathSound();
+
+        Debug.Log("Door Death transition complete");
+
+        RestartLevel();
     }
 
     public void RestartLevel()
