@@ -3,8 +3,8 @@ using TMPro;
 
 public class LaptopPuzzle : MonoBehaviour
 {
-    public static bool IsPuzzleOpen = false;
-    public GameObject puzzlePanel;
+    public bool IsPuzzleOpen = false;
+    public LaptopPuzzle puzzlePanel;
     public TMP_InputField answer1Input;
     public TMP_InputField answer2Input;
     public TMP_Text feedbackText;
@@ -45,7 +45,7 @@ public class LaptopPuzzle : MonoBehaviour
 
     public void ClosePuzzle()
     {
-        puzzlePanel.SetActive(false);
+        puzzlePanel.gameObject.SetActive(false);
         feedbackText.text = "";
         IsPuzzleOpen = false;
     }
