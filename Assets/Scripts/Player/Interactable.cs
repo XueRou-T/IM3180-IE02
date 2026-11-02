@@ -1,5 +1,6 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Interactable : MonoBehaviour
 {
@@ -112,6 +113,10 @@ public class Interactable : MonoBehaviour
     {
         hasBeenPickedUp = true;
 
+        if (this.gameObject.GetComponent<Light2D>() != null)
+        {
+            this.gameObject.GetComponent<Light2D>().enabled = false;
+        }
 
         // SAFETY CHECK 1: Only update the prompt text if it actually exists
         if (promptText != null)
@@ -146,9 +151,6 @@ public class Interactable : MonoBehaviour
         {
             col.enabled = false;
         }
-
-
-
     }
 
     void FinishPickUp()
