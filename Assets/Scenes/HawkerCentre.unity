@@ -636,7 +636,7 @@ Transform:
   m_GameObject: {fileID: 202255570}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -15.497645, z: -1}
+  m_LocalPosition: {x: 0, y: -17.91, z: -1}
   m_LocalScale: {x: 58, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1078,9 +1078,19 @@ MonoBehaviour:
     speakerPortrait: {fileID: 1202419796048458812, guid: e18f355699b37444582efe278f6276ca, type: 3}
     sentence: Here, take this plate, it's on the house
     displayTime: 2
+  alreadyHaveLines:
+  - speakerName: Nasi Lemak Vendor
+    speakerPortrait: {fileID: 1202419796048458812, guid: e18f355699b37444582efe278f6276ca, type: 3}
+    sentence: One more.. for your wife?
+    displayTime: 2
+  - speakerName: Nasi Lemak Vendor
+    speakerPortrait: {fileID: 1202419796048458812, guid: e18f355699b37444582efe278f6276ca, type: 3}
+    sentence: Heh jokes
+    displayTime: 2
   choicePanel: {fileID: 355128906}
   yesButton: {fileID: 1230137360}
   noButton: {fileID: 710143166}
+  itemID: Nasi Lemak
   onAcceptItem:
     m_PersistentCalls:
       m_Calls:
@@ -1183,21 +1193,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355128906}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.22352941}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -6297332884496016497, guid: b45815b0c44c41941bd75c1fb114dbc5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1226,6 +1236,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 488675288}
   - {fileID: 1230137359}
   - {fileID: 710143165}
   m_Father: {fileID: 1334625193}
@@ -1264,9 +1275,15 @@ MonoBehaviour:
     speakerPortrait: {fileID: -7424247051360647635, guid: 6b6edbfbb2369b54287f80876ead334b, type: 3}
     sentence: Would you like a plate of prata?
     displayTime: 2
+  alreadyHaveLines:
+  - speakerName: Prata Vendor
+    speakerPortrait: {fileID: -7424247051360647635, guid: 6b6edbfbb2369b54287f80876ead334b, type: 3}
+    sentence: Finish your food, then I can give u more
+    displayTime: 2
   choicePanel: {fileID: 355128906}
   yesButton: {fileID: 1230137360}
   noButton: {fileID: 710143166}
+  itemID: Prata
   onAcceptItem:
     m_PersistentCalls:
       m_Calls:
@@ -1841,6 +1858,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1210730615}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &488675287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 488675288}
+  - component: {fileID: 488675290}
+  - component: {fileID: 488675289}
+  m_Layer: 5
+  m_Name: MerchantPanelBG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &488675288
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488675287}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 355128909}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -24.717468, y: -1.3395996}
+  m_SizeDelta: {x: 1728.5, y: 368.938}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &488675289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488675287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -6297332884496016497, guid: b45815b0c44c41941bd75c1fb114dbc5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &488675290
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488675287}
+  m_CullTransparentMesh: 1
 --- !u!1 &501459584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2486,7 @@ Transform:
   m_GameObject: {fileID: 805481846}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.1, y: -7.0976458, z: -1}
+  m_LocalPosition: {x: -15.76, y: -7.0976458, z: -1}
   m_LocalScale: {x: 1, y: 32, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4327,7 +4419,7 @@ Transform:
   m_GameObject: {fileID: 1284162494}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.3, y: -7.0976458, z: -1}
+  m_LocalPosition: {x: 15.81, y: -7.0976458, z: -1}
   m_LocalScale: {x: 1, y: 32, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5495,9 +5587,11 @@ MonoBehaviour:
     speakerPortrait: {fileID: 5619552167996273271, guid: 75aee6af7d5dc204cb3bbff15a3ec899, type: 3}
     sentence: Would you like a plate of Chicken Rice?
     displayTime: 2
+  alreadyHaveLines: []
   choicePanel: {fileID: 355128906}
   yesButton: {fileID: 1230137360}
   noButton: {fileID: 710143166}
+  itemID: Chicken Rice
   onAcceptItem:
     m_PersistentCalls:
       m_Calls:
@@ -6126,7 +6220,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6172,9 +6266,9 @@ MonoBehaviour:
   target: {fileID: 0}
   smoothSpeed: 5
   offset: {x: 0, y: 0, z: -10}
-  useBounds: 0
-  minBounds: {x: -10, y: -10}
-  maxBounds: {x: 10, y: 10}
+  useBounds: 1
+  minBounds: {x: -15.5, y: -17.5}
+  maxBounds: {x: 15.5, y: 3}
 --- !u!114 &1629921678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6476,7 +6570,7 @@ Transform:
   m_GameObject: {fileID: 1724430384}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.4023542, z: -1}
+  m_LocalPosition: {x: 0, y: 3.44, z: -1}
   m_LocalScale: {x: 58, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7656,7 +7750,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 6, y: 4}
+  m_Size: {x: 7, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
@@ -8312,16 +8406,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45804423, g: 0.3649341, b: 0.7584905, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -7424247051360647635, guid: 6b6edbfbb2369b54287f80876ead334b, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -8526,16 +8620,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45804423, g: 0.3649341, b: 0.7584905, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1202419796048458812, guid: e18f355699b37444582efe278f6276ca, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
