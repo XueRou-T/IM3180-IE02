@@ -35,6 +35,8 @@ public class Dialogue : MonoBehaviour
     [Header("Dialogue Content")]
     public DialogueLine[] lines;
     public float textSpeed;
+    public bool haveOption = false;
+    public GameObject optionChoice;
 
    
     private string speakerOne = "";
@@ -56,6 +58,11 @@ public class Dialogue : MonoBehaviour
         avatarOneImage.gameObject.SetActive(false);
         avatarTwoImage.gameObject.SetActive(false);
 
+        if (optionChoice != null)
+        {
+            optionChoice.SetActive(false);
+        }
+
         StartDialogue();
     }
 
@@ -65,7 +72,7 @@ public class Dialogue : MonoBehaviour
         {
             if (textComponent.text == lines[index].text)
             {
-                NextLine();
+                    NextLine();
             }
             else
             {
@@ -124,6 +131,13 @@ public class Dialogue : MonoBehaviour
             index++;
             textComponent.text = string.Empty;
             UpdateSpeakerInfo();
+            if (index == lines.Length - 1)
+            {
+                if (haveOption && optionChoice != null)
+                {
+                    optionChoice.SetActive(true);
+                }
+            }
             StartCoroutine(TypeLine());
         }
         else
@@ -205,6 +219,7 @@ public class Dialogue : MonoBehaviour
 
         yield return new WaitForSeconds(3);
 
-        SceneManager.LoadScene(nextSceneName);
+        if(nextSceneName != null)
+            SceneManager.LoadScene(nextSceneName);
     }
 }

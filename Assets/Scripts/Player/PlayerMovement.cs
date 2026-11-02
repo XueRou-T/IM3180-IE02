@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Animation Settings")]
     public float frameRate = 0.2f; // time (seconds) between frame swaps
 
+    [Header("SFX Reference")]
+    public OverWorldSFX sfxManager;
+
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Vector2 moveInput;
@@ -37,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     private float frameTimer = 0f;
     private bool showingFirstFrame = true;
 
+    public LaptopPuzzle puzzlePanel;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -45,7 +49,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (LaptopPuzzle.IsPuzzleOpen || DestinationChoice.IsChoiceOpen || DialogueSystem.IsDialogueOpen || HawkerDialogueManager.IsDialogueOpen)
+        bool isPuzzleOpen = puzzlePanel != null && puzzlePanel.IsPuzzleOpen;
+
+        if (isPuzzleOpen || DestinationChoice.IsChoiceOpen || DialogueSystem.IsDialogueOpen || HawkerDialogueManager.IsDialogueOpen)
         {
             moveInput = Vector2.zero;
             return;
@@ -78,6 +84,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isMoving)
         {
+            if(sfxManager != null)
+                sfxManager.StopAllSound();
             // Standing still - show idle sprite, reset animation timer
             frameTimer = 0f;
             showingFirstFrame = true;
@@ -92,6 +100,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            if (sfxManager != null)
+                sfxManager.PlayWalkingSound();
             // Moving - alternate between frame 1 and frame 2 based on timer
             frameTimer += Time.deltaTime;
             if (frameTimer >= frameRate)

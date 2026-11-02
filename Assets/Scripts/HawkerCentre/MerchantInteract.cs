@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI; // --- ADDED: Required to control UI Buttons in code ---
+using UnityEngine.UI;
 using TMPro;
 
 public class MerchantInteract : MonoBehaviour
@@ -12,13 +12,15 @@ public class MerchantInteract : MonoBehaviour
 
     [Header("Merchant Dialogue")]
     public DialogueSystem.Line[] merchantLines;
+    public DialogueSystem.Line[] alreadyHaveLines; // What to say if they already have it
 
     [Header("UI Choices")]
     public GameObject choicePanel;
-    public Button yesButton; // --- ADDED: Slot for the Yes button ---
-    public Button noButton;  // --- ADDED: Slot for the No button ---
+    public Button yesButton;
+    public Button noButton;
 
     [Header("Item Reward")]
+    public string itemID; // The name of the food to check in the inventory
     public UnityEvent onAcceptItem;
 
     private bool playerInRange = false;
@@ -37,7 +39,18 @@ public class MerchantInteract : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && !HawkerDialogueManager.IsDialogueOpen && !choicePanel.activeSelf)
         {
             if (promptContainer != null) promptContainer.SetActive(false);
-            HawkerDialogueManager.Instance.StartDialogue(merchantLines, ShowChoicePanel);
+
+            // 1. Check if the player already has the item
+            if (GameManager.Instance != null && !string.IsNullOrEmpty(itemID) && GameManager.Instance.HasItem(itemID))
+            {
+                // Play the rejection dialogue. Passing 'null' means the Yes/No panel WON'T appear after.
+                HawkerDialogueManager.Instance.StartDialogue(alreadyHaveLines, null);
+            }
+            else
+            {
+                // 2. Player doesn't have it. Play normal dialogue and show Yes/No panel at the end.
+                HawkerDialogueManager.Instance.StartDialogue(merchantLines, ShowChoicePanel);
+            }
         }
 
         if (!HawkerDialogueManager.IsDialogueOpen && !choicePanel.activeSelf && promptContainer != null && !promptContainer.activeSelf)
@@ -51,7 +64,6 @@ public class MerchantInteract : MonoBehaviour
         choicePanel.SetActive(true);
         HawkerDialogueManager.IsDialogueOpen = true;
 
-        // --- ADDED: Tell the buttons to trigger THIS specific merchant ---
         // First, clear out any leftover connections from the last merchant you spoke to
         yesButton.onClick.RemoveAllListeners();
         noButton.onClick.RemoveAllListeners();
