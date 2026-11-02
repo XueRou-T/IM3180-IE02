@@ -935,15 +935,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thank You For Playing
-
-    You''ve Reached The End Of Chapter 1
-
-
-    Jon''s
-    Story Continues At Chapter 2
-
-    Stay Tuned'
+  m_text: "You experienced the True Ending.\n\nThank you for playing our game demo.
+    \nMore chapters about Jon's adventure coming soon. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
   m_sharedMaterial: {fileID: 532153396506003083, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
