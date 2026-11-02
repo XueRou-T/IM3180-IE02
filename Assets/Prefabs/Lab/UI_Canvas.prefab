@@ -2267,17 +2267,18 @@ MonoBehaviour:
   popupDescText: {fileID: 4671273184799575158}
   itemDatabase:
   - itemName: Personal ID
-    itemSprite: {fileID: -4672458477834289504, guid: dc6dabdfbe868a241afc6c1f6c81fafe, type: 3}
+    itemSprite: {fileID: 4174359590760033433, guid: b72fcdd8b6250f947b1b0b2a758faf66, type: 3}
     itemColor: {r: 1, g: 1, b: 1, a: 1}
-    description: meow meow meow
+    description: "Jonathan\u2019s Identification card\nCould I be Jonathan?"
   - itemName: Work ID
-    itemSprite: {fileID: -4672458477834289504, guid: dc6dabdfbe868a241afc6c1f6c81fafe, type: 3}
-    itemColor: {r: 1, g: 1, b: 0, a: 1}
-    description: meow meow meow
+    itemSprite: {fileID: -5405843913079911806, guid: 53cbc482b1077a54c8e1ecbb88bfed67, type: 3}
+    itemColor: {r: 1, g: 1, b: 1, a: 1}
+    description: Work pass for Jonathan to access the labs
   - itemName: Wallet
     itemSprite: {fileID: -480632553539714925, guid: 7b48726a838222a4597fd082b3ee83ab, type: 3}
     itemColor: {r: 1, g: 1, b: 1, a: 1}
-    description: meow meow meow
+    description: "Seems like they\u2019re only a few notes inside... \nBut we\u2019re
+      a cashless society... right?\r\n"
   - itemName: House Key
     itemSprite: {fileID: 7440145182128167302, guid: 8db47ca7353e8ce47bdd7a6941beb927, type: 3}
     itemColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2291,15 +2292,15 @@ MonoBehaviour:
     itemColor: {r: 1, g: 1, b: 1, a: 1}
     description: meow meow meow
   - itemName: Chicken Rice
-    itemSprite: {fileID: 7440145182128167302, guid: 8db47ca7353e8ce47bdd7a6941beb927, type: 3}
+    itemSprite: {fileID: -480632553539714925, guid: 7b48726a838222a4597fd082b3ee83ab, type: 3}
     itemColor: {r: 1, g: 1, b: 1, a: 1}
     description: meow meow meow
   - itemName: White Tulips
-    itemSprite: {fileID: 7440145182128167302, guid: 8db47ca7353e8ce47bdd7a6941beb927, type: 3}
+    itemSprite: {fileID: 622239769680624179, guid: 3dbc4bdba467be045a3a3e60e85dddbc, type: 3}
     itemColor: {r: 1, g: 1, b: 1, a: 1}
     description: meow meow meow
   - itemName: Family Photo
-    itemSprite: {fileID: -480632553539714925, guid: 7b48726a838222a4597fd082b3ee83ab, type: 3}
+    itemSprite: {fileID: 9068496691467835646, guid: f0520daaacf29474b8d7c0c40c156de8, type: 3}
     itemColor: {r: 1, g: 1, b: 1, a: 1}
     description: meow meow meow
 --- !u!114 &3098527758850934341
