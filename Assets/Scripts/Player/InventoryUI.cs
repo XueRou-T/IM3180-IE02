@@ -14,6 +14,11 @@ public class InventoryUI : MonoBehaviour
         public Sprite itemSprite;
         public Color itemColor = Color.white;
         [TextArea(3, 5)] public string description;
+
+        [Header("Back Side (Flippable ID Cards)")]
+        public bool isFlippable = false; // Check this in Inspector for IDs
+        public Sprite backItemSprite;
+        [TextArea(3, 5)] public string backDescription;
     }
 
     [Header("Main UI References")]
@@ -29,11 +34,14 @@ public class InventoryUI : MonoBehaviour
     public Image popupImage;
     public TMP_Text popupTitleText;
     public TMP_Text popupDescText;
+    public GameObject flipButtonObject; // Reference to your UI Flip button
 
     [Header("Item Database")]
     public ItemDisplay[] itemDatabase;
 
     private bool isOpen = false;
+    private ItemDisplay currentPopupItem;
+    private bool showingBack = false;
 
     void Awake()
     {
@@ -49,10 +57,10 @@ public class InventoryUI : MonoBehaviour
             return;
         }
 
-        // Force everything closed immediately on awake before start runs
         if (panelToToggle != null) panelToToggle.SetActive(false);
         if (tooltipPanel != null) tooltipPanel.SetActive(false);
         if (popupPanel != null) popupPanel.SetActive(false);
+        if (flipButtonObject != null) flipButtonObject.SetActive(false);
         isOpen = false;
     }
 
@@ -67,6 +75,7 @@ public class InventoryUI : MonoBehaviour
         SetPanelOpen(false);
         if (tooltipPanel != null) tooltipPanel.SetActive(false);
         if (popupPanel != null) popupPanel.SetActive(false);
+        if (flipButtonObject != null) flipButtonObject.SetActive(false);
         RefreshDisplay();
     }
 
@@ -85,7 +94,6 @@ public class InventoryUI : MonoBehaviour
         {
             if (obj.hideFlags == HideFlags.None)
             {
-                // Only auto-reconnect if they aren't already assigned in the inspector
                 if (panelToToggle == null && (obj.name == "InventoryPanel" || obj.name == "Inventory Panel")) panelToToggle = obj;
                 if (tooltipPanel == null && (obj.name == "TooltipPanel" || obj.name == "Tooltip Panel")) tooltipPanel = obj;
             }
@@ -109,6 +117,7 @@ public class InventoryUI : MonoBehaviour
         {
             if (tooltipPanel != null) tooltipPanel.SetActive(false);
             if (popupPanel != null) popupPanel.SetActive(false);
+            if (flipButtonObject != null) flipButtonObject.SetActive(false);
         }
 
         if (isOpen) RefreshDisplay();
@@ -182,19 +191,50 @@ public class InventoryUI : MonoBehaviour
             return;
         }
 
-        ItemDisplay foundItem = GetItemDisplay(itemName);
-        if (foundItem == null || popupPanel == null) return;
+        currentPopupItem = GetItemDisplay(itemName);
+        if (currentPopupItem == null || popupPanel == null) return;
 
-        popupTitleText.text = foundItem.itemName;
-        popupDescText.text = foundItem.description;
-        popupImage.sprite = foundItem.itemSprite;
-        popupImage.color = foundItem.itemColor;
+        showingBack = false; // Always start on the front view
+        UpdatePopupVisuals();
+
+        // Show flip button only if this specific item is marked as flippable
+        if (flipButtonObject != null)
+        {
+            flipButtonObject.SetActive(currentPopupItem.isFlippable);
+        }
 
         popupPanel.SetActive(true);
+    }
+
+    public void FlipCard()
+    {
+        if (currentPopupItem == null || !currentPopupItem.isFlippable) return;
+
+        showingBack = !showingBack;
+        UpdatePopupVisuals();
+    }
+
+    private void UpdatePopupVisuals()
+    {
+        if (showingBack)
+        {
+            popupTitleText.text = currentPopupItem.itemName + " (Back)";
+            popupDescText.text = currentPopupItem.backDescription;
+            popupImage.sprite = currentPopupItem.backItemSprite;
+            popupImage.color = currentPopupItem.itemColor;
+        }
+        else
+        {
+            popupTitleText.text = currentPopupItem.itemName;
+            popupDescText.text = currentPopupItem.description;
+            popupImage.sprite = currentPopupItem.itemSprite;
+            popupImage.color = currentPopupItem.itemColor;
+        }
     }
 
     public void ClosePopup()
     {
         if (popupPanel != null) popupPanel.SetActive(false);
+        if (flipButtonObject != null) flipButtonObject.SetActive(false);
     }
 }
