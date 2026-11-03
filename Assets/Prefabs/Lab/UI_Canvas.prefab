@@ -2850,7 +2850,7 @@ MonoBehaviour:
     description: "Jonathan\u2019s Identification card\nCould I be Jonathan?"
     isFlippable: 1
     backItemSprite: {fileID: -1981349290348939618, guid: b72fcdd8b6250f947b1b0b2a758faf66, type: 3}
-    backDescription: 'It seems like I? liveat this address '
+    backDescription: 'It seems like I live at this address '
   - itemName: Work ID
     itemSprite: {fileID: -5405843913079911806, guid: 53cbc482b1077a54c8e1ecbb88bfed67, type: 3}
     itemColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2859,7 +2859,7 @@ MonoBehaviour:
     backItemSprite: {fileID: 0}
     backDescription: 
   - itemName: Wallet
-    itemSprite: {fileID: 3288183018727488999, guid: c4c38683fffb67a4d8776b8d1a8a8891, type: 3}
+    itemSprite: {fileID: 494000272056692211, guid: f4acca5b9eb010842b8b18e798f69964, type: 3}
     itemColor: {r: 1, g: 1, b: 1, a: 1}
     description: "Seems like they\u2019re only a few notes inside... \nBut we\u2019re
       a cashless society... right?\r\n"
@@ -2867,7 +2867,7 @@ MonoBehaviour:
     backItemSprite: {fileID: 0}
     backDescription: 
   - itemName: House Key
-    itemSprite: {fileID: 7440145182128167302, guid: 8db47ca7353e8ce47bdd7a6941beb927, type: 3}
+    itemSprite: {fileID: 1694913177206695654, guid: 632fd6492be5fb74d8e442884eb28749, type: 3}
     itemColor: {r: 1, g: 1, b: 1, a: 1}
     description: meow meow meow
     isFlippable: 0
