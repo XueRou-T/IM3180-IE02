@@ -677,6 +677,7 @@ MonoBehaviour:
   shadowMoveCount: 7
   moveHistory: 
   moveTrackerUI: {fileID: 834206969}
+  isPuzzleOne: 0
   nextSceneName: HawkerMemory
 --- !u!4 &144435362
 Transform:
