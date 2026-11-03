@@ -10,11 +10,13 @@ public class DesktopManager : MonoBehaviour
     private float lastClickTime;
 
     [Header("References")]
-    public Image merlionTimesImage;
+    public EndGameManager endGameManager;
+    public LaptopPuzzle puzzlePanel;
 
     private void Awake()
     {
-        LaptopPuzzle.IsPuzzleOpen = true;
+        puzzlePanel.IsPuzzleOpen = true;
+        endGameManager.closeDesktopTrigger = false;
     }
 
     public void OpenWindow(GameObject targetPanel)
@@ -34,6 +36,11 @@ public class DesktopManager : MonoBehaviour
     public void CloseWindows(GameObject targetPanel)
     {
         targetPanel.SetActive(false);
-        LaptopPuzzle.IsPuzzleOpen = false;
+        puzzlePanel.IsPuzzleOpen = false;
+
+        if (endGameManager.merlionTimesTrigger && endGameManager.journalTrigger && endGameManager.videoTrigger && endGameManager.closeDesktopTrigger)
+        {
+            endGameManager.StartEndDialogue();
+        }
     }
 }

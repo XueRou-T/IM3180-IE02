@@ -696,7 +696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb21f939b9e85b408f95c5ace062bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaptopLogin
-  loginPanel: {fileID: 3628054342500846706}
+  loginPanel: {fileID: 2118248794439034302}
   puzzlePanel: {fileID: 0}
   passwordInput: {fileID: 3614901543511251755}
   loginFeedbackText: {fileID: 2106559801956982487}

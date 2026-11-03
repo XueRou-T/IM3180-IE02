@@ -923,7 +923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3c47abcf3fb3d12408efe3073b2e379f, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1638,6 +1638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DesktopManager
   doubleClickTime: 0.3
   merlionTimesImage: {fileID: 2356508853703273664}
+  endGameManager: {fileID: 0}
 --- !u!1 &5632555114488704979
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,7 +2473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 872176305381383156, guid: bd69ee6531d2d59469dec8ba69022710, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1556845121236104295, guid: bd69ee6531d2d59469dec8ba69022710, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2617,7 +2618,7 @@ PrefabInstance:
     - target: {fileID: 5878602792123209036, guid: bd69ee6531d2d59469dec8ba69022710, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3c47abcf3fb3d12408efe3073b2e379f, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7464952130710624079, guid: bd69ee6531d2d59469dec8ba69022710, type: 3}
       propertyPath: leftTemp
       value: 

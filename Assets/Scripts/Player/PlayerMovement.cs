@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     private float frameTimer = 0f;
     private bool showingFirstFrame = true;
 
+    public LaptopPuzzle puzzlePanel;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,7 +49,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (LaptopPuzzle.IsPuzzleOpen || DestinationChoice.IsChoiceOpen || DialogueSystem.IsDialogueOpen || HawkerDialogueManager.IsDialogueOpen)
+        bool isPuzzleOpen = puzzlePanel != null && puzzlePanel.IsPuzzleOpen;
+
+        if (isPuzzleOpen || DestinationChoice.IsChoiceOpen || DialogueSystem.IsDialogueOpen || HawkerDialogueManager.IsDialogueOpen)
         {
             moveInput = Vector2.zero;
             return;
