@@ -74,14 +74,23 @@ public class DestinationChoice : MonoBehaviour
         // Whenever traveling back to the house/door, set the spawn point target
         PlayerPersistence.nextSpawnPointName = "SpawnNearDoor";
 
-        if (currentActiveDoor != null)
+        // Open the persistent address popup cleanly via its controller (clears feedback text automatically)
+        if (UIPersistence.Instance != null && UIPersistence.Instance.addressPopupController != null)
         {
-            currentActiveDoor.SelectHomeOption();
+            UIPersistence.Instance.addressPopupController.OpenPanel();
         }
         else
         {
-            SceneDoor fallbackDoor = FindAnyObjectByType<SceneDoor>();
-            if (fallbackDoor != null) fallbackDoor.SelectHomeOption();
+            // Fallback just in case controller reference is missing
+            if (currentActiveDoor != null)
+            {
+                currentActiveDoor.SelectHomeOption();
+            }
+            else
+            {
+                SceneDoor fallbackDoor = FindAnyObjectByType<SceneDoor>();
+                if (fallbackDoor != null) fallbackDoor.SelectHomeOption();
+            }
         }
     }
 
@@ -117,9 +126,16 @@ public class DestinationChoice : MonoBehaviour
     // Helper method to safely close the address popup via UIPersistence
     void HideAddressPopup()
     {
-        if (UIPersistence.Instance != null && UIPersistence.Instance.houseAddressPopup != null)
+        if (UIPersistence.Instance != null)
         {
-            UIPersistence.Instance.houseAddressPopup.SetActive(false);
+            if (UIPersistence.Instance.addressPopupController != null)
+            {
+                UIPersistence.Instance.addressPopupController.ClosePanel();
+            }
+            else if (UIPersistence.Instance.houseAddressPopup != null)
+            {
+                UIPersistence.Instance.houseAddressPopup.SetActive(false);
+            }
         }
     }
 

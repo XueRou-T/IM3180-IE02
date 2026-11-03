@@ -124,7 +124,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7170076276207673845, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
   m_PrefabInstance: {fileID: 1334625192}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59233273}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaceeaead2bda9f4bb9da5cac32f68d0, type: 3}
@@ -419,11 +419,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawnerExplore
   spawnPointName: SpawnNearDoor
---- !u!1 &59233273 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 539355188730449123, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 1334625192}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &67211006
 GameObject:
   m_ObjectHideFlags: 0
@@ -6124,15 +6119,8 @@ MonoBehaviour:
   promptText: {fileID: 1114579961}
   promptMessage: Press E to go to the lab
   lockedMessage: 
-  choicePanelObject: {fileID: 59233273}
   requiresUnlock: 0
   requiredItems: []
-  addressInputPanel: {fileID: 1448447875}
-  addressInputField: {fileID: 1812238879}
-  postalInputField: {fileID: 1590374159}
-  feedbackText: {fileID: 1530678093}
-  correctAddress: 123 Seventh Avenue #07-67
-  correctPostalCode: 676767
   homeSceneName: House
 --- !u!1 &691663807
 GameObject:
@@ -12298,14 +12286,14 @@ PrefabInstance:
     - target: {fileID: 6822277903497104942, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 680834747}
+      objectReference: {fileID: 1334625193}
     - target: {fileID: 6822277903497104942, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SubmitAddress
       objectReference: {fileID: 0}
     - target: {fileID: 6822277903497104942, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneDoor, Assembly-CSharp
+      value: AddressPopupController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6822277903497104942, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -12546,6 +12534,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+--- !u!114 &1334625193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3391081172320368375, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+  m_PrefabInstance: {fileID: 1334625192}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9134e05e83318d94b8a03e43893b1f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AddressPopupController
 --- !u!1 &1345058649
 GameObject:
   m_ObjectHideFlags: 0
@@ -13869,11 +13868,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &1448447875 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4291108185490470195, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 1334625192}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1467748638
 GameObject:
   m_ObjectHideFlags: 0
@@ -14535,17 +14529,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1530678093 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6617778047045526494, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 1334625192}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1535085883
 GameObject:
   m_ObjectHideFlags: 0
@@ -15167,17 +15150,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1590374159 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6604902750126454586, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 1334625192}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
 --- !u!1 &1601413624
 GameObject:
   m_ObjectHideFlags: 0
@@ -18131,17 +18103,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 100
   m_TargetDisplay: 0
---- !u!114 &1812238879 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5665331253543104262, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 1334625192}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
 --- !u!1 &1813990767
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,8 @@ public class UIPersistence : MonoBehaviour
 
     public DestinationChoice destinationChoice;
     public GameObject dialoguePanel;
-    public GameObject houseAddressPopup; // ADD THIS LINE
+    public GameObject houseAddressPopup;
+    [HideInInspector] public AddressPopupController addressPopupController;
 
     void Awake()
     {
@@ -14,6 +15,17 @@ public class UIPersistence : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            if (houseAddressPopup == null)
+            {
+                Transform foundPopup = transform.Find("House Address Popup");
+                if (foundPopup != null) houseAddressPopup = foundPopup.gameObject;
+            }
+
+            if (houseAddressPopup != null)
+            {
+                addressPopupController = houseAddressPopup.GetComponent<AddressPopupController>();
+            }
         }
         else
         {
