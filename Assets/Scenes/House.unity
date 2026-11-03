@@ -598,6 +598,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7440145182128167302, guid: 8db47ca7353e8ce47bdd7a6941beb927, type: 3}
     - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.data[0].isFlippable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: itemDatabase.Array.data[0].itemColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -1664,15 +1668,8 @@ MonoBehaviour:
   promptText: {fileID: 2100066302}
   promptMessage: Press E to leave
   lockedMessage: It's locked. I need everything first.
-  choicePanelObject: {fileID: 1203051899}
   requiresUnlock: 0
   requiredItems: []
-  addressInputPanel: {fileID: 0}
-  addressInputField: {fileID: 0}
-  postalInputField: {fileID: 0}
-  feedbackText: {fileID: 0}
-  correctAddress: 123 Seventh Avenue #07-67
-  correctPostalCode: 676767
   homeSceneName: House
 --- !u!1001 &514474348
 PrefabInstance:
@@ -3368,17 +3365,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1203051899 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 539355188730449123, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 202852819}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1203051901 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7170076276207673845, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
   m_PrefabInstance: {fileID: 202852819}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203051899}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaceeaead2bda9f4bb9da5cac32f68d0, type: 3}

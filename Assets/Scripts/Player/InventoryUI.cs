@@ -1,7 +1,8 @@
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -234,7 +235,19 @@ public class InventoryUI : MonoBehaviour
 
     public void ClosePopup()
     {
+        // Save the item ID before clearing it
+        string closedItemID = (currentPopupItem != null) ? currentPopupItem.itemName : "";
+
         if (popupPanel != null) popupPanel.SetActive(false);
         if (flipButtonObject != null) flipButtonObject.SetActive(false);
+
+        // --- SCENE TRANSITION CHECK ---
+        // Replace "PuzzleSceneNameHere" with the exact itemID of your special collectible
+        // and "PuzzleScene" with your target puzzle scene name.
+        if (closedItemID == "White Tulips")
+        {
+            Debug.Log("[InventoryUI] Special collectible popup closed! Loading puzzle scene...");
+            SceneManager.LoadScene("Puzzle1");
+        }
     }
 }
