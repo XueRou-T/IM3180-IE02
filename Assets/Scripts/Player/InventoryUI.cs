@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -37,12 +37,18 @@ public class InventoryUI : MonoBehaviour
     public TMP_Text popupDescText;
     public GameObject flipButtonObject; // Reference to your UI Flip button
 
+    [Header("First-Time Prompt")]
+    public GameObject inventoryPromptPanel; // Drag your prompt UI panel here
+
     [Header("Item Database")]
     public ItemDisplay[] itemDatabase;
 
     private bool isOpen = false;
     private ItemDisplay currentPopupItem;
     private bool showingBack = false;
+    private bool hasShownPrompt = false;
+    private bool isWaitingForInventoryCycle = false;
+    private bool promptHasOpened = false;
 
     void Awake()
     {
@@ -62,6 +68,7 @@ public class InventoryUI : MonoBehaviour
         if (tooltipPanel != null) tooltipPanel.SetActive(false);
         if (popupPanel != null) popupPanel.SetActive(false);
         if (flipButtonObject != null) flipButtonObject.SetActive(false);
+        if (inventoryPromptPanel != null) inventoryPromptPanel.SetActive(false);
         isOpen = false;
     }
 
@@ -77,6 +84,7 @@ public class InventoryUI : MonoBehaviour
         if (tooltipPanel != null) tooltipPanel.SetActive(false);
         if (popupPanel != null) popupPanel.SetActive(false);
         if (flipButtonObject != null) flipButtonObject.SetActive(false);
+        if (inventoryPromptPanel != null) inventoryPromptPanel.SetActive(false);
         RefreshDisplay();
     }
 
@@ -113,6 +121,25 @@ public class InventoryUI : MonoBehaviour
         {
             Debug.LogError("InventoryUI: panelToToggle is UNASSIGNED! Drag your Inventory Panel into the Inspector slot.");
         }
+
+        // --- INVENTORY PROMPT CYCLE CHECK ---
+        if (isWaitingForInventoryCycle)
+        {
+            if (open)
+            {
+                promptHasOpened = true; // 1st Tab: Player opened the inventory
+            }
+            else if (promptHasOpened && !open)
+            {
+                // 2nd Tab: Player closed the inventory after opening it -> Hide prompt forever
+                if (inventoryPromptPanel != null)
+                {
+                    inventoryPromptPanel.SetActive(false);
+                }
+                isWaitingForInventoryCycle = false;
+            }
+        }
+        // ------------------------------------
 
         if (!isOpen)
         {
@@ -192,6 +219,19 @@ public class InventoryUI : MonoBehaviour
             return;
         }
 
+        // --- FIRST-TIME INVENTORY PROMPT CHECK ---
+        if (GameManager.Instance != null && GameManager.Instance.GetAllItems().Count == 1 && !hasShownPrompt)
+        {
+            hasShownPrompt = true;
+            if (inventoryPromptPanel != null)
+            {
+                inventoryPromptPanel.SetActive(true);
+                isWaitingForInventoryCycle = true;
+                promptHasOpened = false;
+            }
+        }
+        // -----------------------------------------
+
         currentPopupItem = GetItemDisplay(itemName);
         if (currentPopupItem == null || popupPanel == null) return;
 
@@ -242,8 +282,6 @@ public class InventoryUI : MonoBehaviour
         if (flipButtonObject != null) flipButtonObject.SetActive(false);
 
         // --- SCENE TRANSITION CHECK ---
-        // Replace "PuzzleSceneNameHere" with the exact itemID of your special collectible
-        // and "PuzzleScene" with your target puzzle scene name.
         if (closedItemID == "White Tulips")
         {
             Debug.Log("[InventoryUI] Special collectible popup closed! Loading puzzle scene...");
