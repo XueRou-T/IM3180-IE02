@@ -10,35 +10,72 @@ public class DestinationChoice : MonoBehaviour
     public GameObject houseButton;
     public GameObject hawkerButton;
 
+    [HideInInspector] public SceneDoor currentActiveDoor;
+
+    void Awake()
+    {
+        // Force reset static flags and hide the panel safely on boot
+        IsChoiceOpen = false;
+        currentActiveDoor = null;
+        SetPanelVisible(false);
+    }
+
     void Start()
     {
         SetPanelVisible(false);
     }
 
-    public void OpenChoice()
+    void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SetPanelVisible(false);
+        IsChoiceOpen = false;
+        currentActiveDoor = null;
+    }
+
+    public void OpenChoice(SceneDoor doorCallingThis)
+    {
+        currentActiveDoor = doorCallingThis;
+
+        // Ensure the parent GameObject is active in case it was disabled elsewhere
+        if (gameObject != null && !gameObject.activeSelf)
+        {
+            gameObject.SetActive(true);
+        }
+
         SetPanelVisible(true);
         IsChoiceOpen = true;
 
         string currentScene = SceneManager.GetActiveScene().name;
-        labButton.SetActive(currentScene != "Lab");
-        houseButton.SetActive(currentScene != "House");
-        hawkerButton.SetActive(currentScene != "HawkerCentre");
+        if (labButton != null) labButton.SetActive(currentScene != "Lab");
+        if (houseButton != null) houseButton.SetActive(currentScene != "House");
+        if (hawkerButton != null) hawkerButton.SetActive(currentScene != "HawkerCentre");
     }
 
     public void GoToLab() { LoadDestination("Lab"); }
 
-    // Replaced GoToHouse to trigger the address prompt via SceneDoor
     public void SelectHomeViaDoor()
     {
         SetPanelVisible(false);
         IsChoiceOpen = false;
 
-        // Updated to the new Unity method
-        SceneDoor activeDoor = FindAnyObjectByType<SceneDoor>();
-        if (activeDoor != null)
+        if (currentActiveDoor != null)
         {
-            activeDoor.SelectHomeOption();
+            currentActiveDoor.SelectHomeOption();
+        }
+        else
+        {
+            SceneDoor fallbackDoor = FindAnyObjectByType<SceneDoor>();
+            if (fallbackDoor != null) fallbackDoor.SelectHomeOption();
         }
     }
 
@@ -46,7 +83,6 @@ public class DestinationChoice : MonoBehaviour
 
     void LoadDestination(string sceneName)
     {
-        PlayerPersistence.nextSpawnPointName = "SpawnPoint";
         SetPanelVisible(false);
         IsChoiceOpen = false;
         SceneManager.LoadScene(sceneName);
@@ -60,8 +96,11 @@ public class DestinationChoice : MonoBehaviour
 
     void SetPanelVisible(bool visible)
     {
-        choicePanelGroup.alpha = visible ? 1f : 0f;
-        choicePanelGroup.interactable = visible;
-        choicePanelGroup.blocksRaycasts = visible;
+        if (choicePanelGroup != null)
+        {
+            choicePanelGroup.alpha = visible ? 1f : 0f;
+            choicePanelGroup.interactable = visible;
+            choicePanelGroup.blocksRaycasts = visible;
+        }
     }
 }

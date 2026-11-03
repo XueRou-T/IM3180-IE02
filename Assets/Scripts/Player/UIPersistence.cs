@@ -4,16 +4,16 @@ public class UIPersistence : MonoBehaviour
 {
     public static UIPersistence Instance;
 
-    [Header("Drag the child panels here")]
     public DestinationChoice destinationChoice;
-    public DialogueSystem dialogueSystem;
+    public GameObject dialoguePanel;
+    public GameObject houseAddressPopup; // ADD THIS LINE
 
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Safe because this object is already at the root level!
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
