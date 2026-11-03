@@ -41,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
     private bool showingFirstFrame = true;
 
     public LaptopPuzzle puzzlePanel;
+
+    [Header("UI Blocking")]
+    public GameObject addressInputPanel; // Drag your House Address Popup here
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -50,10 +54,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         bool isPuzzleOpen = puzzlePanel != null && puzzlePanel.IsPuzzleOpen;
+        bool isAddressOpen = addressInputPanel != null && addressInputPanel.activeSelf;
 
-        if (isPuzzleOpen || DestinationChoice.IsChoiceOpen || DialogueSystem.IsDialogueOpen || HawkerDialogueManager.IsDialogueOpen)
+        if (isPuzzleOpen || isAddressOpen || DestinationChoice.IsChoiceOpen || DialogueSystem.IsDialogueOpen || HawkerDialogueManager.IsDialogueOpen)
         {
             moveInput = Vector2.zero;
+            if (sfxManager != null)
+                sfxManager.StopAllSound();
             return;
         }
 
@@ -84,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isMoving)
         {
-            if(sfxManager != null)
+            if (sfxManager != null)
                 sfxManager.StopAllSound();
             // Standing still - show idle sprite, reset animation timer
             frameTimer = 0f;

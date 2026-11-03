@@ -36,6 +36,7 @@ public class PuzzleManager : MonoBehaviour
 
     [Header("Next Scene")]
     public string nextSceneName;
+    public FadeScript fadeImage;
     void Start()
     {
         SetPlayerSpawn();
@@ -391,7 +392,7 @@ public class PuzzleManager : MonoBehaviour
         {
             Debug.Log("Reached Goal");
             minigameSFXManager.PlayWinningSound();
-            GoToNextScene();
+            StartCoroutine(GoToNextScene());
         }
     }
 
@@ -450,8 +451,14 @@ public class PuzzleManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    void GoToNextScene()
+    IEnumerator GoToNextScene()
     {
-        SceneManager.LoadScene(nextSceneName);
+        if (fadeImage != null)
+            fadeImage.StartTransition();
+
+        yield return new WaitForSeconds(3);
+
+        if (nextSceneName != null)
+            SceneManager.LoadScene(nextSceneName);
     }
 }

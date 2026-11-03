@@ -358,19 +358,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3614797072457857258, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -70.9566
+      value: -49.107
       objectReference: {fileID: 0}
     - target: {fileID: 3614797072457857258, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 214.5751
+      value: 395.7122
       objectReference: {fileID: 0}
     - target: {fileID: 3614797072457857258, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.4690857
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3614797072457857258, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 246.395
+      value: 227.34114
       objectReference: {fileID: 0}
     - target: {fileID: 3672126883092746188, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_IsActive
@@ -386,20 +386,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[0].text
-      value: 'Johnathan discards the memory erasing inator.
-
-
-        He began to
-        do hobbies and activities that he promised his wife that they are supposed
-        to do. While she might not be here, but she is still in his heart. '
+      value: "Jonathan finally discards the memory-erasing inator, choosing to stop
+        running away from his past.\r\n\r\nHe begins pursuing the hobbies and activities
+        he once promised his wife they would experience together. Although she is
+        no longer by his side, the memories they shared remain with him, living on
+        in his heart.\r\n\r\nHe understands that moving forward doesn't mean forgetting
+        the people he has lost, but learning to live with their memories.\r\n\r\nThe
+        End...\r\r\n\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[1].text
-      value: The End...
+      value: '???: Hey, it''s been a while, bro. Wanna try out my time machine?'
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[2].text
@@ -451,8 +452,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_text
-      value: Jonathan erase his memories again, and kept repeating what he did for
-        the day over and over again. Never ending cycle of grief.
+      value: "Jonathan finally discards the memory-erasing inator, choosing to stop
+        running away from his past.\r\n\r\nHe begins pursuing the hobbies and activities
+        he once promised his wife they would experience together. Although she is
+        no longer by his side, the memories they shared remain with him, living on
+        in his heart.\r\n\r\nHe understands that moving forward doesn't mean forgetting
+        the people he has lost, but learning to live with their memories.\r\n\r\nThe
+        End...\r\r\n\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor.b

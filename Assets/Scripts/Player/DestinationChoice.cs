@@ -27,7 +27,21 @@ public class DestinationChoice : MonoBehaviour
     }
 
     public void GoToLab() { LoadDestination("Lab"); }
-    public void GoToHouse() { LoadDestination("House"); }
+
+    // Replaced GoToHouse to trigger the address prompt via SceneDoor
+    public void SelectHomeViaDoor()
+    {
+        SetPanelVisible(false);
+        IsChoiceOpen = false;
+
+        // Updated to the new Unity method
+        SceneDoor activeDoor = FindAnyObjectByType<SceneDoor>();
+        if (activeDoor != null)
+        {
+            activeDoor.SelectHomeOption();
+        }
+    }
+
     public void GoToHawker() { LoadDestination("HawkerCentre"); }
 
     void LoadDestination(string sceneName)
