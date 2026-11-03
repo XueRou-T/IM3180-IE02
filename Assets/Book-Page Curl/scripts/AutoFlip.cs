@@ -131,4 +131,14 @@ public class AutoFlip : MonoBehaviour {
         }
         ControledBook.ReleasePage();
     }
+
+    public void StopAutoFlip()
+    {
+        StopAllCoroutines();
+
+        isFlipping = false;
+
+        leftTemp.gameObject.SetActive(true);
+        rightTemp.gameObject.SetActive(true);
+    }
 }
