@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Required for TextMeshPro text
+using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -12,12 +13,12 @@ public class InventoryUI : MonoBehaviour
         public string itemName;
         public Sprite itemSprite;
         public Color itemColor = Color.white;
-        [TextArea(3, 5)] public string description; // Adds a large text box in the Inspector
+        [TextArea(3, 5)] public string description;
     }
 
     [Header("Main UI References")]
     public GameObject panelToToggle;
-    public Image[] inventorySlots; // Keep your ItemIcons dragged in here
+    public Image[] inventorySlots;
 
     [Header("Tooltip References")]
     public GameObject tooltipPanel;
@@ -39,17 +40,30 @@ public class InventoryUI : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            transform.SetParent(null); // Ensures the canvas is a root object
-            DontDestroyOnLoad(gameObject); // Keeps it alive when loading a new level
+            transform.SetParent(null);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject); // Destroys any accidental duplicates
+            Destroy(gameObject);
+            return;
         }
+
+        // Force everything closed immediately on awake before start runs
+        if (panelToToggle != null) panelToToggle.SetActive(false);
+        if (tooltipPanel != null) tooltipPanel.SetActive(false);
+        if (popupPanel != null) popupPanel.SetActive(false);
+        isOpen = false;
+    }
+
+    void OnEnable()
+    {
+        ReconnectUI();
     }
 
     void Start()
     {
+        ReconnectUI();
         SetPanelOpen(false);
         if (tooltipPanel != null) tooltipPanel.SetActive(false);
         if (popupPanel != null) popupPanel.SetActive(false);
@@ -64,10 +78,33 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    public void ReconnectUI()
+    {
+        GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.hideFlags == HideFlags.None)
+            {
+                // Only auto-reconnect if they aren't already assigned in the inspector
+                if (panelToToggle == null && (obj.name == "InventoryPanel" || obj.name == "Inventory Panel")) panelToToggle = obj;
+                if (tooltipPanel == null && (obj.name == "TooltipPanel" || obj.name == "Tooltip Panel")) tooltipPanel = obj;
+            }
+        }
+    }
+
     void SetPanelOpen(bool open)
     {
         isOpen = open;
-        if (panelToToggle != null) panelToToggle.SetActive(open);
+
+        if (panelToToggle != null)
+        {
+            panelToToggle.SetActive(open);
+        }
+        else
+        {
+            Debug.LogError("InventoryUI: panelToToggle is UNASSIGNED! Drag your Inventory Panel into the Inspector slot.");
+        }
+
         if (!isOpen)
         {
             if (tooltipPanel != null) tooltipPanel.SetActive(false);
@@ -81,14 +118,13 @@ public class InventoryUI : MonoBehaviour
     {
         if (GameManager.Instance == null) return;
 
-        // Reset all slots
         foreach (Image slot in inventorySlots)
         {
             if (slot != null)
             {
                 slot.gameObject.SetActive(false);
                 InventorySlot slotScript = slot.GetComponent<InventorySlot>();
-                if (slotScript != null) slotScript.currentItemName = ""; // Clear old data
+                if (slotScript != null) slotScript.currentItemName = "";
             }
         }
 
@@ -105,7 +141,6 @@ public class InventoryUI : MonoBehaviour
                 inventorySlots[slotIndex].color = foundItem.itemColor;
                 inventorySlots[slotIndex].gameObject.SetActive(true);
 
-                // Pass the item name to the slot's click/hover script
                 InventorySlot slotScript = inventorySlots[slotIndex].GetComponent<InventorySlot>();
                 if (slotScript != null) slotScript.currentItemName = foundItem.itemName;
 
@@ -123,14 +158,13 @@ public class InventoryUI : MonoBehaviour
         return null;
     }
 
-    // --- NEW MOUSE INTERACTION METHODS ---
+    // --- MOUSE INTERACTION METHODS ---
 
     public void ShowTooltip(string itemName, Vector3 slotPosition)
     {
-        if (tooltipPanel == null || popupPanel.activeSelf) return; // Don't show if popup is open
+        if (tooltipPanel == null || (popupPanel != null && popupPanel.activeSelf)) return;
 
         tooltipText.text = itemName;
-        // Move the tooltip slightly above the hovered item
         tooltipPanel.transform.position = slotPosition + new Vector3(0, 55f, 0);
         tooltipPanel.SetActive(true);
     }
@@ -142,17 +176,12 @@ public class InventoryUI : MonoBehaviour
 
     public void ShowPopup(string itemName)
     {
-        // 1. CHECK: Are we currently using a table to eat?
         if (TableInteract.activeTable != null)
         {
-            // EATING MODE: Send this item's ID to the table
             TableInteract.activeTable.TryEatItem(itemName);
-
-            // Instantly stop this function so the popup panel below never opens
             return;
         }
 
-        // 2. NORMAL MODE: The table is not active, so open the description panel normally
         ItemDisplay foundItem = GetItemDisplay(itemName);
         if (foundItem == null || popupPanel == null) return;
 
@@ -164,7 +193,6 @@ public class InventoryUI : MonoBehaviour
         popupPanel.SetActive(true);
     }
 
-    // Link this to your Close 'X' Button in the Inspector
     public void ClosePopup()
     {
         if (popupPanel != null) popupPanel.SetActive(false);
