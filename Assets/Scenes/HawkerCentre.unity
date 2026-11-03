@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 49277707}
   - component: {fileID: 49277708}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: SpawnNearDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -418,6 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c87e6e869be104db847209e4e4b099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawnerExplore
+  spawnPointName: SpawnNearDoor
 --- !u!1 &59233273 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 539355188730449123, guid: 55167bf70da7053428aba5cf217cb089, type: 3}

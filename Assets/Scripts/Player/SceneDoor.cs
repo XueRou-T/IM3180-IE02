@@ -7,21 +7,12 @@ public class SceneDoor : MonoBehaviour
     public TMP_Text promptText;
     public string promptMessage = "Press E to leave";
     public string lockedMessage = "It's locked. I need everything first.";
-    public GameObject choicePanelObject; // drag DestinationChoicePanel here
 
     [Header("Lock Settings")]
     public bool requiresUnlock = true;
     public string[] requiredItems;
 
-    [Header("Address Verification (For Home Destination)")]
-    public GameObject addressInputPanel;         // Drag your House Address Popup here
-    public TMP_InputField addressInputField;     // Drag your AddressAnswer input field here
-    public TMP_InputField postalInputField;      // Drag your PostalCodeAnswer input field here
-    public TMP_Text feedbackText;                // Drag your "incorrect address!" text here
-
-    [Header("Correct Answers")]
-    [TextArea] public string correctAddress = "123 Seventh Avenue #07-67";
-    public string correctPostalCode = "676767";
+    [Header("Home Destination Settings")]
     public string homeSceneName = "House";   // Name of your home scene
 
     private bool playerInRange = false;
@@ -32,27 +23,13 @@ public class SceneDoor : MonoBehaviour
     {
         if (!requiresUnlock) isUnlocked = true;
         if (promptText != null) promptText.text = promptMessage;
-        if (feedbackText != null) feedbackText.text = "";
 
-        // Pull UI references dynamically from the persistent manager
+        // Pull the persistent DestinationChoice reference securely
         if (UIPersistence.Instance != null)
         {
             choiceScript = UIPersistence.Instance.destinationChoice;
-
-            // Automatically hook up the persistent address panel if not already assigned
-            if (addressInputPanel == null && UIPersistence.Instance.houseAddressPopup != null)
-            {
-                addressInputPanel = UIPersistence.Instance.houseAddressPopup;
-
-                // Re-grab input fields from the persistent panel if they are inside it
-                if (addressInputField == null) addressInputField = addressInputPanel.GetComponentInChildren<TMP_InputField>();
-                // Note: If you have separate input fields, assign them or find them here
-            }
         }
-
-        if (addressInputPanel != null) addressInputPanel.SetActive(false);
     }
-
 
     void Update()
     {
@@ -61,21 +38,18 @@ public class SceneDoor : MonoBehaviour
             CheckUnlockCondition();
         }
 
-        bool isAddressActive = addressInputPanel != null && addressInputPanel.activeSelf;
+        bool isAddressActive = UIPersistence.Instance != null &&
+                               UIPersistence.Instance.houseAddressPopup != null &&
+                               UIPersistence.Instance.houseAddressPopup.activeSelf;
 
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            // DIAGNOSTIC LOG: Tells us why the door is or isn't responding when 'E' is pressed
-            Debug.Log($"[Door Check] Pressed E on '{gameObject.name}' in scene '{SceneManager.GetActiveScene().name}'. " +
-                      $"PlayerInRange: {playerInRange}, IsUnlocked: {isUnlocked}, ChoiceOpen: {DestinationChoice.IsChoiceOpen}, AddressActive: {isAddressActive}");
-
             if (!DestinationChoice.IsChoiceOpen && !isAddressActive)
             {
                 if (isUnlocked)
                 {
                     if (choiceScript != null)
                     {
-                        Debug.Log("[Door Check] choiceScript found! Opening Choice Panel successfully.");
                         choiceScript.OpenChoice(this);
                     }
                     else
@@ -85,64 +59,40 @@ public class SceneDoor : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("[Door Check] Door is locked! Showing locked message.");
                     ShowLockedMessage();
                 }
-            }
-            else
-            {
-                Debug.Log("[Door Check] Interaction blocked because a panel is already open.");
             }
         }
     }
 
-    // --- 1. HOOK THIS TO YOUR "HOME" BUTTON IN THE DESTINATION CHOICE PANEL ---
+    // Called when clicking the Home option in the Destination Choice panel
     public void SelectHomeOption()
     {
-        // Close the choice panel if open
         if (choiceScript != null)
         {
             if (choiceScript.gameObject != null) choiceScript.gameObject.SetActive(false);
             DestinationChoice.IsChoiceOpen = false;
         }
 
-        // Open the Address Input Panel and clear previous text/feedback
-        if (addressInputPanel != null) addressInputPanel.SetActive(true);
-        if (addressInputField != null) addressInputField.text = "";
-        if (postalInputField != null) postalInputField.text = "";
-        if (feedbackText != null) feedbackText.text = "";
-    }
-
-    // --- 2. HOOK THIS TO YOUR SUBMIT/ENTER BUTTON IN THE ADDRESS INPUT PANEL ---
-    public void SubmitAddress()
-    {
-        if (addressInputField == null || postalInputField == null) return;
-
-        // Clean up inputs and correct answers (ignoring extra spaces & capitalization)
-        string playerAddress = addressInputField.text.Trim().ToLower();
-        string playerPostal = postalInputField.text.Trim().ToLower();
-
-        string targetAddress = correctAddress.Trim().ToLower();
-        string targetPostal = correctPostalCode.Trim().ToLower(); // Uses correctPostalCode variable
-
-        // Check if both the address AND the postal code match
-        if (playerAddress == targetAddress && playerPostal == targetPostal)
+        // Trigger the persistent address panel directly from UIPersistence
+        if (UIPersistence.Instance != null && UIPersistence.Instance.houseAddressPopup != null)
         {
-            if (feedbackText != null) feedbackText.text = "Success!";
-            CloseAllPanels();
-            SceneManager.LoadScene(homeSceneName);
-        }
-        else
-        {
-            if (feedbackText != null) feedbackText.text = "incorrect address!";
-        }
-    }
+            GameObject addressPopup = UIPersistence.Instance.houseAddressPopup;
+            addressPopup.SetActive(true);
 
-    public void CloseAllPanels()
-    {
-        if (addressInputPanel != null) addressInputPanel.SetActive(false);
-        if (choiceScript != null && choiceScript.gameObject != null) choiceScript.gameObject.SetActive(false);
-        DestinationChoice.IsChoiceOpen = false;
+            // Clear fields when opening
+            TMP_InputField[] inputs = addressPopup.GetComponentsInChildren<TMP_InputField>(true);
+            foreach (var input in inputs)
+            {
+                input.text = "";
+            }
+
+            TMP_Text feedback = addressPopup.GetComponentInChildren<TMP_Text>(true);
+            if (feedback != null && feedback.gameObject.name.Contains("Feedback"))
+            {
+                feedback.text = "";
+            }
+        }
     }
 
     void CheckUnlockCondition()
@@ -182,8 +132,6 @@ public class SceneDoor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            // DIAGNOSTIC LOG: Confirms when the trigger area actually registers the player
-            Debug.Log($"[Door Trigger] Player entered trigger on door: {gameObject.name}");
             if (promptText != null) promptText.gameObject.SetActive(true);
         }
     }
@@ -193,15 +141,7 @@ public class SceneDoor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            Debug.Log($"[Door Trigger] Player exited trigger on door: {gameObject.name}");
             if (promptText != null) promptText.gameObject.SetActive(false);
-
-            // ONLY close panels if the address typing panel or choice panel is NOT active
-            bool isAddressActive = addressInputPanel != null && addressInputPanel.activeSelf;
-            if (!isAddressActive && !DestinationChoice.IsChoiceOpen)
-            {
-                CloseAllPanels();
-            }
         }
     }
 }

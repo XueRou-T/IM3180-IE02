@@ -121,9 +121,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5280596657128425356}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-        m_MethodName: SetNativeSize
+      - m_Target: {fileID: 7170076276207673845}
+        m_TargetAssemblyTypeName: DestinationChoice, Assembly-CSharp
+        m_MethodName: CloseAddressPopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

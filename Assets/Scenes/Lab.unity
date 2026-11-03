@@ -8923,6 +8923,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69599baa7b8c26848b6b2af88a731cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaptopPuzzle
+--- !u!1 &483677576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 483677578}
+  m_Layer: 0
+  m_Name: SpawnNearMachine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483677578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483677576}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.58, y: -3.28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &528461580
 GameObject:
   m_ObjectHideFlags: 0
@@ -12347,19 +12378,12 @@ MonoBehaviour:
   promptText: {fileID: 1573559017}
   promptMessage: Press E to exit the lab.
   lockedMessage: It's locked. I need a key.
-  choicePanelObject: {fileID: 1229278876}
   requiresUnlock: 1
   requiredItems:
   - Personal ID
   - Work ID
   - Wallet
   - House Key
-  addressInputPanel: {fileID: 3123558659382816787}
-  addressInputField: {fileID: 3123558659382816786}
-  postalInputField: {fileID: 3123558659382816785}
-  feedbackText: {fileID: 3123558659382816788}
-  correctAddress: 123 Seventh Avenue #07-67
-  correctPostalCode: 676767
   homeSceneName: House
 --- !u!61 &1026464333
 BoxCollider2D:
@@ -14075,17 +14099,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1229278876 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 539355188730449123, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 3123558659382816784}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1229278879 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7170076276207673845, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
   m_PrefabInstance: {fileID: 3123558659382816784}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229278876}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaceeaead2bda9f4bb9da5cac32f68d0, type: 3}
@@ -21348,9 +21367,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2023882455}
-  - component: {fileID: 2023882456}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: SpawnNearDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21371,18 +21389,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2023882456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023882454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17c87e6e869be104db847209e4e4b099, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawnerExplore
 --- !u!114 &2043850741 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4551047183411044149, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
@@ -22751,6 +22757,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4291108185490470195, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4597194181456019225, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -22862,14 +22872,14 @@ PrefabInstance:
     - target: {fileID: 5846480887649555501, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1026464332}
+      objectReference: {fileID: 1229278879}
     - target: {fileID: 5846480887649555501, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseAllPanels
+      value: CloseAddressPopup
       objectReference: {fileID: 0}
     - target: {fileID: 5846480887649555501, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneDoor, Assembly-CSharp
+      value: DestinationChoice, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6077418020682013851, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_AnchorMax.y
@@ -23163,44 +23173,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
---- !u!114 &3123558659382816785 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6604902750126454586, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 3123558659382816784}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
---- !u!114 &3123558659382816786 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5665331253543104262, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 3123558659382816784}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
 --- !u!1 &3123558659382816787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4291108185490470195, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
   m_PrefabInstance: {fileID: 3123558659382816784}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3123558659382816788 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6617778047045526494, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 3123558659382816784}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &5552261577892107763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23570,6 +23547,7 @@ SceneRoots:
   - {fileID: 3123558659382816784}
   - {fileID: 1026464335}
   - {fileID: 2023882455}
+  - {fileID: 483677578}
   - {fileID: 1963336700}
   - {fileID: 1299587263}
   - {fileID: 135094293}

@@ -14,15 +14,17 @@ public class DestinationChoice : MonoBehaviour
 
     void Awake()
     {
-        // Force reset static flags and hide the panel safely on boot
+        // Force reset static flags and hide panels safely on boot
         IsChoiceOpen = false;
         currentActiveDoor = null;
         SetPanelVisible(false);
+        HideAddressPopup();
     }
 
     void Start()
     {
         SetPanelVisible(false);
+        HideAddressPopup();
     }
 
     void OnEnable()
@@ -40,6 +42,7 @@ public class DestinationChoice : MonoBehaviour
         SetPanelVisible(false);
         IsChoiceOpen = false;
         currentActiveDoor = null;
+        HideAddressPopup();
     }
 
     public void OpenChoice(SceneDoor doorCallingThis)
@@ -68,6 +71,9 @@ public class DestinationChoice : MonoBehaviour
         SetPanelVisible(false);
         IsChoiceOpen = false;
 
+        // Whenever traveling back to the house/door, set the spawn point target
+        PlayerPersistence.nextSpawnPointName = "SpawnNearDoor";
+
         if (currentActiveDoor != null)
         {
             currentActiveDoor.SelectHomeOption();
@@ -83,8 +89,12 @@ public class DestinationChoice : MonoBehaviour
 
     void LoadDestination(string sceneName)
     {
+        // Whenever traveling through choice buttons, ensure the player spawns near the door in the next scene
+        PlayerPersistence.nextSpawnPointName = "SpawnNearDoor";
+
         SetPanelVisible(false);
         IsChoiceOpen = false;
+        HideAddressPopup();
         SceneManager.LoadScene(sceneName);
     }
 
@@ -102,5 +112,20 @@ public class DestinationChoice : MonoBehaviour
             choicePanelGroup.interactable = visible;
             choicePanelGroup.blocksRaycasts = visible;
         }
+    }
+
+    // Helper method to safely close the address popup via UIPersistence
+    void HideAddressPopup()
+    {
+        if (UIPersistence.Instance != null && UIPersistence.Instance.houseAddressPopup != null)
+        {
+            UIPersistence.Instance.houseAddressPopup.SetActive(false);
+        }
+    }
+
+    // Public method for your UI Close Button's OnClick event
+    public void CloseAddressPopup()
+    {
+        HideAddressPopup();
     }
 }

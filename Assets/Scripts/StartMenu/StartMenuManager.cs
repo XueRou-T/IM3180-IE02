@@ -10,6 +10,10 @@ public class StartMenuManager : MonoBehaviour
     public void PlayGame()
     {
         Debug.Log("Play Game");
+
+        // Tell PlayerPersistence to spawn the player near the machine for a new game
+        PlayerPersistence.nextSpawnPointName = "SpawnNearMachine";
+
         SceneManager.LoadScene(gameSceneName);
     }
 
