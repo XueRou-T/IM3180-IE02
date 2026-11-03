@@ -685,6 +685,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4291108185490470195, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4597194181456019225, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1659,6 +1663,13 @@ MonoBehaviour:
   choicePanelObject: {fileID: 1203051899}
   requiresUnlock: 0
   requiredItems: []
+  addressInputPanel: {fileID: 0}
+  addressInputField: {fileID: 0}
+  postalInputField: {fileID: 0}
+  feedbackText: {fileID: 0}
+  correctAddress: 123 Seventh Avenue #07-67
+  correctPostalCode: 676767
+  homeSceneName: House
 --- !u!1001 &514474348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2239,6 +2250,7 @@ MonoBehaviour:
   frameRate: 0.2
   sfxManager: {fileID: 1474326718}
   puzzlePanel: {fileID: 0}
+  addressInputPanel: {fileID: 0}
 --- !u!61 &833343267
 BoxCollider2D:
   m_ObjectHideFlags: 0
