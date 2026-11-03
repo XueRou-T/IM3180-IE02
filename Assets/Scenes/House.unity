@@ -546,21 +546,65 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: itemDatabase.Array.data[0].itemName
-      value: Family Photo
+      value: Work ID
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.data[1].itemName
+      value: House Key
       objectReference: {fileID: 0}
     - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: itemDatabase.Array.data[2].itemName
+      value: Nasi Lemak
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.data[3].itemName
+      value: Prata
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.data[4].itemName
+      value: Chicken Rice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.data[5].itemName
       value: White Tulips
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.data[6].itemName
+      value: Family Photo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.data[7].itemName
+      value: Family Photo
       objectReference: {fileID: 0}
     - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: itemDatabase.Array.data[0].itemSprite
       value: 
-      objectReference: {fileID: 9068496691467835646, guid: f0520daaacf29474b8d7c0c40c156de8, type: 3}
+      objectReference: {fileID: -4672458477834289504, guid: dc6dabdfbe868a241afc6c1f6c81fafe, type: 3}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.data[1].itemSprite
+      value: 
+      objectReference: {fileID: 7440145182128167302, guid: 8db47ca7353e8ce47bdd7a6941beb927, type: 3}
     - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: itemDatabase.Array.data[2].itemSprite
       value: 
-      objectReference: {fileID: 622239769680624179, guid: 3dbc4bdba467be045a3a3e60e85dddbc, type: 3}
+      objectReference: {fileID: 7440145182128167302, guid: 8db47ca7353e8ce47bdd7a6941beb927, type: 3}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.data[0].itemColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.data[1].itemColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2375705829790442548, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3097357850770021291, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -743,6 +787,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5354624359446364732, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833408871413573294, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6077418020682013851, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
