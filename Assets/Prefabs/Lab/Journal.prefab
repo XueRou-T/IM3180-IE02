@@ -315,8 +315,6 @@ MonoBehaviour:
   background: {fileID: 21300000, guid: 3c47abcf3fb3d12408efe3073b2e379f, type: 3}
   bookPages:
   - {fileID: 21300000, guid: 52beaa9adc22ac9428b28c6a6d04ecaa, type: 3}
-  - {fileID: 21300000, guid: bee8e21a157c56445913f314adc271a7, type: 3}
-  - {fileID: 21300000, guid: 496dd966329d3184b82d62bf94518610, type: 3}
   - {fileID: 21300000, guid: 7b69d027c3c1f1b458df046053159230, type: 3}
   - {fileID: 21300000, guid: 2ccc2acb9d924114fbab9ecfad6f53ec, type: 3}
   - {fileID: 21300000, guid: ba249fc5cb66f494e91d662ba181cb73, type: 3}
@@ -335,6 +333,8 @@ MonoBehaviour:
   LeftNext: {fileID: 5878602792123209036}
   Right: {fileID: 1065052858913704841}
   RightNext: {fileID: 1260272092032776895}
+  tempLeft: {fileID: 0}
+  tempRight: {fileID: 0}
   OnFlip:
     m_PersistentCalls:
       m_Calls: []
@@ -357,6 +357,8 @@ MonoBehaviour:
   AutoStartFlip: 0
   ControledBook: {fileID: 0}
   AnimationFramesCount: 40
+  leftTemp: {fileID: 0}
+  rightTemp: {fileID: 0}
 --- !u!1 &3651434131592328864
 GameObject:
   m_ObjectHideFlags: 0
