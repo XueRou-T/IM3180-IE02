@@ -450,4 +450,22 @@ public class Book : MonoBehaviour {
         if (onFinish != null)
             onFinish();
     }
+
+    public void CloseBook()
+    {
+        AutoFlip autoFlip = GetComponent<AutoFlip>();
+
+        if (autoFlip != null)
+        {
+            autoFlip.StopAutoFlip();
+        }
+
+        if (currentCoroutine != null)
+        {
+            StopCoroutine(currentCoroutine);
+            currentCoroutine = null;
+        }
+
+        gameObject.SetActive(false);
+    }
 }
