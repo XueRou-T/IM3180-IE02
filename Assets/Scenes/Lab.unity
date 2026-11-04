@@ -1749,7 +1749,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &227708962
 Transform:
@@ -8923,6 +8923,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69599baa7b8c26848b6b2af88a731cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaptopPuzzle
+--- !u!1 &483677576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 483677578}
+  m_Layer: 0
+  m_Name: SpawnNearMachine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483677578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483677576}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.58, y: -3.28, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &528461580
 GameObject:
   m_ObjectHideFlags: 0
@@ -12358,19 +12389,12 @@ MonoBehaviour:
   promptText: {fileID: 1573559017}
   promptMessage: Press E to exit the lab.
   lockedMessage: It's locked. I need a key.
-  choicePanelObject: {fileID: 1229278876}
   requiresUnlock: 1
   requiredItems:
   - Personal ID
   - Work ID
   - Wallet
   - House Key
-  addressInputPanel: {fileID: 3123558659382816787}
-  addressInputField: {fileID: 3123558659382816786}
-  postalInputField: {fileID: 3123558659382816785}
-  feedbackText: {fileID: 3123558659382816788}
-  correctAddress: 123 Seventh Avenue #07-67
-  correctPostalCode: 676767
   homeSceneName: House
 --- !u!61 &1026464333
 BoxCollider2D:
@@ -14087,17 +14111,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1229278876 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 539355188730449123, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 3123558659382816784}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1229278879 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7170076276207673845, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
   m_PrefabInstance: {fileID: 3123558659382816784}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229278876}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaceeaead2bda9f4bb9da5cac32f68d0, type: 3}
@@ -14252,7 +14271,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: da3ec95c8c69e2248b992116b8124386, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16442,7 +16461,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.38, y: 0.38}
+    oldSize: {x: 0.459, y: 0.2935}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16499,8 +16518,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8712255686090660449, guid: dc6dabdfbe868a241afc6c1f6c81fafe, type: 3}
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: -5405843913079911806, guid: 53cbc482b1077a54c8e1ecbb88bfed67, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19960,7 +19979,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 0.47133332, y: 0.29266667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -20017,7 +20036,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4672458477834289504, guid: dc6dabdfbe868a241afc6c1f6c81fafe, type: 3}
+  m_Sprite: {fileID: 4174359590760033433, guid: b72fcdd8b6250f947b1b0b2a758faf66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -20036,7 +20055,7 @@ Transform:
   m_GameObject: {fileID: 1955169596}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.74, y: -6.65, z: -1}
+  m_LocalPosition: {x: -19.74, y: -6.29, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21133,7 +21152,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.108, y: 0.456}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -21190,8 +21209,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.40654868, g: 0.8773585, b: 0.09518514, a: 1}
+  m_Sprite: {fileID: 1694913177206695654, guid: 632fd6492be5fb74d8e442884eb28749, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21369,7 +21388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2023882455}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: SpawnNearDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21384,7 +21403,7 @@ Transform:
   m_GameObject: {fileID: 2023882454}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 14, z: 0}
+  m_LocalPosition: {x: 0, y: 12.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22638,6 +22657,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1268245151770865451, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1472026575964280275, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -22664,6 +22687,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2375705829790442548, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890014585295372047, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890014585295372047, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890014585295372047, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3097357850770021291, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
@@ -22726,6 +22761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3804504540117882171, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3833394427543927837, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -22748,6 +22787,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3839660657870618483, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4291108185490470195, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4597194181456019225, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
@@ -22830,6 +22873,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4602655375331927123, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
+    - target: {fileID: 4602655375331927123, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 532153396506003083, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
+    - target: {fileID: 4602655375331927123, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4671273184799575158, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
+    - target: {fileID: 4671273184799575158, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 532153396506003083, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
+    - target: {fileID: 4671273184799575158, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5354624359446364732, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -22861,14 +22928,14 @@ PrefabInstance:
     - target: {fileID: 5846480887649555501, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1026464332}
+      objectReference: {fileID: 1229278879}
     - target: {fileID: 5846480887649555501, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseAllPanels
+      value: CloseAddressPopup
       objectReference: {fileID: 0}
     - target: {fileID: 5846480887649555501, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneDoor, Assembly-CSharp
+      value: DestinationChoice, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6077418020682013851, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_AnchorMax.y
@@ -22929,14 +22996,14 @@ PrefabInstance:
     - target: {fileID: 6822277903497104942, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1026464332}
+      objectReference: {fileID: 3123558659382816785}
     - target: {fileID: 6822277903497104942, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SubmitAddress
       objectReference: {fileID: 0}
     - target: {fileID: 6822277903497104942, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneDoor, Assembly-CSharp
+      value: AddressPopupController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6822277903497104942, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -23164,42 +23231,20 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
 --- !u!114 &3123558659382816785 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6604902750126454586, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3391081172320368375, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
   m_PrefabInstance: {fileID: 3123558659382816784}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3123558659382816787}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 9134e05e83318d94b8a03e43893b1f75, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
---- !u!114 &3123558659382816786 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5665331253543104262, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 3123558659382816784}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
+  m_EditorClassIdentifier: Assembly-CSharp::AddressPopupController
 --- !u!1 &3123558659382816787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4291108185490470195, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
   m_PrefabInstance: {fileID: 3123558659382816784}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3123558659382816788 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6617778047045526494, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 3123558659382816784}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &5552261577892107763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23681,6 +23726,7 @@ SceneRoots:
   - {fileID: 3123558659382816784}
   - {fileID: 1026464335}
   - {fileID: 2023882455}
+  - {fileID: 483677578}
   - {fileID: 1963336700}
   - {fileID: 1299587263}
   - {fileID: 135094293}

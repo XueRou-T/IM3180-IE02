@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/EndGameScene.unity
     guid: a0e639a84c416b140a46c09e4b8a0c83
   - enabled: 1
-    path: Assets/Scenes/HawkerMemory.unity
+    path: Assets/Scenes/PostExplosion.unity
     guid: d2a24a256e967224187e614100b2d855
   - enabled: 1
     path: Assets/Scenes/BadEnd.unity
@@ -53,6 +53,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TrueEnd.unity
     guid: b4cada229a60c5b4a96c31c93ca81b95
+  - enabled: 1
+    path: Assets/Scenes/Hawker Memory.unity
+    guid: 12527c0a56aefee41b5edfd5ad2e3438
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
