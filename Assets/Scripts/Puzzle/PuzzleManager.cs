@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -35,6 +36,7 @@ public class PuzzleManager : MonoBehaviour
 
     [Header("Next Scene")]
     public string nextSceneName;
+    public FadeScript fadeImage;
     void Start()
     {
         SetPlayerSpawn();
@@ -344,7 +346,7 @@ public class PuzzleManager : MonoBehaviour
         {
             Debug.Log("Game Over: Player trapped inside a closed death door!");
             gameOver = true;
-            StartDoorDeathTransition(player.playerPosition);
+            StartCoroutine(StartDoorDeathTransition(player.playerPosition));
         }
     }
 
@@ -390,7 +392,7 @@ public class PuzzleManager : MonoBehaviour
         {
             Debug.Log("Reached Goal");
             minigameSFXManager.PlayWinningSound();
-            GoToNextScene();
+            StartCoroutine(GoToNextScene());
         }
     }
 
@@ -430,8 +432,9 @@ public class PuzzleManager : MonoBehaviour
 
     IEnumerator StartDoorDeathTransition(Vector2Int playerPos)
     {
+        playerMovement.MoveTo(playerPos);
 
-        while (Vector2.Distance(player.transform.position, (Vector2)playerPos)  > 0.05f)
+        while (Vector2.Distance(player.transform.position, (Vector2)playerPos) > 0.05f)
         {
             yield return null;
         }
@@ -448,8 +451,14 @@ public class PuzzleManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    void GoToNextScene()
+    IEnumerator GoToNextScene()
     {
-        SceneManager.LoadScene(nextSceneName);
+        if (fadeImage != null)
+            fadeImage.StartTransition();
+
+        yield return new WaitForSeconds(3);
+
+        if (nextSceneName != null)
+            SceneManager.LoadScene(nextSceneName);
     }
 }

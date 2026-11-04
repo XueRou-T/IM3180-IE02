@@ -3,8 +3,8 @@ using TMPro;
 
 public class LaptopPuzzle : MonoBehaviour
 {
-    public static bool IsPuzzleOpen = false;
-    public GameObject puzzlePanel;
+    public bool IsPuzzleOpen = false;
+    public LaptopPuzzle puzzlePanel;
     public TMP_InputField answer1Input;
     public TMP_InputField answer2Input;
     public TMP_Text feedbackText;
@@ -25,7 +25,7 @@ public class LaptopPuzzle : MonoBehaviour
         if (correct1 && correct2)
         {
             feedbackText.color = Color.green;
-            feedbackText.text = "Access granted. Loading memory file...";
+            feedbackText.text = "";
 
             if (GameManager.Instance != null)
             {
@@ -45,7 +45,7 @@ public class LaptopPuzzle : MonoBehaviour
 
     public void ClosePuzzle()
     {
-        puzzlePanel.SetActive(false);
+        puzzlePanel.gameObject.SetActive(false);
         feedbackText.text = "";
         IsPuzzleOpen = false;
     }

@@ -37,6 +37,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void RemoveItem(string itemName)
+    {
+        if (collectedItems.Contains(itemName))
+        {
+            collectedItems.Remove(itemName);
+        }
+    }
+
     public bool HasItem(string itemName)
     {
         return collectedItems.Contains(itemName);

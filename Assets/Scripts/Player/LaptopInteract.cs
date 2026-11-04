@@ -4,7 +4,8 @@ using TMPro;
 public class LaptopInteract : MonoBehaviour
 {
     public TMP_Text promptText;
-    public GameObject loginPanel;
+    public LaptopLogin loginPanel;
+    public LaptopPuzzle puzzlePanel;
 
     [Header("Lock Settings")]
     public bool requiresUnlock = true;
@@ -45,7 +46,7 @@ public class LaptopInteract : MonoBehaviour
             PulseGlow();
         }
 
-        if (playerInRange && isUnlocked && !LaptopPuzzle.IsPuzzleOpen && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && isUnlocked && !puzzlePanel.IsPuzzleOpen && Input.GetKeyDown(KeyCode.E))
         {
             if (isSolved)
             {
@@ -83,10 +84,10 @@ public class LaptopInteract : MonoBehaviour
 
     void OpenPuzzle()
     {
-        if (UIPersistence.Instance != null && UIPersistence.Instance.laptopLogin != null)
+        if (loginPanel != null)
         {
-            UIPersistence.Instance.laptopLogin.gameObject.SetActive(true);
-            LaptopPuzzle.IsPuzzleOpen = true;
+            loginPanel.gameObject.SetActive(true);
+            puzzlePanel.IsPuzzleOpen = true;
         }
     }
 

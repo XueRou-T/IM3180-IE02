@@ -1,4 +1,4 @@
-using System; // --- ADDED: Required to use Actions (callbacks) ---
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,23 +30,33 @@ public class HawkerDialogueManager : MonoBehaviour
     private int index = 0;
     private bool isTyping = false;
 
-    private Action onDialogueComplete; // --- ADDED: Variable to store the callback ---
+    private Action onDialogueComplete;
 
-    // Tracking who is on which side
     private string speakerOne = "";
     private string speakerTwo = "";
     private int activeAvatarSlot = 0;
 
     void Awake()
     {
-        if (Instance == null) Instance = this;
-        else
+        // Safely destroy duplicates
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
 
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
+    }
+
+    void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
     }
 
     void Update()
@@ -68,25 +78,39 @@ public class HawkerDialogueManager : MonoBehaviour
         }
     }
 
-    // --- ADDED: "Action onComplete = null" to the method signature ---
     public void StartDialogue(DialogueSystem.Line[] lines, Action onComplete = null)
     {
+        // --- AUTO-RECONNECT UI ---
+        GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.hideFlags == HideFlags.None)
+            {
+                if (obj.name == "DialogueBox") dialoguePanel = obj;
+                if (obj.name == "SpeakerName") speakerNameText = obj.GetComponent<TextMeshProUGUI>();
+                if (obj.name == "DialogueText") dialogueText = obj.GetComponent<TextMeshProUGUI>();
+                if (obj.name == "Avatar1") avatarOneImage = obj.GetComponent<Image>();
+                if (obj.name == "Avatar2") avatarTwoImage = obj.GetComponent<Image>();
+
+                if (obj.name == "InventoryPanel") inventoryPanel = obj;
+                if (obj.name == "ItemPopupPanel") itemDetailsPanel = obj;
+            }
+        }
+
         currentLines = lines;
         index = 0;
+        onDialogueComplete = onComplete; // Stores the choice panel callback from the merchant
 
-        onDialogueComplete = onComplete; // --- ADDED: Save the requested action ---
-
-        // Reset speakers for new conversation
         speakerOne = "";
         speakerTwo = "";
-        avatarOneImage.gameObject.SetActive(false);
-        avatarTwoImage.gameObject.SetActive(false);
 
-        // Force close inventory UIs when talking
+        if (avatarOneImage != null) avatarOneImage.gameObject.SetActive(false);
+        if (avatarTwoImage != null) avatarTwoImage.gameObject.SetActive(false);
+
         if (inventoryPanel != null) inventoryPanel.SetActive(false);
         if (itemDetailsPanel != null) itemDetailsPanel.SetActive(false);
 
-        dialoguePanel.SetActive(true);
+        if (dialoguePanel != null) dialoguePanel.SetActive(true);
         IsDialogueOpen = true;
         ShowLine();
     }
@@ -106,22 +130,29 @@ public class HawkerDialogueManager : MonoBehaviour
 
     void ShowLine()
     {
-        dialogueText.text = "";
+        if (dialogueText != null) dialogueText.text = "";
         UpdateSpeakerInfo();
         StartCoroutine(TypeLine());
     }
 
     void EndDialogue()
     {
-        dialoguePanel.SetActive(false);
+        if (dialoguePanel != null) dialoguePanel.SetActive(false);
         IsDialogueOpen = false;
         index = 0;
 
-        // --- ADDED: Trigger the callback to show the choice menu if one was given ---
+        Debug.Log("Dialogue ended. Checking for choice callback..."); // <-- Add this
+
         if (onDialogueComplete != null)
         {
-            onDialogueComplete.Invoke();
-            onDialogueComplete = null; // Clear it so it doesn't accidentally fire again later
+            Debug.Log("Callback found! Invoking choice panel..."); // <-- Add this
+            Action tempAction = onDialogueComplete;
+            onDialogueComplete = null;
+            tempAction.Invoke();
+        }
+        else
+        {
+            Debug.Log("WARNING: onDialogueComplete was null!"); // <-- Add this
         }
     }
 
@@ -133,28 +164,27 @@ public class HawkerDialogueManager : MonoBehaviour
         string currentSpeaker = currentLine.speakerName;
         Sprite currentAvatar = currentLine.speakerPortrait;
 
-        // Determine which side the current speaker belongs to
         if (speakerOne == currentSpeaker)
         {
             activeAvatarSlot = 1;
-            avatarOneImage.sprite = currentAvatar;
+            if (avatarOneImage != null) avatarOneImage.sprite = currentAvatar;
         }
         else if (speakerTwo == currentSpeaker)
         {
             activeAvatarSlot = 2;
-            avatarTwoImage.sprite = currentAvatar;
+            if (avatarTwoImage != null) avatarTwoImage.sprite = currentAvatar;
         }
         else if (string.IsNullOrEmpty(speakerOne))
         {
             speakerOne = currentSpeaker;
             activeAvatarSlot = 1;
-            avatarOneImage.sprite = currentAvatar;
+            if (avatarOneImage != null) avatarOneImage.sprite = currentAvatar;
         }
         else if (string.IsNullOrEmpty(speakerTwo))
         {
             speakerTwo = currentSpeaker;
             activeAvatarSlot = 2;
-            avatarTwoImage.sprite = currentAvatar;
+            if (avatarTwoImage != null) avatarTwoImage.sprite = currentAvatar;
         }
 
         UpdateAvatarAppearance();
@@ -162,31 +192,30 @@ public class HawkerDialogueManager : MonoBehaviour
 
     void UpdateAvatarAppearance()
     {
-        bool showOne = !string.IsNullOrEmpty(speakerOne) && avatarOneImage.sprite != null;
-        bool showTwo = !string.IsNullOrEmpty(speakerTwo) && avatarTwoImage.sprite != null;
+        bool showOne = !string.IsNullOrEmpty(speakerOne) && avatarOneImage != null && avatarOneImage.sprite != null;
+        bool showTwo = !string.IsNullOrEmpty(speakerTwo) && avatarTwoImage != null && avatarTwoImage.sprite != null;
 
-        avatarOneImage.gameObject.SetActive(showOne);
-        avatarTwoImage.gameObject.SetActive(showTwo);
+        if (avatarOneImage != null) avatarOneImage.gameObject.SetActive(showOne);
+        if (avatarTwoImage != null) avatarTwoImage.gameObject.SetActive(showTwo);
 
         Color dimColor = new Color(dimAmount, dimAmount, dimAmount, 1f);
 
-        if (showOne)
+        if (showOne && avatarOneImage != null)
         {
             avatarOneImage.color = activeAvatarSlot == 1 ? Color.white : dimColor;
 
-            // Keeps avatars at the very top of the Hierarchy (indexes 0 and 1) 
-            if (activeAvatarSlot == 1)
+            if (activeAvatarSlot == 1 && avatarTwoImage != null)
             {
                 avatarTwoImage.transform.SetSiblingIndex(0);
                 avatarOneImage.transform.SetSiblingIndex(1);
             }
         }
 
-        if (showTwo)
+        if (showTwo && avatarTwoImage != null)
         {
             avatarTwoImage.color = activeAvatarSlot == 2 ? Color.white : dimColor;
 
-            if (activeAvatarSlot == 2)
+            if (activeAvatarSlot == 2 && avatarOneImage != null)
             {
                 avatarOneImage.transform.SetSiblingIndex(0);
                 avatarTwoImage.transform.SetSiblingIndex(1);
@@ -197,10 +226,13 @@ public class HawkerDialogueManager : MonoBehaviour
     IEnumerator TypeLine()
     {
         isTyping = true;
-        foreach (char c in currentLines[index].sentence.ToCharArray())
+        if (dialogueText != null)
         {
-            dialogueText.text += c;
-            yield return new WaitForSeconds(typingSpeed);
+            foreach (char c in currentLines[index].sentence.ToCharArray())
+            {
+                dialogueText.text += c;
+                yield return new WaitForSeconds(typingSpeed);
+            }
         }
         isTyping = false;
     }

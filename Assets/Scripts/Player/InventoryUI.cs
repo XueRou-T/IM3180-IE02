@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Required for TextMeshPro text
+using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -12,12 +13,17 @@ public class InventoryUI : MonoBehaviour
         public string itemName;
         public Sprite itemSprite;
         public Color itemColor = Color.white;
-        [TextArea(3, 5)] public string description; // Adds a large text box in the Inspector
+        [TextArea(3, 5)] public string description;
+
+        [Header("Back Side (Flippable ID Cards)")]
+        public bool isFlippable = false; // Check this in Inspector for IDs
+        public Sprite backItemSprite;
+        [TextArea(3, 5)] public string backDescription;
     }
 
     [Header("Main UI References")]
     public GameObject panelToToggle;
-    public Image[] inventorySlots; // Keep your ItemIcons dragged in here
+    public Image[] inventorySlots;
 
     [Header("Tooltip References")]
     public GameObject tooltipPanel;
@@ -28,31 +34,48 @@ public class InventoryUI : MonoBehaviour
     public Image popupImage;
     public TMP_Text popupTitleText;
     public TMP_Text popupDescText;
+    public GameObject flipButtonObject; // Reference to your UI Flip button
 
     [Header("Item Database")]
     public ItemDisplay[] itemDatabase;
 
     private bool isOpen = false;
+    private ItemDisplay currentPopupItem;
+    private bool showingBack = false;
 
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            transform.SetParent(null); // Ensures the canvas is a root object
-            DontDestroyOnLoad(gameObject); // Keeps it alive when loading a new level
+            transform.SetParent(null);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject); // Destroys any accidental duplicates
+            Destroy(gameObject);
+            return;
         }
+
+        if (panelToToggle != null) panelToToggle.SetActive(false);
+        if (tooltipPanel != null) tooltipPanel.SetActive(false);
+        if (popupPanel != null) popupPanel.SetActive(false);
+        if (flipButtonObject != null) flipButtonObject.SetActive(false);
+        isOpen = false;
+    }
+
+    void OnEnable()
+    {
+        ReconnectUI();
     }
 
     void Start()
     {
+        ReconnectUI();
         SetPanelOpen(false);
         if (tooltipPanel != null) tooltipPanel.SetActive(false);
         if (popupPanel != null) popupPanel.SetActive(false);
+        if (flipButtonObject != null) flipButtonObject.SetActive(false);
         RefreshDisplay();
     }
 
@@ -64,14 +87,37 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    public void ReconnectUI()
+    {
+        GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.hideFlags == HideFlags.None)
+            {
+                if (panelToToggle == null && (obj.name == "InventoryPanel" || obj.name == "Inventory Panel")) panelToToggle = obj;
+                if (tooltipPanel == null && (obj.name == "TooltipPanel" || obj.name == "Tooltip Panel")) tooltipPanel = obj;
+            }
+        }
+    }
+
     void SetPanelOpen(bool open)
     {
         isOpen = open;
-        if (panelToToggle != null) panelToToggle.SetActive(open);
+
+        if (panelToToggle != null)
+        {
+            panelToToggle.SetActive(open);
+        }
+        else
+        {
+            Debug.LogError("InventoryUI: panelToToggle is UNASSIGNED! Drag your Inventory Panel into the Inspector slot.");
+        }
+
         if (!isOpen)
         {
             if (tooltipPanel != null) tooltipPanel.SetActive(false);
             if (popupPanel != null) popupPanel.SetActive(false);
+            if (flipButtonObject != null) flipButtonObject.SetActive(false);
         }
 
         if (isOpen) RefreshDisplay();
@@ -81,14 +127,13 @@ public class InventoryUI : MonoBehaviour
     {
         if (GameManager.Instance == null) return;
 
-        // Reset all slots
         foreach (Image slot in inventorySlots)
         {
             if (slot != null)
             {
                 slot.gameObject.SetActive(false);
                 InventorySlot slotScript = slot.GetComponent<InventorySlot>();
-                if (slotScript != null) slotScript.currentItemName = ""; // Clear old data
+                if (slotScript != null) slotScript.currentItemName = "";
             }
         }
 
@@ -105,7 +150,6 @@ public class InventoryUI : MonoBehaviour
                 inventorySlots[slotIndex].color = foundItem.itemColor;
                 inventorySlots[slotIndex].gameObject.SetActive(true);
 
-                // Pass the item name to the slot's click/hover script
                 InventorySlot slotScript = inventorySlots[slotIndex].GetComponent<InventorySlot>();
                 if (slotScript != null) slotScript.currentItemName = foundItem.itemName;
 
@@ -123,14 +167,13 @@ public class InventoryUI : MonoBehaviour
         return null;
     }
 
-    // --- NEW MOUSE INTERACTION METHODS ---
+    // --- MOUSE INTERACTION METHODS ---
 
     public void ShowTooltip(string itemName, Vector3 slotPosition)
     {
-        if (tooltipPanel == null || popupPanel.activeSelf) return; // Don't show if popup is open
+        if (tooltipPanel == null || (popupPanel != null && popupPanel.activeSelf)) return;
 
         tooltipText.text = itemName;
-        // Move the tooltip slightly above the hovered item
         tooltipPanel.transform.position = slotPosition + new Vector3(0, 55f, 0);
         tooltipPanel.SetActive(true);
     }
@@ -142,20 +185,56 @@ public class InventoryUI : MonoBehaviour
 
     public void ShowPopup(string itemName)
     {
-        ItemDisplay foundItem = GetItemDisplay(itemName);
-        if (foundItem == null || popupPanel == null) return;
+        if (TableInteract.activeTable != null)
+        {
+            TableInteract.activeTable.TryEatItem(itemName);
+            return;
+        }
 
-        popupTitleText.text = foundItem.itemName;
-        popupDescText.text = foundItem.description;
-        popupImage.sprite = foundItem.itemSprite;
-        popupImage.color = foundItem.itemColor;
+        currentPopupItem = GetItemDisplay(itemName);
+        if (currentPopupItem == null || popupPanel == null) return;
+
+        showingBack = false; // Always start on the front view
+        UpdatePopupVisuals();
+
+        // Show flip button only if this specific item is marked as flippable
+        if (flipButtonObject != null)
+        {
+            flipButtonObject.SetActive(currentPopupItem.isFlippable);
+        }
 
         popupPanel.SetActive(true);
     }
 
-    // Link this to your Close 'X' Button in the Inspector
+    public void FlipCard()
+    {
+        if (currentPopupItem == null || !currentPopupItem.isFlippable) return;
+
+        showingBack = !showingBack;
+        UpdatePopupVisuals();
+    }
+
+    private void UpdatePopupVisuals()
+    {
+        if (showingBack)
+        {
+            popupTitleText.text = currentPopupItem.itemName + " (Back)";
+            popupDescText.text = currentPopupItem.backDescription;
+            popupImage.sprite = currentPopupItem.backItemSprite;
+            popupImage.color = currentPopupItem.itemColor;
+        }
+        else
+        {
+            popupTitleText.text = currentPopupItem.itemName;
+            popupDescText.text = currentPopupItem.description;
+            popupImage.sprite = currentPopupItem.itemSprite;
+            popupImage.color = currentPopupItem.itemColor;
+        }
+    }
+
     public void ClosePopup()
     {
         if (popupPanel != null) popupPanel.SetActive(false);
+        if (flipButtonObject != null) flipButtonObject.SetActive(false);
     }
 }
