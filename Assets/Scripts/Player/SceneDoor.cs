@@ -7,21 +7,12 @@ public class SceneDoor : MonoBehaviour
     public TMP_Text promptText;
     public string promptMessage = "Press E to leave";
     public string lockedMessage = "It's locked. I need everything first.";
-    public GameObject choicePanelObject; // drag DestinationChoicePanel here
 
     [Header("Lock Settings")]
     public bool requiresUnlock = true;
     public string[] requiredItems;
 
-    [Header("Address Verification (For Home Destination)")]
-    public GameObject addressInputPanel;         // Drag your House Address Popup here
-    public TMP_InputField addressInputField;     // Drag your AddressAnswer input field here
-    public TMP_InputField postalInputField;      // Drag your PostalCodeAnswer input field here
-    public TMP_Text feedbackText;                // Drag your "incorrect address!" text here
-
-    [Header("Correct Answers")]
-    [TextArea] public string correctAddress = "123 Seventh Avenue #07-67";
-    public string correctPostalCode = "676767";
+    [Header("Home Destination Settings")]
     public string homeSceneName = "House";   // Name of your home scene
 
     private bool playerInRange = false;
@@ -32,10 +23,12 @@ public class SceneDoor : MonoBehaviour
     {
         if (!requiresUnlock) isUnlocked = true;
         if (promptText != null) promptText.text = promptMessage;
-        if (addressInputPanel != null) addressInputPanel.SetActive(false);
-        if (feedbackText != null) feedbackText.text = "";
 
-        choiceScript = UIPersistence.Instance != null ? UIPersistence.Instance.destinationChoice : null;
+        // Pull the persistent DestinationChoice reference securely
+        if (UIPersistence.Instance != null)
+        {
+            choiceScript = UIPersistence.Instance.destinationChoice;
+        }
     }
 
     void Update()
@@ -45,68 +38,61 @@ public class SceneDoor : MonoBehaviour
             CheckUnlockCondition();
         }
 
-        bool isAddressActive = addressInputPanel != null && addressInputPanel.activeSelf;
+        bool isAddressActive = UIPersistence.Instance != null &&
+                               UIPersistence.Instance.houseAddressPopup != null &&
+                               UIPersistence.Instance.houseAddressPopup.activeSelf;
 
-        if (playerInRange && Input.GetKeyDown(KeyCode.E) && !DestinationChoice.IsChoiceOpen && !isAddressActive)
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            if (isUnlocked)
+            if (!DestinationChoice.IsChoiceOpen && !isAddressActive)
             {
-                if (choiceScript != null) choiceScript.OpenChoice();
-            }
-            else
-            {
-                ShowLockedMessage();
+                if (isUnlocked)
+                {
+                    if (choiceScript != null)
+                    {
+                        choiceScript.OpenChoice(this);
+                    }
+                    else
+                    {
+                        Debug.LogError("[Door Error] choiceScript is NULL! UIPersistence didn't link the DestinationChoice reference.");
+                    }
+                }
+                else
+                {
+                    ShowLockedMessage();
+                }
             }
         }
     }
 
-    // --- 1. HOOK THIS TO YOUR "HOME" BUTTON IN THE DESTINATION CHOICE PANEL ---
+    // Called when clicking the Home option in the Destination Choice panel
     public void SelectHomeOption()
     {
-        // Close the choice panel if open
         if (choiceScript != null)
         {
             if (choiceScript.gameObject != null) choiceScript.gameObject.SetActive(false);
             DestinationChoice.IsChoiceOpen = false;
         }
 
-        // Open the Address Input Panel and clear previous text/feedback
-        if (addressInputPanel != null) addressInputPanel.SetActive(true);
-        if (addressInputField != null) addressInputField.text = "";
-        if (postalInputField != null) postalInputField.text = "";
-        if (feedbackText != null) feedbackText.text = "";
-    }
-
-    // --- 2. HOOK THIS TO YOUR SUBMIT/ENTER BUTTON IN THE ADDRESS INPUT PANEL ---
-    public void SubmitAddress()
-    {
-        if (addressInputField == null || postalInputField == null) return;
-
-        // Clean up inputs and correct answers (ignoring extra spaces & capitalization)
-        string playerAddress = addressInputField.text.Trim().ToLower();
-        string playerPostal = postalInputField.text.Trim().ToLower();
-
-        string targetAddress = correctAddress.Trim().ToLower();
-        string targetPostal = correctPostalCode.Trim().ToLower(); // Uses correctPostalCode variable
-
-        // Check if both the address AND the postal code match
-        if (playerAddress == targetAddress && playerPostal == targetPostal)
+        // Trigger the persistent address panel directly from UIPersistence
+        if (UIPersistence.Instance != null && UIPersistence.Instance.houseAddressPopup != null)
         {
-            if (feedbackText != null) feedbackText.text = "Success!";
-            CloseAllPanels();
-            SceneManager.LoadScene(homeSceneName);
-        }
-        else
-        {
-            if (feedbackText != null) feedbackText.text = "incorrect address!";
-        }
-    }
+            GameObject addressPopup = UIPersistence.Instance.houseAddressPopup;
+            addressPopup.SetActive(true);
 
-    public void CloseAllPanels()
-    {
-        if (addressInputPanel != null) addressInputPanel.SetActive(false);
-        if (choiceScript != null && choiceScript.gameObject != null) choiceScript.gameObject.SetActive(false);
-        DestinationChoice.IsChoiceOpen = false;
+            // Clear fields when opening
+            TMP_InputField[] inputs = addressPopup.GetComponentsInChildren<TMP_InputField>(true);
+            foreach (var input in inputs)
+            {
+                input.text = "";
+            }
+
+            TMP_Text feedback = addressPopup.GetComponentInChildren<TMP_Text>(true);
+            if (feedback != null && feedback.gameObject.name.Contains("Feedback"))
+            {
+                feedback.text = "";
+            }
+        }
     }
 
     void CheckUnlockCondition()
@@ -156,13 +142,6 @@ public class SceneDoor : MonoBehaviour
         {
             playerInRange = false;
             if (promptText != null) promptText.gameObject.SetActive(false);
-
-            // ONLY close panels if the address typing panel or choice panel is NOT active
-            bool isAddressActive = addressInputPanel != null && addressInputPanel.activeSelf;
-            if (!isAddressActive && !DestinationChoice.IsChoiceOpen)
-            {
-                CloseAllPanels();
-            }
         }
     }
 }

@@ -20,7 +20,7 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public TextMeshProUGUI nameComponent;
     public Image avatarOneImage;
-    public Image avatarTwoImage;
+    public Image avatarTwoImage; // Can be left unassigned or deleted in single-speaker scenes
 
     [Header("Avatar Appearance")]
     [Range(0f, 1f)]
@@ -38,7 +38,6 @@ public class Dialogue : MonoBehaviour
     public bool haveOption = false;
     public GameObject optionChoice;
 
-   
     private string speakerOne = "";
     private string speakerTwo = "";
     private int activeAvatarSlot = 0;
@@ -55,8 +54,11 @@ public class Dialogue : MonoBehaviour
         textComponent.text = string.Empty;
         nameComponent.text = string.Empty;
 
-        avatarOneImage.gameObject.SetActive(false);
-        avatarTwoImage.gameObject.SetActive(false);
+        if (avatarOneImage != null)
+            avatarOneImage.gameObject.SetActive(false);
+
+        if (avatarTwoImage != null)
+            avatarTwoImage.gameObject.SetActive(false);
 
         if (optionChoice != null)
         {
@@ -72,7 +74,7 @@ public class Dialogue : MonoBehaviour
         {
             if (textComponent.text == lines[index].text)
             {
-                    NextLine();
+                NextLine();
             }
             else
             {
@@ -91,6 +93,14 @@ public class Dialogue : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
+
+        // Reset tracking slots if running a single-speaker setup in this scene
+        if (avatarTwoImage == null)
+        {
+            speakerOne = "";
+            speakerTwo = "";
+        }
+
         UpdateSpeakerInfo();
         StartCoroutine(TypeLine());
     }
@@ -155,12 +165,26 @@ public class Dialogue : MonoBehaviour
         string currentSpeaker = currentLine.speakerName;
         Sprite currentAvatar = currentLine.speakerAvatar;
 
-        if(speakerOne == currentSpeaker)
+        // If Slot 2 image reference doesn't exist in this scene, force everything into Slot 1
+        if (avatarTwoImage == null)
+        {
+            speakerOne = currentSpeaker;
+            activeAvatarSlot = 1;
+            if (avatarOneImage != null)
+            {
+                avatarOneImage.sprite = currentAvatar;
+            }
+            UpdateAvatarAppearance();
+            return;
+        }
+
+        // Standard two-speaker tracking logic
+        if (speakerOne == currentSpeaker)
         {
             activeAvatarSlot = 1;
             avatarOneImage.sprite = currentAvatar;
         }
-        else if(speakerTwo == currentSpeaker)
+        else if (speakerTwo == currentSpeaker)
         {
             activeAvatarSlot = 2;
             avatarTwoImage.sprite = currentAvatar;
@@ -184,13 +208,18 @@ public class Dialogue : MonoBehaviour
     void UpdateAvatarAppearance()
     {
         bool showOne = !string.IsNullOrEmpty(speakerOne)
+                       && avatarOneImage != null
                        && avatarOneImage.sprite != null;
 
-        bool showTwo = !string.IsNullOrEmpty(speakerTwo)
+        bool showTwo = avatarTwoImage != null
+                       && !string.IsNullOrEmpty(speakerTwo)
                        && avatarTwoImage.sprite != null;
 
-        avatarOneImage.gameObject.SetActive(showOne);
-        avatarTwoImage.gameObject.SetActive(showTwo);
+        if (avatarOneImage != null)
+            avatarOneImage.gameObject.SetActive(showOne);
+
+        if (avatarTwoImage != null)
+            avatarTwoImage.gameObject.SetActive(showTwo);
 
         Color dimColor = new Color(
             dimAmount,
@@ -199,19 +228,18 @@ public class Dialogue : MonoBehaviour
             1f
         );
 
-        if (showOne)
+        if (showOne && avatarOneImage != null)
         {
-            avatarOneImage.color =
-                activeAvatarSlot == 1 ? Color.white : dimColor;
+            // Keep solo or active speakers fully bright, dim only when multiple speakers are active
+            avatarOneImage.color = (activeAvatarSlot == 1 || avatarTwoImage == null || !showTwo) ? Color.white : dimColor;
         }
 
-        if (showTwo)
+        if (showTwo && avatarTwoImage != null)
         {
-            avatarTwoImage.color =
-                activeAvatarSlot == 2 ? Color.white : dimColor;
+            avatarTwoImage.color = activeAvatarSlot == 2 ? Color.white : dimColor;
         }
     }
-        
+
     IEnumerator LoadNextScene()
     {
         if (fadeImage != null)
@@ -219,7 +247,7 @@ public class Dialogue : MonoBehaviour
 
         yield return new WaitForSeconds(3);
 
-        if(nextSceneName != null)
+        if (nextSceneName != null)
             SceneManager.LoadScene(nextSceneName);
     }
 }

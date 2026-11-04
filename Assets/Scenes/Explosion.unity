@@ -940,7 +940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExplosionManager
   delayTime: 3
-  nextSceneName: Lab
+  nextSceneName: PostExplosion
 --- !u!4 &1789898304
 Transform:
   m_ObjectHideFlags: 0

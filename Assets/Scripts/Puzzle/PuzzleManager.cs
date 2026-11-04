@@ -34,9 +34,13 @@ public class PuzzleManager : MonoBehaviour
     private Vector2Int lastPlayerPos;
     private Vector2Int lastShadowPos;
 
+    [Header("Color Progress Integration")]
+    [Tooltip("Check this for Puzzle Scene 1, uncheck it for Puzzle Scene 2")]
+    public bool isPuzzleOne = true;
+
     [Header("Next Scene")]
     public string nextSceneName;
-    public FadeScript fadeImage;
+
     void Start()
     {
         SetPlayerSpawn();
@@ -81,8 +85,6 @@ public class PuzzleManager : MonoBehaviour
         }
 
         if (moveType == PuzzlePlayerMoveType.Up || moveType == PuzzlePlayerMoveType.Down) return;
-
-       
 
         ExecutePlayerMove(targetPosition, moveType);
     }
@@ -139,7 +141,6 @@ public class PuzzleManager : MonoBehaviour
 
         ProcessTurnLoop();
 
-
         if (tutorialManager != null)
         {
             if (moveType == PuzzlePlayerMoveType.Right)
@@ -152,7 +153,6 @@ public class PuzzleManager : MonoBehaviour
                 tutorialManager.OnMoveSlotsFilled();
             }
         }
-
     }
 
     void ExecuteNextShadowMove()
@@ -367,7 +367,7 @@ public class PuzzleManager : MonoBehaviour
     {
         if (gameOver) return;
 
-        if (player.playerPosition == shadow.shadowPosition || (player.playerPosition == lastShadowPos && shadow.shadowPosition == lastPlayerPos) )
+        if (player.playerPosition == shadow.shadowPosition || (player.playerPosition == lastShadowPos && shadow.shadowPosition == lastPlayerPos))
         {
             gameOver = true;
             Debug.Log("Game Over: Collided with Shadow");
@@ -392,7 +392,21 @@ public class PuzzleManager : MonoBehaviour
         {
             Debug.Log("Reached Goal");
             minigameSFXManager.PlayWinningSound();
-            StartCoroutine(GoToNextScene());
+
+            // Update player color progression based on the Inspector toggle
+            if (PlayerColorProgression.Instance != null)
+            {
+                if (isPuzzleOne)
+                {
+                    PlayerColorProgression.Instance.CompletePuzzleOne();
+                }
+                else
+                {
+                    PlayerColorProgression.Instance.CompletePuzzleTwo();
+                }
+            }
+
+            GoToNextScene();
         }
     }
 
@@ -427,7 +441,7 @@ public class PuzzleManager : MonoBehaviour
 
         Debug.Log("Death transition complete");
 
-        RestartLevel(); 
+        RestartLevel();
     }
 
     IEnumerator StartDoorDeathTransition(Vector2Int playerPos)
@@ -451,14 +465,8 @@ public class PuzzleManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    IEnumerator GoToNextScene()
+    void GoToNextScene()
     {
-        if (fadeImage != null)
-            fadeImage.StartTransition();
-
-        yield return new WaitForSeconds(3);
-
-        if (nextSceneName != null)
-            SceneManager.LoadScene(nextSceneName);
+        SceneManager.LoadScene(nextSceneName);
     }
 }
