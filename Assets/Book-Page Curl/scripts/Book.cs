@@ -457,6 +457,11 @@ public class Book : MonoBehaviour {
 
         if (autoFlip != null)
         {
+            if (autoFlip.isFlipping)
+                return;
+        }
+        if (autoFlip != null)
+        {
             autoFlip.StopAutoFlip();
         }
 

@@ -390,8 +390,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[0].text
-      value: "Jonathan finally discards the memory-erasing inator, choosing to stop
-        running away from his past.\r\n\r\nHe begins pursuing the hobbies and activities
+      value: "Jonathan finally discards the amnesia-inator, choosing to stop running
+        away from his past.\r\n\r\nHe begins pursuing the hobbies and activities
         he once promised his wife they would experience together. Although she is
         no longer by his side, the memories they shared remain with him, living on
         in his heart.\r\n\r\nHe understands that moving forward doesn't mean forgetting
@@ -400,7 +400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[1].text
-      value: '???: Hey, it''s been a while, bro. Wanna try out my time machine?'
+      value: '???: Hey, it''s been a while, bro. Wanna try out my time-rewind-inator?'
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[2].text

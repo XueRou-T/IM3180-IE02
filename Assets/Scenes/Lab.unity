@@ -1685,7 +1685,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.25, y: 0.29}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.25, y: 0.29}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1741,15 +1741,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3288183018727488999, guid: c4c38683fffb67a4d8776b8d1a8a8891, type: 3}
+  m_Sprite: {fileID: 3288183018727488999, guid: 6b47a9d247af3455a9a83541c01a4443, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.25, y: 0.29}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!4 &227708962
 Transform:
@@ -14136,6 +14136,7 @@ GameObject:
   - component: {fileID: 1258044467}
   - component: {fileID: 1258044466}
   - component: {fileID: 1258044471}
+  - component: {fileID: 1258044472}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -14331,6 +14332,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54b8118dac5fc6443a1de9c821355f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerPersistence
+--- !u!114 &1258044472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258044465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35837bf0ddf6544d9fbd3ea1a070853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerColorProgression
+  playerSpriteRenderer: {fileID: 1258044469}
+  saturationIncrease: 0.34
 --- !u!1001 &1260277326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23350,6 +23365,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 424870575294962712, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: hoverExpandScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1017715552968043985, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -23448,7 +23467,7 @@ PrefabInstance:
       objectReference: {fileID: 467566826}
     - target: {fileID: 1531394750174115262, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50.001
+      value: 78.251
       objectReference: {fileID: 0}
     - target: {fileID: 1531394750174115262, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -23515,6 +23534,10 @@ PrefabInstance:
       value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 5084930800527811352, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -78.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084930800527811352, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 107.87
       objectReference: {fileID: 0}
@@ -23572,6 +23595,10 @@ PrefabInstance:
       objectReference: {fileID: 2043850741}
     - target: {fileID: 6766529593737048191, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: PageFlipTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295825334200412460, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: hoverExpandScale
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7302848777869397898, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
@@ -23668,7 +23695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8792335444823276892, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: bookPages.Array.size
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8792335444823276892, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: 'bookPages.Array.data[10]'

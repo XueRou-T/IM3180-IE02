@@ -3898,6 +3898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzlePlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 2651136653524681941, guid: 790179ca15dcff0429fc8c686ec71855, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4210129117985237294, guid: 790179ca15dcff0429fc8c686ec71855, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.993
