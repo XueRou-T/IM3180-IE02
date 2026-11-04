@@ -2991,12 +2991,12 @@ MonoBehaviour:
   promptText: {fileID: 665186897}
   promptMessage: Press E to exit the home.
   lockedMessage: It's locked. I need everything first.
-  choicePanelObject: {fileID: 814064277}
   requiresUnlock: 1
   requiredItems:
   - White Tulips
   - Family Photo
   - Wine Bottle
+  homeSceneName: House
 --- !u!61 &509918769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4150,11 +4150,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &814064277 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 539355188730449123, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
-  m_PrefabInstance: {fileID: 1765826419}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &833343264
 GameObject:
   m_ObjectHideFlags: 0
@@ -4216,6 +4211,7 @@ MonoBehaviour:
   frameRate: 0.2
   sfxManager: {fileID: 0}
   puzzlePanel: {fileID: 0}
+  addressInputPanel: {fileID: 0}
 --- !u!61 &833343267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4357,7 +4353,7 @@ Transform:
   m_GameObject: {fileID: 833343264}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.74, y: -5.34, z: -1}
+  m_LocalPosition: {x: -0.74, y: -4.53, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5877,7 +5873,7 @@ Transform:
   m_GameObject: {fileID: 1135847154}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: -6.12, z: -10}
+  m_LocalPosition: {x: -0.8, y: -1.76, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9598,6 +9594,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1268245151770865451, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1472026575964280275, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11131,8 +11131,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2006760738}
+  - component: {fileID: 2006760739}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: SpawnNearDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11147,12 +11148,25 @@ Transform:
   m_GameObject: {fileID: 2006760737}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -8, z: 0}
+  m_LocalPosition: {x: -0.48, y: -5.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2006760739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006760737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c87e6e869be104db847209e4e4b099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawnerExplore
+  spawnPointName: SpawnNearDoor
 --- !u!1 &2095791769
 GameObject:
   m_ObjectHideFlags: 0
