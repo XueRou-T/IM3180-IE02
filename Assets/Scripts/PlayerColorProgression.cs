@@ -42,16 +42,11 @@ public class PlayerColorProgression : MonoBehaviour
             instancedMaterial = playerSpriteRenderer.material;
 
             // Set initial stage
-            float savedSaturation = PlayerPrefs.GetFloat("PlayerSaturation");
+            float savedSaturation = PlayerPrefs.GetFloat("PlayerSaturation", 0f);
             SetSaturation(savedSaturation);
         }
     }
 
-    private void Update()
-    {
-        float current = PlayerPrefs.GetFloat("PlayerSaturation");
-        SetSaturation(targetAmount);
-    }
     public void CompleteAnimationScene()
     {
         SetSaturation(1);
@@ -76,11 +71,12 @@ public class PlayerColorProgression : MonoBehaviour
 
     public void AddSaturation()
     {
-        float current = PlayerPrefs.GetFloat("PlayerSaturation");
+        float current = PlayerPrefs.GetFloat("PlayerSaturation", 0f);
 
-        targetAmount = current + saturationIncrease;
-        targetAmount = Mathf.Clamp01(targetAmount);
+        float newAmount = Mathf.Clamp01(current + saturationIncrease);
 
-        SetSaturation(targetAmount);
+        SetSaturation(newAmount);
+
+        Debug.Log("[PlayerColor] Saturation increased from " + current + " to " + newAmount);
     }
 }
