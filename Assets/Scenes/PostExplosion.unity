@@ -275,15 +275,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5867699083978962597, guid: b98e5e2ba9be01b41b9bd0fedebee704, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867699083978962597, guid: b98e5e2ba9be01b41b9bd0fedebee704, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867699083978962597, guid: b98e5e2ba9be01b41b9bd0fedebee704, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6468923342755850233, guid: b98e5e2ba9be01b41b9bd0fedebee704, type: 3}
       propertyPath: fadeIn
@@ -1397,15 +1397,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5867699083978962597, guid: b98e5e2ba9be01b41b9bd0fedebee704, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5867699083978962597, guid: b98e5e2ba9be01b41b9bd0fedebee704, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5867699083978962597, guid: b98e5e2ba9be01b41b9bd0fedebee704, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6468923342755850233, guid: b98e5e2ba9be01b41b9bd0fedebee704, type: 3}
       propertyPath: fadeIn
@@ -1549,6 +1549,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 451007803}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: textSpeed
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: nextSceneName
       value: Lab
       objectReference: {fileID: 0}
@@ -1557,20 +1561,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[0].text
-      value: It's been so long since we last ate out...
+      value: Where am I?
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[1].text
-      value: Shall we head to the hawker center downstairs to have lunch?
+      value: Who am I?
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[2].text
-      value: I'm busy.
+      value: Goodness... this place is a mess...
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[3].text
-      value: Can't you spare just one hour of your day to have lunch with your WIFE?
+      value: Maybe I should explore to find out whats going on
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[4].text
@@ -1593,8 +1601,20 @@ PrefabInstance:
       value: 'He''s always working... I guess I''ll just have lunch on my own... '
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[0].speakerName
+      value: ???
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[1].speakerName
+      value: ???
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[2].speakerName
-      value: Jonathan
+      value: ???
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[3].speakerName
+      value: ???
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[4].speakerName
@@ -1604,6 +1624,18 @@ PrefabInstance:
       propertyPath: lines.Array.data[6].speakerName
       value: Jonathan
       objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[0].speakerAvatar
+      value: 
+      objectReference: {fileID: -4281445024243405800, guid: e3f97b872daa05946a24f0a862540432, type: 3}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[1].speakerAvatar
+      value: 
+      objectReference: {fileID: -4281445024243405800, guid: e3f97b872daa05946a24f0a862540432, type: 3}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[3].speakerAvatar
+      value: 
+      objectReference: {fileID: -4281445024243405800, guid: e3f97b872daa05946a24f0a862540432, type: 3}
     - target: {fileID: 3961174576340799076, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
