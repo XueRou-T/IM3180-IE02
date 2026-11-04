@@ -579,8 +579,8 @@ MonoBehaviour:
   shadowMoveCount: 7
   moveHistory: 
   moveTrackerUI: {fileID: 834206969}
+  isPuzzleOne: 1
   nextSceneName: Official M1
-  fadeImage: {fileID: 1923303766}
 --- !u!4 &144435362
 Transform:
   m_ObjectHideFlags: 0
@@ -3570,17 +3570,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b98e5e2ba9be01b41b9bd0fedebee704, type: 3}
---- !u!114 &1923303766 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6468923342755850233, guid: b98e5e2ba9be01b41b9bd0fedebee704, type: 3}
-  m_PrefabInstance: {fileID: 1923303765}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25c158e7febc216468aadcfe87a80dbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FadeScript
 --- !u!224 &1923303767 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4607253043293256894, guid: b98e5e2ba9be01b41b9bd0fedebee704, type: 3}
@@ -3792,6 +3781,10 @@ PrefabInstance:
     - target: {fileID: 2651136653524681941, guid: 790179ca15dcff0429fc8c686ec71855, type: 3}
       propertyPath: m_Name
       value: PuzzlePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651136653524681941, guid: 790179ca15dcff0429fc8c686ec71855, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4210129117985237294, guid: 790179ca15dcff0429fc8c686ec71855, type: 3}
       propertyPath: m_LocalPosition.x

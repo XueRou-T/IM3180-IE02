@@ -7,14 +7,11 @@ public class PlayerColorProgression : MonoBehaviour
     [Header("Material Reference")]
     public SpriteRenderer playerSpriteRenderer;
 
-    [Header("Saturation Stages (0 = Grayscale, 1 = Full Color)")]
-    [Range(0f, 1f)] public float stage0_Start = 0.0f;       // Initial desaturated state
-    [Range(0f, 1f)] public float stage1_AfterPuzzle1 = 0.33f; // After first puzzle
-    [Range(0f, 1f)] public float stage2_AfterPuzzle2 = 0.66f; // After second puzzle
-    [Range(0f, 1f)] public float stage3_FullColor = 1.00f;    // After final animation scene
+    [Range(0f, 1f)] public float saturationIncrease = 0.2f;
 
     private Material instancedMaterial;
     private int saturationPropertyID;
+    private float targetAmount;
 
     void Awake()
     {
@@ -45,28 +42,19 @@ public class PlayerColorProgression : MonoBehaviour
             instancedMaterial = playerSpriteRenderer.material;
 
             // Set initial stage
-            SetSaturation(stage0_Start);
+            float savedSaturation = PlayerPrefs.GetFloat("PlayerSaturation");
+            SetSaturation(savedSaturation);
         }
     }
 
-    // Call this when Puzzle 1 is completed
-    public void CompletePuzzleOne()
+    private void Update()
     {
-        SetSaturation(stage1_AfterPuzzle1);
-        Debug.Log("[PlayerColor] Puzzle 1 completed. Color increased to Stage 1.");
+        float current = PlayerPrefs.GetFloat("PlayerSaturation");
+        SetSaturation(targetAmount);
     }
-
-    // Call this when Puzzle 2 is completed
-    public void CompletePuzzleTwo()
-    {
-        SetSaturation(stage2_AfterPuzzle2);
-        Debug.Log("[PlayerColor] Puzzle 2 completed. Color increased to Stage 2.");
-    }
-
-    // Call this after the animation scene finishes
     public void CompleteAnimationScene()
     {
-        SetSaturation(stage3_FullColor);
+        SetSaturation(1);
         Debug.Log("[PlayerColor] Animation scene completed. Full color restored!");
     }
 
@@ -76,5 +64,23 @@ public class PlayerColorProgression : MonoBehaviour
         {
             instancedMaterial.SetFloat(saturationPropertyID, targetAmount);
         }
+
+        SaveSaturation(targetAmount);
+    }
+
+    private void SaveSaturation(float amount)
+    {
+        PlayerPrefs.SetFloat("PlayerSaturation", amount);
+        PlayerPrefs.Save();
+    }
+
+    public void AddSaturation()
+    {
+        float current = PlayerPrefs.GetFloat("PlayerSaturation");
+
+        targetAmount = current + saturationIncrease;
+        targetAmount = Mathf.Clamp01(targetAmount);
+
+        SetSaturation(targetAmount);
     }
 }
