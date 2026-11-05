@@ -170,8 +170,11 @@ public class PuzzleManager : MonoBehaviour
         if (shadowMoveIndex >= moveHistory.Count) return;
 
         PuzzlePlayerMoveType move = moveHistory[shadowMoveIndex];
-        shadowMoveIndex++;
 
+        moveTrackerUI.ChangeMoveSlotColor(moveTrackerUI.moveSlots[shadowMoveIndex], Color.softRed);
+
+        shadowMoveIndex++;
+              
         TryMoveShadow(move);
     }
 
