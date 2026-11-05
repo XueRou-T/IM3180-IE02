@@ -13,6 +13,9 @@ public class SettingsManager : MonoBehaviour
 
     [SerializeField] Image brightnessFilter;
 
+    [SerializeField] Toggle bgmToggle;
+    [SerializeField] Toggle sfxToggle;
+
     private bool isOn;
 
     public void Start()
@@ -46,6 +49,60 @@ public class SettingsManager : MonoBehaviour
         UpdateBrightnessText(savedBrightness);
         brightnessSlider.onValueChanged.RemoveAllListeners();
         brightnessSlider.onValueChanged.AddListener(OnBrightnessChanged);
+
+        int savedBGM = PlayerPrefs.GetInt("savedBGM", 1);
+        int savedSFX = PlayerPrefs.GetInt("savedSFX", 1);
+
+        bgmToggle.SetIsOnWithoutNotify(savedBGM == 1);
+        sfxToggle.SetIsOnWithoutNotify(savedSFX == 1);
+
+        ApplyBGM(savedBGM == 1);
+        ApplySFX(savedSFX == 1);
+
+        bgmToggle.onValueChanged.AddListener(OnBGMChanged);
+        sfxToggle.onValueChanged.AddListener(OnSFXChanged);
+    }
+
+    public void OnBGMChanged(bool isEnabled)
+    {
+        PlayerPrefs.SetInt("savedBGM", isEnabled ? 1 : 0);
+        PlayerPrefs.Save();
+
+        ApplyBGM(isEnabled);
+    }
+
+    public void OnSFXChanged(bool isEnabled)
+    {
+        PlayerPrefs.SetInt("savedSFX", isEnabled ? 1 : 0);
+        PlayerPrefs.Save();
+
+        ApplySFX(isEnabled);
+    }
+
+    public void ApplyBGM(bool enabled)
+    {
+        GameObject[] bgmObjects = GameObject.FindGameObjectsWithTag("BGM");
+
+        foreach (GameObject obj in bgmObjects)
+        {
+            AudioSource source = obj.GetComponent<AudioSource>();
+
+            if (source != null)
+                source.mute = !enabled;
+        }
+    }
+
+    public void ApplySFX(bool enabled)
+    {
+        GameObject[] sfxObjects = GameObject.FindGameObjectsWithTag("SFX");
+
+        foreach (GameObject obj in sfxObjects)
+        {
+            AudioSource source = obj.GetComponent<AudioSource>();
+
+            if (source != null)
+                source.mute = !enabled;
+        }
     }
 
     public void OnVolumeChanged(float value)

@@ -1074,7 +1074,6 @@ MonoBehaviour:
   shadowMoveCount: 2
   moveHistory: 
   moveTrackerUI: {fileID: 834206969}
-  isPuzzleOne: 1
   nextSceneName: Puzzle1
 --- !u!4 &144435362
 Transform:
@@ -2098,7 +2097,7 @@ GameObject:
   - component: {fileID: 788692285}
   m_Layer: 0
   m_Name: SFX
-  m_TagString: Untagged
+  m_TagString: SFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2294,6 +2293,7 @@ MonoBehaviour:
   puzzleManager: {fileID: 144435361}
   moveSlotPrefab: {fileID: 2751213472731895984, guid: 79214b4053606e1438a20717791b49a0, type: 3}
   moveSlotContainer: {fileID: 90189847}
+  moveSlots: []
 --- !u!1001 &868067596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4724,7 +4724,7 @@ GameObject:
   - component: {fileID: 1913384816}
   m_Layer: 0
   m_Name: BackgroundMusic
-  m_TagString: Untagged
+  m_TagString: BGM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

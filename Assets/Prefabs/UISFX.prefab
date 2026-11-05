@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7074644419682236430}
   m_Layer: 0
   m_Name: UISFX
-  m_TagString: Untagged
+  m_TagString: SFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
