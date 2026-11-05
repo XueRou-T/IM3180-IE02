@@ -1188,7 +1188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[0].text
-      value: John! Look at these beautiful flowers!
+      value: Jon! Look at these beautiful flowers!
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[1].text
@@ -1219,20 +1219,28 @@ PrefabInstance:
       value: '"He''s always working... I guess I''ll just have lunch on my own..." '
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[0].speakerName
+      value: Shannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: lines.Array.data[1].speakerName
+      value: Shannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[2].speakerName
-      value: Sharon
+      value: Shannon
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[3].speakerName
-      value: John
+      value: Jonathan
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[4].speakerName
-      value: Sharon
+      value: Shannon
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[5].speakerName
-      value: John
+      value: Jonathan
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[6].speakerName

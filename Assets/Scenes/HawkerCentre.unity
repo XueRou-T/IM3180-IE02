@@ -12359,6 +12359,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5540179572468879380, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_TagString
+      value: InventoryPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 5833408871413573294, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_IsActive
       value: 0
