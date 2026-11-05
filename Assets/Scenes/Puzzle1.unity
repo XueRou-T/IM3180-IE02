@@ -1086,7 +1086,7 @@ GameObject:
   - component: {fileID: 788692285}
   m_Layer: 0
   m_Name: SFX
-  m_TagString: Untagged
+  m_TagString: SFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3324,7 +3324,7 @@ GameObject:
   - component: {fileID: 1913384816}
   m_Layer: 0
   m_Name: BackgroundMusic
-  m_TagString: Untagged
+  m_TagString: BGM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

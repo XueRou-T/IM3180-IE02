@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 299740611}
   m_Layer: 0
   m_Name: BackgroundMusic
-  m_TagString: Untagged
+  m_TagString: BGM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -937,15 +937,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Thank you for playing our game demo!
 
-    
 
-    But his story doesn''t
-    end here. More chapters of Jonathan''s adventure are coming soon.
 
-    
+    But his story doesn''t end
+    here. More chapters of Jonathan''s adventure are coming soon.
 
-    Stay
-    tuned for what''s next!'
+
+
+    Stay tuned
+    for what''s next!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
   m_sharedMaterial: {fileID: 532153396506003083, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
