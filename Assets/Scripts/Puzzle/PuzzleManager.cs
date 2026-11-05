@@ -34,15 +34,25 @@ public class PuzzleManager : MonoBehaviour
     private Vector2Int lastPlayerPos;
     private Vector2Int lastShadowPos;
 
-    [Header("Color Progress Integration")]
-    [Tooltip("Check this for Puzzle Scene 1, uncheck it for Puzzle Scene 2")]
-    public bool isPuzzleOne = true;
-
     [Header("Next Scene")]
     public string nextSceneName;
 
     void Start()
     {
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        if (currentScene == "Puzzle1" || currentScene == "Puzzle2")
+        {
+            if (PlayerPrefs.GetInt("TutorialCompleted", 0) == 0)
+            {
+                PlayerPrefs.SetString("ReturnPuzzleScene", SceneManager.GetActiveScene().name);
+                PlayerPrefs.Save();
+                SceneManager.LoadScene("TutorialMinigame");
+
+                return;
+            }
+        }
+
         SetPlayerSpawn();
         Invoke(nameof(ProcessTurnLoop), 0.1f);
     }
@@ -396,16 +406,19 @@ public class PuzzleManager : MonoBehaviour
             // Update player color progression based on the Inspector toggle
             if (PlayerColorProgression.Instance != null)
             {
-                if (isPuzzleOne)
-                {
-                    PlayerColorProgression.Instance.CompletePuzzleOne();
-                }
-                else
-                {
-                    PlayerColorProgression.Instance.CompletePuzzleTwo();
-                }
+                PlayerColorProgression.Instance.AddSaturation();
             }
 
+            if (SceneManager.GetActiveScene().name == "TutorialMinigame")
+            {
+                PlayerPrefs.SetInt("TutorialCompleted", 1);
+                PlayerPrefs.Save();
+                string returnScene = PlayerPrefs.GetString("ReturnPuzzleScene");
+
+                SceneManager.LoadScene(returnScene);
+
+                return;
+            }
             GoToNextScene();
         }
     }

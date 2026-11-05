@@ -10,7 +10,7 @@ public class AutoFlip : MonoBehaviour {
     public bool AutoStartFlip=true;
     public Book ControledBook;
     public int AnimationFramesCount = 40;
-    bool isFlipping = false;
+    public bool isFlipping = false;
     // Use this for initialization
 
     public Image leftTemp;

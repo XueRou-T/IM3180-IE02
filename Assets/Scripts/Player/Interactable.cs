@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.Rendering.Universal;
 
 public class Interactable : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class Interactable : MonoBehaviour
     private Color baseColor;
     private bool isUnlocked = true;
 
+    private Light2D light2D;
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -44,6 +46,11 @@ public class Interactable : MonoBehaviour
         {
             isUnlocked = false;
         }
+
+        light2D = GetComponent<Light2D>();
+
+        if (light2D != null) 
+            light2D.enabled = true;
     }
 
     void Update()
@@ -159,5 +166,8 @@ public class Interactable : MonoBehaviour
             promptText.gameObject.SetActive(false);
             promptText.text = interactPrompt;
         }
+
+        if(light2D != null)
+            light2D.enabled = false;
     }
 }
