@@ -579,7 +579,6 @@ MonoBehaviour:
   shadowMoveCount: 7
   moveHistory: 
   moveTrackerUI: {fileID: 834206969}
-  isPuzzleOne: 1
   nextSceneName: Official M1
 --- !u!4 &144435362
 Transform:
@@ -1283,6 +1282,7 @@ MonoBehaviour:
   puzzleManager: {fileID: 144435361}
   moveSlotPrefab: {fileID: 2751213472731895984, guid: 79214b4053606e1438a20717791b49a0, type: 3}
   moveSlotContainer: {fileID: 90189847}
+  moveSlots: []
 --- !u!1001 &868067596
 PrefabInstance:
   m_ObjectHideFlags: 0

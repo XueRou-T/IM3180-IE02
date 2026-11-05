@@ -45,4 +45,9 @@ public class MoveSlotUI : MonoBehaviour
                 break;
         }
     }
+
+    public void SetColor(Color color)
+    {
+        icon_Image.color = color;
+    }
 }
