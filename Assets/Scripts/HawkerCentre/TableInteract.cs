@@ -124,8 +124,14 @@ public class TableInteract : MonoBehaviour
         activeTable = this;
         if (interactPrompt != null) interactPrompt.SetActive(false);
 
-        // Uses the direct reference to turn on the UI
-        if (inventoryPanel != null) inventoryPanel.SetActive(true);
+        if (inventoryPanel != null)
+            inventoryPanel.SetActive(true);
+
+        if (InventoryUI.Instance != null)
+        {
+            InventoryUI.Instance.SetPanelOpen(true);
+            InventoryUI.Instance.RefreshDisplay();
+        }
 
         ShowMessage("Pick a food to eat", 3f);
     }
@@ -156,6 +162,7 @@ public class TableInteract : MonoBehaviour
 
             // Uses the direct reference to turn off the UI
             if (inventoryPanel != null) inventoryPanel.SetActive(false);
+            if (InventoryUI.Instance != null) InventoryUI.Instance.SetPanelOpen(false);
 
             StartCoroutine(EatingSequence(foodToEat));
         }
@@ -201,6 +208,7 @@ public class TableInteract : MonoBehaviour
         // 5. Check what happens after eating
         if (foodToEat.triggersSceneChange)
         {
+            StandUp();
             // If the box is ticked, load the memory scene
             SceneManager.LoadScene(nextSceneName);
         }

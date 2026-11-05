@@ -5003,7 +5003,7 @@ MonoBehaviour:
   walkRight1: {fileID: -3399321404674074116, guid: 27b73cfb416f241818222a5257df965f, type: 3}
   walkRight2: {fileID: 2336009754684808876, guid: 27b73cfb416f241818222a5257df965f, type: 3}
   frameRate: 0.2
-  sfxManager: {fileID: 0}
+  sfxManager: {fileID: 311711781}
   puzzlePanel: {fileID: 0}
   addressInputPanel: {fileID: 0}
 --- !u!61 &833343267

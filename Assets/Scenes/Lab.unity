@@ -13657,7 +13657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[1].text
-      value: I'm sorry, Sharon. I tried to forget you. I tried to erase my mistakes,
+      value: I'm sorry, Shannon. I tried to forget you. I tried to erase my mistakes,
         hoping the pain would disappear.
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
@@ -14552,7 +14552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[0].text
-      value: I'm sorry, Sharon... I can't live with these memories. I can't bear
+      value: I'm sorry, Shannon... I can't live with these memories. I can't bear
         living in a world without you.
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
@@ -17204,7 +17204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[2].text
-      value: I'm sorry, Sharon. I should've been there for you...
+      value: I'm sorry, Shannon. I should've been there for you...
       objectReference: {fileID: 0}
     - target: {fileID: 3942304042872357358, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: lines.Array.data[3].text
@@ -17459,12 +17459,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-'
+  m_text: The Door Prompt Is Here
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
+  m_sharedMaterial: {fileID: 532153396506003083, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17530,7 +17528,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1573559018

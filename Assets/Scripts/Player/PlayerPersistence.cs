@@ -27,6 +27,15 @@ public class PlayerPersistence : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if(scene.name == "Puzzle1" || scene.name == "Puzzle2" || scene.name == "TutorialMinigame")
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
+
         Debug.Log($"[PlayerPersistence] Scene loaded: {scene.name} | Target spawn requested: '{nextSpawnPointName}'");
 
         if (string.IsNullOrEmpty(nextSpawnPointName)) return;

@@ -92,7 +92,10 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            SetPanelOpen(!isOpen);
+            string currentScene = SceneManager.GetActiveScene().name;
+
+            if (currentScene == "Lab" || currentScene == "House" || currentScene == "HawkerCentre")
+                SetPanelOpen(!isOpen);
         }
     }
 
@@ -109,7 +112,7 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    void SetPanelOpen(bool open)
+    public void SetPanelOpen(bool open)
     {
         isOpen = open;
 
