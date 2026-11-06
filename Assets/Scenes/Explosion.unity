@@ -883,11 +883,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1640174447399899154, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1998226470621746300, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
       propertyPath: m_Name
       value: SettingsPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998226470621746300, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3965098568934336304, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
       propertyPath: brightnessFilter
@@ -895,15 +899,15 @@ PrefabInstance:
       objectReference: {fileID: 1897601561}
     - target: {fileID: 4396530141118982208, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6757264800823713786, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7009769693870822235, guid: a5e1ad30aef4c8348b58e2b2c5000e68, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
