@@ -175,7 +175,7 @@ public class PuzzleManager : MonoBehaviour
 
         PuzzlePlayerMoveType move = moveHistory[shadowMoveIndex];
 
-        moveTrackerUI.ChangeMoveSlotColor(moveTrackerUI.moveSlots[shadowMoveIndex], Color.softRed);
+        moveTrackerUI.ChangeMoveSlotColour(moveTrackerUI.moveSlots[shadowMoveIndex], Color.softRed);
 
         shadowMoveIndex++;
               
