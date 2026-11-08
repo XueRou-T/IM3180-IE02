@@ -43,7 +43,7 @@ public class MoveTrackerUI : MonoBehaviour
         }
     }
 
-    public void ChangeMoveSlotColor(MoveSlotUI moveSlot, Color colour)
+    public void ChangeMoveSlotColour(MoveSlotUI moveSlot, Color colour)
     {
         moveSlot.SetColor(colour);
     }
