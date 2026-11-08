@@ -27,6 +27,7 @@ public class PuzzleManager : MonoBehaviour
     public int shadowMoveCount = 5;
     public List<PuzzlePlayerMoveType> moveHistory = new List<PuzzlePlayerMoveType>();
     public MoveTrackerUI moveTrackerUI;
+    public bool reachedGoal;
 
     private bool shadowStarted;
     private int shadowMoveIndex;
@@ -64,6 +65,7 @@ public class PuzzleManager : MonoBehaviour
         Vector2Int spawnPosition = spawnPoint.GetPosition();
         player.playerPosition = spawnPosition;
         player.transform.position = new Vector3(spawnPosition.x, spawnPosition.y, player.transform.position.z);
+        reachedGoal = false;
     }
 
     void SpawnShadow()
@@ -406,6 +408,7 @@ public class PuzzleManager : MonoBehaviour
         if (currentGrid != null && currentGrid.goal != null)
         {
             Debug.Log("Reached Goal");
+            reachedGoal = true;
             minigameSFXManager.PlayWinningSound();
 
             // Update player color progression based on the Inspector toggle

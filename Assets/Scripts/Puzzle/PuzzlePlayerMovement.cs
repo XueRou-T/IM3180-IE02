@@ -98,7 +98,7 @@ public class PuzzlePlayerMovement : MonoBehaviour
             return;
         }
 
-        if (player.isFalling || player.isClimbing)
+        if (player.isFalling || player.isClimbing || puzzleManager.reachedGoal)
             return;
 
         if (Input.GetKeyDown(KeyCode.A))
