@@ -16609,7 +16609,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 25.47, y: 15.993369}
+    oldSize: {x: 0.4245, y: 0.26655614}
     newSize: {x: 25.47, y: 15.993369}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -21321,9 +21321,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   promptText: {fileID: 1027452951}
-  itemID: House Key
-  interactPrompt: House Keys
-  pickupMessage: House Keys picked up!
+  itemID: Key
+  interactPrompt: Keys
+  pickupMessage: Keys picked up!
   requiresUnlock: 1
   requiredItems:
   - Personal ID
