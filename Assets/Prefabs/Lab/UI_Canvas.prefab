@@ -2921,6 +2921,15 @@ MonoBehaviour:
     isFlippable: 0
     backItemSprite: {fileID: 0}
     backDescription: 
+  - itemName: Wine Bottle
+    itemSprite: {fileID: -5170846652504082641, guid: 8db47ca7353e8ce47bdd7a6941beb927, type: 3}
+    itemColor: {r: 1, g: 1, b: 1, a: 1}
+    description: 'Opened wine bottle
+
+      Has gone stale'
+    isFlippable: 0
+    backItemSprite: {fileID: 0}
+    backDescription: 
 --- !u!1 &3885085919931500465
 GameObject:
   m_ObjectHideFlags: 0
