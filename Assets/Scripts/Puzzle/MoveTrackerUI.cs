@@ -24,7 +24,7 @@ public class MoveTrackerUI : MonoBehaviour
             GameObject moveSlot = Instantiate(moveSlotPrefab, moveSlotContainer);
 
             moveSlots[i] = moveSlot.GetComponent<MoveSlotUI>();
-            ChangeMoveSlotColor(moveSlots[i], Color.white);
+            ChangeMoveSlotColour(moveSlots[i], Color.white);
         }
     }
 
