@@ -7847,7 +7847,7 @@ MonoBehaviour:
   promptText: {fileID: 1204440802}
   itemID: Wine Bottle
   interactPrompt: Wine Bottle
-  pickupMessage: White Tulips.. They seem wilted
+  pickupMessage: Stale wine bottle
   requiresUnlock: 0
   requiredItems: []
   pulseSpeed: 2

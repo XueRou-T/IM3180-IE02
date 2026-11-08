@@ -64,6 +64,9 @@ public class ObjectDialogue : MonoBehaviour
 
     void Update()
     {
+        // Stop ObjectDialogue from listening to Spacebar if HawkerDialogueManager is active!
+        if (!gameObject.activeSelf || HawkerDialogueManager.IsDialogueOpen || DialogueSystem.IsDialogueOpen) return;
+
         if (!gameObject.activeSelf) return;
 
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
@@ -182,6 +185,9 @@ public class ObjectDialogue : MonoBehaviour
 
             onDialogueFinished?.Invoke();
             onDialogueFinished = null;
+
+            // Turn off this script component once the laptop lines are done so it never wakes up in future scenes!
+            this.enabled = false;
         }
     }
 
