@@ -5,6 +5,7 @@ using System.Net;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class PuzzleManager : MonoBehaviour
 
     [Header("Next Scene")]
     public string nextSceneName;
+    public FadeScript fadeImage;
 
     void Start()
     {
@@ -418,11 +420,11 @@ public class PuzzleManager : MonoBehaviour
                 PlayerPrefs.Save();
                 string returnScene = PlayerPrefs.GetString("ReturnPuzzleScene");
 
-                SceneManager.LoadScene(returnScene);
+                StartCoroutine(GoToNextScene(returnScene));
 
                 return;
             }
-            GoToNextScene();
+            StartCoroutine(GoToNextScene(nextSceneName));
         }
     }
 
@@ -481,8 +483,14 @@ public class PuzzleManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    void GoToNextScene()
+    IEnumerator GoToNextScene(String nextScene)
     {
-        SceneManager.LoadScene(nextSceneName);
+        if (fadeImage != null)
+            fadeImage.StartTransition();
+
+        yield return new WaitForSeconds(3);
+
+        if (nextSceneName != null)
+            SceneManager.LoadScene(nextScene);
     }
 }

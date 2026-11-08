@@ -7,7 +7,7 @@ public class PlayerColorProgression : MonoBehaviour
     [Header("Material Reference")]
     public SpriteRenderer playerSpriteRenderer;
 
-    [Range(0f, 1f)] public float saturationIncrease = 0.2f;
+    [Range(0f, 1f)] private float saturationIncrease = 0.2f;
 
     private Material instancedMaterial;
     private int saturationPropertyID;
