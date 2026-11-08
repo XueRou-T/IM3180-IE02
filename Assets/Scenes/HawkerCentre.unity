@@ -7419,7 +7419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349bf39eac4c830458901c20843c836c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 25
+  moveSpeed: 15
   idleUp: {fileID: -4788939052404518844, guid: f5f1ab5f2ab31c540a3570cab2e771e1, type: 3}
   idleDown: {fileID: -4281445024243405800, guid: e3f97b872daa05946a24f0a862540432, type: 3}
   idleLeft: {fileID: -8984412352856763439, guid: daacae5145ad49d458d540ef82b522cf, type: 3}
@@ -7596,7 +7596,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerColorProgression
   playerSpriteRenderer: {fileID: 891684830}
-  saturationIncrease: 0.2
 --- !u!1 &894763620
 GameObject:
   m_ObjectHideFlags: 0
@@ -7731,7 +7730,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 24715a99b986ea942a5a7bd59c1e1252, type: 3}
+  m_Resource: {fileID: 8300000, guid: c2669238ae06da3479e2177ca255524d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1830618418730253269}
   - component: {fileID: 7356967959090095637}
   - component: {fileID: 7310307924844190651}
+  - component: {fileID: 7503078437922297649}
   m_Layer: 0
   m_Name: PuzzlePlayer
   m_TagString: Untagged
@@ -60,7 +61,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: da3ec95c8c69e2248b992116b8124386, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,3 +128,16 @@ MonoBehaviour:
   isClimbing: 0
   isUpLadder: 0
   isDownLadder: 0
+--- !u!114 &7503078437922297649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2651136653524681941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e12154702212744ba78c4dcad4f0613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzlePlayerColourProgression
+  playerSpriteRenderer: {fileID: 1830618418730253269}

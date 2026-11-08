@@ -204,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 40388081}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.65, y: -1.45, z: 0}
+  m_LocalPosition: {x: -14.65, y: -9.21, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1337,7 +1337,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!224 &195582964
 RectTransform:
@@ -2035,7 +2035,7 @@ Transform:
   m_GameObject: {fileID: 287576415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18, y: -1.52, z: -1}
+  m_LocalPosition: {x: -15.22, y: -1.52, z: -1}
   m_LocalScale: {x: 4, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9095,7 +9095,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 532153396506003083, guid: ba5426cb691bddf4f9df0e0e4fc487ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9161,7 +9161,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &576953413
@@ -10325,7 +10325,7 @@ Transform:
   m_GameObject: {fileID: 744807846}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.9, y: -1.47, z: 0}
+  m_LocalPosition: {x: -15.9, y: -9.3, z: 0}
   m_LocalScale: {x: 2.9, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12394,7 +12394,7 @@ MonoBehaviour:
   - Personal ID
   - Work ID
   - Wallet
-  - House Key
+  - Key
   homeSceneName: House
 --- !u!61 &1026464333
 BoxCollider2D:
@@ -13951,7 +13951,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 24715a99b986ea942a5a7bd59c1e1252, type: 3}
+  m_Resource: {fileID: 8300000, guid: 8dd19c50303f8174db21762a060065a2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -14220,7 +14220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349bf39eac4c830458901c20843c836c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 25
+  moveSpeed: 15
   idleUp: {fileID: -4788939052404518844, guid: f5f1ab5f2ab31c540a3570cab2e771e1, type: 3}
   idleDown: {fileID: -4281445024243405800, guid: e3f97b872daa05946a24f0a862540432, type: 3}
   idleLeft: {fileID: -8984412352856763439, guid: daacae5145ad49d458d540ef82b522cf, type: 3}
@@ -14378,7 +14378,7 @@ Transform:
   m_GameObject: {fileID: 1258044465}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.43, y: -12.63, z: -1}
+  m_LocalPosition: {x: -23.43, y: -4.65, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14409,7 +14409,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerColorProgression
   playerSpriteRenderer: {fileID: 1258044469}
-  saturationIncrease: 0.34
 --- !u!1001 &1260277326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16256,7 +16255,7 @@ Transform:
   m_GameObject: {fileID: 1384199922}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18, y: -1.1, z: -1}
+  m_LocalPosition: {x: -15.26, y: -1.1, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16278,11 +16277,9 @@ MonoBehaviour:
   promptText: {fileID: 576953412}
   loginPanel: {fileID: 1880823199}
   puzzlePanel: {fileID: 467566831}
-  requiresUnlock: 1
-  requiredItems:
-  - Personal ID
-  - Work ID
-  - Wallet
+  laptopDialogue: {fileID: 3123558659382816792}
+  requiresUnlock: 0
+  requiredItems: []
   pulseSpeed: 2
   minBrightness: 0.7
   maxBrightness: 1.3
@@ -16612,8 +16609,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.459, y: 0.2935}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.4245, y: 0.26655614}
+    newSize: {x: 25.47, y: 15.993369}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -16669,12 +16666,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5405843913079911806, guid: 53cbc482b1077a54c8e1ecbb88bfed67, type: 3}
+  m_Sprite: {fileID: -6870566383412237722, guid: 7629349fbf6897d44ba949c8d50f3baa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 25.47, y: 15.993369}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -20276,7 +20273,7 @@ Transform:
   m_GameObject: {fileID: 1955169596}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.74, y: -6.29, z: -1}
+  m_LocalPosition: {x: -19.74, y: -9.46, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21324,9 +21321,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   promptText: {fileID: 1027452951}
-  itemID: House Key
-  interactPrompt: House Keys
-  pickupMessage: House Keys picked up!
+  itemID: Key
+  interactPrompt: Keys
+  pickupMessage: Keys picked up!
   requiresUnlock: 1
   requiredItems:
   - Personal ID
@@ -22343,7 +22340,7 @@ Transform:
   m_GameObject: {fileID: 2087301677}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.6699, y: -1.4318, z: 0}
+  m_LocalPosition: {x: -14.6699, y: -9.26, z: 0}
   m_LocalScale: {x: 1.0602064, y: 2.404368, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23448,7 +23445,13 @@ PrefabInstance:
     - {fileID: 1904909924984569405, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
     - {fileID: 210651209756253799, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5833408871413573294, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3123558659382816792}
+    - targetCorrespondingSourceObject: {fileID: 5833408871413573294, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3123558659382816797}
   m_SourcePrefab: {fileID: 100100000, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
 --- !u!114 &3123558659382816785 stripped
 MonoBehaviour:
@@ -23461,11 +23464,114 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9134e05e83318d94b8a03e43893b1f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AddressPopupController
+--- !u!114 &3123558659382816786 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4444958803242690736, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+  m_PrefabInstance: {fileID: 3123558659382816784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &3123558659382816787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4291108185490470195, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
   m_PrefabInstance: {fileID: 3123558659382816784}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3123558659382816788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5997166298727906063, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+  m_PrefabInstance: {fileID: 3123558659382816784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &3123558659382816789 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3553825908642953450, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+  m_PrefabInstance: {fileID: 3123558659382816784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &3123558659382816790 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4646009421320121074, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+  m_PrefabInstance: {fileID: 3123558659382816784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &3123558659382816791 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5833408871413573294, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+  m_PrefabInstance: {fileID: 3123558659382816784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3123558659382816792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3123558659382816791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338a8ed3c81c553488ba2fa2de295b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectDialogue
+  textComponent: {fileID: 3123558659382816786}
+  nameComponent: {fileID: 3123558659382816788}
+  avatarOneImage: {fileID: 3123558659382816789}
+  avatarTwoImage: {fileID: 3123558659382816790}
+  dimAmount: 0.4
+  audioSource: {fileID: 0}
+  typingSound: {fileID: 0}
+  soundFrequency: 2
+  lines:
+  - speakerName: ???
+    speakerAvatar: {fileID: 0}
+    text: Huh.. I don't seem to remember my password
+  - speakerName: ???
+    speakerAvatar: {fileID: 0}
+    text: Maybe I should restart my password
+  - speakerName: ???
+    speakerAvatar: {fileID: 0}
+    text: Or explore around and see if anything can make me recall
+  textSpeed: 0.04
+--- !u!223 &3123558659382816797
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3123558659382816791}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 6
+  m_TargetDisplay: 0
 --- !u!1001 &5552261577892107763
 PrefabInstance:
   m_ObjectHideFlags: 0
