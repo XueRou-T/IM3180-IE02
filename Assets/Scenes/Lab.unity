@@ -12394,7 +12394,7 @@ MonoBehaviour:
   - Personal ID
   - Work ID
   - Wallet
-  - House Key
+  - Key
   homeSceneName: House
 --- !u!61 &1026464333
 BoxCollider2D:
@@ -14409,7 +14409,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerColorProgression
   playerSpriteRenderer: {fileID: 1258044469}
-  saturationIncrease: 0.34
 --- !u!1001 &1260277326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16610,8 +16609,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.459, y: 0.2935}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 25.47, y: 15.993369}
+    newSize: {x: 25.47, y: 15.993369}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -16667,12 +16666,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5405843913079911806, guid: 53cbc482b1077a54c8e1ecbb88bfed67, type: 3}
+  m_Sprite: {fileID: -6870566383412237722, guid: 7629349fbf6897d44ba949c8d50f3baa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 25.47, y: 15.993369}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
