@@ -5,6 +5,7 @@ using System.Net;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class PuzzleManager : MonoBehaviour
     public int shadowMoveCount = 5;
     public List<PuzzlePlayerMoveType> moveHistory = new List<PuzzlePlayerMoveType>();
     public MoveTrackerUI moveTrackerUI;
+    public bool reachedGoal;
 
     private bool shadowStarted;
     private int shadowMoveIndex;
@@ -36,6 +38,7 @@ public class PuzzleManager : MonoBehaviour
 
     [Header("Next Scene")]
     public string nextSceneName;
+    public FadeScript fadeImage;
 
     void Start()
     {
@@ -62,6 +65,7 @@ public class PuzzleManager : MonoBehaviour
         Vector2Int spawnPosition = spawnPoint.GetPosition();
         player.playerPosition = spawnPosition;
         player.transform.position = new Vector3(spawnPosition.x, spawnPosition.y, player.transform.position.z);
+        reachedGoal = false;
     }
 
     void SpawnShadow()
@@ -404,6 +408,7 @@ public class PuzzleManager : MonoBehaviour
         if (currentGrid != null && currentGrid.goal != null)
         {
             Debug.Log("Reached Goal");
+            reachedGoal = true;
             minigameSFXManager.PlayWinningSound();
 
             // Update player color progression based on the Inspector toggle
@@ -418,11 +423,11 @@ public class PuzzleManager : MonoBehaviour
                 PlayerPrefs.Save();
                 string returnScene = PlayerPrefs.GetString("ReturnPuzzleScene");
 
-                SceneManager.LoadScene(returnScene);
+                StartCoroutine(GoToNextScene(returnScene));
 
                 return;
             }
-            GoToNextScene();
+            StartCoroutine(GoToNextScene(nextSceneName));
         }
     }
 
@@ -481,8 +486,14 @@ public class PuzzleManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    void GoToNextScene()
+    IEnumerator GoToNextScene(String nextScene)
     {
-        SceneManager.LoadScene(nextSceneName);
+        if (fadeImage != null)
+            fadeImage.StartTransition();
+
+        yield return new WaitForSeconds(3);
+
+        if (nextSceneName != null)
+            SceneManager.LoadScene(nextScene);
     }
 }
