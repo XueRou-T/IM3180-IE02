@@ -74,26 +74,49 @@ public class MerchantInteract : MonoBehaviour
         if (promptText != null) promptText.text = promptMessage;
         if (promptContainer != null) promptContainer.SetActive(false);
         if (choicePanel != null) choicePanel.SetActive(false);
+
+        Debug.Log($"[MerchantInteract - {gameObject.name}] Initialized. Lines configured: {merchantLines?.Length ?? 0}");
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log($"[MerchantInteract - {gameObject.name}] E pressed! playerInRange: {playerInRange}");
+        }
+
         if (!playerInRange) return;
 
-        // Safe check: Is the choice panel actually assigned AND currently active?
         bool isChoiceActive = choicePanel != null && choicePanel.activeSelf;
 
-        if (Input.GetKeyDown(KeyCode.E) && !HawkerDialogueManager.IsDialogueOpen && !isChoiceActive)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (promptContainer != null) promptContainer.SetActive(false);
+            Debug.Log($"[MerchantInteract - {gameObject.name}] State check -> IsDialogueOpen: {HawkerDialogueManager.IsDialogueOpen}, isChoiceActive: {isChoiceActive}, Instance: {(HawkerDialogueManager.Instance != null ? "Found" : "NULL")}");
 
-            if (GameManager.Instance != null && !string.IsNullOrEmpty(itemID) && GameManager.Instance.HasItem(itemID))
+            if (!HawkerDialogueManager.IsDialogueOpen && !isChoiceActive)
             {
-                HawkerDialogueManager.Instance.StartDialogue(alreadyHaveLines, null);
+                if (promptContainer != null) promptContainer.SetActive(false);
+
+                if (HawkerDialogueManager.Instance == null)
+                {
+                    Debug.LogError($"[MerchantInteract - {gameObject.name}] HawkerDialogueManager.Instance is NULL! Ensure GlobalDialogueManager is in the scene.");
+                    return;
+                }
+
+                if (GameManager.Instance != null && !string.IsNullOrEmpty(itemID) && GameManager.Instance.HasItem(itemID))
+                {
+                    Debug.Log($"[MerchantInteract - {gameObject.name}] Playing alreadyHaveLines ({alreadyHaveLines?.Length ?? 0} lines)");
+                    HawkerDialogueManager.Instance.StartDialogue(alreadyHaveLines, null);
+                }
+                else
+                {
+                    Debug.Log($"[MerchantInteract - {gameObject.name}] Playing merchantLines ({merchantLines?.Length ?? 0} lines)");
+                    HawkerDialogueManager.Instance.StartDialogue(merchantLines, ShowChoicePanel);
+                }
             }
             else
             {
-                HawkerDialogueManager.Instance.StartDialogue(merchantLines, ShowChoicePanel);
+                Debug.LogWarning($"[MerchantInteract - {gameObject.name}] E press ignored because IsDialogueOpen is {HawkerDialogueManager.IsDialogueOpen} or isChoiceActive is {isChoiceActive}");
             }
         }
 
@@ -105,7 +128,6 @@ public class MerchantInteract : MonoBehaviour
 
     void ShowChoicePanel()
     {
-        // SAFETY NET: Force find the choice panel right before opening if it was somehow unassigned
         if (choicePanel == null)
         {
             foreach (Transform t in Resources.FindObjectsOfTypeAll<Transform>())
@@ -118,7 +140,6 @@ public class MerchantInteract : MonoBehaviour
             }
         }
 
-        // Re-verify buttons if they are missing
         if (choicePanel != null)
         {
             if (yesButton == null)
@@ -133,17 +154,13 @@ public class MerchantInteract : MonoBehaviour
             }
         }
 
-        Debug.Log("ShowChoicePanel executed. choicePanel is: " + (choicePanel != null ? choicePanel.name : "STILL NULL!"));
-        Debug.Log("Yes button is: " + (yesButton != null ? yesButton.name : "NULL!"));
-        Debug.Log("No button is: " + (noButton != null ? noButton.name : "NULL!"));
-
         if (choicePanel != null)
         {
             choicePanel.SetActive(true);
         }
         else
         {
-            Debug.LogError("CRITICAL ERROR: MerchantChoicePanel could not be found in the scene!");
+            Debug.LogError($"[MerchantInteract - {gameObject.name}] CRITICAL ERROR: MerchantChoicePanel could not be found!");
         }
 
         HawkerDialogueManager.IsDialogueOpen = true;
@@ -163,14 +180,14 @@ public class MerchantInteract : MonoBehaviour
 
     public void AcceptOffer()
     {
-        Debug.Log("AcceptOffer clicked!");
+        Debug.Log($"[MerchantInteract - {gameObject.name}] AcceptOffer clicked!");
         onAcceptItem.Invoke();
         CloseChoice();
     }
 
     public void DeclineOffer()
     {
-        Debug.Log("DeclineOffer clicked!");
+        Debug.Log($"[MerchantInteract - {gameObject.name}] DeclineOffer clicked!");
         CloseChoice();
     }
 
@@ -187,8 +204,9 @@ public class MerchantInteract : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            bool isChoiceActive = choicePanel != null && choicePanel.activeSelf;
+            Debug.Log($"[MerchantInteract - {gameObject.name}] Player entered trigger range.");
 
+            bool isChoiceActive = choicePanel != null && choicePanel.activeSelf;
             if (promptContainer != null && !HawkerDialogueManager.IsDialogueOpen && !isChoiceActive)
             {
                 promptContainer.SetActive(true);
@@ -201,6 +219,7 @@ public class MerchantInteract : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
+            Debug.Log($"[MerchantInteract - {gameObject.name}] Player left trigger range.");
             if (promptContainer != null) promptContainer.SetActive(false);
         }
     }

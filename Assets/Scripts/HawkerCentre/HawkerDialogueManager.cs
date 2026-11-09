@@ -68,7 +68,10 @@ public class HawkerDialogueManager : MonoBehaviour
             if (isTyping)
             {
                 StopAllCoroutines();
-                dialogueText.text = currentLines[index].sentence;
+                if (currentLines != null && index < currentLines.Length && dialogueText != null)
+                {
+                    dialogueText.text = currentLines[index].sentence;
+                }
                 isTyping = false;
             }
             else
@@ -80,6 +83,19 @@ public class HawkerDialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueSystem.Line[] lines, Action onComplete = null)
     {
+        Debug.Log($"[HawkerDialogueManager] StartDialogue called! Lines passed: {lines?.Length ?? 0}");
+
+        if (lines == null || lines.Length == 0)
+        {
+            Debug.LogError("[HawkerDialogueManager] CANNOT START DIALOGUE: lines array is NULL or EMPTY! Check your Inspector on MerchantInteract.");
+            onComplete?.Invoke();
+            return;
+        }
+
+        // Stop any old typing routines that might be running
+        StopAllCoroutines();
+        isTyping = false;
+
         // --- AUTO-RECONNECT UI ---
         GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
         foreach (GameObject obj in allObjects)
@@ -97,9 +113,11 @@ public class HawkerDialogueManager : MonoBehaviour
             }
         }
 
+        Debug.Log($"[HawkerDialogueManager] UI Bind Status -> dialoguePanel: {(dialoguePanel != null ? dialoguePanel.name : "NULL")}, dialogueText: {(dialogueText != null ? "Assigned" : "NULL")}");
+
         currentLines = lines;
         index = 0;
-        onDialogueComplete = onComplete; // Stores the choice panel callback from the merchant
+        onDialogueComplete = onComplete;
 
         speakerOne = "";
         speakerTwo = "";
@@ -110,7 +128,18 @@ public class HawkerDialogueManager : MonoBehaviour
         if (inventoryPanel != null) inventoryPanel.SetActive(false);
         if (itemDetailsPanel != null) itemDetailsPanel.SetActive(false);
 
-        if (dialoguePanel != null) dialoguePanel.SetActive(true);
+        if (dialogueText != null) dialogueText.text = string.Empty;
+        if (speakerNameText != null) speakerNameText.text = string.Empty;
+
+        if (dialoguePanel != null)
+        {
+            dialoguePanel.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("[HawkerDialogueManager] dialoguePanel is NULL! Make sure an object named 'DialogueBox' exists in the scene.");
+        }
+
         IsDialogueOpen = true;
         ShowLine();
     }
@@ -118,7 +147,7 @@ public class HawkerDialogueManager : MonoBehaviour
     void NextLine()
     {
         index++;
-        if (index < currentLines.Length)
+        if (currentLines != null && index < currentLines.Length)
         {
             ShowLine();
         }
@@ -130,6 +159,12 @@ public class HawkerDialogueManager : MonoBehaviour
 
     void ShowLine()
     {
+        if (currentLines == null || index >= currentLines.Length)
+        {
+            EndDialogue();
+            return;
+        }
+
         if (dialogueText != null) dialogueText.text = "";
         UpdateSpeakerInfo();
         StartCoroutine(TypeLine());
@@ -141,23 +176,25 @@ public class HawkerDialogueManager : MonoBehaviour
         IsDialogueOpen = false;
         index = 0;
 
-        Debug.Log("Dialogue ended. Checking for choice callback..."); // <-- Add this
+        Debug.Log("[HawkerDialogueManager] Dialogue ended. Checking for choice callback...");
 
         if (onDialogueComplete != null)
         {
-            Debug.Log("Callback found! Invoking choice panel..."); // <-- Add this
+            Debug.Log("[HawkerDialogueManager] Callback found! Invoking choice panel...");
             Action tempAction = onDialogueComplete;
             onDialogueComplete = null;
             tempAction.Invoke();
         }
         else
         {
-            Debug.Log("WARNING: onDialogueComplete was null!"); // <-- Add this
+            Debug.Log("[HawkerDialogueManager] onDialogueComplete was null (no choice panel).");
         }
     }
 
     void UpdateSpeakerInfo()
     {
+        if (currentLines == null || index >= currentLines.Length) return;
+
         DialogueSystem.Line currentLine = currentLines[index];
         if (speakerNameText != null) speakerNameText.text = currentLine.speakerName;
 
@@ -226,7 +263,7 @@ public class HawkerDialogueManager : MonoBehaviour
     IEnumerator TypeLine()
     {
         isTyping = true;
-        if (dialogueText != null)
+        if (dialogueText != null && currentLines != null && index < currentLines.Length)
         {
             foreach (char c in currentLines[index].sentence.ToCharArray())
             {
