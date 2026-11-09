@@ -29,6 +29,7 @@ public class Interactable : MonoBehaviour
     private Light2D light2D;
     void Start()
     {
+        light2D = GetComponent<Light2D>();
         sr = GetComponent<SpriteRenderer>();
         baseColor = sr.color;
         promptText.text = interactPrompt;
@@ -39,6 +40,7 @@ public class Interactable : MonoBehaviour
             hasBeenPickedUp = true;
             sr.enabled = false;
             GetComponent<Collider2D>().enabled = false;
+            light2D.enabled = false;
             return; // skip the unlock check below, it's irrelevant now
         }
 
@@ -46,8 +48,6 @@ public class Interactable : MonoBehaviour
         {
             isUnlocked = false;
         }
-
-        light2D = GetComponent<Light2D>();
 
         if (light2D != null) 
             light2D.enabled = true;
