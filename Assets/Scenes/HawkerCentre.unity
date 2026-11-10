@@ -14640,6 +14640,7 @@ MonoBehaviour:
   frameRate: 0.2
   sfxManager: {fileID: 1957266928}
   puzzlePanel: {fileID: 0}
+  desktopOpen: 0
   addressInputPanel: {fileID: 0}
 --- !u!61 &891684828
 BoxCollider2D:
@@ -22809,6 +22810,10 @@ PrefabInstance:
     - target: {fileID: 3804504540117882171, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_Name
       value: UI_Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804504540117882171, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3833394427543927837, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_SizeDelta.x
@@ -33745,7 +33750,7 @@ GameObject:
   - component: {fileID: 1957266928}
   m_Layer: 0
   m_Name: OverWorldSFX
-  m_TagString: Untagged
+  m_TagString: OverWorldSFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

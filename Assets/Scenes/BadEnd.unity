@@ -434,6 +434,10 @@ PrefabInstance:
         the day over and over again. Never ending cycle of grief.
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -444,6 +448,10 @@ PrefabInstance:
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor32.rgba

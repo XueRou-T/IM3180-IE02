@@ -4672,7 +4672,7 @@ GameObject:
   - component: {fileID: 355059725}
   m_Layer: 0
   m_Name: OverWorldSFX
-  m_TagString: SFX
+  m_TagString: OverWorldSFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13797,7 +13797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontSize
-      value: 42
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor.b
@@ -13813,7 +13813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontSizeBase
-      value: 42
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -14298,6 +14298,7 @@ MonoBehaviour:
   frameRate: 0.2
   sfxManager: {fileID: 355059725}
   puzzlePanel: {fileID: 467566831}
+  desktopOpen: 0
   addressInputPanel: {fileID: 3123558659382816787}
 --- !u!61 &1258044467
 BoxCollider2D:
@@ -14679,7 +14680,7 @@ PrefabInstance:
       objectReference: {fileID: -6297332884496016497, guid: b45815b0c44c41941bd75c1fb114dbc5, type: 3}
     - target: {fileID: 5323211691345532592, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontSize
-      value: 52
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 5323211691345532592, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor.b
@@ -14695,7 +14696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323211691345532592, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontSizeBase
-      value: 52
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 5323211691345532592, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -14703,7 +14704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontSize
-      value: 42
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor.b
@@ -14719,7 +14720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontSizeBase
-      value: 42
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -17337,7 +17338,7 @@ PrefabInstance:
       objectReference: {fileID: -6297332884496016497, guid: b45815b0c44c41941bd75c1fb114dbc5, type: 3}
     - target: {fileID: 5323211691345532592, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontSize
-      value: 52
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 5323211691345532592, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor.b
@@ -17353,7 +17354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323211691345532592, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontSizeBase
-      value: 52
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 5323211691345532592, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -17361,7 +17362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontSize
-      value: 42
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor.b
@@ -17377,7 +17378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontSizeBase
-      value: 42
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6735154406528815058, guid: edec39da6b5fcc4469939a92f5118ff1, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -22187,7 +22188,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -23895,7 +23896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727456717574160293, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1727456717574160293, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -23927,7 +23928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727456717574160293, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: CloseWindows
+      value: CloseAllWindows
       objectReference: {fileID: 0}
     - target: {fileID: 1727456717574160293, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -23964,19 +23965,23 @@ PrefabInstance:
     - target: {fileID: 1727456717574160293, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 2997632311349296817}
+      objectReference: {fileID: 0}
     - target: {fileID: 1727456717574160293, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1727456717574160293, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1727456717574160293, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2356508853703273664, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8838350008708627210, guid: 6ac953d3641d8db4fbe0313b8b9a2d24, type: 3}
     - target: {fileID: 2793520165013875848, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -24126,13 +24131,21 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7982455433509097871, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: thisPanel
+      value: 
+      objectReference: {fileID: 2997632311349296817}
+    - target: {fileID: 7982455433509097871, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: puzzlePanel
       value: 
-      objectReference: {fileID: 467566831}
+      objectReference: {fileID: 467566826}
     - target: {fileID: 7982455433509097871, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: endGameManager
       value: 
       objectReference: {fileID: 882563488}
+    - target: {fileID: 7982455433509097871, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 1258044466}
     - target: {fileID: 8216320344670659223, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_SizeDelta.y
       value: 265.7517

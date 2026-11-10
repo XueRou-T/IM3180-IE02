@@ -1918,7 +1918,7 @@ GameObject:
   - component: {fileID: 311711781}
   m_Layer: 0
   m_Name: OverWorldSFX
-  m_TagString: SFX
+  m_TagString: OverWorldSFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7276,6 +7276,7 @@ MonoBehaviour:
   frameRate: 0.2
   sfxManager: {fileID: 0}
   puzzlePanel: {fileID: 0}
+  desktopOpen: 0
   addressInputPanel: {fileID: 0}
 --- !u!61 &1333419983
 BoxCollider2D:
@@ -10349,6 +10350,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.data[0].itemName
+      value: Personal ID
+      objectReference: {fileID: 0}
     - target: {fileID: 2375705829790442548, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -12473,6 +12478,7 @@ SceneRoots:
   - {fileID: 471939739}
   - {fileID: 291500618}
   - {fileID: 1268205510}
+  - {fileID: 1765826419}
   - {fileID: 198239898}
   - {fileID: 557751490}
   - {fileID: 185957677}
@@ -12480,7 +12486,6 @@ SceneRoots:
   - {fileID: 1806753755}
   - {fileID: 228691221}
   - {fileID: 514474348}
-  - {fileID: 1765826419}
   - {fileID: 360050137}
   - {fileID: 388233605}
   - {fileID: 1374552002}

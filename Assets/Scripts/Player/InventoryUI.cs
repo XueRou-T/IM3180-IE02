@@ -94,6 +94,9 @@ public class InventoryUI : MonoBehaviour
         {
             string currentScene = SceneManager.GetActiveScene().name;
 
+            if (currentScene == "Puzzle1" || currentScene == "Puzzle2" || currentScene == "TutorialMinigame")
+                if (inventoryPromptPanel != null) inventoryPromptPanel.SetActive(false);
+
             if (currentScene == "Lab" || currentScene == "House" || currentScene == "HawkerCentre")
                 SetPanelOpen(!isOpen);
         }
@@ -147,8 +150,17 @@ public class InventoryUI : MonoBehaviour
         if (!isOpen)
         {
             if (tooltipPanel != null) tooltipPanel.SetActive(false);
-            if (popupPanel != null) popupPanel.SetActive(false);
-            if (flipButtonObject != null) flipButtonObject.SetActive(false);
+
+            // If popup is open, close it through ClosePopup() so transition checks run
+            if (popupPanel != null && popupPanel.activeSelf)
+            {
+                ClosePopup();
+            }
+            else
+            {
+                if (popupPanel != null) popupPanel.SetActive(false);
+                if (flipButtonObject != null) flipButtonObject.SetActive(false);
+            }
         }
 
         if (isOpen) RefreshDisplay();
@@ -283,6 +295,9 @@ public class InventoryUI : MonoBehaviour
 
         if (popupPanel != null) popupPanel.SetActive(false);
         if (flipButtonObject != null) flipButtonObject.SetActive(false);
+
+        // Reset tracking so closing a normal inventory later doesn't re-trigger
+        currentPopupItem = null;
 
         // --- SCENE TRANSITION CHECK ---
         if (closedItemID == "White Tulips")

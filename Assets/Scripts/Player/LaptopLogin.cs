@@ -27,8 +27,13 @@ public class LaptopLogin : MonoBehaviour
         puzzlePanel.IsPuzzleOpen = false;
     }
 
-    void OnEnable()
+    private void OnEnable()
     {
-        puzzlePanel.IsPuzzleOpen = true;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = true;
+    }
+
+    private void OnDisable()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = false;
     }
 }
