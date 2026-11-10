@@ -22811,6 +22811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3804504540117882171, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3833394427543927837, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
