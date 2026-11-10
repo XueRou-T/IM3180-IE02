@@ -10350,6 +10350,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2287401071073179950, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
+      propertyPath: itemDatabase.Array.data[0].itemName
+      value: Personal ID
+      objectReference: {fileID: 0}
     - target: {fileID: 2375705829790442548, guid: 55167bf70da7053428aba5cf217cb089, type: 3}
       propertyPath: m_IsActive
       value: 0
