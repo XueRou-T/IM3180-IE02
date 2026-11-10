@@ -30,10 +30,12 @@ public class LaptopLogin : MonoBehaviour
     private void OnEnable()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = true;
+        puzzlePanel.IsPuzzleOpen = true;
     }
 
     private void OnDisable()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = false;
+        puzzlePanel.IsPuzzleOpen = false;
     }
 }
