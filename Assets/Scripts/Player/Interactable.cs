@@ -23,34 +23,49 @@ public class Interactable : MonoBehaviour
     private bool playerInRange = false;
     private bool hasBeenPickedUp = false;
     private SpriteRenderer sr;
+    private Collider2D col;
     private Color baseColor;
     private bool isUnlocked = true;
 
     private Light2D light2D;
+
     void Start()
     {
         light2D = GetComponent<Light2D>();
         sr = GetComponent<SpriteRenderer>();
-        baseColor = sr.color;
-        promptText.text = interactPrompt;
+        col = GetComponent<Collider2D>();
 
-        // If this item was already collected before (e.g. scene reload), hide it immediately
+        if (sr != null)
+        {
+            baseColor = sr.color;
+        }
+
+        if (promptText != null)
+        {
+            promptText.text = interactPrompt;
+            promptText.gameObject.SetActive(false);
+        }
+
+        // If this item was already collected before (e.g. scene reload), hide it permanently
         if (GameManager.Instance != null && GameManager.Instance.HasItem(itemID))
         {
             hasBeenPickedUp = true;
-            sr.enabled = false;
-            GetComponent<Collider2D>().enabled = false;
-            if(light2D != null) light2D.enabled = false;
-            return; // skip the unlock check below, it's irrelevant now
+            SetItemVisibility(false);
+            return;
         }
 
+        // Handle initial lock state
         if (requiresUnlock)
         {
             isUnlocked = false;
+            SetItemVisibility(false); // Hide the item immediately since it's locked
+            CheckUnlockCondition();   // Check in case the player already holds the required items
         }
-
-        if (light2D != null) 
-            light2D.enabled = true;
+        else
+        {
+            isUnlocked = true;
+            SetItemVisibility(true);
+        }
     }
 
     void Update()
@@ -87,12 +102,31 @@ public class Interactable : MonoBehaviour
 
         if (allFound)
         {
-            isUnlocked = true;
+            UnlockItem();
+        }
+    }
+
+    void UnlockItem()
+    {
+        isUnlocked = true;
+        SetItemVisibility(true); // Reveal the item now that it's unlocked
+    }
+
+    private void SetItemVisibility(bool visible)
+    {
+        if (sr != null) sr.enabled = visible;
+        if (col != null) col.enabled = visible;
+        if (light2D != null) light2D.enabled = visible;
+
+        if (!visible && promptText != null)
+        {
+            promptText.gameObject.SetActive(false);
         }
     }
 
     void PulseGlow()
     {
+        if (sr == null) return;
         float brightness = Mathf.Lerp(minBrightness, maxBrightness, (Mathf.Sin(Time.time * pulseSpeed) + 1f) / 2f);
         sr.color = baseColor * brightness;
     }
@@ -102,7 +136,7 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player") && isUnlocked && !hasBeenPickedUp)
         {
             playerInRange = true;
-            promptText.gameObject.SetActive(true);
+            if (promptText != null) promptText.gameObject.SetActive(true);
         }
     }
 
@@ -111,7 +145,7 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player") && !hasBeenPickedUp)
         {
             playerInRange = false;
-            promptText.gameObject.SetActive(false);
+            if (promptText != null) promptText.gameObject.SetActive(false);
         }
     }
 
@@ -119,8 +153,6 @@ public class Interactable : MonoBehaviour
     {
         hasBeenPickedUp = true;
 
-
-        // SAFETY CHECK 1: Only update the prompt text if it actually exists
         if (promptText != null)
         {
             promptText.text = pickupMessage;
@@ -133,41 +165,26 @@ public class Interactable : MonoBehaviour
             if (InventoryUI.Instance != null)
             {
                 InventoryUI.Instance.RefreshDisplay();
-
-                // --- ADDED: Tell the UI to pop up the description for this specific item ---
                 InventoryUI.Instance.ShowPopup(itemID);
             }
         }
 
         Invoke(nameof(FinishPickUp), 1f);
 
-        // SAFETY CHECK 2: Only disable the sprite renderer if it found one
-        if (sr != null)
-        {
-            sr.enabled = false;
-        }
-
-        // SAFETY CHECK 3: Only disable the collider if one is attached
-        Collider2D col = GetComponent<Collider2D>();
-        if (col != null)
-        {
-            col.enabled = false;
-        }
-
-
-
+        // Hide sprite and collider immediately on pickup while keeping prompt text visible for 1s
+        if (sr != null) sr.enabled = false;
+        if (col != null) col.enabled = false;
     }
 
     void FinishPickUp()
     {
-        // SAFETY CHECK: Only try to modify the text if it actually exists
         if (promptText != null)
         {
             promptText.gameObject.SetActive(false);
             promptText.text = interactPrompt;
         }
 
-        if(light2D != null)
+        if (light2D != null)
             light2D.enabled = false;
     }
 }

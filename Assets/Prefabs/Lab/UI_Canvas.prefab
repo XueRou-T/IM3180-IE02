@@ -2912,12 +2912,11 @@ MonoBehaviour:
   - itemName: Family Photo
     itemSprite: {fileID: 9068496691467835646, guid: f0520daaacf29474b8d7c0c40c156de8, type: 3}
     itemColor: {r: 1, g: 1, b: 1, a: 1}
-    description: 'She''s so beautiful standing next to me
+    description: 'Is that me..?
 
-      Is that my wife?
+      Who is that next to me?
 
-      Where
-      is she?'
+      Where is she?'
     isFlippable: 0
     backItemSprite: {fileID: 0}
     backDescription: 
