@@ -34,7 +34,8 @@ public class LaptopPuzzle : MonoBehaviour
 
             // Placeholder for later: trigger the memory-reveal video/cutscene here
             desktopScreen.SetActive(true);
-            this.gameObject.SetActive(false);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = true;
+            //this.gameObject.SetActive(false);
         }
         else
         {
@@ -52,6 +53,13 @@ public class LaptopPuzzle : MonoBehaviour
 
     private void OnEnable()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = true;
         IsPuzzleOpen=true;
+    }
+
+    private void OnDisable()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = false;
+        IsPuzzleOpen=false;
     }
 }

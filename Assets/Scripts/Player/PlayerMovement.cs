@@ -57,10 +57,7 @@ public class PlayerMovement : MonoBehaviour
         bool isPuzzleOpen = puzzlePanel != null && puzzlePanel.IsPuzzleOpen;
         bool isAddressOpen = addressInputPanel != null && addressInputPanel.activeSelf;
 
-        if (desktopOpen)
-            return; 
-
-        if (isPuzzleOpen || isAddressOpen || DestinationChoice.IsChoiceOpen || DialogueSystem.IsDialogueOpen || HawkerDialogueManager.IsDialogueOpen)
+        if (desktopOpen || isAddressOpen || DestinationChoice.IsChoiceOpen || DialogueSystem.IsDialogueOpen || HawkerDialogueManager.IsDialogueOpen)
         {
             moveInput = Vector2.zero;
             if (sfxManager != null)

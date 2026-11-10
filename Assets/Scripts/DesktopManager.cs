@@ -12,14 +12,10 @@ public class DesktopManager : MonoBehaviour
 
     [Header("References")]
     public EndGameManager endGameManager;
-    public LaptopPuzzle puzzlePanel;
-    public PlayerMovement playerMovement;
 
-    private void Awake()
-    {
-        puzzlePanel.IsPuzzleOpen = true;
-        playerMovement.desktopOpen = true;
-    }
+    [Header("LaptopReferences")]
+    public GameObject puzzlePanel;
+    public GameObject thisPanel;
 
     public void OpenWindow(GameObject targetPanel, int panelAssignedNumber)
     {
@@ -66,11 +62,20 @@ public class DesktopManager : MonoBehaviour
 
     private void OnEnable()
     {
-        playerMovement.desktopOpen = true;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = true;
     }
 
     private void OnDisable()
     {
-        playerMovement.desktopOpen = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = false;
+    }
+
+    public void CloseAllWindows()
+    {
+        if(thisPanel != null && puzzlePanel != null)
+        {
+            puzzlePanel.SetActive(false);
+            thisPanel.SetActive(false);
+        }
     }
 }
