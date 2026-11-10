@@ -7260,7 +7260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349bf39eac4c830458901c20843c836c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 15
+  moveSpeed: 10
   idleUp: {fileID: -4788939052404518844, guid: f5f1ab5f2ab31c540a3570cab2e771e1, type: 3}
   idleDown: {fileID: -4281445024243405800, guid: e3f97b872daa05946a24f0a862540432, type: 3}
   idleLeft: {fileID: -8984412352856763439, guid: daacae5145ad49d458d540ef82b522cf, type: 3}

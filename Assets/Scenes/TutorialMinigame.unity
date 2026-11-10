@@ -1074,6 +1074,7 @@ MonoBehaviour:
   shadowMoveCount: 2
   moveHistory: 
   moveTrackerUI: {fileID: 834206969}
+  reachedGoal: 0
   nextSceneName: Puzzle1
   fadeImage: {fileID: 1174189971}
 --- !u!4 &144435362
@@ -2132,7 +2133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSFXManager
   walking: {fileID: 8300000, guid: ef6ab3c83dc5b3447a61b290abd45df9, type: 3}
   falling: {fileID: 8300000, guid: 314b82d5ba6e44045a9126891d68a7d9, type: 3}
-  dead: {fileID: 8300000, guid: 11a728190b3f398448d33e701e6eea6b, type: 3}
+  dead: {fileID: 8300000, guid: de735186e090792478d40c4fb31bd486, type: 3}
   winning: {fileID: 8300000, guid: b057dd4353fe23c40a0290e23d4cbb65, type: 3}
 --- !u!82 &788692286
 AudioSource:
