@@ -49,4 +49,9 @@ public class LaptopPuzzle : MonoBehaviour
         feedbackText.text = "";
         IsPuzzleOpen = false;
     }
+
+    private void OnEnable()
+    {
+        IsPuzzleOpen=true;
+    }
 }

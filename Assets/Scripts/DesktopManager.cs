@@ -13,10 +13,12 @@ public class DesktopManager : MonoBehaviour
     [Header("References")]
     public EndGameManager endGameManager;
     public LaptopPuzzle puzzlePanel;
+    public PlayerMovement playerMovement;
 
     private void Awake()
     {
         puzzlePanel.IsPuzzleOpen = true;
+        playerMovement.desktopOpen = true;
     }
 
     public void OpenWindow(GameObject targetPanel, int panelAssignedNumber)
@@ -45,7 +47,6 @@ public class DesktopManager : MonoBehaviour
     public void CloseWindows(GameObject targetPanel)
     {
         targetPanel.SetActive(false);
-        puzzlePanel.IsPuzzleOpen = false;
     }
 
     public void merlionButton(GameObject targetPanel)
@@ -61,5 +62,15 @@ public class DesktopManager : MonoBehaviour
     public void journalButton(GameObject targetPanel)
     {
         OpenWindow(targetPanel, 2);
+    }
+
+    private void OnEnable()
+    {
+        playerMovement.desktopOpen = true;
+    }
+
+    private void OnDisable()
+    {
+        playerMovement.desktopOpen = false;
     }
 }

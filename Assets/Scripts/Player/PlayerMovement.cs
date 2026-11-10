@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     private bool showingFirstFrame = true;
 
     public LaptopPuzzle puzzlePanel;
+    public bool desktopOpen = false;
 
     [Header("UI Blocking")]
     public GameObject addressInputPanel; // Drag your House Address Popup here
@@ -55,6 +56,9 @@ public class PlayerMovement : MonoBehaviour
     {
         bool isPuzzleOpen = puzzlePanel != null && puzzlePanel.IsPuzzleOpen;
         bool isAddressOpen = addressInputPanel != null && addressInputPanel.activeSelf;
+
+        if (desktopOpen)
+            return; 
 
         if (isPuzzleOpen || isAddressOpen || DestinationChoice.IsChoiceOpen || DialogueSystem.IsDialogueOpen || HawkerDialogueManager.IsDialogueOpen)
         {

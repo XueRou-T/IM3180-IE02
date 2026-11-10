@@ -4672,7 +4672,7 @@ GameObject:
   - component: {fileID: 355059725}
   m_Layer: 0
   m_Name: OverWorldSFX
-  m_TagString: SFX
+  m_TagString: OverWorldSFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14298,6 +14298,7 @@ MonoBehaviour:
   frameRate: 0.2
   sfxManager: {fileID: 355059725}
   puzzlePanel: {fileID: 467566831}
+  desktopOpen: 0
   addressInputPanel: {fileID: 3123558659382816787}
 --- !u!61 &1258044467
 BoxCollider2D:
@@ -22187,7 +22188,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -24133,6 +24134,10 @@ PrefabInstance:
       propertyPath: endGameManager
       value: 
       objectReference: {fileID: 882563488}
+    - target: {fileID: 7982455433509097871, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 1258044466}
     - target: {fileID: 8216320344670659223, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: m_SizeDelta.y
       value: 265.7517

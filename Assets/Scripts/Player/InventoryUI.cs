@@ -94,6 +94,9 @@ public class InventoryUI : MonoBehaviour
         {
             string currentScene = SceneManager.GetActiveScene().name;
 
+            if (currentScene == "Puzzle1" || currentScene == "Puzzle2" || currentScene == "TutorialMinigame")
+                if(inventoryPromptPanel != null) inventoryPromptPanel.SetActive(false);
+
             if (currentScene == "Lab" || currentScene == "House" || currentScene == "HawkerCentre")
                 SetPanelOpen(!isOpen);
         }
