@@ -1564,6 +1564,7 @@ MonoBehaviour:
   doubleClickTime: 0.3
   endGameManager: {fileID: 0}
   puzzlePanel: {fileID: 0}
+  thisPanel: {fileID: 0}
 --- !u!1 &5632555114488704979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,7 +1657,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2361291844906823759
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1705,7 +1706,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8d592490712e9414d802d409b0660858, type: 3}
+  m_Sprite: {fileID: 524012151963230834, guid: 38e24a1a03c6e8345b1e9f8e8b0935f8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
