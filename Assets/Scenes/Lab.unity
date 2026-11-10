@@ -24285,6 +24285,38 @@ PrefabInstance:
       propertyPath: PageFlipTime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7210281016402655660, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: fa058b6fdb981cf409dcfb35e46833cd, type: 3}
+    - target: {fileID: 7210281016402655660, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_ControlledAudioTrackCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7210281016402655660, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_DirectAudioMutes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7210281016402655660, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7210281016402655660, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_EnabledAudioTracks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7210281016402655660, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: m_TargetAudioSources.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7210281016402655660, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: 'm_DirectAudioVolumes.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7210281016402655660, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
+      propertyPath: 'm_EnabledAudioTracks.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7295825334200412460, guid: b07b991681c1aa64db6ac453ab629880, type: 3}
       propertyPath: hoverExpandScale
       value: 1
