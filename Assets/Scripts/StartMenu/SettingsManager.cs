@@ -94,14 +94,19 @@ public class SettingsManager : MonoBehaviour
 
     public void ApplySFX(bool enabled)
     {
-        GameObject[] sfxObjects = GameObject.FindGameObjectsWithTag("SFX");
+        string[] tags = { "SFX", "OverWorldSFX" };
 
-        foreach (GameObject obj in sfxObjects)
+        foreach (string tag in tags)
         {
-            AudioSource source = obj.GetComponent<AudioSource>();
+            GameObject[] sfxObjects = GameObject.FindGameObjectsWithTag(tag);
 
-            if (source != null)
-                source.mute = !enabled;
+            foreach (GameObject obj in sfxObjects)
+            {
+                AudioSource source = obj.GetComponent<AudioSource>();
+
+                if (source != null)
+                    source.mute = !enabled;
+            }
         }
     }
 

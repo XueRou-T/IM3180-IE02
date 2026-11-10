@@ -12,12 +12,10 @@ public class DesktopManager : MonoBehaviour
 
     [Header("References")]
     public EndGameManager endGameManager;
-    public LaptopPuzzle puzzlePanel;
 
-    private void Awake()
-    {
-        puzzlePanel.IsPuzzleOpen = true;
-    }
+    [Header("LaptopReferences")]
+    public GameObject puzzlePanel;
+    public GameObject thisPanel;
 
     public void OpenWindow(GameObject targetPanel, int panelAssignedNumber)
     {
@@ -45,7 +43,6 @@ public class DesktopManager : MonoBehaviour
     public void CloseWindows(GameObject targetPanel)
     {
         targetPanel.SetActive(false);
-        puzzlePanel.IsPuzzleOpen = false;
     }
 
     public void merlionButton(GameObject targetPanel)
@@ -61,5 +58,24 @@ public class DesktopManager : MonoBehaviour
     public void journalButton(GameObject targetPanel)
     {
         OpenWindow(targetPanel, 2);
+    }
+
+    private void OnEnable()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = true;
+    }
+
+    private void OnDisable()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = false;
+    }
+
+    public void CloseAllWindows()
+    {
+        if(thisPanel != null && puzzlePanel != null)
+        {
+            puzzlePanel.SetActive(false);
+            thisPanel.SetActive(false);
+        }
     }
 }

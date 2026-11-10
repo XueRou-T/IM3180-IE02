@@ -1,11 +1,13 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using UnityEngine.VFX;
 
 public class PlayerPersistence : MonoBehaviour
 {
     public static PlayerPersistence Instance;
     public static string nextSpawnPointName = "";
-
+    private OverWorldSFX overWorldSFX;
     void Awake()
     {
         if (Instance == null)
@@ -48,6 +50,8 @@ public class PlayerPersistence : MonoBehaviour
             if (player != null)
             {
                 player.transform.position = spawnPoint.transform.position;
+                overWorldSFX = GameObject.FindGameObjectWithTag("OverWorldSFX").GetComponent<OverWorldSFX>();
+                if (overWorldSFX != null) player.GetComponent<PlayerMovement>().sfxManager = overWorldSFX;
                 Debug.Log($"[PlayerPersistence] Successfully moved player to {spawnPoint.name}");
             }
             else

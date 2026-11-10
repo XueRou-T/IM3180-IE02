@@ -1918,7 +1918,7 @@ GameObject:
   - component: {fileID: 311711781}
   m_Layer: 0
   m_Name: OverWorldSFX
-  m_TagString: SFX
+  m_TagString: OverWorldSFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7276,6 +7276,7 @@ MonoBehaviour:
   frameRate: 0.2
   sfxManager: {fileID: 0}
   puzzlePanel: {fileID: 0}
+  desktopOpen: 0
   addressInputPanel: {fileID: 0}
 --- !u!61 &1333419983
 BoxCollider2D:

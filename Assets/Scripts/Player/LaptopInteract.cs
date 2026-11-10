@@ -56,14 +56,7 @@ public class LaptopInteract : MonoBehaviour
 
         if (playerInRange && isUnlocked && !puzzlePanel.IsPuzzleOpen && Input.GetKeyDown(KeyCode.E))
         {
-            if (isSolved)
-            {
-                OpenFiles();
-            }
-            else
-            {
-                OpenPuzzle();
-            }
+            OpenPuzzle();
         }
     }
 

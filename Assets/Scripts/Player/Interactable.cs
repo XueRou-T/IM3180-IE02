@@ -40,7 +40,7 @@ public class Interactable : MonoBehaviour
             hasBeenPickedUp = true;
             sr.enabled = false;
             GetComponent<Collider2D>().enabled = false;
-            light2D.enabled = false;
+            if(light2D != null) light2D.enabled = false;
             return; // skip the unlock check below, it's irrelevant now
         }
 

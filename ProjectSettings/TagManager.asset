@@ -7,6 +7,7 @@ TagManager:
   - BGM
   - SFX
   - InventoryPanel
+  - OverWorldSFX
   layers:
   - Default
   - TransparentFX
