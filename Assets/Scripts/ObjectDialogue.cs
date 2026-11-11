@@ -96,6 +96,7 @@ public class ObjectDialogue : MonoBehaviour
 
     public void StartDialogue()
     {
+        this.enabled = true;
         gameObject.SetActive(true);
         index = 0;
 
@@ -187,7 +188,7 @@ public class ObjectDialogue : MonoBehaviour
             onDialogueFinished = null;
 
             // Turn off this script component once the laptop lines are done so it never wakes up in future scenes!
-            this.enabled = false;
+            //this.enabled = false;
         }
     }
 
