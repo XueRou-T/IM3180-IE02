@@ -1,10 +1,13 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using System.Collections;
 
 public class LaptopInteract : MonoBehaviour
 {
     public TMP_Text promptText;
-    public GameObject loginPanel;
+    public LaptopLogin loginPanel;
+    public LaptopPuzzle puzzlePanel;
+    public ObjectDialogue laptopDialogue;
 
     [Header("Lock Settings")]
     public bool requiresUnlock = true;
@@ -27,8 +30,14 @@ public class LaptopInteract : MonoBehaviour
         baseColor = sr.color;
         promptText.text = "Laptop";
 
+        if (!requiresUnlock)
+        {
+            isUnlocked = true;
+        }
+
         if (GameManager.Instance != null && GameManager.Instance.HasFlag("LaptopSolved"))
         {
+            isUnlocked = true;
             isSolved = true;
         }
     }
@@ -45,16 +54,9 @@ public class LaptopInteract : MonoBehaviour
             PulseGlow();
         }
 
-        if (playerInRange && isUnlocked && !LaptopPuzzle.IsPuzzleOpen && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && isUnlocked && !puzzlePanel.IsPuzzleOpen && Input.GetKeyDown(KeyCode.E))
         {
-            if (isSolved)
-            {
-                OpenFiles();
-            }
-            else
-            {
-                OpenPuzzle();
-            }
+            OpenPuzzle();
         }
     }
 
@@ -83,11 +85,71 @@ public class LaptopInteract : MonoBehaviour
 
     void OpenPuzzle()
     {
-        if (UIPersistence.Instance != null && UIPersistence.Instance.laptopLogin != null)
+        // --- FIRST-TIME LAPTOP DIALOGUE CHECK ---
+        if (GameManager.Instance != null && !GameManager.Instance.HasFlag("LaptopFirstDialogueShown"))
         {
-            UIPersistence.Instance.laptopLogin.gameObject.SetActive(true);
-            LaptopPuzzle.IsPuzzleOpen = true;
+            GameManager.Instance.SetFlag("LaptopFirstDialogueShown");
+
+            // 1. Open the laptop canvas / login panel IMMEDIATELY first!
+            if (loginPanel != null)
+            {
+                loginPanel.gameObject.SetActive(true);
+                puzzlePanel.IsPuzzleOpen = true;
+            }
+
+            // 2. Trigger the dialogue with a slight delay so it appears ON TOP of the laptop canvas
+            if (laptopDialogue != null)
+            {
+                StartCoroutine(TriggerDialogueOverLaptop());
+            }
+
+            return;
         }
+        // ----------------------------------------
+
+        if (loginPanel != null)
+        {
+            loginPanel.gameObject.SetActive(true);
+            puzzlePanel.IsPuzzleOpen = true;
+        }
+    }
+
+    // Opens dialogue a split-second after the laptop canvas is already visible
+    private IEnumerator TriggerDialogueOverLaptop()
+    {
+        // Wait a fraction of a second so the player registers the laptop opening first
+        yield return new WaitForSeconds(0.5f);
+
+        laptopDialogue.gameObject.SetActive(true);
+        laptopDialogue.StartDialogue();
+
+        // When the dialogue finishes, the laptop canvas is ALREADY open, 
+        // so we don't need to open it again—just let the player interact with it!
+        laptopDialogue.onDialogueFinished = () =>
+        {
+            // Dialogue closed, laptop canvas stays open and ready for input
+        };
+    }
+
+    // Safely delays dialogue startup by 1 frame so UI canvas components wake up properly
+    private IEnumerator SafelyStartFirstDialogue()
+    {
+        laptopDialogue.gameObject.SetActive(true);
+
+        // Wait 1 frame so Unity's UI layout and TextMeshPro components initialize completely
+        yield return null;
+
+        laptopDialogue.StartDialogue();
+
+        // Listen for when this first-time dialogue finishes
+        laptopDialogue.onDialogueFinished = () =>
+        {
+            if (loginPanel != null)
+            {
+                loginPanel.gameObject.SetActive(true);
+                puzzlePanel.IsPuzzleOpen = true;
+            }
+        };
     }
 
     void OpenFiles()

@@ -3,8 +3,8 @@ guid: b45815b0c44c41941bd75c1fb114dbc5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2063826154672905881
-    second: black_0
+      213: -6297332884496016497
+    second: blackdialoguebox_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: black_0
+      name: blackdialoguebox_0
       rect:
         serializedVersion: 2
         x: 19
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 99e507bf3fe24ac10800000000000000
-      internalID: 2063826154672905881
+      spriteID: f8b9a333b116b98a0800000000000000
+      internalID: -6297332884496016497
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      black_0: 2063826154672905881
+      blackdialoguebox_0: -6297332884496016497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

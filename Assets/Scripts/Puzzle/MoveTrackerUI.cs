@@ -6,7 +6,7 @@ public class MoveTrackerUI : MonoBehaviour
     public GameObject moveSlotPrefab;
     public Transform moveSlotContainer;
 
-    private MoveSlotUI[] moveSlots;
+    public MoveSlotUI[] moveSlots;
 
     void Start()
     {
@@ -24,6 +24,7 @@ public class MoveTrackerUI : MonoBehaviour
             GameObject moveSlot = Instantiate(moveSlotPrefab, moveSlotContainer);
 
             moveSlots[i] = moveSlot.GetComponent<MoveSlotUI>();
+            ChangeMoveSlotColour(moveSlots[i], Color.white);
         }
     }
 
@@ -40,5 +41,10 @@ public class MoveTrackerUI : MonoBehaviour
                 moveSlots[i].ClearMove();
             }
         }
+    }
+
+    public void ChangeMoveSlotColour(MoveSlotUI moveSlot, Color colour)
+    {
+        moveSlot.SetColor(colour);
     }
 }

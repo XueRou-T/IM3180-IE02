@@ -44,6 +44,8 @@ public class Book : MonoBehaviour {
     public Image LeftNext;
     public Image Right;
     public Image RightNext;
+    public Image tempLeft;
+    public Image tempRight;
     public UnityEvent OnFlip;
     float radius1, radius2;
     //Spine Bottom
@@ -69,6 +71,8 @@ public class Book : MonoBehaviour {
 
         Left.gameObject.SetActive(false);
         Right.gameObject.SetActive(false);
+        tempLeft.gameObject.SetActive(false);
+        tempRight.gameObject.SetActive(false);
         UpdateSprites();
         CalcCurlCriticalPoints();
 
@@ -361,8 +365,11 @@ public class Book : MonoBehaviour {
     Coroutine currentCoroutine;
     void UpdateSprites()
     {
-        LeftNext.sprite= (currentPage > 0 && currentPage <= bookPages.Length) ? bookPages[currentPage-1] : background;
-        RightNext.sprite=(currentPage>=0 &&currentPage<bookPages.Length) ? bookPages[currentPage] : background;
+        LeftNext.sprite = (currentPage > 0 && currentPage <= bookPages.Length) ? bookPages[currentPage-1] : background;
+        RightNext.sprite = (currentPage>=0 &&currentPage<bookPages.Length) ? bookPages[currentPage] : background;
+
+        tempLeft.sprite = LeftNext.sprite;
+        tempRight.sprite = RightNext.sprite;
     }
     public void TweenForward()
     {
@@ -373,17 +380,20 @@ public class Book : MonoBehaviour {
     }
     void Flip()
     {
+        tempLeft.gameObject.SetActive(false);
+        tempRight.gameObject.SetActive(false);
+
         if (mode == FlipMode.RightToLeft)
             currentPage += 2;
         else
             currentPage -= 2;
+
         LeftNext.transform.SetParent(BookPanel.transform, true);
+        RightNext.transform.SetParent(BookPanel.transform, true);
         Left.transform.SetParent(BookPanel.transform, true);
-        LeftNext.transform.SetParent(BookPanel.transform, true);
         Left.gameObject.SetActive(false);
         Right.gameObject.SetActive(false);
         Right.transform.SetParent(BookPanel.transform, true);
-        RightNext.transform.SetParent(BookPanel.transform, true);
         UpdateSprites();
         Shadow.gameObject.SetActive(false);
         ShadowLTR.gameObject.SetActive(false);
@@ -439,5 +449,28 @@ public class Book : MonoBehaviour {
         }
         if (onFinish != null)
             onFinish();
+    }
+
+    public void CloseBook()
+    {
+        AutoFlip autoFlip = GetComponent<AutoFlip>();
+
+        if (autoFlip != null)
+        {
+            if (autoFlip.isFlipping)
+                return;
+        }
+        if (autoFlip != null)
+        {
+            autoFlip.StopAutoFlip();
+        }
+
+        if (currentCoroutine != null)
+        {
+            StopCoroutine(currentCoroutine);
+            currentCoroutine = null;
+        }
+
+        gameObject.SetActive(false);
     }
 }

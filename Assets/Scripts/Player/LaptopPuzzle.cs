@@ -3,11 +3,12 @@ using TMPro;
 
 public class LaptopPuzzle : MonoBehaviour
 {
-    public static bool IsPuzzleOpen = false;
-    public GameObject puzzlePanel;
+    public bool IsPuzzleOpen = false;
+    public LaptopPuzzle puzzlePanel;
     public TMP_InputField answer1Input;
     public TMP_InputField answer2Input;
     public TMP_Text feedbackText;
+    public GameObject desktopScreen;
 
     [Header("Correct Answers")]
     public string correctAnswer1 = "White Tulip";
@@ -24,7 +25,7 @@ public class LaptopPuzzle : MonoBehaviour
         if (correct1 && correct2)
         {
             feedbackText.color = Color.green;
-            feedbackText.text = "Access granted. Loading memory file...";
+            feedbackText.text = "";
 
             if (GameManager.Instance != null)
             {
@@ -32,6 +33,9 @@ public class LaptopPuzzle : MonoBehaviour
             }
 
             // Placeholder for later: trigger the memory-reveal video/cutscene here
+            desktopScreen.SetActive(true);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = true;
+            //this.gameObject.SetActive(false);
         }
         else
         {
@@ -42,8 +46,20 @@ public class LaptopPuzzle : MonoBehaviour
 
     public void ClosePuzzle()
     {
-        puzzlePanel.SetActive(false);
+        puzzlePanel.gameObject.SetActive(false);
         feedbackText.text = "";
         IsPuzzleOpen = false;
+    }
+
+    private void OnEnable()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = true;
+        IsPuzzleOpen=true;
+    }
+
+    private void OnDisable()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = false;
+        IsPuzzleOpen=false;
     }
 }

@@ -1,16 +1,19 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SceneDoor : MonoBehaviour
 {
     public TMP_Text promptText;
     public string promptMessage = "Press E to leave";
     public string lockedMessage = "It's locked. I need everything first.";
-    public GameObject choicePanelObject; // drag DestinationChoicePanel here
 
     [Header("Lock Settings")]
     public bool requiresUnlock = true;
     public string[] requiredItems;
+
+    [Header("Home Destination Settings")]
+    public string homeSceneName = "House";   // Name of your home scene
 
     private bool playerInRange = false;
     private bool isUnlocked = false;
@@ -21,7 +24,11 @@ public class SceneDoor : MonoBehaviour
         if (!requiresUnlock) isUnlocked = true;
         if (promptText != null) promptText.text = promptMessage;
 
-        choiceScript = UIPersistence.Instance != null ? UIPersistence.Instance.destinationChoice : null;
+        // Pull the persistent DestinationChoice reference securely
+        if (UIPersistence.Instance != null)
+        {
+            choiceScript = UIPersistence.Instance.destinationChoice;
+        }
     }
 
     void Update()
@@ -31,15 +38,59 @@ public class SceneDoor : MonoBehaviour
             CheckUnlockCondition();
         }
 
-        if (playerInRange && Input.GetKeyDown(KeyCode.E) && !DestinationChoice.IsChoiceOpen)
+        bool isAddressActive = UIPersistence.Instance != null &&
+                               UIPersistence.Instance.houseAddressPopup != null &&
+                               UIPersistence.Instance.houseAddressPopup.activeSelf;
+
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            if (isUnlocked)
+            if (!DestinationChoice.IsChoiceOpen && !isAddressActive)
             {
-                choiceScript.OpenChoice();
+                if (isUnlocked)
+                {
+                    if (choiceScript != null)
+                    {
+                        choiceScript.OpenChoice(this);
+                    }
+                    else
+                    {
+                        Debug.LogError("[Door Error] choiceScript is NULL! UIPersistence didn't link the DestinationChoice reference.");
+                    }
+                }
+                else
+                {
+                    ShowLockedMessage();
+                }
             }
-            else
+        }
+    }
+
+    // Called when clicking the Home option in the Destination Choice panel
+    public void SelectHomeOption()
+    {
+        if (choiceScript != null)
+        {
+            if (choiceScript.gameObject != null) choiceScript.gameObject.SetActive(false);
+            DestinationChoice.IsChoiceOpen = false;
+        }
+
+        // Trigger the persistent address panel directly from UIPersistence
+        if (UIPersistence.Instance != null && UIPersistence.Instance.houseAddressPopup != null)
+        {
+            GameObject addressPopup = UIPersistence.Instance.houseAddressPopup;
+            addressPopup.SetActive(true);
+
+            // Clear fields when opening
+            TMP_InputField[] inputs = addressPopup.GetComponentsInChildren<TMP_InputField>(true);
+            foreach (var input in inputs)
             {
-                ShowLockedMessage();
+                input.text = "";
+            }
+
+            TMP_Text feedback = addressPopup.GetComponentInChildren<TMP_Text>(true);
+            if (feedback != null && feedback.gameObject.name.Contains("Feedback"))
+            {
+                feedback.text = "";
             }
         }
     }

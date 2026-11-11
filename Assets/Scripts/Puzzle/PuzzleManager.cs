@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -18,12 +20,14 @@ public class PuzzleManager : MonoBehaviour
     public PuzzlePlayerAnimator playerAnimator;
     public PuzzleShadowAnimator shadowAnimator;
     public MinigameSFXManager minigameSFXManager;
+    public TutorialManager tutorialManager;
 
     [Header("Move Tracking")]
     public int moveCount;
     public int shadowMoveCount = 5;
     public List<PuzzlePlayerMoveType> moveHistory = new List<PuzzlePlayerMoveType>();
     public MoveTrackerUI moveTrackerUI;
+    public bool reachedGoal;
 
     private bool shadowStarted;
     private int shadowMoveIndex;
@@ -34,8 +38,24 @@ public class PuzzleManager : MonoBehaviour
 
     [Header("Next Scene")]
     public string nextSceneName;
+    public FadeScript fadeImage;
+
     void Start()
     {
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        if (currentScene == "Puzzle1" || currentScene == "Puzzle2")
+        {
+            if (PlayerPrefs.GetInt("TutorialCompleted", 0) == 0)
+            {
+                PlayerPrefs.SetString("ReturnPuzzleScene", SceneManager.GetActiveScene().name);
+                PlayerPrefs.Save();
+                SceneManager.LoadScene("TutorialMinigame");
+
+                return;
+            }
+        }
+
         SetPlayerSpawn();
         Invoke(nameof(ProcessTurnLoop), 0.1f);
     }
@@ -45,6 +65,7 @@ public class PuzzleManager : MonoBehaviour
         Vector2Int spawnPosition = spawnPoint.GetPosition();
         player.playerPosition = spawnPosition;
         player.transform.position = new Vector3(spawnPosition.x, spawnPosition.y, player.transform.position.z);
+        reachedGoal = false;
     }
 
     void SpawnShadow()
@@ -133,6 +154,19 @@ public class PuzzleManager : MonoBehaviour
         }
 
         ProcessTurnLoop();
+
+        if (tutorialManager != null)
+        {
+            if (moveType == PuzzlePlayerMoveType.Right)
+            {
+                tutorialManager.OnPlayerMovedRight();
+            }
+
+            if (moveHistory.Count == shadowMoveCount)
+            {
+                tutorialManager.OnMoveSlotsFilled();
+            }
+        }
     }
 
     void ExecuteNextShadowMove()
@@ -140,8 +174,11 @@ public class PuzzleManager : MonoBehaviour
         if (shadowMoveIndex >= moveHistory.Count) return;
 
         PuzzlePlayerMoveType move = moveHistory[shadowMoveIndex];
-        shadowMoveIndex++;
 
+        moveTrackerUI.ChangeMoveSlotColour(moveTrackerUI.moveSlots[shadowMoveIndex], Color.softRed);
+
+        shadowMoveIndex++;
+              
         TryMoveShadow(move);
     }
 
@@ -252,7 +289,7 @@ public class PuzzleManager : MonoBehaviour
         CheckLadders();
         CheckGoals();
         CheckPlayerShadowCollide();
-        CheckShadowlosedDoorDeath();
+        CheckShadowClosedDoorDeath();
     }
 
     void CheckButtons()
@@ -326,11 +363,11 @@ public class PuzzleManager : MonoBehaviour
         {
             Debug.Log("Game Over: Player trapped inside a closed death door!");
             gameOver = true;
-            StartFall(lastMoveType);
+            StartCoroutine(StartDoorDeathTransition(player.playerPosition));
         }
     }
 
-    void CheckShadowlosedDoorDeath()
+    void CheckShadowClosedDoorDeath()
     {
         GridData currentGrid = gridManager.GetGridData(shadow.shadowPosition);
         if (currentGrid == null || currentGrid.door == null) return;
@@ -347,7 +384,7 @@ public class PuzzleManager : MonoBehaviour
     {
         if (gameOver) return;
 
-        if (player.playerPosition == shadow.shadowPosition || (player.playerPosition == lastShadowPos && shadow.shadowPosition == lastPlayerPos) )
+        if (player.playerPosition == shadow.shadowPosition || (player.playerPosition == lastShadowPos && shadow.shadowPosition == lastPlayerPos))
         {
             gameOver = true;
             Debug.Log("Game Over: Collided with Shadow");
@@ -371,8 +408,26 @@ public class PuzzleManager : MonoBehaviour
         if (currentGrid != null && currentGrid.goal != null)
         {
             Debug.Log("Reached Goal");
+            reachedGoal = true;
             minigameSFXManager.PlayWinningSound();
-            GoToNextScene();
+
+            // Update player color progression based on the Inspector toggle
+            if (PlayerColorProgression.Instance != null)
+            {
+                PlayerColorProgression.Instance.AddSaturation();
+            }
+
+            if (SceneManager.GetActiveScene().name == "TutorialMinigame")
+            {
+                PlayerPrefs.SetInt("TutorialCompleted", 1);
+                PlayerPrefs.Save();
+                string returnScene = PlayerPrefs.GetString("ReturnPuzzleScene");
+
+                StartCoroutine(GoToNextScene(returnScene));
+
+                return;
+            }
+            StartCoroutine(GoToNextScene(nextSceneName));
         }
     }
 
@@ -407,7 +462,23 @@ public class PuzzleManager : MonoBehaviour
 
         Debug.Log("Death transition complete");
 
-        RestartLevel(); 
+        RestartLevel();
+    }
+
+    IEnumerator StartDoorDeathTransition(Vector2Int playerPos)
+    {
+        playerMovement.MoveTo(playerPos);
+
+        while (Vector2.Distance(player.transform.position, (Vector2)playerPos) > 0.05f)
+        {
+            yield return null;
+        }
+
+        minigameSFXManager.PlayDeathSound();
+
+        Debug.Log("Door Death transition complete");
+
+        RestartLevel();
     }
 
     public void RestartLevel()
@@ -415,8 +486,14 @@ public class PuzzleManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    void GoToNextScene()
+    IEnumerator GoToNextScene(String nextScene)
     {
-        SceneManager.LoadScene(nextSceneName);
+        if (fadeImage != null)
+            fadeImage.StartTransition();
+
+        yield return new WaitForSeconds(3);
+
+        if (nextSceneName != null)
+            SceneManager.LoadScene(nextScene);
     }
 }

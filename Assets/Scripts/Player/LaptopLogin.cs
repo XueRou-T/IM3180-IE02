@@ -3,8 +3,8 @@ using TMPro;
 
 public class LaptopLogin : MonoBehaviour
 {
-    public GameObject loginPanel;
-    public GameObject puzzlePanel;
+    public LaptopLogin loginPanel;
+    public LaptopPuzzle puzzlePanel;
     public TMP_InputField passwordInput;
     public TMP_Text loginFeedbackText;
 
@@ -15,20 +15,27 @@ public class LaptopLogin : MonoBehaviour
 
     public void OpenForgotPassword()
     {
-        loginPanel.SetActive(false);
-        puzzlePanel.SetActive(true);
+        loginPanel.gameObject.SetActive(false);
+        puzzlePanel.gameObject.SetActive(true);
     }
 
     public void CloseLogin()
     {
-        loginPanel.SetActive(false);
+        loginPanel.gameObject.SetActive(false);
         passwordInput.text = "";
         loginFeedbackText.text = "";
-        LaptopPuzzle.IsPuzzleOpen = false;
+        puzzlePanel.IsPuzzleOpen = false;
     }
 
-    void OnEnable()
+    private void OnEnable()
     {
-        LaptopPuzzle.IsPuzzleOpen = true;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = true;
+        puzzlePanel.IsPuzzleOpen = true;
+    }
+
+    private void OnDisable()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().desktopOpen = false;
+        puzzlePanel.IsPuzzleOpen = false;
     }
 }

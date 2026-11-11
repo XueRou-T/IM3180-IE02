@@ -1,11 +1,9 @@
 using TMPro;
 using UnityEngine;
-
-using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public struct DialogueLine
@@ -21,7 +19,12 @@ public class Dialogue : MonoBehaviour
     [Header("UI References")]
     public TextMeshProUGUI textComponent;
     public TextMeshProUGUI nameComponent;
-    public Image avatarImage;
+    public Image avatarOneImage;
+    public Image avatarTwoImage; // Can be left unassigned or deleted in single-speaker scenes
+
+    [Header("Avatar Appearance")]
+    [Range(0f, 1f)]
+    public float dimAmount = 0.4f;
 
     [Header("Audio")]
     public AudioSource audioSource;
@@ -32,6 +35,17 @@ public class Dialogue : MonoBehaviour
     [Header("Dialogue Content")]
     public DialogueLine[] lines;
     public float textSpeed;
+    public bool haveOption = false;
+    public GameObject optionChoice;
+
+    private string speakerOne = "";
+    private string speakerTwo = "";
+    private int activeAvatarSlot = 0;
+    private Color normalColor = Color.white;
+
+    [Header("Next Scene")]
+    public string nextSceneName;
+    public FadeScript fadeImage;
 
     private int index;
 
@@ -39,12 +53,24 @@ public class Dialogue : MonoBehaviour
     {
         textComponent.text = string.Empty;
         nameComponent.text = string.Empty;
+
+        if (avatarOneImage != null)
+            avatarOneImage.gameObject.SetActive(false);
+
+        if (avatarTwoImage != null)
+            avatarTwoImage.gameObject.SetActive(false);
+
+        if (optionChoice != null)
+        {
+            optionChoice.SetActive(false);
+        }
+
         StartDialogue();
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
             if (textComponent.text == lines[index].text)
             {
@@ -67,6 +93,14 @@ public class Dialogue : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
+
+        // Reset tracking slots if running a single-speaker setup in this scene
+        if (avatarTwoImage == null)
+        {
+            speakerOne = "";
+            speakerTwo = "";
+        }
+
         UpdateSpeakerInfo();
         StartCoroutine(TypeLine());
     }
@@ -107,26 +141,113 @@ public class Dialogue : MonoBehaviour
             index++;
             textComponent.text = string.Empty;
             UpdateSpeakerInfo();
+            if (index == lines.Length - 1)
+            {
+                if (haveOption && optionChoice != null)
+                {
+                    optionChoice.SetActive(true);
+                }
+            }
             StartCoroutine(TypeLine());
         }
         else
         {
-            gameObject.SetActive(false);
+            StartCoroutine(LoadNextScene());
         }
     }
 
     void UpdateSpeakerInfo()
     {
+        DialogueLine currentLine = lines[index];
+
         nameComponent.text = lines[index].speakerName;
 
-        if (lines[index].speakerAvatar != null)
+        string currentSpeaker = currentLine.speakerName;
+        Sprite currentAvatar = currentLine.speakerAvatar;
+
+        // If Slot 2 image reference doesn't exist in this scene, force everything into Slot 1
+        if (avatarTwoImage == null)
         {
-            avatarImage.sprite = lines[index].speakerAvatar;
-            avatarImage.gameObject.SetActive(true);
+            speakerOne = currentSpeaker;
+            activeAvatarSlot = 1;
+            if (avatarOneImage != null)
+            {
+                avatarOneImage.sprite = currentAvatar;
+            }
+            UpdateAvatarAppearance();
+            return;
         }
-        else
+
+        // Standard two-speaker tracking logic
+        if (speakerOne == currentSpeaker)
         {
-            avatarImage.gameObject.SetActive(false);
+            activeAvatarSlot = 1;
+            avatarOneImage.sprite = currentAvatar;
         }
+        else if (speakerTwo == currentSpeaker)
+        {
+            activeAvatarSlot = 2;
+            avatarTwoImage.sprite = currentAvatar;
+        }
+        else if (string.IsNullOrEmpty(speakerOne))
+        {
+            speakerOne = currentSpeaker;
+            activeAvatarSlot = 1;
+            avatarOneImage.sprite = currentAvatar;
+        }
+        else if (string.IsNullOrEmpty(speakerTwo))
+        {
+            speakerTwo = currentSpeaker;
+            activeAvatarSlot = 2;
+            avatarTwoImage.sprite = currentAvatar;
+        }
+
+        UpdateAvatarAppearance();
+    }
+
+    void UpdateAvatarAppearance()
+    {
+        bool showOne = !string.IsNullOrEmpty(speakerOne)
+                       && avatarOneImage != null
+                       && avatarOneImage.sprite != null;
+
+        bool showTwo = avatarTwoImage != null
+                       && !string.IsNullOrEmpty(speakerTwo)
+                       && avatarTwoImage.sprite != null;
+
+        if (avatarOneImage != null)
+            avatarOneImage.gameObject.SetActive(showOne);
+
+        if (avatarTwoImage != null)
+            avatarTwoImage.gameObject.SetActive(showTwo);
+
+        Color dimColor = new Color(
+            dimAmount,
+            dimAmount,
+            dimAmount,
+            1f
+        );
+
+        if (showOne && avatarOneImage != null)
+        {
+            // Keep solo or active speakers fully bright, dim only when multiple speakers are active
+            avatarOneImage.color = (activeAvatarSlot == 1 || avatarTwoImage == null || !showTwo) ? Color.white : dimColor;
+        }
+
+        if (showTwo && avatarTwoImage != null)
+        {
+            avatarTwoImage.color = activeAvatarSlot == 2 ? Color.white : dimColor;
+        }
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        if (fadeImage != null)
+            fadeImage.StartTransition();
+
+        yield return new WaitForSeconds(3);
+
+        if (nextSceneName != null)
+            SceneManager.LoadScene(nextSceneName);
     }
 }

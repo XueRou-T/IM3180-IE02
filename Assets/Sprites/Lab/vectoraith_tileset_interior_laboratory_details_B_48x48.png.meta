@@ -1,0 +1,2691 @@
+fileFormatVersion: 2
+guid: 9b994576500aab245ac6bb492667f866
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1173338804749164294
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_0
+  - first:
+      213: 992993504582717272
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_1
+  - first:
+      213: 7560798463348030551
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_2
+  - first:
+      213: -7706366583404458543
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_3
+  - first:
+      213: 8657405292621338509
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_4
+  - first:
+      213: -9173976536321961995
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_5
+  - first:
+      213: -827853903349495207
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_6
+  - first:
+      213: -5425781555559617383
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_7
+  - first:
+      213: 552893734367003900
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_8
+  - first:
+      213: -6021252697871252647
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_9
+  - first:
+      213: 2956706143858734467
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_10
+  - first:
+      213: -3682758454739218049
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_11
+  - first:
+      213: -3756648676185423529
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_12
+  - first:
+      213: 2790412871490670111
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_13
+  - first:
+      213: -6005410647166017270
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_14
+  - first:
+      213: 1567517307006302258
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_15
+  - first:
+      213: -354045037731884171
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_16
+  - first:
+      213: -1537480365778251393
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_17
+  - first:
+      213: -2706441378451885676
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_18
+  - first:
+      213: -5482683091542544230
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_19
+  - first:
+      213: 1247891492915611745
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_20
+  - first:
+      213: -6377193552300785118
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_21
+  - first:
+      213: 1615736753994367500
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_22
+  - first:
+      213: -7919282914896160154
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_23
+  - first:
+      213: 8134776905698461483
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_24
+  - first:
+      213: 9207197885307097772
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_25
+  - first:
+      213: 2589537391296220814
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_26
+  - first:
+      213: 8190525353155790235
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_27
+  - first:
+      213: -7361129102682385025
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_28
+  - first:
+      213: 5163359072070426935
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_29
+  - first:
+      213: 2307481830316200037
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_30
+  - first:
+      213: 7105662036451760352
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_31
+  - first:
+      213: -8425622293240586711
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_32
+  - first:
+      213: 8205716968439875455
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_33
+  - first:
+      213: 8299272481769681914
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_34
+  - first:
+      213: -3691641260959183898
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_35
+  - first:
+      213: -3591223141023630392
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_36
+  - first:
+      213: 5379494227629236910
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_37
+  - first:
+      213: 6686284693183718540
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_38
+  - first:
+      213: -6581482104823733448
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_39
+  - first:
+      213: -1279150235116798473
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_40
+  - first:
+      213: 4683205079511850531
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_41
+  - first:
+      213: 4829652260320258503
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_42
+  - first:
+      213: -9147727913761885993
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_43
+  - first:
+      213: -1981538745929536263
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_44
+  - first:
+      213: 8927610040440612578
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_45
+  - first:
+      213: -1398332411041362060
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_46
+  - first:
+      213: -4358197542491238755
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_47
+  - first:
+      213: 2792063101045331457
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_48
+  - first:
+      213: 4521596318895685747
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_49
+  - first:
+      213: -7490946735194942429
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_50
+  - first:
+      213: -2812601753035389017
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_51
+  - first:
+      213: 8287191216063565877
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_52
+  - first:
+      213: -7765261776583779655
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_53
+  - first:
+      213: 6925867734048859556
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_54
+  - first:
+      213: 337924496731259972
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_55
+  - first:
+      213: 2306344109461053987
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_56
+  - first:
+      213: 274027687035592210
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_57
+  - first:
+      213: -2682777023545290809
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_58
+  - first:
+      213: -1511620152151612633
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_59
+  - first:
+      213: 6792791233101329488
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_60
+  - first:
+      213: 6828771927623057448
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_61
+  - first:
+      213: -1108978913596871916
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_62
+  - first:
+      213: 3380431310440605804
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_63
+  - first:
+      213: 684768817502818011
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_64
+  - first:
+      213: -615852323561703109
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_65
+  - first:
+      213: 1467516018990812371
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_66
+  - first:
+      213: -124158211210351092
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_67
+  - first:
+      213: -1766600335278873135
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_68
+  - first:
+      213: 5339958531115201129
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_69
+  - first:
+      213: -7014681085761572963
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_70
+  - first:
+      213: 2794361002157461393
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_71
+  - first:
+      213: 3009443833514691000
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_72
+  - first:
+      213: -7795446944920944011
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_73
+  - first:
+      213: -1542639351029098883
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_74
+  - first:
+      213: -1613727508414162669
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_75
+  - first:
+      213: -8163973999055345994
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_76
+  - first:
+      213: 5793839673428160149
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_77
+  - first:
+      213: -6356719456404271674
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_78
+  - first:
+      213: 6660531153352604059
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_79
+  - first:
+      213: 9078444023269246293
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_80
+  - first:
+      213: 6985753245960426608
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_81
+  - first:
+      213: 6871627186849606535
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_82
+  - first:
+      213: -445066642836957026
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_83
+  - first:
+      213: -7926566488380689298
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_84
+  - first:
+      213: -8378775091030301168
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_85
+  - first:
+      213: -3311824096296286142
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_86
+  - first:
+      213: 4317381981193175604
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_87
+  - first:
+      213: 4435534481216015628
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_88
+  - first:
+      213: 2983959545705715571
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_89
+  - first:
+      213: -6157164618993830381
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_90
+  - first:
+      213: -3159582350885342767
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_91
+  - first:
+      213: 8548390268039834487
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_92
+  - first:
+      213: 2972864443284451441
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_93
+  - first:
+      213: -6111718856008920396
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_94
+  - first:
+      213: 3391963348358553814
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_95
+  - first:
+      213: 7330336040699764315
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_96
+  - first:
+      213: 6540435554261490012
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_97
+  - first:
+      213: -8201116066202220830
+    second: vectoraith_tileset_interior_laboratory_details_B_48x48_98
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_0
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 671
+        width: 38
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0aebdd29677bfe0800000000000000
+      internalID: -1173338804749164294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 719
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f4ce0d452d7cd00800000000000000
+      internalID: 992993504582717272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 734
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75cbd22c42a5de860800000000000000
+      internalID: 7560798463348030551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_3
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 728
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd8c372c6c7d0590800000000000000
+      internalID: -7706366583404458543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_4
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 728
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d871847ae38452870800000000000000
+      internalID: 8657405292621338509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_5
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 728
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ffc2ce22fc7fa080800000000000000
+      internalID: -9173976536321961995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_6
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 731
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95acee4d24fd284f0800000000000000
+      internalID: -827853903349495207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_7
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 689
+        width: 128
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ca0081c60c3b4b0800000000000000
+      internalID: -5425781555559617383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_8
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 689
+        width: 128
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf40c7b0ce54ca700800000000000000
+      internalID: 552893734367003900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_9
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 671
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9538580c296307ca0800000000000000
+      internalID: -6021252697871252647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_10
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 671
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3853ae19294580920800000000000000
+      internalID: 2956706143858734467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_11
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 695
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f71d3bf82b634ecc0800000000000000
+      internalID: -3682758454739218049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_12
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 689
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751c60ebee3bddbc0800000000000000
+      internalID: -3756648676185423529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_13
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 680
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1e01ede8b989b620800000000000000
+      internalID: 2790412871490670111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_14
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 674
+        width: 17
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a01225d95de78aca0800000000000000
+      internalID: -6005410647166017270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_15
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 680
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23833678fa0f0c510800000000000000
+      internalID: 1567517307006302258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_16
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 680
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 573508bf9ed261bf0800000000000000
+      internalID: -354045037731884171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_17
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 602
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7156a4d0c5c9aae0800000000000000
+      internalID: -1537480365778251393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_18
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 629
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491f4f7d7e9c07ad0800000000000000
+      internalID: -2706441378451885676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_19
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 608
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a90f098d6c899e3b0800000000000000
+      internalID: -5482683091542544230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_20
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 629
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168877183b6615110800000000000000
+      internalID: 1247891492915611745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_21
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 632
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22243338048af77a0800000000000000
+      internalID: -6377193552300785118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_22
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 632
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02806864004c6610800000000000000
+      internalID: 1615736753994367500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_23
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 626
+        width: 17
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a5bc5a52e091290800000000000000
+      internalID: -7919282914896160154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_24
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 632
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27453fee7884e070800000000000000
+      internalID: 8134776905698461483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_25
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 632
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca21572e1b986cf70800000000000000
+      internalID: 9207197885307097772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_26
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 593
+        width: 128
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e8dc49982efe320800000000000000
+      internalID: 2589537391296220814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_27
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 593
+        width: 128
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b958ea6d9679aa170800000000000000
+      internalID: 8190525353155790235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_28
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 584
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7593d0051408d990800000000000000
+      internalID: -7361129102682385025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_29
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 587
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7316c8a28bfe7a740800000000000000
+      internalID: 5163359072070426935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_30
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 584
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5605aa5cf72d50020800000000000000
+      internalID: 2307481830316200037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_31
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 584
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e89fa889f16c9260800000000000000
+      internalID: 7105662036451760352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_32
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 584
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92e58c74a2d221b80800000000000000
+      internalID: -8425622293240586711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_33
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 602
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7701476b1090e170800000000000000
+      internalID: 8205716968439875455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_34
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 599
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af37e0ac950fc2370800000000000000
+      internalID: 8299272481769681914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_35
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 533
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb4a5215d7a4ccc0800000000000000
+      internalID: -3691641260959183898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_36
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 479
+        width: 38
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbbf129499692ec0800000000000000
+      internalID: -3591223141023630392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_37
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 527
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea2ea1d8f7dc7aa40800000000000000
+      internalID: 5379494227629236910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_38
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 533
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c84e854c0847acc50800000000000000
+      internalID: 6686284693183718540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_39
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 545
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833246655e0e9a4a0800000000000000
+      internalID: -6581482104823733448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_40
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 533
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fd718d63ab8f3ee0800000000000000
+      internalID: -1279150235116798473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_41
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 488
+        width: 44
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32edb9605361ef040800000000000000
+      internalID: 4683205079511850531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_42
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 485
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c92d05642f560340800000000000000
+      internalID: 4829652260320258503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_43
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 434
+        width: 146
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d03c4eddedbc0180800000000000000
+      internalID: -9147727913761885993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_44
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 449
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc623c52092084e0800000000000000
+      internalID: -1981538745929536263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_45
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 449
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e66ca1080e35eb70800000000000000
+      internalID: 8927610040440612578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_46
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 449
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47fc6f1b410289ce0800000000000000
+      internalID: -1398332411041362060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_47
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 449
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e44d20d629483c0800000000000000
+      internalID: -4358197542491238755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_48
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 449
+        width: 44
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1065840f8966fb620800000000000000
+      internalID: 2792063101045331457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_49
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 479
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 370cd7545efefbe30800000000000000
+      internalID: 4521596318895685747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_50
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 479
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324555112afca0890800000000000000
+      internalID: -7490946735194942429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_51
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 485
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a74faf7b91a7f8d0800000000000000
+      internalID: -2812601753035389017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_52
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 491
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 530d43be084020370800000000000000
+      internalID: 8287191216063565877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_53
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 488
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ba1eca6e8f3c3490800000000000000
+      internalID: -7765261776583779655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_54
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 437
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a562516200ad1060800000000000000
+      internalID: 6925867734048859556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_55
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 410
+        width: 23
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444c1941a8c80b400800000000000000
+      internalID: 337924496731259972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_56
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 416
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322ad3e7fb7c10020800000000000000
+      internalID: 2306344109461053987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_57
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 437
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ed060caba8dc300800000000000000
+      internalID: 274027687035592210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_58
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 437
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cfc004d28cd4cad0800000000000000
+      internalID: -2682777023545290809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_59
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 443
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7236ea30b75a50be0800000000000000
+      internalID: -1511620152151612633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_60
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 440
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054746203a7d44e50800000000000000
+      internalID: 6792791233101329488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_61
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 392
+        width: 38
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820c12643eba4ce50800000000000000
+      internalID: 6828771927623057448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_62
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 392
+        width: 38
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41be8afbd8d1c90f0800000000000000
+      internalID: -1108978913596871916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_63
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 410
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c68ab66dd54b9ee20800000000000000
+      internalID: 3380431310440605804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_64
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 392
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bde05888c99c08900800000000000000
+      internalID: 684768817502818011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_65
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 386
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39710c139d0477f0800000000000000
+      internalID: -615852323561703109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_66
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 386
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dc84264b0aad5410800000000000000
+      internalID: 1467516018990812371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_67
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 386
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0eebd4c3c6e64ef0800000000000000
+      internalID: -124158211210351092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_68
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 302
+        width: 71
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d5ed9bda56cb77e0800000000000000
+      internalID: -1766600335278873135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_69
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 302
+        width: 71
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9623072edf75b1a40800000000000000
+      internalID: 5339958531115201129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_70
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 302
+        width: 38
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9fa786c7b8d6ae90800000000000000
+      internalID: -7014681085761572963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_71
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 296
+        width: 38
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19fcccbb68097c620800000000000000
+      internalID: 2794361002157461393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_72
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 308
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b9022cc831b3c920800000000000000
+      internalID: 3009443833514691000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_73
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 308
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 572459e3e4201d390800000000000000
+      internalID: -7795446944920944011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_74
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 305
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d761f59fea1779ae0800000000000000
+      internalID: -1542639351029098883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_75
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 305
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31992b88163ea99e0800000000000000
+      internalID: -1613727508414162669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_76
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 305
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b6e7c607ecb3be80800000000000000
+      internalID: -8163973999055345994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_77
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 305
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e20446c7ad76050800000000000000
+      internalID: 5793839673428160149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_78
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 239
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd8530755568c7a0800000000000000
+      internalID: -6356719456404271674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_79
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 203
+        width: 44
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9931038bc5fe6c50800000000000000
+      internalID: 6660531153352604059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_80
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 143
+        width: 80
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5554b305dbc1dfd70800000000000000
+      internalID: 9078444023269246293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_81
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 191
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 074d00aa09162f060800000000000000
+      internalID: 6985753245960426608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_82
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 191
+        width: 41
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b661dd48cec5f50800000000000000
+      internalID: 6871627186849606535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_83
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 191
+        width: 50
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e98d3541f3ec2d9f0800000000000000
+      internalID: -445066642836957026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_84
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 161
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64bd8b86cd2ff190800000000000000
+      internalID: -7926566488380689298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_85
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 161
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0166f36827c98bb80800000000000000
+      internalID: -8378775091030301168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_86
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 161
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2484eadf7890a02d0800000000000000
+      internalID: -3311824096296286142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_87
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 161
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43201b4990c6aeb30800000000000000
+      internalID: 4317381981193175604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_88
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 191
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d80e53c1f2e8d30800000000000000
+      internalID: 4435534481216015628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_89
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 146
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377dce9a567296920800000000000000
+      internalID: 2983959545705715571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_90
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 146
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 316f44da66b5d8aa0800000000000000
+      internalID: -6157164618993830381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_91
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 86
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1b2e09798e624d0800000000000000
+      internalID: -3159582350885342767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_92
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 95
+        width: 41
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77babef48abf1a670800000000000000
+      internalID: 8548390268039834487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_93
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 50
+        width: 44
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170fb53d57cb14920800000000000000
+      internalID: 2972864443284451441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_94
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 50
+        width: 44
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2188ce410de2ba0800000000000000
+      internalID: -6111718856008920396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_95
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 0
+        width: 74
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d06e06a1bca21f20800000000000000
+      internalID: 3391963348358553814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_96
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 125
+        width: 50
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e172e8ac59ab560800000000000000
+      internalID: 7330336040699764315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_97
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 5
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c595710eb7b44ca50800000000000000
+      internalID: 6540435554261490012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vectoraith_tileset_interior_laboratory_details_B_48x48_98
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 8
+        width: 385
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e68440a368cf2e80800000000000000
+      internalID: -8201116066202220830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      vectoraith_tileset_interior_laboratory_details_B_48x48_0: -1173338804749164294
+      vectoraith_tileset_interior_laboratory_details_B_48x48_1: 992993504582717272
+      vectoraith_tileset_interior_laboratory_details_B_48x48_10: 2956706143858734467
+      vectoraith_tileset_interior_laboratory_details_B_48x48_11: -3682758454739218049
+      vectoraith_tileset_interior_laboratory_details_B_48x48_12: -3756648676185423529
+      vectoraith_tileset_interior_laboratory_details_B_48x48_13: 2790412871490670111
+      vectoraith_tileset_interior_laboratory_details_B_48x48_14: -6005410647166017270
+      vectoraith_tileset_interior_laboratory_details_B_48x48_15: 1567517307006302258
+      vectoraith_tileset_interior_laboratory_details_B_48x48_16: -354045037731884171
+      vectoraith_tileset_interior_laboratory_details_B_48x48_17: -1537480365778251393
+      vectoraith_tileset_interior_laboratory_details_B_48x48_18: -2706441378451885676
+      vectoraith_tileset_interior_laboratory_details_B_48x48_19: -5482683091542544230
+      vectoraith_tileset_interior_laboratory_details_B_48x48_2: 7560798463348030551
+      vectoraith_tileset_interior_laboratory_details_B_48x48_20: 1247891492915611745
+      vectoraith_tileset_interior_laboratory_details_B_48x48_21: -6377193552300785118
+      vectoraith_tileset_interior_laboratory_details_B_48x48_22: 1615736753994367500
+      vectoraith_tileset_interior_laboratory_details_B_48x48_23: -7919282914896160154
+      vectoraith_tileset_interior_laboratory_details_B_48x48_24: 8134776905698461483
+      vectoraith_tileset_interior_laboratory_details_B_48x48_25: 9207197885307097772
+      vectoraith_tileset_interior_laboratory_details_B_48x48_26: 2589537391296220814
+      vectoraith_tileset_interior_laboratory_details_B_48x48_27: 8190525353155790235
+      vectoraith_tileset_interior_laboratory_details_B_48x48_28: -7361129102682385025
+      vectoraith_tileset_interior_laboratory_details_B_48x48_29: 5163359072070426935
+      vectoraith_tileset_interior_laboratory_details_B_48x48_3: -7706366583404458543
+      vectoraith_tileset_interior_laboratory_details_B_48x48_30: 2307481830316200037
+      vectoraith_tileset_interior_laboratory_details_B_48x48_31: 7105662036451760352
+      vectoraith_tileset_interior_laboratory_details_B_48x48_32: -8425622293240586711
+      vectoraith_tileset_interior_laboratory_details_B_48x48_33: 8205716968439875455
+      vectoraith_tileset_interior_laboratory_details_B_48x48_34: 8299272481769681914
+      vectoraith_tileset_interior_laboratory_details_B_48x48_35: -3691641260959183898
+      vectoraith_tileset_interior_laboratory_details_B_48x48_36: -3591223141023630392
+      vectoraith_tileset_interior_laboratory_details_B_48x48_37: 5379494227629236910
+      vectoraith_tileset_interior_laboratory_details_B_48x48_38: 6686284693183718540
+      vectoraith_tileset_interior_laboratory_details_B_48x48_39: -6581482104823733448
+      vectoraith_tileset_interior_laboratory_details_B_48x48_4: 8657405292621338509
+      vectoraith_tileset_interior_laboratory_details_B_48x48_40: -1279150235116798473
+      vectoraith_tileset_interior_laboratory_details_B_48x48_41: 4683205079511850531
+      vectoraith_tileset_interior_laboratory_details_B_48x48_42: 4829652260320258503
+      vectoraith_tileset_interior_laboratory_details_B_48x48_43: -9147727913761885993
+      vectoraith_tileset_interior_laboratory_details_B_48x48_44: -1981538745929536263
+      vectoraith_tileset_interior_laboratory_details_B_48x48_45: 8927610040440612578
+      vectoraith_tileset_interior_laboratory_details_B_48x48_46: -1398332411041362060
+      vectoraith_tileset_interior_laboratory_details_B_48x48_47: -4358197542491238755
+      vectoraith_tileset_interior_laboratory_details_B_48x48_48: 2792063101045331457
+      vectoraith_tileset_interior_laboratory_details_B_48x48_49: 4521596318895685747
+      vectoraith_tileset_interior_laboratory_details_B_48x48_5: -9173976536321961995
+      vectoraith_tileset_interior_laboratory_details_B_48x48_50: -7490946735194942429
+      vectoraith_tileset_interior_laboratory_details_B_48x48_51: -2812601753035389017
+      vectoraith_tileset_interior_laboratory_details_B_48x48_52: 8287191216063565877
+      vectoraith_tileset_interior_laboratory_details_B_48x48_53: -7765261776583779655
+      vectoraith_tileset_interior_laboratory_details_B_48x48_54: 6925867734048859556
+      vectoraith_tileset_interior_laboratory_details_B_48x48_55: 337924496731259972
+      vectoraith_tileset_interior_laboratory_details_B_48x48_56: 2306344109461053987
+      vectoraith_tileset_interior_laboratory_details_B_48x48_57: 274027687035592210
+      vectoraith_tileset_interior_laboratory_details_B_48x48_58: -2682777023545290809
+      vectoraith_tileset_interior_laboratory_details_B_48x48_59: -1511620152151612633
+      vectoraith_tileset_interior_laboratory_details_B_48x48_6: -827853903349495207
+      vectoraith_tileset_interior_laboratory_details_B_48x48_60: 6792791233101329488
+      vectoraith_tileset_interior_laboratory_details_B_48x48_61: 6828771927623057448
+      vectoraith_tileset_interior_laboratory_details_B_48x48_62: -1108978913596871916
+      vectoraith_tileset_interior_laboratory_details_B_48x48_63: 3380431310440605804
+      vectoraith_tileset_interior_laboratory_details_B_48x48_64: 684768817502818011
+      vectoraith_tileset_interior_laboratory_details_B_48x48_65: -615852323561703109
+      vectoraith_tileset_interior_laboratory_details_B_48x48_66: 1467516018990812371
+      vectoraith_tileset_interior_laboratory_details_B_48x48_67: -124158211210351092
+      vectoraith_tileset_interior_laboratory_details_B_48x48_68: -1766600335278873135
+      vectoraith_tileset_interior_laboratory_details_B_48x48_69: 5339958531115201129
+      vectoraith_tileset_interior_laboratory_details_B_48x48_7: -5425781555559617383
+      vectoraith_tileset_interior_laboratory_details_B_48x48_70: -7014681085761572963
+      vectoraith_tileset_interior_laboratory_details_B_48x48_71: 2794361002157461393
+      vectoraith_tileset_interior_laboratory_details_B_48x48_72: 3009443833514691000
+      vectoraith_tileset_interior_laboratory_details_B_48x48_73: -7795446944920944011
+      vectoraith_tileset_interior_laboratory_details_B_48x48_74: -1542639351029098883
+      vectoraith_tileset_interior_laboratory_details_B_48x48_75: -1613727508414162669
+      vectoraith_tileset_interior_laboratory_details_B_48x48_76: -8163973999055345994
+      vectoraith_tileset_interior_laboratory_details_B_48x48_77: 5793839673428160149
+      vectoraith_tileset_interior_laboratory_details_B_48x48_78: -6356719456404271674
+      vectoraith_tileset_interior_laboratory_details_B_48x48_79: 6660531153352604059
+      vectoraith_tileset_interior_laboratory_details_B_48x48_8: 552893734367003900
+      vectoraith_tileset_interior_laboratory_details_B_48x48_80: 9078444023269246293
+      vectoraith_tileset_interior_laboratory_details_B_48x48_81: 6985753245960426608
+      vectoraith_tileset_interior_laboratory_details_B_48x48_82: 6871627186849606535
+      vectoraith_tileset_interior_laboratory_details_B_48x48_83: -445066642836957026
+      vectoraith_tileset_interior_laboratory_details_B_48x48_84: -7926566488380689298
+      vectoraith_tileset_interior_laboratory_details_B_48x48_85: -8378775091030301168
+      vectoraith_tileset_interior_laboratory_details_B_48x48_86: -3311824096296286142
+      vectoraith_tileset_interior_laboratory_details_B_48x48_87: 4317381981193175604
+      vectoraith_tileset_interior_laboratory_details_B_48x48_88: 4435534481216015628
+      vectoraith_tileset_interior_laboratory_details_B_48x48_89: 2983959545705715571
+      vectoraith_tileset_interior_laboratory_details_B_48x48_9: -6021252697871252647
+      vectoraith_tileset_interior_laboratory_details_B_48x48_90: -6157164618993830381
+      vectoraith_tileset_interior_laboratory_details_B_48x48_91: -3159582350885342767
+      vectoraith_tileset_interior_laboratory_details_B_48x48_92: 8548390268039834487
+      vectoraith_tileset_interior_laboratory_details_B_48x48_93: 2972864443284451441
+      vectoraith_tileset_interior_laboratory_details_B_48x48_94: -6111718856008920396
+      vectoraith_tileset_interior_laboratory_details_B_48x48_95: 3391963348358553814
+      vectoraith_tileset_interior_laboratory_details_B_48x48_96: 7330336040699764315
+      vectoraith_tileset_interior_laboratory_details_B_48x48_97: 6540435554261490012
+      vectoraith_tileset_interior_laboratory_details_B_48x48_98: -8201116066202220830
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
