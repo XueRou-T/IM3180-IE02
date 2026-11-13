@@ -411,7 +411,6 @@ public class PuzzleManager : MonoBehaviour
             reachedGoal = true;
             minigameSFXManager.PlayWinningSound();
 
-            // Update player color progression based on the Inspector toggle
             if (PlayerColorProgression.Instance != null)
             {
                 PlayerColorProgression.Instance.AddSaturation();

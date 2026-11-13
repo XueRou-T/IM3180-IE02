@@ -165,7 +165,6 @@ public class Dialogue : MonoBehaviour
         string currentSpeaker = currentLine.speakerName;
         Sprite currentAvatar = currentLine.speakerAvatar;
 
-        // If Slot 2 image reference doesn't exist in this scene, force everything into Slot 1
         if (avatarTwoImage == null)
         {
             speakerOne = currentSpeaker;
@@ -178,7 +177,6 @@ public class Dialogue : MonoBehaviour
             return;
         }
 
-        // Standard two-speaker tracking logic
         if (speakerOne == currentSpeaker)
         {
             activeAvatarSlot = 1;
@@ -230,7 +228,6 @@ public class Dialogue : MonoBehaviour
 
         if (showOne && avatarOneImage != null)
         {
-            // Keep solo or active speakers fully bright, dim only when multiple speakers are active
             avatarOneImage.color = (activeAvatarSlot == 1 || avatarTwoImage == null || !showTwo) ? Color.white : dimColor;
         }
 
